@@ -13,3 +13,19 @@ function wpdocs_theme_name_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'wpdocs_theme_name_scripts');
+
+
+/**
+ * Register menu
+ */
+
+function register_my_menus()
+{
+    register_nav_menus(
+        array(
+            'header-menu' => __('Header Menu')
+        )
+    );
+}
+
+add_action('init', 'register_my_menus');

@@ -15,13 +15,13 @@
 
 <body <?php echo body_class() ?>>
     <a class="skip-to-content-link" href="#content">
-        Skip to content
+        Pular para o conteúdo
     </a>
 
-    <?php if (current_user_can('edit_posts')) { ?>
 
-        <a href="<?php echo get_edit_post_link(); ?>" class="svpa-edit" title="Edit this page">
-            <i aria-hidden="true" class="icon icon-pencil"></i>
+    <?php if (current_user_can('edit_posts')) { ?>
+        <a href="<?php echo get_edit_post_link(); ?>" class="wp-edit" title="Edit this page">
+            Editar página
         </a>
     <?php
     } ?>
