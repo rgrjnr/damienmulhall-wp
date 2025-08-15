@@ -33,6 +33,5 @@ function rgrjnr_attach_case_study_fields()
                 ->set_help_text(__('e.g., "3 months" or "Jan 2024 - Mar 2024"', 'rgrjnr')),
             Field::make('image', 'rgrjnr_client_logo', __('Client Logo', 'rgrjnr'))
                 ->set_help_text(__('Upload the client logo', 'rgrjnr'))
-                ->set_value_type('url')
         ));
 }

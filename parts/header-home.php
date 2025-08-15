@@ -5,7 +5,7 @@
  * @package WPThemeStarter
  */
 ?>
-<header class="w-full max-w-page mx-auto px-6 lg:px-0">
+<header class="w-full max-w-page mx-auto px-6">
     <div class="flex flex-col gap-9">
         <!-- Navigation Bar -->
         <div class="flex flex-col gap-6">

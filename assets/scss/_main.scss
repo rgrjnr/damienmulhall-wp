@@ -1,19 +1,13 @@
-// Base styles and variables
-:root {
-  --color-black: #000;
-  --color-white: #fff;
-  --color-primary: #f300c2;
-  --color-primary-dark: #af078d;
-}
-
 * {
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  background-color: $dm-white;
 }
 
 a {

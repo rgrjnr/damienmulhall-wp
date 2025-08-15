@@ -5,8 +5,6 @@
  * @package WPThemeStarter
  */
 
-// Include the highlights circles component
-require_once get_template_directory() . '/parts/highlights-circles.php';
 
 get_header(); ?>
 
@@ -38,11 +36,15 @@ get_header(); ?>
                         project or the
                         flashiest brand.
                     </p>
-                    <div class="hidden lg:block absolute right-16 bottom-16">
-                        <svg class="w-24 h-20 text-dm-white" viewBox="0 0 102 77" fill="none">
-                            <path d="M5 72L51 5L97 72" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                    <div class="hidden lg:block absolute right-0 bottom-0">
+
+                        <svg width="102" height="77" viewBox="0 0 102 77" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M58.6125 77C57.7751 74.8854 55.4027 73.7594 53.1698 73.7045C52.3046 73.7045 49.6251 74.4734 49.7089 73.0454C49.7089 72.6334 50.8811 71.068 51.2161 70.6286C53.3652 67.6352 57.7193 63.1038 59.2265 60.0555C59.5056 59.5062 59.7847 58.6549 59.7847 58.0781C59.7847 57.5289 59.2265 56.4853 59.8964 56.2656L68.9395 55.6339C80.6341 55.9635 89.4261 67.3606 101.484 66.1247C101.763 66.0973 102.07 66.2895 101.986 65.8501C95.5386 61.8131 89.8168 56.8148 83.6206 52.4757C76.2521 47.3127 70.0001 47.3402 61.7943 44.6488C58.8637 43.6876 56.0167 42.4793 53.2815 41.1061C53.2536 40.7491 53.6722 40.9414 53.8676 40.9963C56.7982 41.9575 59.5335 42.644 62.5479 43.3306C66.0368 44.127 69.8326 44.9509 73.3494 45.5002C75.4985 45.8297 77.7314 46.2142 79.9085 46.0494C74.6333 41.7927 69.6093 37.2888 64.5296 32.8398C57.2448 26.4959 51.4114 22.1568 43.4848 16.6642C38.8236 13.4511 38.8515 10.7597 36.0046 6.53047C31.6784 0.104182 25.2031 -1.81821 18.03 1.83434C17.3043 2.21882 15.518 3.61942 15.0715 3.75673C11.7501 4.85524 7.67508 5.23972 4.18621 6.42062C3.15351 6.77764 0.474061 7.73884 0.0274872 8.75496C-0.139978 9.11198 0.501978 9.1669 0.753176 9.22183C5.02354 10.1281 14.2341 9.77108 17.1648 13.0666C19.7884 15.9777 18.03 19.7126 17.7788 22.9532C16.9973 33.2518 21.8538 41.7378 29.4177 48.3838C31.1202 49.8668 34.8324 51.9814 36.0046 53.3545C36.814 54.2883 38.2375 58.3802 38.6283 59.6984C38.9074 60.6871 39.2702 61.5384 38.5724 62.4447C35.0278 65.548 30.9248 72.6334 26.3475 73.8967C24.4216 74.4185 21.9934 74.2812 20.2908 74.9128C19.5372 75.2149 18.1696 76.1212 18.1696 77H58.6125ZM35.6418 39.4309C32.2087 36.2178 30.562 32.4828 29.1106 28.0888C29.0548 27.8965 28.8874 27.4297 29.1106 27.3198C31.2598 31.2195 33.381 34.8721 36.7024 37.893C40.4425 41.2984 44.8524 43.9623 49.4577 46.1044L59.9801 50.1963C55.9888 50.0865 52.2488 48.8506 48.5924 47.3127C44.043 45.3903 39.2423 42.7539 35.6139 39.4034L35.6418 39.4309ZM47.3644 57.0071C47.3644 57.0071 48.9832 57.8584 49.2065 58.0232C50.2671 58.7372 52.7512 60.4399 52.6953 61.7581C52.6674 62.939 50.295 67.3606 49.5693 68.5964C48.8995 69.7498 46.862 72.6334 45.8014 73.2376C43.7918 74.3636 40.4146 73.7319 37.8188 74.5009C36.842 74.7755 35.6139 75.7367 35.0278 75.8466C33.2135 76.1487 30.2271 75.3797 31.9855 73.2376C35.4743 68.9259 40.275 65.9325 44.5175 62.4722C46.4991 60.8244 47.6156 59.9181 47.3923 57.0345L47.3644 57.0071Z"
+                                fill="#E1DFD0" />
                         </svg>
+
                     </div>
                 </div>
 
@@ -149,15 +151,10 @@ get_header(); ?>
                 if ($case_studies->have_posts()) :
                     while ($case_studies->have_posts()) : $case_studies->the_post();
                         // Get the short title from Carbon Fields
-                        $short_title = carbon_get_post_meta(get_the_ID(), 'short_title');
+                        $short_title = carbon_get_post_meta(get_the_ID(), 'rgrjnr_short_title');
                         // Use short title if available, otherwise fall back to regular title
                         $display_title = !empty($short_title) ? $short_title : get_the_title();
                         
-                        // Get highlights for this case study
-                        $highlights = get_the_terms(get_the_ID(), 'highlight');
-                        
-                        // Format highlights for the component
-                        $highlights_data = rgrjnr_format_highlight_terms($highlights);
                 ?>
                 <div
                     class="border-b-[3px] border-dm-black py-6 flex flex-col md:flex-row items-start md:items-center justify-between group cursor-pointer hover:px-4 transition-all">
@@ -165,11 +162,10 @@ get_header(); ?>
                         class="font-haas-display font-medium text-display-lg text-dm-black group-hover:text-dm-cyan transition-colors">
                         <?php echo esc_html($display_title); ?>
                     </a>
+
                     <?php 
-                    // Display highlight circles
-                    rgrjnr_display_highlight_circles($highlights_data, [
-                        'container_class' => 'mt-4 md:mt-0'
-                    ]);
+                    // Include highlights badges component
+                    get_template_part('parts/highlights-badges', null, ['post_id' => get_the_ID()]); 
                     ?>
                 </div>
                 <?php 
@@ -188,52 +184,73 @@ get_header(); ?>
 
         <!-- Skills Section -->
         <section class="w-full max-w-page mx-auto px-6 mt-section">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2  gap-4">
                 <!-- Skills Card -->
-                <div class="bg-dm-black p-6 flex flex-col justify-between min-h-[240px]">
-                    <div class="w-8 h-8 bg-dm-white rounded"></div>
-                    <div>
-                        <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Skills</h3>
-                        <p class="font-haas-display font-medium text-heading-xs text-dm-white leading-tight">
-                            Waterfall / Budgeting / Planning / Client & Stakeholder Management / Creative Studio
-                            Management
-                        </p>
-                    </div>
+                <div class="bg-dm-black p-6 flex flex-col justify-between relative min-h-[240px]"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="2rem"
+                        class="absolute top-6 right-6">
+                        <path
+                            d="M22,10c-0.738,0-1.376,0.405-1.723,1H13V9h6V5.723C19.595,5.376,20,4.738,20,4c0-1.105-0.895-2-2-2s-2,0.895-2,2	c0,0.738,0.405,1.376,1,1.723V7h-4V3.333l-0.331-0.298C11.927,2.368,10.979,2,10,2C8.815,2,7.732,2.523,6.992,3.382L6.983,3.374	C6.898,3.472,6.831,3.582,6.756,3.687C6.73,3.724,6.701,3.759,6.676,3.797c-0.092,0.138-0.171,0.282-0.245,0.43	C6.425,4.239,6.417,4.25,6.412,4.262C4.405,4.937,3,6.849,3,9c0,0.48,0.069,0.953,0.207,1.413C2.425,11.452,2,12.704,2,14	c0,2.42,1.468,4.588,3.693,5.516C6.588,21.058,8.203,22,10,22c0.874,0,1.716-0.232,2.503-0.69L13,21.02V17h3v1.277	c-0.595,0.346-1,0.984-1,1.723c0,1.105,0.895,2,2,2s2-0.895,2-2c0-0.738-0.405-1.376-1-1.723V15h-5v-2h7.277	c0.346,0.595,0.984,1,1.723,1c1.105,0,2-0.895,2-2C24,10.895,23.105,10,22,10z"
+                            fill="#e1dfd0" />
+                    </svg>
+
+                    <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Skills</h3>
+                    <p class="font-haas-display font-medium text-body-lg text-dm-white leading-tight">
+                        Waterfall / Budgeting / Planning / Client & Stakeholder Management / Creative Studio
+                        Management
+                    </p>
+
                 </div>
 
                 <!-- Certifications Card -->
-                <div class="bg-dm-black p-6 flex flex-col justify-between min-h-[240px]">
-                    <div class="w-8 h-8 bg-dm-white rounded"></div>
-                    <div>
-                        <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Certifications</h3>
-                        <p class="font-haas-display font-medium text-heading-xs text-dm-white leading-tight">
-                            PMP / Google Project Management / Agile Project Management / Project Planning / Project
-                            Execution
-                        </p>
-                    </div>
+                <div class="bg-dm-black p-6 flex flex-col justify-between relative min-h-[240px]"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="2rem"
+                        class="absolute top-6 right-6">
+                        <path
+                            d="M 12 1.5351562 L 9.4414062 3.125 L 6.4375 3.34375 L 5.3007812 6.1328125 L 3 8.0761719 L 3.7207031 11 L 3 13.923828 L 5.3007812 15.867188 L 6.4375 18.65625 L 9.4414062 18.875 L 12 20.464844 L 14.558594 18.875 L 17.5625 18.65625 L 18.699219 15.867188 L 21 13.923828 L 20.279297 11 L 21 8.0761719 L 18.699219 6.1328125 L 17.5625 3.34375 L 14.558594 3.125 L 12 1.5351562 z M 12 6 C 14.757 6 17 8.243 17 11 C 17 13.757 14.757 16 12 16 C 9.243 16 7 13.757 7 11 C 7 8.243 9.243 6 12 6 z M 12 8 A 3 3 0 0 0 12 14 A 3 3 0 0 0 12 8 z M 2.4824219 16.103516 L 0 18.585938 L 0 19.90625 L 3.1894531 20.810547 L 4.09375 24 L 5.4140625 24 L 8.5957031 20.818359 L 6.2929688 20.650391 L 5.0546875 20.560547 L 4.5859375 19.410156 L 3.6347656 17.078125 L 2.4824219 16.103516 z M 21.517578 16.103516 L 20.365234 17.078125 L 19.414062 19.410156 L 18.945312 20.560547 L 17.707031 20.650391 L 15.404297 20.818359 L 18.585938 24 L 19.90625 24 L 20.810547 20.810547 L 24 19.90625 L 24 18.585938 L 21.517578 16.103516 z"
+                            fill="#e1dfd0" />
+                    </svg>
+
+                    <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Certifications</h3>
+                    <p class="font-haas-display font-medium text-body-lg text-dm-white leading-tight">
+                        PMP / Google Project Management / Agile Project Management / Project Planning / Project
+                        Execution
+                    </p>
+
                 </div>
 
                 <!-- Expertise Card -->
-                <div class="bg-dm-black p-6 flex flex-col justify-between min-h-[240px]">
-                    <div class="w-8 h-8 bg-dm-white rounded"></div>
-                    <div>
-                        <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Expertise</h3>
-                        <p class="font-haas-display font-medium text-heading-xs text-dm-white leading-tight">
-                            Sales Enablement / Webinars & Live Events / Podcasts / Product Launches / Community Events /
-                            Demand Generation Campaigns / Rich Media Content
-                        </p>
-                    </div>
+                <div class="bg-dm-black p-6 flex flex-col justify-between relative min-h-[240px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="2rem"
+                        class="absolute top-6 right-6">
+                        <path
+                            d="M 11.662109 1 C 5.0231094 1 2 5.665 2 10 C 2 12.627 3.0446406 14.123312 4.0566406 15.570312 C 5.0556406 17.001312 6 18.353 6 21 L 6 22 L 15.876953 22 L 15.990234 21.130859 C 15.991234 21.123859 16.069937 20.582 16.335938 20 L 17.900391 20 C 19.609391 20 21 18.609391 21 16.900391 L 21 14.294922 L 22.244141 12.355469 L 21.755859 11.791016 C 21.738859 11.771016 20 9.7333438 20 7.5273438 C 20 3.8063438 16.415109 1 11.662109 1 z M 10.267578 5.6660156 L 11.730469 5.6660156 L 11.933594 6.6640625 C 12.502594 6.8230625 13.013828 7.1214375 13.423828 7.5234375 L 14.388672 7.1992188 L 15.119141 8.4667969 L 14.355469 9.1425781 C 14.425469 9.4165781 14.466797 9.703 14.466797 10 C 14.466797 10.297 14.426469 10.584375 14.355469 10.859375 L 15.117188 11.533203 L 14.388672 12.800781 L 13.423828 12.476562 C 13.013828 12.878562 12.503547 13.176938 11.935547 13.335938 L 11.732422 14.333984 L 10.269531 14.333984 L 10.066406 13.335938 C 9.4974063 13.176937 8.9861719 12.878563 8.5761719 12.476562 L 7.6113281 12.800781 L 6.8808594 11.533203 L 7.6445312 10.857422 C 7.5745312 10.583422 7.5332031 10.297 7.5332031 10 C 7.5332031 9.703 7.5735313 9.415625 7.6445312 9.140625 L 6.8808594 8.4667969 L 7.6113281 7.1992188 L 8.5761719 7.5234375 C 8.9861719 7.1214375 9.4954531 6.8230625 10.064453 6.6640625 L 10.267578 5.6660156 z M 11 8.3144531 C 10.07 8.3144531 9.3144531 9.069 9.3144531 10 C 9.3144531 10.93 10.069 11.683594 11 11.683594 C 11.931 11.683594 12.685547 10.93 12.685547 10 C 12.685547 9.07 11.93 8.3144531 11 8.3144531 z"
+                            fill="#e1dfd0" />
+                    </svg>
+
+
+                    <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Expertise</h3>
+                    <p class="font-haas-display font-medium text-body-lg text-dm-white leading-tight">
+                        Sales Enablement / Webinars & Live Events / Podcasts / Product Launches / Community Events /
+                        Demand Generation Campaigns / Rich Media Content
+                    </p>
+
                 </div>
 
                 <!-- Tools Card -->
-                <div class="bg-dm-black p-6 flex flex-col justify-between min-h-[240px]">
-                    <div class="w-8 h-8 bg-dm-white rounded"></div>
-                    <div>
-                        <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Tools</h3>
-                        <p class="font-haas-display font-medium text-heading-xs text-dm-white leading-tight">
-                            Google Workspace / Office 365 / Sharepoint / Adobe CC / Riverside FM / Trello
-                        </p>
-                    </div>
+                <div class="bg-dm-black p-6 flex flex-col justify-between relative min-h-[240px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="2rem"
+                        class="absolute top-6 right-6">
+                        <path
+                            d="M22,10c-0.738,0-1.376,0.405-1.723,1H13V9h6V5.723C19.595,5.376,20,4.738,20,4c0-1.105-0.895-2-2-2s-2,0.895-2,2	c0,0.738,0.405,1.376,1,1.723V7h-4V3.333l-0.331-0.298C11.927,2.368,10.979,2,10,2C8.815,2,7.732,2.523,6.992,3.382L6.983,3.374	C6.898,3.472,6.831,3.582,6.756,3.687C6.73,3.724,6.701,3.759,6.676,3.797c-0.092,0.138-0.171,0.282-0.245,0.43	C6.425,4.239,6.417,4.25,6.412,4.262C4.405,4.937,3,6.849,3,9c0,0.48,0.069,0.953,0.207,1.413C2.425,11.452,2,12.704,2,14	c0,2.42,1.468,4.588,3.693,5.516C6.588,21.058,8.203,22,10,22c0.874,0,1.716-0.232,2.503-0.69L13,21.02V17h3v1.277	c-0.595,0.346-1,0.984-1,1.723c0,1.105,0.895,2,2,2s2-0.895,2-2c0-0.738-0.405-1.376-1-1.723V15h-5v-2h7.277	c0.346,0.595,0.984,1,1.723,1c1.105,0,2-0.895,2-2C24,10.895,23.105,10,22,10z"
+                            fill="#e1dfd0" />
+                    </svg>
+
+                    <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Tools</h3>
+                    <p class="font-haas-display font-medium text-body-lg text-dm-white leading-tight">
+                        Google Workspace / Office 365 / Sharepoint / Adobe CC / Riverside FM / Trello
+                    </p>
+
                 </div>
             </div>
         </section>
