@@ -76,6 +76,21 @@ body.loaded {
     }
   }
 
+  .work-arrow {
+    position: absolute;
+    pointer-events: none;
+    z-index: 20;
+    opacity: 0;
+    transform: scale(0.8);
+
+    .arrow-path {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      stroke: #e1dfd0;
+      stroke-width: 8;
+    }
+  }
+
   &:hover {
     .work-title {
       color: $dm-black !important;

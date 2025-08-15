@@ -334,12 +334,16 @@ class ThemeAnimations {
       const title = item.querySelector('.work-title') as HTMLElement;
       const titleDuplicate = item.querySelector('.work-title-duplicate') as HTMLElement;
       const highlights = item.querySelectorAll('.work-highlights > div > div'); // Target the highlight circles
+      const arrow = item.querySelector('.work-arrow') as HTMLElement;
+      const arrowPaths = item.querySelectorAll('.arrow-path') as NodeListOf<SVGPathElement>;
 
       console.log(`Work item ${index + 1}:`, {
         background: !!background,
         title: !!title,
         titleDuplicate: !!titleDuplicate,
         highlightsCount: highlights.length,
+        arrow: !!arrow,
+        arrowPathsCount: arrowPaths.length,
       });
 
       if (!background || !title || !titleDuplicate) {
@@ -369,6 +373,8 @@ class ThemeAnimations {
         // Reset animations
         gsap.set([title, titleDuplicate], { clearProps: 'all' });
         gsap.set(background, { scaleY: 0 });
+        gsap.set(arrow, { opacity: 0, scale: 0.8 });
+        gsap.set(arrowPaths, { strokeDashoffset: 100 });
 
         // Set background origin based on entry point
         gsap.set(background, {
@@ -381,8 +387,8 @@ class ThemeAnimations {
           background,
           {
             scaleY: 1,
-            duration: 0.4,
-            ease: 'power2.out',
+            duration: 0.5,
+            ease: 'expo.inOut',
           },
           0
         );
@@ -392,8 +398,8 @@ class ThemeAnimations {
           title,
           {
             y: itemHeight,
-            duration: 0.4,
-            ease: 'power2.out',
+            duration: 0.5,
+            ease: 'expo.inOut',
           },
           0
         );
@@ -401,9 +407,7 @@ class ThemeAnimations {
         // Animate duplicate title from outside top to original position + 1em right
         gsap.set(titleDuplicate, {
           y: -itemHeight,
-          x: '1em',
           opacity: 1,
-          color: '#ffffff', // Make duplicate title white
         });
 
         tl.to(
@@ -411,11 +415,35 @@ class ThemeAnimations {
           {
             y: 0,
             // Removed x animation - title stays at 1em offset
-            duration: 0.4,
-            ease: 'power2.out',
+            duration: 0.5,
+            ease: 'expo.inOut',
           },
           0
         );
+
+        // Animate arrow appearance and stroke drawing
+        if (arrow && arrowPaths.length > 0) {
+          tl.to(
+            arrow,
+            {
+              opacity: 1,
+              scale: 1,
+              duration: 0.3,
+              ease: 'power2.out',
+            },
+            0.2
+          );
+
+          tl.to(
+            arrowPaths,
+            {
+              strokeDashoffset: 0,
+              duration: 0.4,
+              ease: 'power2.out',
+            },
+            0.3
+          );
+        }
 
         // Animate highlights with stagger effect (only position, not color)
         if (highlights.length > 0) {
@@ -423,9 +451,9 @@ class ThemeAnimations {
             highlights,
             {
               y: itemHeight,
-              duration: 0.4, // Same duration as other animations
-              ease: 'power2.out',
-              // Removed stagger so all highlights animate simultaneously
+              duration: 0.2, // Same duration as other animations
+              ease: 'power2.inOut',
+              stagger: 0.05, // Add stagger effect back
             },
             0
           );

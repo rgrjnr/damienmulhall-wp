@@ -157,22 +157,33 @@ get_header(); ?>
                         
                 ?>
                 <div
-                    class="work-item border-b-[3px] border-dm-black py-6 flex flex-col md:flex-row items-start md:items-center justify-between group cursor-pointer hover:px-4 transition-all relative overflow-hidden">
-                    
+                    class="work-item border-b-[3px] border-dm-black py-6 flex flex-col md:flex-row items-start md:items-center justify-between group cursor-pointer transition-all relative overflow-hidden">
+
                     <!-- Animated Background -->
-                    <div class="work-background absolute inset-0 bg-dm-cyan transform scale-y-0 origin-top pointer-events-none"></div>
-                    
+                    <div
+                        class="work-background absolute inset-0 bg-dm-cyan transform scale-y-0 origin-top pointer-events-none">
+                    </div>
+
+                    <!-- Animated Arrow -->
+                    <div class="work-arrow absolute top-[50%] translate-y-[-50%] right-6 pointer-events-none z-20">
+                        <svg width="52" height="45" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27 3L46.3208 22.5L27 42" stroke="#E1DFD0" stroke-width="8" class="arrow-path" />
+                            <path d="M0 23H43.5" stroke="#E1DFD0" stroke-width="8" class="arrow-path" />
+                        </svg>
+
+                    </div>
+
                     <!-- Title Container -->
                     <div class="work-title-container relative z-10 flex-1">
                         <!-- Original Title -->
                         <a href="<?php the_permalink(); ?>"
-                            class="work-title font-haas-display font-medium text-display-lg text-dm-black group-hover:text-dm-black transition-colors block">
+                            class="work-title font-haas-display font-medium text-display-lg text-dm-black transition-colors block">
                             <?php echo esc_html($display_title); ?>
                         </a>
-                        
+
                         <!-- Duplicate Title for Animation (Hidden by default) -->
                         <a href="<?php the_permalink(); ?>"
-                            class="work-title-duplicate font-haas-display font-medium text-display-lg text-dm-black absolute top-0 left-0 opacity-0 pointer-events-none"
+                            class="work-title-duplicate font-haas-display font-medium text-display-lg text-dm-white absolute top-0 left-0 opacity-0 pointer-events-none ml-6"
                             aria-hidden="true">
                             <?php echo esc_html($display_title); ?>
                         </a>
