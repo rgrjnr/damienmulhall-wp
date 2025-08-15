@@ -1,6 +1,6 @@
-@import "variables";
-@import "main";
-@import "animations";
+@use "variables" as *;
+@use "main" as *;
+@use "animations" as *;
 
 #wp-admin-toolbar {
   background-color: white;

@@ -45,6 +45,13 @@
         <div id="loader-progress"></div>
     </div>
 
+    <!-- Crow loading overlay -->
+    <div id="crow-loader" class="crow-loader">
+        <video id="crow-video" autoplay muted loop playsinline>
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/images/loading.mp4" type="video/mp4">
+        </video>
+    </div>
+
     <!-- <?php get_template_part("parts/nav"); ?> -->
 
     <div id="smooth-wrapper">

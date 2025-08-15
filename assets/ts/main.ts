@@ -11,6 +11,8 @@ gsap.registerPlugin(ScrollTrigger, SplitText, ScrollSmoother);
 class ThemeAnimations {
   private animations: Map<string, gsap.core.Timeline> = new Map();
   private smoother: ScrollSmoother | null = null;
+  private crowLoader: HTMLElement | null = null;
+  private crowVideo: HTMLVideoElement | null = null;
 
   constructor() {
     this.init();
@@ -235,6 +237,10 @@ class ThemeAnimations {
 
   // Page transition animations
   private setupPageTransitions(): void {
+    // Initialize crow loader elements
+    this.crowLoader = document.getElementById('crow-loader') as HTMLElement;
+    this.crowVideo = document.getElementById('crow-video') as HTMLVideoElement;
+
     // Smooth page transitions
     const links = document.querySelectorAll(
       'a[href]:not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"])'
@@ -248,6 +254,9 @@ class ThemeAnimations {
         // Only handle internal links
         if (url && url.includes(window.location.host)) {
           e.preventDefault();
+
+          // Show crow loader
+          this.showCrowLoader();
 
           // Fade out animation
           gsap.to('body', {
@@ -272,9 +281,24 @@ class ThemeAnimations {
         ease: 'power2.out',
         onComplete: () => {
           document.body.classList.add('page-loaded');
+          this.hideCrowLoader();
         },
       }
     );
+  }
+
+  // Crow loader methods
+  private showCrowLoader(): void {
+    if (this.crowLoader && this.crowVideo) {
+      this.crowLoader.classList.add('active');
+      this.crowVideo.play().catch((e) => console.log('Video autoplay prevented:', e));
+    }
+  }
+
+  private hideCrowLoader(): void {
+    if (this.crowLoader) {
+      this.crowLoader.classList.remove('active');
+    }
   }
 
   // Interactive animations
@@ -373,7 +397,6 @@ class ThemeAnimations {
         // Reset animations
         gsap.set([title, titleDuplicate], { clearProps: 'all' });
         gsap.set(background, { scaleY: 0 });
-        gsap.set(arrow, { opacity: 0, scale: 0.8 });
         gsap.set(arrowPaths, { strokeDashoffset: 100 });
 
         // Set background origin based on entry point
@@ -423,17 +446,6 @@ class ThemeAnimations {
 
         // Animate arrow appearance and stroke drawing
         if (arrow && arrowPaths.length > 0) {
-          tl.to(
-            arrow,
-            {
-              opacity: 1,
-              scale: 1,
-              duration: 0.3,
-              ease: 'power2.out',
-            },
-            0.2
-          );
-
           tl.to(
             arrowPaths,
             {

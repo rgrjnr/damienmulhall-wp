@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 * {
   box-sizing: border-box;
 }
@@ -31,6 +33,37 @@ body.loaded {
   transition: opacity 300ms ease-out;
 }
 
+// Crow loading overlay
+.crow-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $dm-white;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #crow-video {
+    max-width: 200px;
+    max-height: 200px;
+    mix-blend-mode: multiply;
+    opacity: 0.1;
+  }
+}
+
 // Work item animations
 .work-item {
   position: relative;
@@ -62,7 +95,6 @@ body.loaded {
       left: 0;
       opacity: 0;
       pointer-events: none;
-      color: #ffffff; // White color for duplicate title
     }
   }
 
@@ -80,15 +112,6 @@ body.loaded {
     position: absolute;
     pointer-events: none;
     z-index: 20;
-    opacity: 0;
-    transform: scale(0.8);
-
-    .arrow-path {
-      stroke-dasharray: 100;
-      stroke-dashoffset: 100;
-      stroke: #e1dfd0;
-      stroke-width: 8;
-    }
   }
 
   &:hover {
@@ -96,6 +119,13 @@ body.loaded {
       color: $dm-black !important;
     }
   }
+}
+
+.arrow-path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  stroke: $dm-white;
+  stroke-width: 8;
 }
 
 .prose {

@@ -156,7 +156,7 @@ get_header(); ?>
                         $display_title = !empty($short_title) ? $short_title : get_the_title();
                         
                 ?>
-                <div
+                <a href="<?php the_permalink(); ?>"
                     class="work-item border-b-[3px] border-dm-black py-6 flex flex-col md:flex-row items-start md:items-center justify-between group cursor-pointer transition-all relative overflow-hidden">
 
                     <!-- Animated Background -->
@@ -165,7 +165,7 @@ get_header(); ?>
                     </div>
 
                     <!-- Animated Arrow -->
-                    <div class="work-arrow absolute top-[50%] translate-y-[-50%] right-6 pointer-events-none z-20">
+                    <div class="work-arrow absolute top-[50%] translate-y-[-50%] right-12 pointer-events-none z-20">
                         <svg width="52" height="45" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M27 3L46.3208 22.5L27 42" stroke="#E1DFD0" stroke-width="8" class="arrow-path" />
                             <path d="M0 23H43.5" stroke="#E1DFD0" stroke-width="8" class="arrow-path" />
@@ -176,17 +176,16 @@ get_header(); ?>
                     <!-- Title Container -->
                     <div class="work-title-container relative z-10 flex-1">
                         <!-- Original Title -->
-                        <a href="<?php the_permalink(); ?>"
+                        <div
                             class="work-title font-haas-display font-medium text-display-lg text-dm-black transition-colors block">
                             <?php echo esc_html($display_title); ?>
-                        </a>
+                        </div>
 
                         <!-- Duplicate Title for Animation (Hidden by default) -->
-                        <a href="<?php the_permalink(); ?>"
-                            class="work-title-duplicate font-haas-display font-medium text-display-lg text-dm-white absolute top-0 left-0 opacity-0 pointer-events-none ml-6"
+                        <div class="work-title-duplicate font-haas-display font-medium text-display-lg text-dm-white absolute top-0 left-0 opacity-0 pointer-events-none ml-6"
                             aria-hidden="true">
                             <?php echo esc_html($display_title); ?>
-                        </a>
+                        </div>
                     </div>
 
                     <!-- Highlights Container -->
@@ -196,7 +195,7 @@ get_header(); ?>
                         get_template_part('parts/highlights-badges', null, ['post_id' => get_the_ID()]); 
                         ?>
                     </div>
-                </div>
+                </a>
                 <?php 
                     endwhile;
                     wp_reset_postdata();
@@ -321,12 +320,6 @@ get_header(); ?>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="w-full max-w-page mx-auto px-6 mt-section">
-            <p class="font-haas-display font-medium text-body-md text-dm-black">
-                2025 © Damien Mulhall
-            </p>
-        </footer>
     </div>
 </main>
 
