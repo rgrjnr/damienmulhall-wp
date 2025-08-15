@@ -83,6 +83,45 @@ The theme includes a TypeScript-based SPA navigation (`assets/ts/main.ts`) that:
 3. Follow existing patterns for component structure
 4. Use Carbon Fields for custom fields and metaboxes
 
+### Component Whitelist Management
+**CRITICAL**: When creating or removing custom components, you MUST update the whitelist in `custom/index.php` to maintain security:
+
+#### Adding Components:
+1. **Automatically add** new filenames to the appropriate section in the `$components` array:
+   - `'post-types'` => array for custom post type files
+   - `'taxonomies'` => array for custom taxonomy files  
+   - `'fields'` => array for Carbon Fields configuration files
+   - `'blocks'` => array for custom Gutenberg block files
+   - `'theme-options'` => array for theme options files
+
+2. **Maintain array structure**: Add filenames as strings in the correct subdirectory array
+3. **Preserve formatting**: Keep existing indentation and array syntax
+4. **Example whitelist update**:
+   ```php
+   private static $components = [
+       'post-types' => [
+           'team.php',
+           'products.php'  // <- New file added here
+       ],
+       'taxonomies' => [
+           'team-departments.php',
+           'product-categories.php'  // <- New file added here
+       ],
+       // ... other sections
+   ];
+   ```
+
+#### Removing Components:
+1. **Remove filename** from the appropriate `$components` array section
+2. **Clean up empty arrays** but maintain the structure
+3. **Verify** the component file is also deleted from the filesystem
+
+#### Security Requirements:
+- **Never bypass** the whitelist system
+- **Always validate** that new components follow the security patterns
+- **Ensure** all component files include the `@package WPThemeStarter` header
+- **Use** the `rgrjnr_` prefix for all functions to avoid conflicts
+
 ### Modifying Build Configuration
 - Webpack config: `webpack.config.js` (TypeScript bundling)
 - Tailwind config: `tailwind.config.js` (utility classes, theme)
