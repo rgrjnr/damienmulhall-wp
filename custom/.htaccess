@@ -1,0 +1,18 @@
+# Prevent direct access to PHP files in custom directory
+<FilesMatch "\.php$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Prevent directory listing
+Options -Indexes
+
+# Disable PHP execution for uploaded files
+<FilesMatch "\.(jpg|jpeg|png|gif|bmp|ico|svg|webp|pdf|doc|docx|xls|xlsx|zip|rar|tar|gz)$">
+    <IfModule mod_php7.c>
+        php_flag engine off
+    </IfModule>
+    <IfModule mod_php8.c>
+        php_flag engine off
+    </IfModule>
+</FilesMatch>

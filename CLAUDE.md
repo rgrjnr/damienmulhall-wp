@@ -51,9 +51,17 @@ The theme includes a TypeScript-based SPA navigation (`assets/ts/main.ts`) that:
 
 ### Carbon Fields Usage
 - Initialized in `carbon.php` with `rgrjnr_crb_load()` function
-- Theme options attached via `rgrjnr_attach_theme_options()` (currently empty placeholder)
-- Custom post types can use Carbon Fields for metaboxes
+- Components organized in `custom/` directory with secure whitelist-based loader
+- Custom post types, taxonomies, fields, blocks, and theme options in separate subdirectories
+- Uses `RGRJNR_Component_Loader` class with explicit file whitelist for security
 - Required via Composer, not committed to repository
+
+### Security Implementation
+- **Component Loader**: Uses whitelist-based approach instead of glob patterns to prevent arbitrary file inclusion
+- **File Validation**: Validates file existence, type, and location before loading
+- **Suspicious Pattern Detection**: Logs warnings for potentially dangerous PHP functions
+- **Directory Protection**: `.htaccess` and `index.php` files prevent direct access to component files
+- **Extensibility**: Child themes/plugins can safely register components via `rgrjnr_register_custom_components` action
 
 ## Development Workflow
 
@@ -64,11 +72,16 @@ The theme includes a TypeScript-based SPA navigation (`assets/ts/main.ts`) that:
 4. Run `npm run dev` to watch changes
 5. Test with `npm run lint` before committing
 
-### Adding Custom Post Types
-1. Create new file in `custom-posts/` directory
-2. Follow the pattern in `team.php` for registration
-3. Include the file in `functions.php` or autoload it
-4. Use Carbon Fields for custom fields if needed
+### Adding Custom Components
+1. Create new file in appropriate `custom/` subdirectory:
+   - `custom/post-types/` for custom post types
+   - `custom/taxonomies/` for custom taxonomies
+   - `custom/fields/` for Carbon Fields configurations
+   - `custom/blocks/` for custom Gutenberg blocks
+   - `custom/theme-options/` for theme settings
+2. Add the filename to the whitelist in `custom/index.php` in the `$components` array
+3. Follow existing patterns for component structure
+4. Use Carbon Fields for custom fields and metaboxes
 
 ### Modifying Build Configuration
 - Webpack config: `webpack.config.js` (TypeScript bundling)
@@ -97,5 +110,6 @@ The project includes WordPress stubs via Composer for better IDE support. This r
 - `assets/ts/main.ts`: Core navigation system implementation
 - `functions.php`: Theme setup and asset enqueuing
 - `carbon.php`: Carbon Fields initialization
+- `custom/index.php`: Secure component loader with whitelist
 - `package.json`: Build scripts and dependencies
 - `webpack.config.js`: TypeScript bundling configuration
