@@ -28,29 +28,20 @@ function rgrjnr_attach_highlights_fields()
             Field::make('image', 'rgrjnr_highlight_icon', __('Highlight Icon', 'rgrjnr'))
                 ->set_help_text(__('Upload an icon for this highlight. SVG files are recommended for best quality and scalability.', 'rgrjnr'))
                 ->set_value_type('url'),
+
             
-            Field::make('textarea', 'rgrjnr_highlight_description', __('Description', 'rgrjnr'))
-                ->set_rows(3)
-                ->set_help_text(__('Optional description for this highlight category.', 'rgrjnr')),
-            
-            Field::make('select', 'rgrjnr_highlight_theme_color', __('Theme Color', 'rgrjnr'))
+            Field::make('select', 'rgrjnr_highlight_color', __('Highlight Color', 'rgrjnr'))
                 ->set_options(array(
-                    'primary' => __('Primary', 'rgrjnr'),
-                    'secondary' => __('Secondary', 'rgrjnr'),
-                    'accent' => __('Accent', 'rgrjnr'),
-                    'success' => __('Success', 'rgrjnr'),
-                    'warning' => __('Warning', 'rgrjnr'),
-                    'danger' => __('Danger', 'rgrjnr'),
-                    'info' => __('Info', 'rgrjnr'),
-                    'light' => __('Light', 'rgrjnr'),
-                    'dark' => __('Dark', 'rgrjnr'),
+                    '#201a1e' => __('Black', 'rgrjnr'),
+                    '#33a199' => __('Cyan', 'rgrjnr'),
+                    '#e1dfd0' => __('White', 'rgrjnr'),
+                    '#85316d' => __('Purple', 'rgrjnr'),
+                    '#bf4c31' => __('Red', 'rgrjnr'),
+                    '#68882a' => __('Green', 'rgrjnr'),
+                    '#e3bf30' => __('Yellow', 'rgrjnr'),
                 ))
-                ->set_default_value('primary')
-                ->set_help_text(__('Select a theme color for this highlight', 'rgrjnr')),
-            
-            Field::make('color', 'rgrjnr_highlight_color', __('Accent Color', 'rgrjnr'))
-                ->set_help_text(__('Optional accent color for this highlight category.', 'rgrjnr'))
-                ->set_default_value('#3b82f6'),
+                ->set_default_value('#201a1e')
+                ->set_help_text(__('Select a color for this highlight category.', 'rgrjnr')),
         ));
 }
 
