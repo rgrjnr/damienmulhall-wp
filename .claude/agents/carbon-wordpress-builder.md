@@ -25,6 +25,7 @@ custom/
    - Include proper labels, supports array, and registration arguments
    - Follow the naming convention with `rgrjnr_` prefix for functions
    - Register post types using WordPress `register_post_type()` function
+   - Add a filter to customize the title placeholder to match the post type (e.g., "Member name" for members instead of "Add title")
 
 2. **Custom Taxonomies**: When creating taxonomies, you will:
    - Generate files in `custom/taxonomies/` named after the taxonomy (e.g., `project-types.php`)
@@ -87,6 +88,15 @@ add_action('carbon_fields_register_fields', 'rgrjnr_attach_[name]_fields');
 function rgrjnr_attach_[name]_fields() {
     // Carbon Fields code
 }
+
+// For custom post types, always include title placeholder filter
+add_filter('enter_title_here', 'rgrjnr_[post_type]_title_placeholder', 10, 2);
+function rgrjnr_[post_type]_title_placeholder($title, $post) {
+    if ($post->post_type === '[post_type]') {
+        $title = '[Singular name] name'; // e.g., "Member name", "Testimonial title", "Product name"
+    }
+    return $title;
+}
 ```
 
 ## Important Considerations
@@ -97,5 +107,6 @@ function rgrjnr_attach_[name]_fields() {
 - When creating complex fields, provide clear field names and help text
 - For blocks, consider both editor and frontend rendering needs
 - Always validate and sanitize data appropriately
+- For custom post types, ALWAYS include the enter_title_here filter to customize the title placeholder text to be consistent with the post type name (e.g., "Member name" instead of "Add title")
 
 When asked to create any WordPress customization, analyze the requirements carefully and generate the appropriate Carbon Fields code in the correct directory. Always update the custom/index.php file to include new files. Provide clear explanations of what each piece of code does and any additional setup that might be required.
