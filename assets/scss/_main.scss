@@ -31,6 +31,58 @@ body.loaded {
   transition: opacity 300ms ease-out;
 }
 
+// Work item animations
+.work-item {
+  position: relative;
+  overflow: hidden;
+
+  .work-background {
+    position: absolute;
+    inset: 0;
+    background-color: $dm-cyan;
+    transform: scaleY(0);
+    transform-origin: top;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .work-title-container {
+    position: relative;
+    z-index: 10;
+
+    .work-title,
+    .work-title-duplicate {
+      display: block;
+      transition: color 0.3s ease;
+    }
+
+    .work-title-duplicate {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      color: #ffffff; // White color for duplicate title
+    }
+  }
+
+  .work-highlights {
+    position: relative;
+    z-index: 10;
+
+    > div > div {
+      transition: transform 0.3s ease;
+      // Keep original background colors and styling
+    }
+  }
+
+  &:hover {
+    .work-title {
+      color: $dm-black !important;
+    }
+  }
+}
+
 .prose {
   font-size: 1.125rem;
   line-height: 1.75;

@@ -78,6 +78,16 @@ button,
   }
 }
 
+// SplitText line styles
+.split-line {
+  position: relative;
+  display: block;
+  text-align: start;
+  overflow: hidden;
+  padding-block: 0.1em;
+  margin-block: -0.1em;
+}
+
 // Scroll-triggered animation classes
 .scroll-fade {
   opacity: 0;
@@ -120,6 +130,22 @@ button,
 }
 .animate-delay-5 {
   animation-delay: 0.5s;
+}
+
+// Smooth scrolling wrapper styles
+#smooth-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#smooth-content {
+  min-height: 100vh;
+  transform-origin: 0 0;
 }
 
 // Performance optimizations

@@ -53,49 +53,49 @@ get_header(); ?>
                     <!-- What I Do -->
                     <div class="bg-dm-cyan p-card flex flex-col gap-3">
                         <h3 class="font-haas-display font-bold text-heading-xs text-dm-white">What I Do</h3>
-                        <ul class="flex flex-col gap-2">
-                            <li class="font-haas-display font-medium text-heading-xs text-dm-white leading-none">
+                        <div class="flex flex-col gap-2">
+                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
                                 Lead Creative Projects End-to-End
-                            </li>
-                            <li class="font-haas-display font-medium text-heading-xs text-dm-white leading-none">
+                            </p>
+                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
                                 Translate Strategy into Execution
-                            </li>
-                            <li class="font-haas-display font-medium text-heading-xs text-dm-white leading-none">
+                            </p>
+                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
                                 Align Stakeholders & Deliver Results
-                            </li>
-                        </ul>
+                            </p>
+                        </div>
                     </div>
 
                     <!-- What I Deliver -->
                     <div class="bg-dm-cyan p-card flex flex-col gap-3">
                         <h3 class="font-haas-display font-bold text-heading-xs text-dm-white">What I Deliver</h3>
-                        <ul class="flex flex-col gap-2">
-                            <li class="font-haas-display font-medium text-heading-xs text-dm-white leading-none">
+                        <div class="flex flex-col gap-2">
+                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
                                 Content That Performs
-                            </li>
-                            <li class="font-haas-display font-medium text-heading-xs text-dm-white leading-none">
+                            </p>
+                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
                                 Projects On Time & On Budget
-                            </li>
-                            <li class="font-haas-display font-medium text-heading-xs text-dm-white leading-none">
+                            </p>
+                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
                                 Clear, Actionable Comms
-                            </li>
-                        </ul>
+                            </p>
+                        </div>
                     </div>
 
                     <!-- What To Expect -->
                     <div class="bg-dm-cyan p-card flex flex-col gap-3">
                         <h3 class="font-haas-display font-bold text-heading-xs text-dm-white">What To Expect</h3>
-                        <ul class="flex flex-col gap-2">
-                            <li class="font-haas-display font-medium text-heading-xs text-dm-white leading-none">
+                        <div class="flex flex-col gap-2">
+                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
                                 Sharp Thinking
-                            </li>
-                            <li class="font-haas-display font-medium text-heading-xs text-dm-white leading-none">
+                            </p>
+                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
                                 Calm Leadership
-                            </li>
-                            <li class="font-haas-display font-medium text-heading-xs text-dm-white leading-none">
+                            </p>
+                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
                                 No-Fluff Delivery
-                            </li>
-                        </ul>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -157,16 +157,34 @@ get_header(); ?>
                         
                 ?>
                 <div
-                    class="border-b-[3px] border-dm-black py-6 flex flex-col md:flex-row items-start md:items-center justify-between group cursor-pointer hover:px-4 transition-all">
-                    <a href="<?php the_permalink(); ?>"
-                        class="font-haas-display font-medium text-display-lg text-dm-black group-hover:text-dm-cyan transition-colors">
-                        <?php echo esc_html($display_title); ?>
-                    </a>
+                    class="work-item border-b-[3px] border-dm-black py-6 flex flex-col md:flex-row items-start md:items-center justify-between group cursor-pointer hover:px-4 transition-all relative overflow-hidden">
+                    
+                    <!-- Animated Background -->
+                    <div class="work-background absolute inset-0 bg-dm-cyan transform scale-y-0 origin-top pointer-events-none"></div>
+                    
+                    <!-- Title Container -->
+                    <div class="work-title-container relative z-10 flex-1">
+                        <!-- Original Title -->
+                        <a href="<?php the_permalink(); ?>"
+                            class="work-title font-haas-display font-medium text-display-lg text-dm-black group-hover:text-dm-black transition-colors block">
+                            <?php echo esc_html($display_title); ?>
+                        </a>
+                        
+                        <!-- Duplicate Title for Animation (Hidden by default) -->
+                        <a href="<?php the_permalink(); ?>"
+                            class="work-title-duplicate font-haas-display font-medium text-display-lg text-dm-black absolute top-0 left-0 opacity-0 pointer-events-none"
+                            aria-hidden="true">
+                            <?php echo esc_html($display_title); ?>
+                        </a>
+                    </div>
 
-                    <?php 
-                    // Include highlights badges component
-                    get_template_part('parts/highlights-badges', null, ['post_id' => get_the_ID()]); 
-                    ?>
+                    <!-- Highlights Container -->
+                    <div class="work-highlights relative z-10">
+                        <?php 
+                        // Include highlights badges component
+                        get_template_part('parts/highlights-badges', null, ['post_id' => get_the_ID()]); 
+                        ?>
+                    </div>
                 </div>
                 <?php 
                     endwhile;

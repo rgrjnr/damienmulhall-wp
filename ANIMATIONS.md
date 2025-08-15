@@ -8,6 +8,7 @@ This theme includes comprehensive GSAP animations with ScrollTrigger and SplitTe
 - **Scroll-Triggered Animations**: Elements fade in, scale in, and slide in as they enter the viewport
 - **Interactive Animations**: Button and image hover effects
 - **Page Transitions**: Smooth fade transitions between pages
+- **Smooth Scrolling**: GSAP ScrollSmoother with fallback to CSS smooth scroll
 - **Performance Optimized**: Uses `will-change` and respects `prefers-reduced-motion`
 
 ## How to Use
@@ -45,6 +46,23 @@ Add these classes to any element to trigger specific animations:
 </div>
 ```
 
+### Smooth Scrolling Setup
+
+For optimal smooth scrolling with ScrollSmoother, wrap your content in the required structure:
+
+```html
+<div id="smooth-wrapper">
+  <div id="smooth-content">
+    <!-- Your page content here -->
+    <header>...</header>
+    <main>...</main>
+    <footer>...</footer>
+  </div>
+</div>
+```
+
+If you don't use this structure, the system will fallback to CSS smooth scrolling.
+
 ### JavaScript API
 
 Access the animation system through the global `window.themeAnimations` object:
@@ -72,6 +90,11 @@ window.themeAnimations.killAnimation('my-animation');
 
 // Refresh ScrollTrigger (useful after dynamic content changes)
 window.themeAnimations.refresh();
+
+// Smooth scrolling methods
+window.themeAnimations.scrollTo('.my-section');
+window.themeAnimations.scrollToTop();
+window.themeAnimations.getSmoother(); // Get ScrollSmoother instance
 ```
 
 ### Custom ScrollTrigger Animations
@@ -158,6 +181,7 @@ The animations respect the `prefers-reduced-motion` media query. When users have
 - GSAP 3.13.0+
 - ScrollTrigger plugin
 - SplitText plugin
+- ScrollSmoother plugin (with CSS fallback)
 
 ## Troubleshooting
 
@@ -178,6 +202,13 @@ The animations respect the `prefers-reduced-motion` media query. When users have
 1. Ensure text content exists before splitting
 2. Check for proper CSS overflow handling
 3. Verify SplitText plugin is registered
+
+### Smooth scrolling issues?
+
+1. Check if ScrollSmoother plugin is available
+2. Ensure proper HTML structure with `#smooth-wrapper` and `#smooth-content`
+3. Verify ScrollSmoother is registered: `gsap.registerPlugin(ScrollSmoother)`
+4. Fallback to CSS smooth scroll if ScrollSmoother is not available
 
 ## Examples
 
