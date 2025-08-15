@@ -143,18 +143,11 @@ get_header(); ?>
                         // Get highlights for this case study
                         $highlights = get_the_terms(get_the_ID(), 'highlight');
                         
-                        // Define theme color mapping for Tailwind classes
-                        $theme_colors = [
-                            'primary' => 'dm-cyan',
-                            'secondary' => 'dm-purple',
-                            'accent' => 'dm-yellow',
-                            'success' => 'dm-green',
-                            'warning' => 'dm-orange',
-                            'danger' => 'dm-red',
-                            'info' => 'dm-blue',
-                            'light' => 'dm-white',
-                            'dark' => 'dm-black'
-                        ];
+                        // Include the highlights circles component
+                        require_once get_template_directory() . '/parts/highlights-circles.php';
+                        
+                        // Format highlights for the component
+                        $highlights_data = rgrjnr_format_highlight_terms($highlights);
                 ?>
                 <div
                     class="border-b-[3px] border-dm-black py-6 flex flex-col md:flex-row items-start md:items-center justify-between group cursor-pointer hover:px-4 transition-all">
@@ -162,77 +155,12 @@ get_header(); ?>
                         class="font-haas-display font-medium text-display-lg text-dm-black group-hover:text-dm-cyan transition-colors">
                         <?php echo esc_html($display_title); ?>
                     </a>
-                    <div class="flex gap-3 mt-4 md:mt-0">
-                        <?php if ($highlights && !is_wp_error($highlights)) : ?>
-                            <!-- Always show black circle first -->
-                            <div class="w-16 h-16 lg:w-20 lg:h-20 bg-dm-black rounded-full flex items-center justify-center">
-                                <?php 
-                                // Get the first highlight's icon if available
-                                if (!empty($highlights[0])) {
-                                    $icon_id = carbon_get_term_meta($highlights[0]->term_id, 'rgrjnr_highlight_icon');
-                                    if ($icon_id) {
-                                        $icon_url = wp_get_attachment_url($icon_id);
-                                        if ($icon_url && pathinfo($icon_url, PATHINFO_EXTENSION) === 'svg') {
-                                            // For SVG, we can embed it directly
-                                            $svg_content = file_get_contents($icon_url);
-                                            if ($svg_content) {
-                                                echo '<div class="w-10 h-10 lg:w-12 lg:h-12 text-dm-white">';
-                                                // Clean and output SVG with currentColor
-                                                $svg_content = preg_replace('/<svg/', '<svg class="w-full h-full" fill="currentColor"', $svg_content, 1);
-                                                echo $svg_content;
-                                                echo '</div>';
-                                            }
-                                        } else {
-                                            // For other image formats
-                                            echo '<img src="' . esc_url($icon_url) . '" alt="" class="w-10 h-10 lg:w-12 lg:h-12 object-contain filter invert">';
-                                        }
-                                    }
-                                }
-                                ?>
-                            </div>
-                            
-                            <?php 
-                            // Display up to 2 more circles based on highlight theme colors
-                            $count = 0;
-                            foreach ($highlights as $highlight) : 
-                                if ($count >= 2) break;
-                                $theme_color = carbon_get_term_meta($highlight->term_id, 'rgrjnr_highlight_theme_color');
-                                $color_class = isset($theme_colors[$theme_color]) ? $theme_colors[$theme_color] : 'dm-cyan';
-                                $count++;
-                            ?>
-                            <div class="w-16 h-16 lg:w-20 lg:h-20 bg-<?php echo esc_attr($color_class); ?> rounded-full flex items-center justify-center">
-                                <?php 
-                                // Get highlight icon if available
-                                $icon_id = carbon_get_term_meta($highlight->term_id, 'rgrjnr_highlight_icon');
-                                if ($icon_id) {
-                                    $icon_url = wp_get_attachment_url($icon_id);
-                                    if ($icon_url && pathinfo($icon_url, PATHINFO_EXTENSION) === 'svg') {
-                                        // For SVG, embed directly
-                                        $svg_content = file_get_contents($icon_url);
-                                        if ($svg_content) {
-                                            $text_color = ($color_class === 'dm-white' || $color_class === 'dm-yellow') ? 'text-dm-black' : 'text-dm-white';
-                                            echo '<div class="w-10 h-10 lg:w-12 lg:h-12 ' . $text_color . '">';
-                                            // Clean and output SVG with currentColor
-                                            $svg_content = preg_replace('/<svg/', '<svg class="w-full h-full" fill="currentColor"', $svg_content, 1);
-                                            echo $svg_content;
-                                            echo '</div>';
-                                        }
-                                    } else {
-                                        // For other image formats
-                                        $filter = ($color_class === 'dm-white' || $color_class === 'dm-yellow') ? '' : 'filter invert';
-                                        echo '<img src="' . esc_url($icon_url) . '" alt="' . esc_attr($highlight->name) . '" class="w-10 h-10 lg:w-12 lg:h-12 object-contain ' . $filter . '">';
-                                    }
-                                }
-                                ?>
-                            </div>
-                            <?php endforeach; ?>
-                        <?php else : ?>
-                            <!-- Default circles if no highlights -->
-                            <div class="w-16 h-16 lg:w-20 lg:h-20 bg-dm-black rounded-full"></div>
-                            <div class="w-16 h-16 lg:w-20 lg:h-20 bg-dm-cyan rounded-full"></div>
-                            <div class="w-16 h-16 lg:w-20 lg:h-20 bg-dm-purple rounded-full"></div>
-                        <?php endif; ?>
-                    </div>
+                    <?php 
+                    // Display highlight circles
+                    rgrjnr_display_highlight_circles($highlights_data, [
+                        'container_class' => 'mt-4 md:mt-0'
+                    ]);
+                    ?>
                 </div>
                 <?php 
                     endwhile;
@@ -241,7 +169,8 @@ get_header(); ?>
                 ?>
                 <div class="py-12 text-center">
                     <p class="font-haas-display font-medium text-heading-md text-dm-black">No case studies found.</p>
-                    <p class="font-haas-text text-body-lg text-dm-black mt-2">Add case studies in the WordPress admin to display them here.</p>
+                    <p class="font-haas-text text-body-lg text-dm-black mt-2">Add case studies in the WordPress admin to
+                        display them here.</p>
                 </div>
                 <?php endif; ?>
             </div>
@@ -308,9 +237,16 @@ get_header(); ?>
                     </h2>
 
                     <div class="flex items-center gap-4">
-                        <div class="w-7 h-7 rounded-full border-2 border-dm-black"></div>
-                        <div class="w-7 h-7 bg-dm-black transform rotate-45"></div>
-                        <div class="w-7 h-7 bg-dm-black"></div>
+                        <svg width="111" height="30" viewBox="0 0 111 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13.6677" cy="14.7312" r="13.6677" fill="#201A1E" />
+                            <rect x="41.0036" y="23.4292" width="32.8025" height="8.20062"
+                                transform="rotate(-45 41.0036 23.4292)" fill="#201A1E" />
+                            <rect x="64.198" y="29.2278" width="32.8025" height="8.20062"
+                                transform="rotate(-135 64.198 29.2278)" fill="#201A1E" />
+                            <rect x="83.6646" y="1.06348" width="27.3354" height="27.3354" fill="#201A1E" />
+                        </svg>
+
                     </div>
 
                     <div class="flex justify-end">
