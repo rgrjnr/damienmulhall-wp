@@ -1,0 +1,7 @@
+node_modules/
+vendor/
+assets/dist/
+*.min.js
+*.min.css
+composer.lock
+package-lock.json

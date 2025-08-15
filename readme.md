@@ -1,6 +1,7 @@
 # Wordpress Starter Theme
 
 ## SCSS
+
 Running SCSS changes
 
     sass assets/scss/stylesheet.scss assets/css/stylesheet.css -w --style=compressed

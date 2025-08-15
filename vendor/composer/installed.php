@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '4e796dd78d2f33823c68ae179505fd89e469654a',
+        'reference' => 'b71437242df5c6623e44d0d7d9e64a9ef8653715',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '4e796dd78d2f33823c68ae179505fd89e469654a',
+            'reference' => 'b71437242df5c6623e44d0d7d9e64a9ef8653715',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -27,6 +27,15 @@
             'install_path' => __DIR__ . '/../htmlburger/carbon-fields',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'php-stubs/wordpress-stubs' => array(
+            'pretty_version' => 'v6.8.2',
+            'version' => '6.8.2.0',
+            'reference' => '9c8e22e437463197c1ec0d5eaa9ddd4a0eb6d7f8',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../php-stubs/wordpress-stubs',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
     ),
 );

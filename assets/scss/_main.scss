@@ -1,0 +1,47 @@
+// Base styles and variables
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-primary: #f300c2;
+  --color-primary-dark: #af078d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+// Loading states
+body.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+body.loaded {
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}

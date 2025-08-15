@@ -1,0 +1,33 @@
+{
+  "files": {
+    "associations": ["*.php", "*.phtml"],
+    "maxSize": 5000000,
+    "exclude": [
+      "**/vendor/**/*.php",
+      "**/node_modules/**",
+      "**/.git/**",
+      "**/.svn/**",
+      "**/.hg/**",
+      "**/CVS/**",
+      "**/.DS_Store/**",
+      "**/Thumbs.db/**"
+    ]
+  },
+  "environment": {
+    "phpVersion": "8.0.0",
+    "includePaths": [
+      "./vendor/php-stubs/wordpress-stubs"
+    ]
+  },
+  "diagnostics": {
+    "enable": true,
+    "run": "onType",
+    "undefinedTypes": false,
+    "undefinedFunctions": false,
+    "undefinedConstants": false,
+    "undefinedClassConstants": false,
+    "undefinedMethods": false,
+    "undefinedProperties": false,
+    "undefinedVariables": true
+  }
+}
