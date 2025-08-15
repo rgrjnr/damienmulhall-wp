@@ -46,3 +46,20 @@ function rgrjnr_enqueue_assets()
 }
 
 add_action('wp_enqueue_scripts', 'rgrjnr_enqueue_assets');
+
+/**
+ * Disable Gutenberg editor
+ */
+// Disable Gutenberg for all post types
+add_filter('use_block_editor_for_post', '__return_false', 10);
+
+// Disable Gutenberg for widgets
+add_filter('use_widgets_block_editor', '__return_false');
+
+// Remove Gutenberg CSS from frontend
+add_action('wp_print_styles', function() {
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
+    wp_dequeue_style('wc-blocks-style'); // Remove WooCommerce block CSS if present
+    wp_dequeue_style('global-styles'); // Remove theme.json related styles
+}, 100);

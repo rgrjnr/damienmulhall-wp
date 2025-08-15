@@ -30,16 +30,16 @@ class RGRJNR_Component_Loader {
      */
     private static $components = [
         'post-types' => [
-            'team.php'
+            'case-study.php'
         ],
         'taxonomies' => [
-            'team-departments.php'
+            'highlights.php'
         ],
         'fields' => [
-            'team-fields.php'
+            'highlights-fields.php',
+            'case-study-fields.php'
         ],
         'blocks' => [
-            'team-showcase.php'
         ],
         'theme-options' => [
             'general.php'
