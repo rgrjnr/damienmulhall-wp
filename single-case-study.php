@@ -26,7 +26,7 @@ if (!$highlights || is_wp_error($highlights)) {
         <section class="w-full max-w-page mx-auto px-6">
             <div class="flex flex-col gap-8">
                 <!-- Back Link -->
-                <a href="<?php echo home_url('/#work'); ?>"
+                <a href="<?php echo home_url(); ?>"
                     class="inline-flex items-center gap-2 font-haas-display font-medium text-body-lg text-dm-black hover:text-dm-cyan transition-colors group">
                     <svg class="w-5 h-5 transform rotate-180 group-hover:-translate-x-1 transition-transform"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -88,12 +88,7 @@ if (!$highlights || is_wp_error($highlights)) {
                     <div class="bg-dm-black p-card sticky top-6">
                         <h3 class="font-haas-display font-bold text-heading-sm text-dm-white mb-6">
                             <div>Project Details</div>
-                            <div>
-                                <?php 
-                        $short_title = carbon_get_post_meta(get_the_ID(), 'rgrjnr_short_title');
-                        if ($short_title) : 
-                        echo esc_html($short_title);  endif; ?>
-                            </div>
+
                         </h3>
 
                         <!-- Meta Information -->
@@ -183,20 +178,15 @@ if (!$highlights || is_wp_error($highlights)) {
                         <h2 class="font-haas-display font-bold text-heading-lg text-dm-white mb-3">
                             Ready to start your project?
                         </h2>
-                        <p class="font-haas-text text-body-lg text-dm-white/90">
+                        <div class="font-haas-text text-body-lg text-dm-white/90">
                             Let's discuss how I can help bring your ideas to life.
-                        </p>
+                        </div>
                     </div>
-                    <a href="mailto:contact@damienmulhall.com"
-                        class="bg-dm-yellow rounded-full px-9 py-3 flex items-center gap-4 hover:bg-opacity-90 transition-all group flex-shrink-0">
-                        <span class="font-haas-display font-medium text-display-sm text-dm-black">Get in touch</span>
-                        <svg class="w-16 h-16 text-dm-black group-hover:translate-x-2 transition-transform"
-                            viewBox="0 0 64 64" fill="none">
-                            <circle cx="32" cy="32" r="31" stroke="currentColor" stroke-width="2" />
-                            <path d="M22 32H42M42 32L34 24M42 32L34 40" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
+                    <?php
+                    $label = 'Get in touch';
+                    $link = 'mailto:contact@damienmulhall.com';
+                    include get_template_directory() . '/parts/animated-button.php';
+                    ?>
                 </div>
             </div>
         </section>

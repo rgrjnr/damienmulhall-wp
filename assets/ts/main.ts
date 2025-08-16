@@ -39,6 +39,10 @@ class ThemeAnimations {
     this.setupScrollAnimations();
     this.setupPageTransitions();
     this.setupInteractiveAnimations();
+    this.setupPopstateHandler();
+
+    // Handle initial anchor link if present in URL
+    this.handleInitialAnchorLink();
 
     // Refresh ScrollTrigger after all animations are set up
     ScrollTrigger.refresh();
@@ -71,9 +75,6 @@ class ThemeAnimations {
   private setupCSSSmoothScroll(): void {
     // Add smooth scroll behavior to html element
     document.documentElement.style.scrollBehavior = 'smooth';
-
-    // Handle smooth scroll for anchor links
-    this.setupSmoothAnchorLinks();
   }
 
   // Setup smooth scrolling for anchor links
@@ -90,10 +91,16 @@ class ThemeAnimations {
           const targetElement = document.querySelector(href);
 
           if (targetElement) {
-            targetElement.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start',
-            });
+            if (this.smoother) {
+              // Use ScrollSmoother for smooth scrolling
+              this.smoother.scrollTo(targetElement, true, 'top');
+            } else {
+              // Fallback to native smooth scroll
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }
           }
         }
       });
@@ -241,37 +248,10 @@ class ThemeAnimations {
     this.crowLoader = document.getElementById('crow-loader') as HTMLElement;
     this.crowVideo = document.getElementById('crow-video') as HTMLVideoElement;
 
-    // Smooth page transitions
-    const links = document.querySelectorAll(
-      'a[href]:not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"])'
-    );
+    // Setup link listeners
+    this.attachLinkListeners();
 
-    links.forEach((link) => {
-      link.addEventListener('click', (e) => {
-        const target = e.target as HTMLAnchorElement;
-        const url = target.href;
-
-        // Only handle internal links
-        if (url && url.includes(window.location.host)) {
-          e.preventDefault();
-
-          // Show crow loader
-          this.showCrowLoader();
-
-          // Fade out animation
-          gsap.to('body', {
-            opacity: 0,
-            duration: 0.3,
-            ease: 'power2.inOut',
-            onComplete: () => {
-              window.location.href = url;
-            },
-          });
-        }
-      });
-    });
-
-    // Page load animation
+    // Initial page load animation
     gsap.fromTo(
       'body',
       { opacity: 0 },
@@ -281,10 +261,179 @@ class ThemeAnimations {
         ease: 'power2.out',
         onComplete: () => {
           document.body.classList.add('page-loaded');
-          this.hideCrowLoader();
         },
       }
     );
+  }
+
+  // Attach listeners to all internal links
+  private attachLinkListeners(): void {
+    // Handle regular internal links for AJAX transitions
+    const links = document.querySelectorAll(
+      'a[href]:not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"]):not([target="_blank"])'
+    );
+
+    links.forEach((link) => {
+      link.addEventListener('click', (e) => this.handleLinkClick(e));
+    });
+
+    // Handle anchor links for smooth scrolling
+    this.setupSmoothAnchorLinks();
+  }
+
+  // Handle internal link clicks with AJAX
+  private handleLinkClick(e: Event): void {
+    const target = e.currentTarget as HTMLAnchorElement;
+    const url = target.href;
+    const href = target.getAttribute('href');
+
+    // Double-check: don't handle anchor links (they should be handled by setupSmoothAnchorLinks)
+    if (href && href.startsWith('#')) {
+      return;
+    }
+
+    // Only handle internal links
+    if (url && url.includes(window.location.host) && !target.classList.contains('no-ajax')) {
+      e.preventDefault();
+      this.loadPage(url);
+    }
+  }
+
+  // Load page via AJAX
+  private async loadPage(url: string): Promise<void> {
+    // Extra safeguard: don't show crow loader for anchor links
+    if (url.includes('#')) {
+      console.warn('Attempted to load anchor link via AJAX, this should not happen');
+      return;
+    }
+
+    // Show crow loader immediately
+    this.showCrowLoader();
+
+    try {
+      // Fetch the new page
+      const response = await fetch(url);
+      if (!response.ok) throw new Error('Failed to fetch page');
+
+      const html = await response.text();
+
+      // Parse the HTML
+      const parser = new DOMParser();
+      const newDoc = parser.parseFromString(html, 'text/html');
+
+      // Get the main content areas to replace
+      const newContent =
+        newDoc.querySelector('#smooth-content') || newDoc.querySelector('main') || newDoc.body;
+      const currentContent =
+        document.querySelector('#smooth-content') ||
+        document.querySelector('main') ||
+        document.body;
+
+      // Get new title
+      const newTitle = newDoc.querySelector('title')?.textContent || '';
+
+      // Fade out current content
+      await gsap.to(currentContent, {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'power2.inOut',
+      });
+
+      // Replace content
+      if (currentContent && newContent) {
+        currentContent.innerHTML = newContent.innerHTML;
+      }
+
+      // Update page title
+      if (newTitle) {
+        document.title = newTitle;
+      }
+
+      // Update URL in browser
+      window.history.pushState({}, '', url);
+
+      // Scroll to top instantly (no animation)
+      if (this.smoother) {
+        // If using ScrollSmoother, jump to top instantly
+        this.smoother.scrollTo(0, false);
+      } else {
+        // Otherwise use native instant scroll
+        window.scrollTo(0, 0);
+      }
+
+      // Reinitialize components
+      this.reinitializeAfterLoad();
+
+      // Fade in new content
+      await gsap.fromTo(
+        currentContent,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 0.5,
+          ease: 'power2.out',
+        }
+      );
+
+      // Hide loader after content is visible
+      this.hideCrowLoader();
+    } catch (error) {
+      console.error('Error loading page:', error);
+      // Fallback to normal navigation if AJAX fails
+      this.hideCrowLoader();
+      window.location.href = url;
+    }
+  }
+
+  // Reinitialize components after AJAX load
+  private reinitializeAfterLoad(): void {
+    // Re-attach link listeners (this includes anchor links)
+    this.attachLinkListeners();
+
+    // Reinitialize animations for new content
+    this.setupTextAnimations();
+    this.setupScrollAnimations();
+    this.setupInteractiveAnimations();
+
+    // Refresh ScrollTrigger
+    ScrollTrigger.refresh();
+
+    // If smooth scroll is enabled, update it
+    if (this.smoother) {
+      this.smoother.content('#smooth-content');
+      this.smoother.refresh();
+    }
+
+    // Handle any anchor links in the URL after AJAX load
+    this.handleInitialAnchorLink();
+  }
+
+  // Handle browser back/forward buttons
+  private setupPopstateHandler(): void {
+    window.addEventListener('popstate', () => {
+      this.loadPage(window.location.href);
+    });
+  }
+
+  // Handle initial anchor link in URL (for direct links to sections)
+  private handleInitialAnchorLink(): void {
+    const hash = window.location.hash;
+    if (hash) {
+      // Small delay to ensure content is fully loaded
+      window.setTimeout(() => {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+          if (this.smoother) {
+            this.smoother.scrollTo(targetElement, true, 'top');
+          } else {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        }
+      }, 100);
+    }
   }
 
   // Crow loader methods
@@ -343,8 +492,37 @@ class ThemeAnimations {
       });
     });
 
+    // Continuous rotation animation for .animate-rotate elements
+    this.setupRotateAnimations();
+
     // Work item hover animations
     this.setupWorkItemAnimations();
+  }
+
+  // Continuous rotation animation for .animate-rotate elements
+  private setupRotateAnimations(): void {
+    const rotateElements = document.querySelectorAll('.animate-rotate');
+
+    rotateElements.forEach((element) => {
+      // Set transform origin to center for proper rotation
+      gsap.set(element, {
+        transformOrigin: 'center center',
+      });
+
+      // Create timeline for 90deg rotation with pause
+      const tl = gsap.timeline({ repeat: -1 });
+
+      tl.to(element, {
+        rotation: '+=90',
+        scale: 0.9,
+        duration: 0.5,
+        ease: 'power2.inOut',
+      }).to(element, {
+        scale: 1,
+        duration: 3,
+        ease: 'power2.out',
+      }); // Scale back to 1 during pause
+    });
   }
 
   // Work item hover animations

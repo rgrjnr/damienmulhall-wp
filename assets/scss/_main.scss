@@ -166,3 +166,72 @@ body.loaded {
     }
   }
 }
+
+.btn-animated {
+  overflow: hidden;
+  background-color: $dm-yellow;
+  border-radius: 4rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 2.5rem 2rem;
+
+  .btn-labels {
+    position: relative;
+    z-index: 1;
+
+    .btn-label {
+      padding-block: 0.5rem;
+      pointer-events: none;
+      display: block;
+      transition: transform 0.3s ease;
+
+      &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(100%);
+      }
+    }
+  }
+
+  .btn-arrows {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    .btn-arrow {
+      top: 0;
+      left: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-arrow:nth-child(2) {
+      position: absolute;
+      transform: translate(-100%, 100%);
+    }
+  }
+
+  &:hover {
+    .btn-labels {
+      .btn-label:nth-child(1) {
+        transform: translateY(-100%);
+      }
+
+      .btn-label:nth-child(2) {
+        transform: translateY(0);
+      }
+    }
+
+    .btn-arrows {
+      .btn-arrow:nth-child(1) {
+        transform: translate(100%, -100%);
+      }
+
+      .btn-arrow:nth-child(2) {
+        transform: translate(0, 0);
+      }
+    }
+  }
+}

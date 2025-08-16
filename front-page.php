@@ -103,7 +103,7 @@ get_header(); ?>
                 <div class="bg-dm-cyan p-content flex flex-col lg:flex-row items-center justify-between gap-8">
                     <div class="flex gap-4 items-center">
                         <svg width="412" height="118" viewBox="0 0 412 118" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                            xmlns="http://www.w3.org/2000/svg" class="max-w-full h-auto">
                             <path opacity="0.4"
                                 d="M59 9.00024C45.7392 9.00024 33.0215 14.2681 23.6447 23.6449C14.2678 33.0217 9 45.7394 9 59.0002C9 72.2611 14.2678 84.9788 23.6447 94.3556C33.0215 103.732 45.7392 109 59 109C60.6049 108.992 62.1732 108.52 63.5164 107.641C64.8596 106.763 65.9205 105.516 66.5718 104.049C67.2231 102.582 67.4369 100.958 67.1877 99.3727C66.9384 97.7873 66.2366 96.3076 65.1667 95.1114C64.0863 93.9182 63.3773 92.436 63.1263 90.8461C62.8753 89.2562 63.0933 87.6276 63.7536 86.1597C64.4138 84.6918 65.4877 83.4482 66.8438 82.5812C68.1999 81.7141 69.7794 81.2613 71.3889 81.278H81.2222C88.5893 81.278 95.6547 78.3514 100.864 73.1421C106.073 67.9328 109 60.8674 109 53.5002C109 28.8891 86.7778 9.00024 59 9.00024ZM28.4444 59.0002C26.7963 59.0002 25.1851 58.5115 23.8147 57.5958C22.4443 56.6801 21.3762 55.3787 20.7454 53.8559C20.1147 52.3332 19.9497 50.6577 20.2712 49.0412C20.5928 47.4246 21.3864 45.9398 22.5519 44.7744C23.7173 43.6089 25.2022 42.8152 26.8187 42.4937C28.4352 42.1722 30.1108 42.3372 31.6335 42.9679C33.1562 43.5986 34.4577 44.6668 35.3734 46.0372C36.289 47.4076 36.7778 49.0187 36.7778 50.6669C36.7778 52.877 35.8998 54.9967 34.337 56.5595C32.7742 58.1223 30.6546 59.0002 28.4444 59.0002ZM45.1111 36.778C43.4629 36.778 41.8518 36.2893 40.4814 35.3736C39.111 34.4579 38.0428 33.1564 37.4121 31.6337C36.7814 30.111 36.6164 28.4354 36.9379 26.8189C37.2594 25.2024 38.0531 23.7176 39.2186 22.5521C40.384 21.3867 41.8688 20.593 43.4854 20.2715C45.1019 19.9499 46.7774 20.115 48.3001 20.7457C49.8229 21.3764 51.1243 22.4445 52.04 23.8149C52.9557 25.1853 53.4444 26.7965 53.4444 28.4447C53.4444 30.6548 52.5665 32.7744 51.0037 34.3372C49.4409 35.9 47.3212 36.778 45.1111 36.778ZM72.8889 36.778C71.2407 36.778 69.6295 36.2893 68.2591 35.3736C66.8887 34.4579 65.8206 33.1564 65.1899 31.6337C64.5592 30.111 64.3941 28.4354 64.7157 26.8189C65.0372 25.2024 65.8309 23.7176 66.9963 22.5521C68.1618 21.3867 69.6466 20.593 71.2631 20.2715C72.8796 19.9499 74.5552 20.115 76.0779 20.7457C77.6006 21.3764 78.9021 22.4445 79.8178 23.8149C80.7335 25.1853 81.2222 26.7965 81.2222 28.4447C81.2222 30.6548 80.3442 32.7744 78.7814 34.3372C77.2186 35.9 75.099 36.778 72.8889 36.778ZM89.5556 59.0002C87.9074 59.0002 86.2962 58.5115 84.9258 57.5958C83.5554 56.6801 82.4873 55.3787 81.8566 53.8559C81.2258 52.3332 81.0608 50.6577 81.3823 49.0412C81.7039 47.4246 82.4976 45.9398 83.663 44.7744C84.8284 43.6089 86.3133 42.8152 87.9298 42.4937C89.5463 42.1722 91.2219 42.3372 92.7446 42.9679C94.2673 43.5986 95.5688 44.6668 96.4845 46.0372C97.4001 47.4076 97.8889 49.0187 97.8889 50.6669C97.8889 52.877 97.0109 54.9967 95.4481 56.5595C93.8853 58.1223 91.7657 59.0002 89.5556 59.0002Z"
                                 fill="#E1DFD0" />
@@ -177,12 +177,12 @@ get_header(); ?>
                     <div class="work-title-container relative z-10 flex-1">
                         <!-- Original Title -->
                         <div
-                            class="work-title font-haas-display font-medium text-display-lg text-dm-black transition-colors block">
+                            class="work-title leading-none font-haas-display font-medium text-display-sm md:text-display-lg text-dm-black transition-colors block">
                             <?php echo esc_html($display_title); ?>
                         </div>
 
                         <!-- Duplicate Title for Animation (Hidden by default) -->
-                        <div class="work-title-duplicate font-haas-display font-medium text-display-lg text-dm-white absolute top-0 left-0 opacity-0 pointer-events-none ml-6"
+                        <div class="work-title-duplicate leading-none font-haas-display font-medium text-display-sm md:text-display-lg text-dm-white absolute top-0 left-0 opacity-0 pointer-events-none ml-6"
                             aria-hidden="true">
                             <?php echo esc_html($display_title); ?>
                         </div>
@@ -287,34 +287,30 @@ get_header(); ?>
         <section id="contact" class="w-full max-w-page mx-auto px-6 mt-section">
             <div class="border-t-[3px] border-dm-black pt-12">
                 <div class="flex flex-col gap-5">
-                    <h2 class="font-haas-text font-bold text-display-md text-dm-black leading-none max-w-4xl">
+                    <h2
+                        class="font-haas-text font-bold text-display-sm md:text-display-md text-dm-black leading-none max-w-4xl">
                         Work with me, and see how smooth, focused projects really feel.
                     </h2>
 
                     <div class="flex items-center gap-4">
-                        <svg width="111" height="30" viewBox="0 0 111 30" fill="none"
+                        <svg width="111" height="29" viewBox="0 0 111 29" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="13.6677" cy="14.7312" r="13.6677" fill="#201A1E" />
-                            <rect x="41.0036" y="23.4292" width="32.8025" height="8.20062"
-                                transform="rotate(-45 41.0036 23.4292)" fill="#201A1E" />
-                            <rect x="64.198" y="29.2278" width="32.8025" height="8.20062"
-                                transform="rotate(-135 64.198 29.2278)" fill="#201A1E" />
-                            <rect x="83.6646" y="1.06348" width="27.3354" height="27.3354" fill="#201A1E" />
+                            <circle cx="13.6677" cy="14.497" r="13.6677" fill="#201A1E" />
+                            <path
+                                d="M69.9971 5.79883L61.2979 14.4971L69.9961 23.1953L64.1982 28.9941L55.5 20.2959L46.8018 28.9941L41.0039 23.1953L49.7012 14.4971L41.0029 5.79883L46.8018 0L55.5 8.69824L64.1982 0L69.9971 5.79883Z"
+                                fill="#201A1E" class="animate-rotate" />
+                            <rect x="83.665" y="0.829346" width="27.3354" height="27.3354" fill="#201A1E" />
                         </svg>
+
 
                     </div>
 
-                    <div class="flex justify-end">
-                        <a href="mailto:contact@damienmulhall.com"
-                            class="bg-dm-yellow rounded-full px-9 py-3 flex items-center gap-4 hover:bg-opacity-90 transition-all group">
-                            <span class="font-haas-display font-medium text-display-sm text-dm-black">Let's work</span>
-                            <svg class="w-16 h-16 text-dm-black group-hover:translate-x-2 transition-transform"
-                                viewBox="0 0 64 64" fill="none">
-                                <circle cx="32" cy="32" r="31" stroke="currentColor" stroke-width="2" />
-                                <path d="M22 32H42M42 32L34 24M42 32L34 40" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
+                    <div class="flex md:justify-end">
+                        <?php
+                        $label = 'Let\'s work';
+                        $link = 'mailto:contact@damienmulhall.com';
+                        include get_template_directory() . '/parts/animated-button.php';
+                        ?>
                     </div>
                 </div>
             </div>
