@@ -19,11 +19,11 @@ module.exports = {
         'dm-yellow': '#e3bf30',
       },
       fontFamily: {
-        'haas-display': ['Neue Haas Grotesk Display Pro', 'sans-serif'],
-        'haas-text': ['Neue Haas Grotesk Text Pro', 'sans-serif'],
+        'haas-display': ['neue-haas-grotesk-display', 'sans-serif'],
+        'haas-text': ['neue-haas-grotesk-text', 'sans-serif'],
       },
       maxWidth: {
-        'page': '1120px',
+        page: '1120px',
       },
       fontSize: {
         'display-xl': '84px',
@@ -39,9 +39,9 @@ module.exports = {
         'body-sm': '14px',
       },
       spacing: {
-        'section': '96px',
-        'content': '72px',
-        'card': '48px',
+        section: '96px',
+        content: '72px',
+        card: '48px',
       },
     },
   },
