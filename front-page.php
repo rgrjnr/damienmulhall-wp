@@ -18,7 +18,7 @@ get_header(); ?>
             <div class="flex flex-col gap-3">
                 <!-- Main About Block -->
                 <div class="bg-dm-cyan p-content">
-                    <p class="font-haas-text font-medium text-heading-lg text-dm-white leading-normal">
+                    <p class="font-haas-text font-medium text-heading-md md:text-heading-lg text-dm-white leading-normal">
                         My background is in media production, so I naturally gravitate toward structure, story, and the
                         bigger picture.
                         I'm not tied to a single methodology or buzzword. What matters is making things happen—and
@@ -29,7 +29,7 @@ get_header(); ?>
 
                 <!-- Secondary About Block -->
                 <div class="bg-dm-cyan p-content flex items-end justify-between relative">
-                    <p class="font-haas-text font-medium text-body-lg text-dm-white max-w-md leading-normal">
+                    <p class="font-haas-text font-medium text-body-md md:text-body-lg text-dm-white max-w-md leading-normal">
                         I've helped launch podcasts with 100,000+ downloads, built internal playbooks that actually get
                         used,
                         and run campaigns across formats, teams, and time zones. But this isn't about the biggest
@@ -52,15 +52,15 @@ get_header(); ?>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <!-- What I Do -->
                     <div class="bg-dm-cyan p-card flex flex-col gap-3">
-                        <h3 class="font-haas-display font-bold text-heading-xs text-dm-white">What I Do</h3>
+                        <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">What I Do</h3>
                         <div class="flex flex-col gap-2">
-                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
+                            <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
                                 Lead Creative Projects End-to-End
                             </p>
-                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
+                            <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
                                 Translate Strategy into Execution
                             </p>
-                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
+                            <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
                                 Align Stakeholders & Deliver Results
                             </p>
                         </div>
@@ -68,15 +68,15 @@ get_header(); ?>
 
                     <!-- What I Deliver -->
                     <div class="bg-dm-cyan p-card flex flex-col gap-3">
-                        <h3 class="font-haas-display font-bold text-heading-xs text-dm-white">What I Deliver</h3>
+                        <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">What I Deliver</h3>
                         <div class="flex flex-col gap-2">
-                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
+                            <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
                                 Content That Performs
                             </p>
-                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
+                            <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
                                 Projects On Time & On Budget
                             </p>
-                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
+                            <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
                                 Clear, Actionable Comms
                             </p>
                         </div>
@@ -84,15 +84,15 @@ get_header(); ?>
 
                     <!-- What To Expect -->
                     <div class="bg-dm-cyan p-card flex flex-col gap-3">
-                        <h3 class="font-haas-display font-bold text-heading-xs text-dm-white">What To Expect</h3>
+                        <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">What To Expect</h3>
                         <div class="flex flex-col gap-2">
-                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
+                            <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
                                 Sharp Thinking
                             </p>
-                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
+                            <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
                                 Calm Leadership
                             </p>
-                            <p class="font-haas-display font-medium text-body-lg text-dm-white leading-none">
+                            <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
                                 No-Fluff Delivery
                             </p>
                         </div>
@@ -120,7 +120,7 @@ get_header(); ?>
                         </svg>
 
                     </div>
-                    <p class="font-haas-text font-medium text-body-lg text-dm-white max-w-md leading-normal">
+                    <p class="font-haas-text font-medium text-body-md md:text-body-lg text-dm-white max-w-md leading-normal">
                         I'm not the designer or the developer. I'm just the project manager who clears the path so they
                         can do
                         their best work—on time, on budget, and without the chaos.
@@ -177,12 +177,12 @@ get_header(); ?>
                     <div class="work-title-container relative z-10 flex-1">
                         <!-- Original Title -->
                         <div
-                            class="work-title leading-none font-haas-display font-medium text-display-sm md:text-display-lg text-dm-black transition-colors block">
+                            class="work-title leading-none font-haas-display font-medium text-heading-lg md:text-display-sm lg:text-display-lg text-dm-black transition-colors block">
                             <?php echo esc_html($display_title); ?>
                         </div>
 
                         <!-- Duplicate Title for Animation (Hidden by default) -->
-                        <div class="work-title-duplicate leading-none font-haas-display font-medium text-display-sm md:text-display-lg text-dm-white absolute top-0 left-0 opacity-0 pointer-events-none ml-6"
+                        <div class="work-title-duplicate leading-none font-haas-display font-medium text-heading-lg md:text-display-sm lg:text-display-lg text-dm-white absolute top-0 left-0 opacity-0 pointer-events-none ml-6"
                             aria-hidden="true">
                             <?php echo esc_html($display_title); ?>
                         </div>
@@ -202,8 +202,8 @@ get_header(); ?>
                 else : 
                 ?>
                 <div class="py-12 text-center">
-                    <p class="font-haas-display font-medium text-heading-md text-dm-black">No case studies found.</p>
-                    <p class="font-haas-text text-body-lg text-dm-black mt-2">Add case studies in the WordPress admin to
+                    <p class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-black">No case studies found.</p>
+                    <p class="font-haas-text text-body-md md:text-body-lg text-dm-black mt-2">Add case studies in the WordPress admin to
                         display them here.</p>
                 </div>
                 <?php endif; ?>
@@ -222,8 +222,8 @@ get_header(); ?>
                             fill="#e1dfd0" />
                     </svg>
 
-                    <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Skills</h3>
-                    <p class="font-haas-display font-medium text-body-lg text-dm-white leading-tight">
+                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2">Skills</h3>
+                    <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-tight">
                         Waterfall / Budgeting / Planning / Client & Stakeholder Management / Creative Studio
                         Management
                     </p>
@@ -239,8 +239,8 @@ get_header(); ?>
                             fill="#e1dfd0" />
                     </svg>
 
-                    <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Certifications</h3>
-                    <p class="font-haas-display font-medium text-body-lg text-dm-white leading-tight">
+                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2">Certifications</h3>
+                    <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-tight">
                         PMP / Google Project Management / Agile Project Management / Project Planning / Project
                         Execution
                     </p>
@@ -257,8 +257,8 @@ get_header(); ?>
                     </svg>
 
 
-                    <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Expertise</h3>
-                    <p class="font-haas-display font-medium text-body-lg text-dm-white leading-tight">
+                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2">Expertise</h3>
+                    <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-tight">
                         Sales Enablement / Webinars & Live Events / Podcasts / Product Launches / Community Events /
                         Demand Generation Campaigns / Rich Media Content
                     </p>
@@ -274,8 +274,8 @@ get_header(); ?>
                             fill="#e1dfd0" />
                     </svg>
 
-                    <h3 class="font-haas-display font-medium text-heading-md text-dm-white mb-2">Tools</h3>
-                    <p class="font-haas-display font-medium text-body-lg text-dm-white leading-tight">
+                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2">Tools</h3>
+                    <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-tight">
                         Google Workspace / Office 365 / Sharepoint / Adobe CC / Riverside FM / Trello
                     </p>
 
@@ -288,7 +288,7 @@ get_header(); ?>
             <div class="border-t-[3px] border-dm-black pt-12">
                 <div class="flex flex-col gap-5">
                     <h2
-                        class="font-haas-text font-bold text-display-sm md:text-display-md text-dm-black leading-none max-w-4xl">
+                        class="font-haas-text font-bold text-heading-lg md:text-display-sm lg:text-display-md text-dm-black leading-none max-w-4xl">
                         Work with me, and see how smooth, focused projects really feel.
                     </h2>
 

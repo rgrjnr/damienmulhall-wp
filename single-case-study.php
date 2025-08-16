@@ -27,7 +27,7 @@ if (!$highlights || is_wp_error($highlights)) {
             <div class="flex flex-col gap-8">
                 <!-- Back Link -->
                 <a href="<?php echo home_url(); ?>"
-                    class="inline-flex items-center gap-2 font-haas-display font-medium text-body-lg text-dm-black hover:text-dm-cyan transition-colors group">
+                    class="inline-flex items-center gap-2 font-haas-display font-medium text-body-md md:text-body-lg text-dm-black hover:text-dm-cyan transition-colors group">
                     <svg class="w-5 h-5 transform rotate-180 group-hover:-translate-x-1 transition-transform"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
@@ -39,11 +39,11 @@ if (!$highlights || is_wp_error($highlights)) {
                 <div class="border-b-[3px] border-dm-black pb-8">
                     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
                         <div>
-                            <h1 class="font-haas-display font-medium text-display-xl text-dm-black leading-none mb-4">
+                            <h1 class="font-haas-display font-medium text-display-sm md:text-display-lg lg:text-display-xl text-dm-black leading-none mb-4">
                                 <?php the_title(); ?>
                             </h1>
                             <?php if (!empty($short_title)) : ?>
-                            <p class="font-haas-text font-medium text-heading-md text-dm-black/60">
+                            <p class="font-haas-text font-medium text-heading-sm md:text-heading-md text-dm-black/60">
                                 <?php echo esc_html($short_title); ?>
                             </p>
                             <?php endif; ?>
@@ -86,7 +86,7 @@ if (!$highlights || is_wp_error($highlights)) {
                 <!-- Sidebar -->
                 <div class="lg:col-span-1">
                     <div class="bg-dm-black p-card sticky top-6">
-                        <h3 class="font-haas-display font-bold text-heading-sm text-dm-white mb-6">
+                        <h3 class="font-haas-display font-bold text-body-lg md:text-heading-sm text-dm-white mb-6">
                             <div>Project Details</div>
 
                         </h3>
@@ -100,8 +100,8 @@ if (!$highlights || is_wp_error($highlights)) {
 
                             <?php if ($client) : ?>
                             <div>
-                                <p class="font-haas-text text-body-sm text-dm-white/60">Client</p>
-                                <p class="font-haas-text text-body-md text-dm-white">
+                                <p class="font-haas-text text-body-xs md:text-body-sm text-dm-white/60">Client</p>
+                                <p class="font-haas-text text-body-sm md:text-body-md text-dm-white">
                                     <?php echo esc_html($client); ?>
                                 </p>
                             </div>
@@ -109,16 +109,16 @@ if (!$highlights || is_wp_error($highlights)) {
 
                             <?php if ($duration) : ?>
                             <div>
-                                <p class="font-haas-text text-body-sm text-dm-white/60">Duration</p>
-                                <p class="font-haas-text text-body-md text-dm-white">
+                                <p class="font-haas-text text-body-xs md:text-body-sm text-dm-white/60">Duration</p>
+                                <p class="font-haas-text text-body-sm md:text-body-md text-dm-white">
                                     <?php echo esc_html($duration); ?>
                                 </p>
                             </div>
                             <?php endif; ?>
 
                             <div>
-                                <p class="font-haas-text text-body-sm text-dm-white/60">Date</p>
-                                <p class="font-haas-text text-body-md text-dm-white">
+                                <p class="font-haas-text text-body-xs md:text-body-sm text-dm-white/60">Date</p>
+                                <p class="font-haas-text text-body-sm md:text-body-md text-dm-white">
                                     <?php echo get_the_date('Y'); ?>
                                 </p>
                             </div>
@@ -142,7 +142,7 @@ if (!$highlights || is_wp_error($highlights)) {
                         $prev_display = !empty($prev_short_title) ? $prev_short_title : $prev_post->post_title;
                     ?>
                     <a href="<?php echo get_permalink($prev_post); ?>"
-                        class="group flex items-center gap-3 font-haas-display font-medium text-heading-sm text-dm-black hover:text-dm-cyan transition-colors">
+                        class="group flex items-center gap-3 font-haas-display font-medium text-body-lg md:text-heading-sm text-dm-black hover:text-dm-cyan transition-colors">
                         <svg class="w-6 h-6 transform rotate-180 group-hover:-translate-x-2 transition-transform"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
@@ -158,7 +158,7 @@ if (!$highlights || is_wp_error($highlights)) {
                         $next_display = !empty($next_short_title) ? $next_short_title : $next_post->post_title;
                     ?>
                     <a href="<?php echo get_permalink($next_post); ?>"
-                        class="group flex items-center gap-3 font-haas-display font-medium text-heading-sm text-dm-black hover:text-dm-cyan transition-colors">
+                        class="group flex items-center gap-3 font-haas-display font-medium text-body-lg md:text-heading-sm text-dm-black hover:text-dm-cyan transition-colors">
                         <span><?php echo esc_html($next_display); ?></span>
                         <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2">
@@ -175,10 +175,10 @@ if (!$highlights || is_wp_error($highlights)) {
             <div class="bg-dm-cyan p-content">
                 <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
                     <div>
-                        <h2 class="font-haas-display font-bold text-heading-lg text-dm-white mb-3">
+                        <h2 class="font-haas-display font-bold text-heading-md md:text-heading-lg text-dm-white mb-3">
                             Ready to start your project?
                         </h2>
-                        <div class="font-haas-text text-body-lg text-dm-white/90">
+                        <div class="font-haas-text text-body-md md:text-body-lg text-dm-white/90">
                             Let's discuss how I can help bring your ideas to life.
                         </div>
                     </div>
