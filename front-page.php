@@ -19,22 +19,14 @@ get_header(); ?>
                 <!-- Main About Block -->
                 <div class="bg-dm-cyan p-content">
                     <p class="font-haas-text font-medium text-heading-md md:text-heading-lg text-dm-white leading-normal">
-                        My background is in media production, so I naturally gravitate toward structure, story, and the
-                        bigger picture.
-                        I'm not tied to a single methodology or buzzword. What matters is making things happen—and
-                        making the
-                        process easier for everyone involved.
+                        <?php echo esc_html(carbon_get_theme_option('rgrjnr_about_main_text')); ?>
                     </p>
                 </div>
 
                 <!-- Secondary About Block -->
                 <div class="bg-dm-cyan p-content flex items-end justify-between relative">
                     <p class="font-haas-text font-medium text-body-md md:text-body-lg text-dm-white max-w-md leading-normal">
-                        I've helped launch podcasts with 100,000+ downloads, built internal playbooks that actually get
-                        used,
-                        and run campaigns across formats, teams, and time zones. But this isn't about the biggest
-                        project or the
-                        flashiest brand.
+                        <?php echo esc_html(carbon_get_theme_option('rgrjnr_about_secondary_text')); ?>
                     </p>
                     <div class="hidden lg:block absolute right-0 bottom-0">
 
@@ -52,48 +44,48 @@ get_header(); ?>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <!-- What I Do -->
                     <div class="bg-dm-cyan p-card flex flex-col gap-3">
-                        <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">What I Do</h3>
+                        <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white"><?php echo esc_html(carbon_get_theme_option('rgrjnr_what_i_do_title')); ?></h3>
                         <div class="flex flex-col gap-2">
                             <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
-                                Lead Creative Projects End-to-End
+                                <?php echo esc_html(carbon_get_theme_option('rgrjnr_what_i_do_line1')); ?>
                             </p>
                             <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
-                                Translate Strategy into Execution
+                                <?php echo esc_html(carbon_get_theme_option('rgrjnr_what_i_do_line2')); ?>
                             </p>
                             <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
-                                Align Stakeholders & Deliver Results
+                                <?php echo esc_html(carbon_get_theme_option('rgrjnr_what_i_do_line3')); ?>
                             </p>
                         </div>
                     </div>
 
                     <!-- What I Deliver -->
                     <div class="bg-dm-cyan p-card flex flex-col gap-3">
-                        <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">What I Deliver</h3>
+                        <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white"><?php echo esc_html(carbon_get_theme_option('rgrjnr_what_i_deliver_title')); ?></h3>
                         <div class="flex flex-col gap-2">
                             <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
-                                Content That Performs
+                                <?php echo esc_html(carbon_get_theme_option('rgrjnr_what_i_deliver_line1')); ?>
                             </p>
                             <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
-                                Projects On Time & On Budget
+                                <?php echo esc_html(carbon_get_theme_option('rgrjnr_what_i_deliver_line2')); ?>
                             </p>
                             <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
-                                Clear, Actionable Comms
+                                <?php echo esc_html(carbon_get_theme_option('rgrjnr_what_i_deliver_line3')); ?>
                             </p>
                         </div>
                     </div>
 
                     <!-- What To Expect -->
                     <div class="bg-dm-cyan p-card flex flex-col gap-3">
-                        <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">What To Expect</h3>
+                        <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white"><?php echo esc_html(carbon_get_theme_option('rgrjnr_what_to_expect_title')); ?></h3>
                         <div class="flex flex-col gap-2">
                             <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
-                                Sharp Thinking
+                                <?php echo esc_html(carbon_get_theme_option('rgrjnr_what_to_expect_line1')); ?>
                             </p>
                             <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
-                                Calm Leadership
+                                <?php echo esc_html(carbon_get_theme_option('rgrjnr_what_to_expect_line2')); ?>
                             </p>
                             <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
-                                No-Fluff Delivery
+                                <?php echo esc_html(carbon_get_theme_option('rgrjnr_what_to_expect_line3')); ?>
                             </p>
                         </div>
                     </div>
@@ -121,9 +113,7 @@ get_header(); ?>
 
                     </div>
                     <p class="font-haas-text font-medium text-body-md md:text-body-lg text-dm-white max-w-md leading-normal">
-                        I'm not the designer or the developer. I'm just the project manager who clears the path so they
-                        can do
-                        their best work—on time, on budget, and without the chaos.
+                        <?php echo esc_html(carbon_get_theme_option('rgrjnr_tools_block_text')); ?>
                     </p>
                 </div>
             </div>
@@ -222,10 +212,9 @@ get_header(); ?>
                             fill="#e1dfd0" />
                     </svg>
 
-                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2">Skills</h3>
+                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2"><?php echo esc_html(carbon_get_theme_option('rgrjnr_skills_title')); ?></h3>
                     <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-tight">
-                        Waterfall / Budgeting / Planning / Client & Stakeholder Management / Creative Studio
-                        Management
+                        <?php echo esc_html(carbon_get_theme_option('rgrjnr_skills_text')); ?>
                     </p>
 
                 </div>
@@ -239,10 +228,9 @@ get_header(); ?>
                             fill="#e1dfd0" />
                     </svg>
 
-                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2">Certifications</h3>
+                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2"><?php echo esc_html(carbon_get_theme_option('rgrjnr_certifications_title')); ?></h3>
                     <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-tight">
-                        PMP / Google Project Management / Agile Project Management / Project Planning / Project
-                        Execution
+                        <?php echo esc_html(carbon_get_theme_option('rgrjnr_certifications_text')); ?>
                     </p>
 
                 </div>
@@ -257,10 +245,9 @@ get_header(); ?>
                     </svg>
 
 
-                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2">Expertise</h3>
+                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2"><?php echo esc_html(carbon_get_theme_option('rgrjnr_expertise_title')); ?></h3>
                     <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-tight">
-                        Sales Enablement / Webinars & Live Events / Podcasts / Product Launches / Community Events /
-                        Demand Generation Campaigns / Rich Media Content
+                        <?php echo esc_html(carbon_get_theme_option('rgrjnr_expertise_text')); ?>
                     </p>
 
                 </div>
@@ -274,9 +261,9 @@ get_header(); ?>
                             fill="#e1dfd0" />
                     </svg>
 
-                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2">Tools</h3>
+                    <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2"><?php echo esc_html(carbon_get_theme_option('rgrjnr_tools_title')); ?></h3>
                     <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-tight">
-                        Google Workspace / Office 365 / Sharepoint / Adobe CC / Riverside FM / Trello
+                        <?php echo esc_html(carbon_get_theme_option('rgrjnr_tools_text')); ?>
                     </p>
 
                 </div>
@@ -289,7 +276,7 @@ get_header(); ?>
                 <div class="flex flex-col gap-5">
                     <h2
                         class="font-haas-text font-bold text-heading-lg md:text-display-sm lg:text-display-md text-dm-black leading-none max-w-4xl">
-                        Work with me, and see how smooth, focused projects really feel.
+                        <?php echo esc_html(carbon_get_theme_option('rgrjnr_cta_heading')); ?>
                     </h2>
 
                     <div class="flex items-center gap-4">
@@ -307,8 +294,8 @@ get_header(); ?>
 
                     <div class="flex md:justify-end">
                         <?php
-                        $label = 'Let\'s work';
-                        $link = 'mailto:contact@damienmulhall.com';
+                        $label = carbon_get_theme_option('rgrjnr_cta_button_text');
+                        $link = carbon_get_theme_option('rgrjnr_cta_button_link');
                         include get_template_directory() . '/parts/animated-button.php';
                         ?>
                     </div>

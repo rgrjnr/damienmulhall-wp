@@ -42,7 +42,7 @@ class RGRJNR_Component_Loader {
         'blocks' => [
         ],
         'theme-options' => [
-            'general.php'
+            'homepage.php'
         ]
     ];
     

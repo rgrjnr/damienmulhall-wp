@@ -80,12 +80,12 @@ button,
 
 // SplitText line styles
 .split-line {
-  position: relative;
   display: block;
-  text-align: start;
+  margin-block: -0.1em;
   overflow: hidden;
   padding-block: 0.1em;
-  margin-block: -0.1em;
+  position: relative;
+  text-align: start;
 }
 
 // Scroll-triggered animation classes
@@ -119,27 +119,31 @@ button,
 .animate-delay-1 {
   animation-delay: 0.1s;
 }
+
 .animate-delay-2 {
   animation-delay: 0.2s;
 }
+
 .animate-delay-3 {
   animation-delay: 0.3s;
 }
+
 .animate-delay-4 {
   animation-delay: 0.4s;
 }
+
 .animate-delay-5 {
   animation-delay: 0.5s;
 }
 
 // Smooth scrolling wrapper styles
 #smooth-wrapper {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
   z-index: 1;
 }
 
