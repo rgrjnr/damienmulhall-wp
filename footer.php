@@ -3,7 +3,7 @@
 <!-- Footer -->
 <footer class="w-full max-w-page mx-auto px-6 py-12 flex justify-between items-center">
     <p class="font-haas-display font-medium text-body-md text-dm-black">
-        <?php echo date('Y'); ?> © Damien Mulhall
+        <?php echo date('Y'); ?> © Damien Mulhal. <a href="https://www.linkedin.com/in/damien-mulhall/">LinkedIn</a>
     </p>
     <a href="https://rogerjunior.com/?utm_source=damienmulhall">
 

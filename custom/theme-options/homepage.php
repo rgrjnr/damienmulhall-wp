@@ -25,7 +25,18 @@ function rgrjnr_attach_homepage_options()
     Container::make('theme_options', __('Theme Options', 'rgrjnr'))
         ->set_page_parent('themes.php')
         ->add_tab(__('Homepage Content', 'rgrjnr'), [
-            
+
+            // Header Section
+            Field::make('separator', 'rgrjnr_header_separator', __('Header Section', 'rgrjnr')),
+
+            Field::make('textarea', 'rgrjnr_header_hero_heading', __('Hero Heading', 'rgrjnr'))
+                ->set_help_text(__('The main hero heading text', 'rgrjnr'))
+                ->set_default_value('I lead creative projects from concept to delivery.'),
+
+            Field::make('textarea', 'rgrjnr_header_hero_description', __('Hero Description', 'rgrjnr'))
+                ->set_help_text(__('The description text that appears alongside the hero heading', 'rgrjnr'))
+                ->set_default_value('I\'ve spent over 10 years leading creative projects—mostly in agency settings where content, deadlines, and expectations all move fast.'),
+
             // About Section
             Field::make('separator', 'rgrjnr_about_separator', __('About Section', 'rgrjnr')),
             
@@ -136,6 +147,6 @@ function rgrjnr_attach_homepage_options()
                 ->set_default_value('Let\'s work'),
             
             Field::make('text', 'rgrjnr_cta_button_link', __('CTA Button Link', 'rgrjnr'))
-                ->set_default_value('mailto:contact@damienmulhall.com'),
+                ->set_default_value('mailto:damien@damienmulhall.com'),
         ]);
 }

@@ -58,39 +58,12 @@ if (!empty($highlights) && !is_wp_error($highlights)) : ?>
                 style="background-color: <?php echo esc_attr($color); ?>;"
                 title="<?php echo esc_attr($highlight->name); ?>">
                 <?php if (!empty($icon_url)) : ?>
-                    <?php 
-                    // Check if it's an SVG file
-                    if (pathinfo($icon_url, PATHINFO_EXTENSION) === 'svg') {
-                        // Try to load and inline the SVG
-                        $svg_content = @file_get_contents($icon_url);
-                        if ($svg_content) {
-                            $text_color = $needs_invert ? 'text-white' : 'text-black';
-                            echo '<div class="' . esc_attr($icon_class) . ' ' . $text_color . '">';
-                            // Add classes to the SVG element
-                            $svg_content = preg_replace('/<svg/', '<svg class="w-full h-full" fill="currentColor"', $svg_content, 1);
-                            echo $svg_content;
-                            echo '</div>';
-                        } else {
-                            // Fallback to img tag if can't load SVG
-                            ?>
-                            <img 
-                                src="<?php echo esc_url($icon_url); ?>" 
-                                alt="<?php echo esc_attr($highlight->name); ?>" 
-                                class="<?php echo esc_attr($icon_class); ?> object-contain"
-                                style="<?php echo $needs_invert ? 'filter: brightness(0) invert(1);' : ''; ?>">
-                            <?php
-                        }
-                    } else {
-                        // For non-SVG images
-                        ?>
-                        <img 
-                            src="<?php echo esc_url($icon_url); ?>" 
-                            alt="<?php echo esc_attr($highlight->name); ?>" 
-                            class="<?php echo esc_attr($icon_class); ?> object-contain"
-                            style="<?php echo $needs_invert ? 'filter: brightness(0) invert(1);' : ''; ?>">
-                        <?php
-                    }
-                    ?>
+                    <img
+                        src="<?php echo esc_url($icon_url); ?>"
+                        alt="<?php echo esc_attr($highlight->name); ?>"
+                        class="<?php echo esc_attr($icon_class); ?> object-contain"
+                        style="<?php echo $needs_invert ? 'filter: brightness(0) invert(1);' : ''; ?>"
+                        loading="lazy">
                 <?php endif; ?>
             </div>
         <?php endforeach; ?>
