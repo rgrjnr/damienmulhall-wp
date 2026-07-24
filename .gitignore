@@ -4,3 +4,9 @@ yarn-error.log
 .DS_Store
 *.log
 /assets/css
+
+# Font source drop-ins — the files the site actually ships live in
+# 2026/src/assets/fonts/. The trial collection is licensed for evaluation only
+# and must never be committed or deployed (see 2026/FONTS.md).
+/neue-haas-grotesk/
+/Neue_Haas_Grotesk_Collection/

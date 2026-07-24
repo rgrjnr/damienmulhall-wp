@@ -1,0 +1,22 @@
+{
+  "name": "Damien Mulhall",
+  "title": "Damien Mulhall — Creative Project Manager",
+  "tagline": "I lead creative projects from concept to delivery.",
+  "description": "Creative project manager with 10+ years leading content, campaigns and events end-to-end — on time, on budget, without the chaos.",
+  "url": "https://damienmulhall.com",
+  "lang": "en",
+  "locale": "en_IE",
+  "author": "Damien Mulhall",
+  "email": "damien@damienmulhall.com",
+  "jobTitle": "Creative Project Manager",
+  "ogImage": "/assets/images/site/og.png",
+  "favicon": "/assets/images/site/favicon.png",
+  "cv": "/assets/files/Damien_Mulhall_CV.pdf",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/damien-mulhall/"
+  },
+  "credit": {
+    "name": "Roger Junior",
+    "url": "https://rogerjunior.com/?utm_source=damienmulhall"
+  }
+}

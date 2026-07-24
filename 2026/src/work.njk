@@ -1,0 +1,60 @@
+---
+layout: layouts/base.njk
+title: Selected Work
+description: Case studies from creative projects led end-to-end — podcasts, campaigns, community events and sales enablement.
+permalink: /work/
+showHero: false
+eleventyExcludeFromCollections: true
+---
+{% from "partials/highlights-badges.njk" import badges with context %}
+
+<section class="w-full max-w-page mx-auto px-6 mt-section relative" aria-label="Selected work">
+    <div class="border-b-[3px] border-dm-black pb-8">
+        <h1 class="font-haas-display font-medium text-display-sm md:text-display-lg lg:text-display-xl text-dm-black leading-none">
+            Selected Work
+        </h1>
+    </div>
+
+    <div class="relative z-10">
+        {%- for item in collections.work %}
+        {%- set displayTitle = item.data.shortTitle or item.data.title %}
+        <a href="{{ item.url }}"
+            class="work-item border-b-[3px] border-dm-black py-6 flex flex-col md:flex-row items-start md:items-center justify-between group cursor-pointer transition-all relative overflow-hidden">
+
+            <!-- Animated Background -->
+            <div
+                class="work-background absolute inset-0 bg-dm-cyan transform scale-y-0 origin-top pointer-events-none">
+            </div>
+
+            <!-- Animated Arrow -->
+            <div class="work-arrow absolute top-[50%] translate-y-[-50%] right-12 pointer-events-none z-20">
+                <svg aria-hidden="true" focusable="false" width="52" height="45" viewBox="0 0 52 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27 3L46.3208 22.5L27 42" stroke="#E1DFD0" stroke-width="8" class="arrow-path" />
+                            <path d="M0 23H43.5" stroke="#E1DFD0" stroke-width="8" class="arrow-path" />
+                        </svg>
+
+            </div>
+
+            <!-- Title Container -->
+            <div class="work-title-container relative z-10 flex-1">
+                <!-- Original Title -->
+                <div
+                    class="work-title leading-none font-haas-display font-medium text-heading-lg md:text-display-sm lg:text-display-lg text-dm-black transition-colors block">
+                    {{ displayTitle }}
+                </div>
+
+                <!-- Duplicate Title for Animation (Hidden by default) -->
+                <div class="work-title-duplicate leading-none font-haas-display font-medium text-heading-lg md:text-display-sm lg:text-display-lg text-dm-white absolute top-0 left-0 opacity-0 pointer-events-none ml-6"
+                    aria-hidden="true">
+                    {{ displayTitle }}
+                </div>
+            </div>
+
+            <!-- Highlights Container -->
+            <div class="work-highlights relative z-10">
+                {{ badges(item.data.highlights, 'small', badgeStyles) }}
+            </div>
+        </a>
+        {%- endfor %}
+    </div>
+</section>

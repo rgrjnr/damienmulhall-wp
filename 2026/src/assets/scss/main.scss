@@ -1,0 +1,10 @@
+// Single stylesheet entry. Order matters: Tailwind's preflight lands first so the
+// theme's own base rules win, and the utility layer lands last so utilities beat
+// everything. Sass passes the @tailwind at-rules through for PostCSS to expand.
+
+@use "fonts";
+@use "tailwind-base";
+@use "base";
+@use "animations";
+@use "site";
+@use "tailwind-utils";

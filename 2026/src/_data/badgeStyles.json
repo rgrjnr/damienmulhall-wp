@@ -1,0 +1,17 @@
+{
+  "_comment": "Badge definitions for the coloured circles on work items. Colours are the seven brand values from the WordPress theme's highlight field; icons are the icons8 SVGs the original site used, re-fetched into /assets/icons/.",
+
+  "mic": { "name": "Podcast production", "color": "#85316d", "icon": "icons8-mic.svg" },
+  "spotify": { "name": "Audio distribution", "color": "#68882a", "icon": "icons8-spotify.svg" },
+  "megaphone": { "name": "Campaign & events", "color": "#bf4c31", "icon": "icons8-megaphone.svg" },
+  "movie": { "name": "Video & film", "color": "#201a1e", "icon": "icons8-movie.svg" },
+  "star": { "name": "Hero asset", "color": "#e3bf30", "icon": "icons8-star.svg" },
+  "heart": { "name": "Community", "color": "#bf4c31", "icon": "icons8-heart.svg" },
+  "increase": { "name": "Growth & pipeline", "color": "#226d68", "icon": "icons8-increase.svg" },
+  "education": { "name": "Education", "color": "#226d68", "icon": "icons8-education.svg" },
+  "code": { "name": "Interactive build", "color": "#201a1e", "icon": "icons8-code.svg" },
+  "4k": { "name": "High-end production", "color": "#85316d", "icon": "icons8-4k.svg" },
+  "my-computer": { "name": "Enterprise IT", "color": "#201a1e", "icon": "icons8-my-computer.svg" },
+  "video-card": { "name": "Workstations", "color": "#68882a", "icon": "icons8-video-card.svg" },
+  "instagram": { "name": "Social", "color": "#85316d", "icon": "icons8-instagram.svg" }
+}

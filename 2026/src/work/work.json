@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/case-study.njk",
+  "permalink": "/work/{{ page.fileSlug }}/",
+  "tags": "work",
+  "schemaType": "CreativeWork",
+  "showHero": false
+}

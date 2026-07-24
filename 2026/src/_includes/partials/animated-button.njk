@@ -1,0 +1,30 @@
+{#
+  Animated button — port of parts/animated-button.php
+  Both labels and both arrows are duplicated on purpose: the CSS animation
+  slides one out while the other slides in.
+#}
+{% macro button(label, link, classes) %}
+<a href="{{ link or '#' }}" class="btn-animated {{ classes or '' }}">
+    <div class="btn-labels">
+        <span class="font-haas-display font-medium text-display-sm text-dm-black btn-label">
+            {{ label or "Let's work" }}
+        </span>
+        <span class="font-haas-display font-medium text-display-sm text-dm-black btn-label">
+            {{ label or "Let's work" }}
+        </span>
+    </div>
+
+    <div class="btn-arrows">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-arrow" aria-hidden="true" focusable="false">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.45022 0H23.1835V18.7332L18.1881 18.7329L18.1878 8.52735L3.53134 23.1844L0 19.6513L14.655 4.99572L4.45054 4.99538L4.45022 0Z"
+                fill="black" />
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-arrow" aria-hidden="true" focusable="false">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.45022 0H23.1835V18.7332L18.1881 18.7329L18.1878 8.52735L3.53134 23.1844L0 19.6513L14.655 4.99572L4.45054 4.99538L4.45022 0Z"
+                fill="black" />
+        </svg>
+    </div>
+</a>
+{% endmacro %}

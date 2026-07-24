@@ -1,0 +1,86 @@
+@use "variables" as *;
+
+// Carried over from the WordPress theme's stylesheet.scss. The wp-admin toolbar,
+// #wpadminbar and carbon-box rules are gone — there is no admin any more.
+.skip-to-content-link {
+  background-color: $dm-black;
+  color: $dm-white;
+  left: 50%;
+  padding: 1rem;
+  position: fixed;
+  text-decoration: none;
+  transform: translate(-50%, -100%);
+  transition: all 300ms ease-out;
+  z-index: 200;
+
+  &:focus {
+    transform: translate(-50%, 0);
+  }
+}
+
+// Media embedded in case study bodies (Megaphone player, recovered trailers).
+.embed {
+  border: 0;
+  display: block;
+  margin-block: 2rem;
+  width: 100%;
+}
+
+video.embed {
+  background-color: $dm-black;
+  height: auto;
+}
+
+// Placeholder art stands in for the images lost with the server. Real files drop
+// in at the same paths; see MISSING-ASSETS.md.
+.is-placeholder {
+  background-color: rgba($dm-black, 0.06);
+}
+
+// Prose images inside case studies sit on the dark frame the theme uses elsewhere.
+.prose {
+  img {
+    display: block;
+    height: auto;
+    margin-block: 2rem;
+    width: 100%;
+  }
+
+  blockquote {
+    border-left: 3px solid $dm-black;
+    font-family: $font-haas-display;
+    font-size: $text-heading-xs;
+    line-height: 1.4;
+    margin-block: 2rem;
+    padding-left: 1.5rem;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+}
+
+footer a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+// Mobile navigation panel — collapsed by default, revealed by the toggle button.
+#mobile-menu {
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+}

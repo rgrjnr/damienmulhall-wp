@@ -1,0 +1,75 @@
+{
+  "_comment": "Recovered verbatim from the WordPress theme's Carbon Fields defaults in custom/theme-options/homepage.php. This file is the homepage copy — edit it here.",
+
+  "hero": {
+    "heading": "I lead creative projects from concept to delivery.",
+    "description": "I've spent over 10 years leading creative projects—mostly in agency settings where content, deadlines, and expectations all move fast."
+  },
+
+  "about": {
+    "main": "My background is in media production, so I naturally gravitate toward structure, story, and the bigger picture. I'm not tied to a single methodology or buzzword. What matters is making things happen—and making the process easier for everyone involved.",
+    "secondary": "I've helped launch podcasts with 100,000+ downloads, built internal playbooks that actually get used, and run campaigns across formats, teams, and time zones. But this isn't about the biggest project or the flashiest brand."
+  },
+
+  "services": [
+    {
+      "title": "What I Do",
+      "lines": [
+        "Lead Creative Projects End-to-End",
+        "Translate Strategy into Execution",
+        "Align Stakeholders & Deliver Results"
+      ]
+    },
+    {
+      "title": "What I Deliver",
+      "lines": [
+        "Content That Performs",
+        "Projects On Time & On Budget",
+        "Clear, Actionable Comms"
+      ]
+    },
+    {
+      "title": "What To Expect",
+      "lines": ["Sharp Thinking", "Calm Leadership", "No-Fluff Delivery"]
+    }
+  ],
+
+  "toolsBlock": {
+    "text": "I'm not the designer or the developer. I'm just the project manager who clears the path so they can do their best work—on time, on budget, and without the chaos."
+  },
+
+  "cards": [
+    {
+      "title": "Skills",
+      "text": "Waterfall / Budgeting / Planning / Client & Stakeholder Management / Creative Studio Management",
+      "icon": "skills"
+    },
+    {
+      "title": "Certifications",
+      "text": "PMP / Google Project Management / Agile Project Management / Project Planning / Project Execution",
+      "icon": "certifications"
+    },
+    {
+      "title": "Expertise",
+      "text": "Sales Enablement / Webinars & Live Events / Podcasts / Product Launches / Community Events / Demand Generation Campaigns / Rich Media Content",
+      "icon": "expertise"
+    },
+    {
+      "title": "Tools",
+      "text": "Google Workspace / Office 365 / Sharepoint / Adobe CC / Riverside FM / Trello",
+      "icon": "tools"
+    }
+  ],
+
+  "cta": {
+    "heading": "Work with me, and see how smooth, focused projects really feel.",
+    "buttonText": "Let's work",
+    "buttonLink": "mailto:damien@damienmulhall.com"
+  },
+
+  "nav": [
+    { "label": "Download CV", "url": "/assets/files/Damien_Mulhall_CV.pdf" },
+    { "label": "Work", "url": "/#work" },
+    { "label": "Contact me", "url": "mailto:damien@damienmulhall.com" }
+  ]
+}

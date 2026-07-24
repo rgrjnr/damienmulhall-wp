@@ -1,0 +1,158 @@
+---
+layout: layouts/base.njk
+schemaType: CreativeWork
+showHero: false
+---
+{% from "partials/highlights-badges.njk" import badges with context %}
+{% from "partials/animated-button.njk" import button %}
+
+{%- set prev = collections.work | getPreviousCollectionItem %}
+{%- set next = collections.work | getNextCollectionItem %}
+
+<!-- Hero Section -->
+<section class="w-full max-w-page mx-auto px-6 mt-10 md:mt-12">
+    <div class="flex flex-col gap-8">
+        <!-- Back Link -->
+        <a href="/#work"
+            class="inline-flex items-center gap-2 font-haas-display font-medium text-body-md md:text-body-lg text-dm-black hover:text-dm-cyan transition-colors group no-underline">
+            <svg class="w-5 h-5 transform rotate-180 group-hover:-translate-x-1 transition-transform"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Back to All Work</span>
+        </a>
+
+        <!-- Title with Highlights -->
+        <div class="border-b-[3px] border-dm-black pb-8">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+                <div>
+                    <h1 class="font-haas-display font-medium text-display-sm md:text-display-lg lg:text-display-xl text-dm-black leading-none mb-4">
+                        {{ title }}
+                    </h1>
+                    {%- if shortTitle %}
+                    <p class="font-haas-text font-medium text-heading-sm md:text-heading-md text-dm-black/60">
+                        {{ shortTitle }}
+                    </p>
+                    {%- endif %}
+                </div>
+
+                <!-- Highlight Circles -->
+                {{ badges(highlights, 'medium', badgeStyles) }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{%- if hero %}
+<!-- Featured Image -->
+<section class="w-full max-w-page mx-auto px-6 mt-section">
+    <div class="bg-dm-black p-3">
+        {% image hero, title, { sizes: "(min-width: 1120px) 1096px, 100vw", className: "w-full h-auto", eager: true } %}
+    </div>
+</section>
+{%- endif %}
+
+<!-- Main Content -->
+<section class="w-full max-w-page mx-auto px-6 mt-section">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Content Area -->
+        <div class="lg:col-span-2">
+            <div class="prose prose-lg max-w-none">
+                {%- if excerpt %}
+                <blockquote>
+                    <p>
+                        {{ excerpt }}
+                    </p>
+                </blockquote>
+                {%- endif %}
+                {{ content | safe }}
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+            <div class="bg-dm-black p-card sticky top-6">
+                <h3 class="font-haas-display font-bold text-body-lg md:text-heading-sm text-dm-white mb-6">
+                    <div>Project Details</div>
+
+                </h3>
+
+                <!-- Meta Information -->
+                <div class="space-y-4">
+                    {%- if client %}
+                    <div>
+                        <p class="font-haas-text text-body-xs md:text-body-sm text-dm-white/60">Client</p>
+                        <p class="font-haas-text text-body-sm md:text-body-md text-dm-white">
+                            {{ client }}
+                        </p>
+                    </div>
+                    {%- endif %}
+
+                    {%- if duration %}
+                    <div>
+                        <p class="font-haas-text text-body-xs md:text-body-sm text-dm-white/60">Duration</p>
+                        <p class="font-haas-text text-body-sm md:text-body-md text-dm-white">
+                            {{ duration }}
+                        </p>
+                    </div>
+                    {%- endif %}
+
+                    <div>
+                        <p class="font-haas-text text-body-xs md:text-body-sm text-dm-white/60">Date</p>
+                        <p class="font-haas-text text-body-sm md:text-body-md text-dm-white">
+                            {{ date | year }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Navigation -->
+<nav class="w-full max-w-page mx-auto px-6 mt-section" aria-label="Case study navigation">
+    <div class="border-t-[3px] border-dm-black pt-8">
+        <div class="flex justify-between items-center">
+            {%- if prev %}
+            <a href="{{ prev.url }}" rel="prev"
+                class="group flex items-center gap-3 font-haas-display font-medium text-body-lg md:text-heading-sm text-dm-black hover:text-dm-cyan transition-colors">
+                <svg class="w-6 h-6 transform rotate-180 group-hover:-translate-x-2 transition-transform"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                    <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>{{ prev.data.shortTitle or prev.data.title }}</span>
+            </a>
+            {%- else %}
+            <div></div>
+            {%- endif %}
+
+            {%- if next %}
+            <a href="{{ next.url }}" rel="next"
+                class="group flex items-center gap-3 font-haas-display font-medium text-body-lg md:text-heading-sm text-dm-black hover:text-dm-cyan transition-colors">
+                <span>{{ next.data.shortTitle or next.data.title }}</span>
+                <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                    <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+            {%- endif %}
+        </div>
+    </div>
+</nav>
+
+<!-- CTA Section -->
+<section class="w-full max-w-page mx-auto px-6 mt-section">
+    <div class="bg-dm-cyan p-content">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div>
+                <h2 class="font-haas-display font-bold text-heading-md md:text-heading-lg text-dm-white mb-3">
+                    Ready to start your project?
+                </h2>
+                <div class="font-haas-text text-body-md md:text-body-lg text-dm-white/90">
+                    Let's discuss how I can help bring your ideas to life.
+                </div>
+            </div>
+            {{ button('Get in touch', 'mailto:' + site.email) }}
+        </div>
+    </div>
+</section>

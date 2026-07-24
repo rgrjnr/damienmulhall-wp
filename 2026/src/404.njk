@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: Page not found
+description: That page does not exist.
+permalink: /404.html
+showHero: false
+eleventyExcludeFromCollections: true
+---
+{% from "partials/animated-button.njk" import button %}
+
+<section class="w-full max-w-page mx-auto px-6 mt-section" aria-label="Page not found">
+    <div class="border-t-[3px] border-dm-black pt-12">
+        <div class="flex flex-col gap-5">
+            <p class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-black">404</p>
+            <h1 class="font-haas-text font-bold text-heading-lg md:text-display-sm lg:text-display-md text-dm-black leading-none max-w-4xl">
+                This page went missing. The work didn't.
+            </h1>
+            <p class="font-haas-text font-medium text-body-md md:text-body-lg text-dm-black max-w-md leading-normal">
+                The link you followed is broken or the page has moved. Head back to the homepage, or jump straight to the case studies.
+            </p>
+
+            <div class="flex md:justify-end">
+                {{ button('Back home', '/') }}
+            </div>
+        </div>
+    </div>
+</section>

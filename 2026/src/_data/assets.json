@@ -1,0 +1,358 @@
+{
+  "site": [
+    {
+      "file": "icons8-my-computer.svg",
+      "localPath": "/assets/images/site/icons8-my-computer.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-my-computer",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-my-computer.svg"
+    },
+    {
+      "file": "icons8-video-card.svg",
+      "localPath": "/assets/images/site/icons8-video-card.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-video-card",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-video-card.svg"
+    },
+    {
+      "file": "icons8-star.svg",
+      "localPath": "/assets/images/site/icons8-star.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-star",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-star.svg"
+    },
+    {
+      "file": "icons8-mic.svg",
+      "localPath": "/assets/images/site/icons8-mic.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-mic",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-mic.svg"
+    },
+    {
+      "file": "icons8-heart.svg",
+      "localPath": "/assets/images/site/icons8-heart.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-heart",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-heart.svg"
+    },
+    {
+      "file": "icons8-increase.svg",
+      "localPath": "/assets/images/site/icons8-increase.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-increase",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-increase.svg"
+    },
+    {
+      "file": "icons8-movie.svg",
+      "localPath": "/assets/images/site/icons8-movie.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-movie",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-movie.svg"
+    },
+    {
+      "file": "icons8-4k.svg",
+      "localPath": "/assets/images/site/icons8-4k.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-4k",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-4k.svg"
+    },
+    {
+      "file": "icons8-megaphone.svg",
+      "localPath": "/assets/images/site/icons8-megaphone.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-megaphone",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-megaphone.svg"
+    },
+    {
+      "file": "icons8-spotify.svg",
+      "localPath": "/assets/images/site/icons8-spotify.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-spotify",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-spotify.svg"
+    },
+    {
+      "file": "icons8-instagram.svg",
+      "localPath": "/assets/images/site/icons8-instagram.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-instagram",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-instagram.svg"
+    },
+    {
+      "file": "icons8-code.svg",
+      "localPath": "/assets/images/site/icons8-code.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-code",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-code.svg"
+    },
+    {
+      "file": "icons8-education.svg",
+      "localPath": "/assets/images/site/icons8-education.svg",
+      "mime": "image/svg+xml",
+      "title": "icons8-education",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/icons8-education.svg"
+    },
+    {
+      "file": "logo.png",
+      "localPath": "/assets/images/site/logo.png",
+      "mime": "image/png",
+      "title": "logo",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/logo.png"
+    },
+    {
+      "file": "favicon.png",
+      "localPath": "/assets/images/site/favicon.png",
+      "mime": "image/png",
+      "title": "favicon",
+      "scope": "site",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/favicon.png"
+    },
+    {
+      "file": "cropped-favicon.png",
+      "localPath": "/assets/images/site/cropped-favicon.png",
+      "mime": "image/png",
+      "title": "cropped-favicon.png",
+      "scope": "site",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/cropped-favicon.png"
+    },
+    {
+      "file": "favicon-1.png",
+      "localPath": "/assets/images/site/favicon-1.png",
+      "mime": "image/png",
+      "title": "favicon",
+      "scope": "site",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/favicon-1.png"
+    },
+    {
+      "file": "og.png",
+      "localPath": "/assets/images/site/og.png",
+      "mime": "image/png",
+      "title": "og",
+      "scope": "site",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/og.png"
+    },
+    {
+      "file": "Layer_1.png",
+      "localPath": "/assets/images/site/Layer_1.png",
+      "mime": "image/png",
+      "title": "Layer_1",
+      "scope": "site",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/Layer_1.png"
+    },
+    {
+      "file": "Layer_1-1.png",
+      "localPath": "/assets/images/site/Layer_1-1.png",
+      "mime": "image/png",
+      "title": "Layer_1 (1)",
+      "scope": "site",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/Layer_1-1.png"
+    },
+    {
+      "file": "Damien_Mulhall_CV.pdf",
+      "localPath": "/assets/images/site/Damien_Mulhall_CV.pdf",
+      "mime": "application/pdf",
+      "title": "Damien_Mulhall_CV",
+      "scope": "site",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/Damien_Mulhall_CV.pdf"
+    }
+  ],
+  "dell-podcast": [
+    {
+      "file": "Vector.svg",
+      "localPath": "/assets/images/work/dell-podcast/Vector.svg",
+      "mime": "image/svg+xml",
+      "title": "Dell",
+      "scope": "dell-podcast",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/Vector.svg"
+    },
+    {
+      "file": "3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-3v2-14May2024.mp4",
+      "localPath": "/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-3v2-14May2024.mp4",
+      "mime": "video/mp4",
+      "title": "3966-DEL SD Podcast Series for DTF-Podcast trailer 3v2-14May2024",
+      "scope": "dell-podcast",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/08/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-3v2-14May2024.mp4"
+    },
+    {
+      "file": "3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-3-17May2024.mp4",
+      "localPath": "/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-3-17May2024.mp4",
+      "mime": "video/mp4",
+      "title": "3966-DEL SD Podcast Series for DTF-Podcast trailer 3-17May2024",
+      "scope": "dell-podcast",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-3-17May2024.mp4"
+    },
+    {
+      "file": "3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-Poster-frame-1.jpg",
+      "localPath": "/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-Poster-frame-1.jpg",
+      "mime": "image/jpeg",
+      "title": "3966-DEL SD Podcast Series for DTF-Podcast trailer-Poster frame (1)",
+      "scope": "dell-podcast",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-Poster-frame-1.jpg"
+    }
+  ],
+  "vashi-nedomansky-filmmaking-guide": [
+    {
+      "file": "drive-download-20250815T153935Z-1-001.zip",
+      "localPath": "/assets/images/work/vashi-nedomansky-filmmaking-guide/drive-download-20250815T153935Z-1-001.zip",
+      "mime": "application/zip",
+      "title": "drive-download-20250815T153935Z-1-001",
+      "scope": "vashi-nedomansky-filmmaking-guide",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/drive-download-20250815T153935Z-1-001.zip"
+    },
+    {
+      "file": "Screenshot-2025-08-26-at-15.04.12.png",
+      "localPath": "/assets/images/work/vashi-nedomansky-filmmaking-guide/Screenshot-2025-08-26-at-15.04.12.png",
+      "mime": "image/png",
+      "title": "Screenshot 2025-08-26 at 15.04.12",
+      "scope": "vashi-nedomansky-filmmaking-guide",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/Screenshot-2025-08-26-at-15.04.12.png"
+    },
+    {
+      "file": "Screenshot-2025-08-26-at-15.03.17.png",
+      "localPath": "/assets/images/work/vashi-nedomansky-filmmaking-guide/Screenshot-2025-08-26-at-15.03.17.png",
+      "mime": "image/png",
+      "title": "Screenshot 2025-08-26 at 15.03.17",
+      "scope": "vashi-nedomansky-filmmaking-guide",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/08/Screenshot-2025-08-26-at-15.03.17.png"
+    },
+    {
+      "file": "Screenshot-2025-08-26-at-15.02.49.png",
+      "localPath": "/assets/images/work/vashi-nedomansky-filmmaking-guide/Screenshot-2025-08-26-at-15.02.49.png",
+      "mime": "image/png",
+      "title": "Screenshot 2025-08-26 at 15.02.49",
+      "scope": "vashi-nedomansky-filmmaking-guide",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/Screenshot-2025-08-26-at-15.02.49.png"
+    },
+    {
+      "file": "Screenshot-2025-08-26-at-15.05.53.png",
+      "localPath": "/assets/images/work/vashi-nedomansky-filmmaking-guide/Screenshot-2025-08-26-at-15.05.53.png",
+      "mime": "image/png",
+      "title": "Screenshot 2025-08-26 at 15.05.53",
+      "scope": "vashi-nedomansky-filmmaking-guide",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/Screenshot-2025-08-26-at-15.05.53.png"
+    }
+  ],
+  "windows-11-community-events": [
+    {
+      "file": "4275-LinkedIn-1080x1080-posts2.jpg",
+      "localPath": "/assets/images/work/windows-11-community-events/4275-LinkedIn-1080x1080-posts2.jpg",
+      "mime": "image/jpeg",
+      "title": "4275 LinkedIn 1080x1080 posts2",
+      "scope": "windows-11-community-events",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/4275-LinkedIn-1080x1080-posts2.jpg"
+    },
+    {
+      "file": "IMG-20241015-WA0007.jpg",
+      "localPath": "/assets/images/work/windows-11-community-events/IMG-20241015-WA0007.jpg",
+      "mime": "image/jpeg",
+      "title": "IMG-20241015-WA0007",
+      "scope": "windows-11-community-events",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/IMG-20241015-WA0007.jpg"
+    },
+    {
+      "file": "IMG-20241015-WA0003.jpg",
+      "localPath": "/assets/images/work/windows-11-community-events/IMG-20241015-WA0003.jpg",
+      "mime": "image/jpeg",
+      "title": "IMG-20241015-WA0003",
+      "scope": "windows-11-community-events",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/IMG-20241015-WA0003.jpg"
+    },
+    {
+      "file": "IMG-20241015-WA0046.jpg",
+      "localPath": "/assets/images/work/windows-11-community-events/IMG-20241015-WA0046.jpg",
+      "mime": "image/jpeg",
+      "title": "IMG-20241015-WA0046",
+      "scope": "windows-11-community-events",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/IMG-20241015-WA0046.jpg"
+    }
+  ],
+  "product-launch-training-emea": [
+    {
+      "file": "4140-Dell-FM-Reboot-FY25-Landscape-05Feb2024.mp4",
+      "localPath": "/assets/images/work/product-launch-training-emea/4140-Dell-FM-Reboot-FY25-Landscape-05Feb2024.mp4",
+      "mime": "video/mp4",
+      "title": "4140-Dell-FM-Reboot FY25 Landscape-05Feb2024",
+      "scope": "product-launch-training-emea",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/4140-Dell-FM-Reboot-FY25-Landscape-05Feb2024.mp4"
+    },
+    {
+      "file": "Screenshot-2025-08-26-at-18.19.21.png",
+      "localPath": "/assets/images/work/product-launch-training-emea/Screenshot-2025-08-26-at-18.19.21.png",
+      "mime": "image/png",
+      "title": "Screenshot 2025-08-26 at 18.19.21",
+      "scope": "product-launch-training-emea",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/08/Screenshot-2025-08-26-at-18.19.21.png"
+    },
+    {
+      "file": "Screenshot-2025-08-26-at-18.18.29.png",
+      "localPath": "/assets/images/work/product-launch-training-emea/Screenshot-2025-08-26-at-18.18.29.png",
+      "mime": "image/png",
+      "title": "Screenshot 2025-08-26 at 18.18.29",
+      "scope": "product-launch-training-emea",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/Screenshot-2025-08-26-at-18.18.29.png"
+    },
+    {
+      "file": "Screenshot-2025-08-26-at-18.19.21-1.png",
+      "localPath": "/assets/images/work/product-launch-training-emea/Screenshot-2025-08-26-at-18.19.21-1.png",
+      "mime": "image/png",
+      "title": "Screenshot 2025-08-26 at 18.19.21",
+      "scope": "product-launch-training-emea",
+      "originalUrl": "https://damienmulhall.com/wp-content/uploads/2025/09/Screenshot-2025-08-26-at-18.19.21-1.png"
+    }
+  ],
+  "google-education": [
+    {
+      "file": "EDU-Lifestyle-4-Latitude-5430-Chromebook.jpeg",
+      "localPath": "/assets/images/work/google-education/EDU-Lifestyle-4-Latitude-5430-Chromebook.jpeg",
+      "mime": "image/jpeg",
+      "title": "EDU Lifestyle 4 - Latitude 5430 Chromebook",
+      "scope": "google-education",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/EDU-Lifestyle-4-Latitude-5430-Chromebook.jpeg"
+    },
+    {
+      "file": "EDU-Lifestyle-2-Latitude-3445-Chromebook.jpeg",
+      "localPath": "/assets/images/work/google-education/EDU-Lifestyle-2-Latitude-3445-Chromebook.jpeg",
+      "mime": "image/jpeg",
+      "title": "EDU Lifestyle 2 - Latitude 3445 Chromebook",
+      "scope": "google-education",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/EDU-Lifestyle-2-Latitude-3445-Chromebook.jpeg"
+    },
+    {
+      "file": "EDU-Lifestyle-1-Latitude-3445-Chromebook.jpeg",
+      "localPath": "/assets/images/work/google-education/EDU-Lifestyle-1-Latitude-3445-Chromebook.jpeg",
+      "mime": "image/jpeg",
+      "title": "EDU Lifestyle 1 - Latitude 3445 Chromebook",
+      "scope": "google-education",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/EDU-Lifestyle-1-Latitude-3445-Chromebook.jpeg"
+    },
+    {
+      "file": "EDU-Lifestyle-3-Latitude-5430-Chromebook.jpeg",
+      "localPath": "/assets/images/work/google-education/EDU-Lifestyle-3-Latitude-5430-Chromebook.jpeg",
+      "mime": "image/jpeg",
+      "title": "EDU Lifestyle 3 - Latitude 5430 Chromebook",
+      "scope": "google-education",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/EDU-Lifestyle-3-Latitude-5430-Chromebook.jpeg"
+    },
+    {
+      "file": "3884-DELL-Chrome-Educators-eGuide-FY24-03Nov2023-stu-1.pdf",
+      "localPath": "/assets/images/work/google-education/3884-DELL-Chrome-Educators-eGuide-FY24-03Nov2023-stu-1.pdf",
+      "mime": "application/pdf",
+      "title": "3884 DELL-Chrome Educators eGuide FY24-03Nov2023-stu (1)",
+      "scope": "google-education",
+      "originalUrl": "http://damien-mulhall.local/wp-content/uploads/2025/08/3884-DELL-Chrome-Educators-eGuide-FY24-03Nov2023-stu-1.pdf"
+    }
+  ]
+}

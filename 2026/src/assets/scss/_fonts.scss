@@ -1,0 +1,55 @@
+// Neue Haas Grotesk — self-hosted.
+//
+// Weight ranges (rather than single values) let the available files answer for the
+// neighbouring weights the templates ask for, without the browser synthesising a
+// fake bold. Display carries 500/600/700; Text carries 400/500 and 700.
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('/assets/fonts/NeueHaasGroteskDisplay-SemiBold-600.woff2') format('woff2');
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Text';
+  src: url('/assets/fonts/NeueHaasGroteskText-Regular-400.woff2') format('woff2');
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Text';
+  src: url('/assets/fonts/NeueHaasGroteskText-Italic-400.woff2') format('woff2');
+  font-weight: 400 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Text';
+  src: url('/assets/fonts/NeueHaasGroteskText-Bold-700.woff2') format('woff2');
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Text';
+  src: url('/assets/fonts/NeueHaasGroteskText-BoldItalic-700.woff2') format('woff2');
+  font-weight: 600 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Metric-matched fallback so the swap from Arial does not shift layout.
+@font-face {
+  font-family: 'NHG Fallback';
+  src: local('Arial'), local('Helvetica Neue'), local('Liberation Sans');
+  size-adjust: 97%;
+  ascent-override: 95%;
+  descent-override: 23%;
+  line-gap-override: 0%;
+}
