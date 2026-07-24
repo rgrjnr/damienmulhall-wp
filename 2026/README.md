@@ -74,7 +74,7 @@ Other commands:
 
 | Command | Does |
 | --- | --- |
-| `npm run migrate` | Regenerates `src/work/*.md` from `../dm_posts.csv` (one-off recovery, kept for reference) |
+| `npm run migrate` | Regenerates `src/work/*.md` from `dm_posts.csv` (one-off recovery, kept for reference) |
 | `node tools/build-placeholders.mjs` | Generates stand-ins for any still-missing image |
 | `node tools/build-icons.mjs` | Regenerates the highlight badge icons |
 

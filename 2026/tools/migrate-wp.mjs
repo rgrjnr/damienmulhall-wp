@@ -18,7 +18,7 @@ import TurndownService from 'turndown';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
-const CSV = resolve(ROOT, '..', 'dm_posts.csv');
+const CSV = resolve(ROOT, 'dm_posts.csv');
 
 /**
  * Everything the CSV could not tell us, reconstructed from the case study bodies.
