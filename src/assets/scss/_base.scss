@@ -65,6 +65,9 @@ body.loaded {
     // full opacity makes it the centrepiece of the intro splash.
     mix-blend-mode: multiply;
     opacity: 1;
+    // The video's own background is not quite pure white, so multiply leaves a
+    // faint rectangular edge where it meets the page. Crop that outer band off.
+    clip-path: inset(3%);
   }
 }
 
