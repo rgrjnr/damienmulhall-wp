@@ -13,7 +13,7 @@ const watching = process.argv.includes('--watch');
 
 const options = {
   entryPoints: [resolve(ROOT, 'src/assets/ts/main.ts')],
-  outfile: resolve(ROOT, '_site/assets/js/main.js'),
+  outfile: resolve(ROOT, 'public/assets/js/main.js'),
   bundle: true,
   format: 'esm',
   target: ['es2020'],

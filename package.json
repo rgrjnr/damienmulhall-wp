@@ -13,7 +13,7 @@
     "dev:css": "node tools/build-css.mjs --watch",
     "dev:js": "node tools/build-js.mjs --watch",
     "build": "npm-run-all build:clean build:css build:js build:eleventy",
-    "build:clean": "rimraf _site",
+    "build:clean": "rimraf public",
     "build:css": "node tools/build-css.mjs",
     "build:js": "node tools/build-js.mjs",
     "build:eleventy": "eleventy",

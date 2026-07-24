@@ -17,7 +17,7 @@ import cssnano from 'cssnano';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const ENTRY = resolve(ROOT, 'src/assets/scss/main.scss');
-const OUT = resolve(ROOT, '_site/assets/css/main.css');
+const OUT = resolve(ROOT, 'public/assets/css/main.css');
 
 const isProduction = process.env.NODE_ENV === 'production' || !process.argv.includes('--watch');
 

@@ -14,7 +14,7 @@ import { extname, join, normalize, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createGzip } from 'node:zlib';
 
-const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../_site');
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
 const PORT = Number(process.argv[2]) || 8099;
 
 const TYPES = {
@@ -82,5 +82,5 @@ createServer((request, response) => {
   response.writeHead(found ? 200 : 404, headers);
   createReadStream(file).pipe(response);
 }).listen(PORT, () => {
-  console.log(`serving _site on http://localhost:${PORT}`);
+  console.log(`serving public on http://localhost:${PORT}`);
 });

@@ -37,7 +37,7 @@ async function responsiveImage(src, alt = '', options = {}) {
   const metadata = await Image(onDisk, {
     widths: [...IMAGE_WIDTHS, null],
     formats: ['avif', 'webp', 'jpeg'],
-    outputDir: resolve(__dirname, '_site/assets/img/'),
+    outputDir: resolve(__dirname, 'public/assets/img/'),
     urlPath: '/assets/img/',
     sharpOptions: { animated: false },
   });
@@ -61,10 +61,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/assets/files': 'assets/files' });
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': 'robots.txt' });
 
-  // The CSS and JS pipelines write straight into _site; watch them for reloads.
+  // The CSS and JS pipelines write straight into public; watch them for reloads.
   eleventyConfig.addWatchTarget('src/assets/scss/');
   eleventyConfig.addWatchTarget('src/assets/ts/');
-  eleventyConfig.setServerOptions({ watch: ['_site/assets/css/*.css', '_site/assets/js/*.js'] });
+  eleventyConfig.setServerOptions({ watch: ['public/assets/css/*.css', 'public/assets/js/*.js'] });
 
   eleventyConfig.addAsyncShortcode('image', responsiveImage);
 
@@ -110,7 +110,7 @@ sortAttributes: true,
   return {
     dir: {
       input: 'src',
-      output: '_site',
+      output: 'public',
       includes: '_includes',
       data: '_data',
     },

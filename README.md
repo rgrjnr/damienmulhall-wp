@@ -66,7 +66,7 @@ Images marked "IMAGE PENDING" are stand-ins. Save the real file at the exact pat
 ```bash
 npm install
 npm start          # dev server at localhost:8080 with live reload
-npm run build      # production build into _site/
+npm run build      # production build into public/
 npm run lighthouse # build, serve, and audit every page
 ```
 

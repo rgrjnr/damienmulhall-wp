@@ -18,7 +18,7 @@ see `MISSING-ASSETS.md` for what did not survive.
 ```bash
 npm install
 npm start          # dev server at localhost:8080, live reload
-npm run build      # production build into _site/
+npm run build      # production build into public/
 npm run smoke      # headless-browser behavioural test (animations, menu, a11y)
 npm run lighthouse # build, serve, audit every page (run serialized; see note)
 ```
@@ -28,7 +28,7 @@ under CPU contention. For a trustworthy reading, audit one page at a time.
 
 ## Architecture
 
-- **Eleventy 3 + Nunjucks.** Input `src/`, output `_site/`, config in
+- **Eleventy 3 + Nunjucks.** Input `src/`, output `public/`, config in
   `eleventy.config.mjs` (responsive-image shortcode, collections, RSS).
 - **Content is data, not code:**
   - `src/_data/site.json` — site-wide details (name, description, social).
@@ -58,4 +58,4 @@ under CPU contention. For a trustworthy reading, audit one page at a time.
 ## Deploy
 
 `.do/app.yaml` defines the DigitalOcean App Platform static site (`npm run build`
-→ `_site`). Fill in the GitHub `repo:` field before first deploy.
+→ `public`). Fill in the GitHub `repo:` field before first deploy.
