@@ -1,8 +1,0 @@
-{
-  "require": {
-    "htmlburger/carbon-fields": "^3.6"
-  },
-  "require-dev": {
-    "php-stubs/wordpress-stubs": "^6.8"
-  }
-}

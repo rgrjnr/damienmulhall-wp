@@ -34,6 +34,17 @@ Eleventy site in `2026/`. Promote to root once Roger signs off.
   Clean serialized Lighthouse: desktop 100 all; mobile 99 home (LCP 1.9s w/ splash) + 99 elsewhere.
   Note: lighthouse.mjs run-of-6 gives noisy numbers under CPU contention — measure serialized.
 
-**Next step**
-Roger reviews `2026/` (run `cd 2026 && npm start`). On approval: commit, then promote
-2026/ → root and delete the WP theme files.
+**Promotion (2026-07-24) — DONE**
+- Approved. Fast-forwarded master, deleted the entire WordPress theme (php, custom/,
+  parts/, vendor/, composer, old build config, carbon agent), moved 2026/* → repo root.
+- Fixed migrate CSV path (../dm_posts.csv → dm_posts.csv). Rewrote root .gitignore and
+  replaced the WP CLAUDE.md with an Eleventy one.
+- Re-verified from root: migrate ok, tsc clean, build writes 10 pages, smoke 17/17.
+- Repo root IS the site now: `npm install && npm start`.
+
+**Still open (unchanged)**
+- Real images/CV are placeholders (`MISSING-ASSETS.md`); Damien supplies.
+- Fonts are Adobe-served originals, not a bought licence (`FONTS.md`) — sort before public launch.
+- `.do/app.yaml` needs the GitHub `repo:` filled in for DO deploy.
+- 5 guessed metadata fields (durations + Windows 11 client) for Damien to confirm.
+- On master; not pushed (no remote configured yet).
