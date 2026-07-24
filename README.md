@@ -89,5 +89,3 @@ src/
 tools/          build and migration scripts
 .do/app.yaml    DigitalOcean App Platform spec
 ```
-
-See `FONTS.md` for the typeface situation.

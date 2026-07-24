@@ -42,9 +42,12 @@ Eleventy site in `2026/`. Promote to root once Roger signs off.
 - Re-verified from root: migrate ok, tsc clean, build writes 10 pages, smoke 17/17.
 - Repo root IS the site now: `npm install && npm start`.
 
-**Still open (unchanged)**
+**Fonts settled (2026-07-24):** going with the current self-hosted woff2 as-is
+(5 files in src/assets/fonts/). Removed the redundant loose root font folder and
+deleted FONTS.md. Licensing question closed per Roger.
+
+**Still open**
 - Real images/CV are placeholders (`MISSING-ASSETS.md`); Damien supplies.
-- Fonts are Adobe-served originals, not a bought licence (`FONTS.md`) — sort before public launch.
 - `.do/app.yaml` needs the GitHub `repo:` filled in for DO deploy.
 - 5 guessed metadata fields (durations + Windows 11 client) for Damien to confirm.
 - On master; not pushed (no remote configured yet).

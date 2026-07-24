@@ -41,8 +41,8 @@ under CPU contention. For a trustworthy reading, audit one page at a time.
   `src/assets/ts/`. Boot is deferred + chunked to protect LCP, and every step is
   guarded for reduced-motion. The crow overlay is a homepage-only, once-per-session
   intro splash.
-- **Fonts:** self-hosted Neue Haas Grotesk in `src/assets/fonts/`. See `FONTS.md`
-  for the licensing situation before going live on a custom domain.
+- **Fonts:** self-hosted Neue Haas Grotesk (5 woff2 in `src/assets/fonts/`),
+  declared in `src/assets/scss/_fonts.scss`.
 
 ## Conventions
 

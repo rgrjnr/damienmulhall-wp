@@ -5,8 +5,3 @@ _site/
 .DS_Store
 *.log
 
-# Font source drop-ins. The files the site ships live in src/assets/fonts/.
-# The trial collection is licensed for evaluation only and must never be
-# committed or deployed (see FONTS.md).
-/neue-haas-grotesk/
-/Neue_Haas_Grotesk_Collection/
