@@ -4,11 +4,11 @@
   slides one out while the other slides in. The second label is aria-hidden so
   screen readers announce the name once.
 
-  variant: omit for the yellow default, 'green' for the smaller green pill.
+  variant: omit for the full-size default, 'pill' for the smaller pill.
   arrow:   omit for the up-right arrow, 'down' for a chevron that rolls downward.
 #}
 {% macro button(label, link, classes, variant, arrow) %}
-{%- set labelSize = 'text-heading-sm' if variant == 'green' else 'text-display-sm' -%}
+{%- set labelSize = 'text-heading-sm' if variant == 'pill' else 'text-display-sm' -%}
 <a href="{{ link or '#' }}" class="btn-animated{% if variant %} btn-animated--{{ variant }}{% endif %}{% if arrow == 'down' %} btn-animated--down{% endif %} {{ classes or '' }}">
     <div class="btn-labels">
         <span class="font-haas-display font-medium {{ labelSize }} text-dm-black btn-label">

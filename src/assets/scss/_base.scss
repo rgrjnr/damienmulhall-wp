@@ -258,8 +258,7 @@ body.loaded {
 
 // Smaller green pill (the hero's Projects link). Same roll, with a chevron that
 // drops down and out while its twin falls in from above.
-.btn-animated--green {
-  background-color: $dm-green;
+.btn-animated--pill {
   gap: 0.5rem;
   padding-block: 0.25rem;
   padding-inline: 1.5rem 1.25rem;
