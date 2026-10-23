@@ -6,7 +6,7 @@
  * navigations are already instant. Scrolling is the browser's own.
  * What remains: the hero SplitText reveal and scribble, scroll reveals, stat
  * counters, the logo marquee, the `.work-item` hover choreography, the crow
- * overlay, the scroll-up header, copy-to-clipboard and anchor scrolling.
+ * overlay and hover caw, the scroll-up header, copy-to-clipboard and anchor scrolling.
  */
 
 import { gsap } from 'gsap';
@@ -25,6 +25,7 @@ import { setupMarquee } from './lib/marquee';
 import { setupCopyEmail } from './lib/copy-email';
 import { setupScrollNav } from './lib/scroll-nav';
 import { setupReceipts } from './lib/receipts';
+import { setupCrowCaw } from './lib/crow-caw';
 
 /** Plugin registration is itself fail-safe: without it we degrade to static. */
 function registerPlugins(): boolean {
@@ -63,6 +64,7 @@ async function start(): Promise<void> {
   safely('receipts', setupReceipts);
 
   const reduced = prefersReducedMotion();
+  safely('crow-caw', () => setupCrowCaw(!reduced));
 
   if (!registerPlugins()) {
     safely('force-visible', forceVisible);

@@ -572,3 +572,9 @@
     transform: none !important;
   }
 }
+
+// Crow caw: the canvas crow-caw.ts lays over a crow while it caws.
+.crow-caw__canvas {
+  pointer-events: none;
+  position: absolute;
+}
