@@ -2,9 +2,9 @@
   "_comment": "Homepage copy. First recovered from the old WordPress theme, rewritten October 2026. Edit it here.",
 
   "hero": {
-    "heading": "I lead creative projects from concept to delivery.",
+    "heading": "I take projects and products from first idea to delivery.",
     "highlight": "delivery",
-    "description": "I've spent 14 years leading projects, mostly in agencies where content, deadlines and expectations all move fast."
+    "description": "14 years leading projects for Dell, Microsoft, Intel and Google, mostly in agencies where deadlines move fast. Now co-founder of Hay.chat, an AI support platform I took from first backlog to live product."
   },
 
   "brands": {
@@ -21,7 +21,7 @@
     {
       "title": "What I do",
       "lines": [
-        "Lead creative projects end to end",
+        "Lead projects and products end to end",
         "Turn strategy into a plan that ships",
         "Get stakeholders aligned and deliver"
       ]
@@ -62,7 +62,7 @@
     },
     {
       "title": "Tools",
-      "text": "Google Workspace / Office 365 / SharePoint / Adobe CC / Riverside.fm / Trello",
+      "text": "Jira / Confluence / Claude Code / VS Code / GitHub / Figma / Canva / Workfront / CVENT / Lemlist / Twenty CRM / Google Search Console / Google Workspace / Office 365 / Adobe CC / Riverside.fm",
       "icon": "tools"
     }
   ],
