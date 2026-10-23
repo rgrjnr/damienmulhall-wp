@@ -31,7 +31,7 @@ stats:
     label: 'consecutive years running the programme'
   - value: '5 of 5'
     label: 'years delivered on time'
-    note: 'Each year, on time and on budget'  # TODO confirm with Damien
+    note: 'Each year, on time and on budget'
 
 summary: 'Before each annual product launch, Dell needed sales teams across 40+ EMEA sites trained and excited about the new range. I ran the programme, from the training manual to a launch hype campaign and the physical kit shipped to every site.'
 

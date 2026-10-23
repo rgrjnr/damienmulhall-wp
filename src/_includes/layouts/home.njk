@@ -27,10 +27,24 @@ showHero: true
     <h2 id="about-heading" class="sr-only">About</h2>
     <div class="flex flex-col gap-3">
         <!-- Main About Block -->
-        <div class="bg-dm-cyan p-content">
+        <div class="bg-dm-cyan p-content{% if home.about.path %} reveal-panel{% endif %}"{% if home.about.path %} tabindex="0"{% endif %}>
             <p class="font-haas-text font-medium text-heading-md md:text-heading-lg text-dm-white leading-normal">
                 {{ home.about.main }}
             </p>
+            {%- if home.about.path %}
+            <div class="career-strip">
+                <p class="career-cue" aria-hidden="true">{{ home.about.pathCue }}</p>
+                <ol class="career" aria-label="How I got here">
+                    {%- for step in home.about.path %}
+                    <li class="career__step">
+                        <span class="career__year">{{ step.year }}</span>
+                        <span class="career__role">{{ step.role }}</span>
+                        <span class="career__org">{{ step.org }}</span>
+                    </li>
+                    {%- endfor %}
+                </ol>
+            </div>
+            {%- endif %}
         </div>
 
         <!-- Secondary About Block -->
@@ -172,7 +186,7 @@ showHero: true
     <h2 id="skills-heading" class="sr-only">Skills, certifications, expertise and tools</h2>
     <div class="grid grid-cols-1 md:grid-cols-2  gap-4">
         {%- for card in home.cards %}
-        <div class="bg-dm-black p-6 flex flex-col justify-between relative min-h-[240px]">
+        <div class="bg-dm-black p-6 flex flex-col justify-between relative min-h-[240px]{% if card.detail %} reveal-card{% endif %}"{% if card.detail %} tabindex="0"{% endif %}>
             {%- if card.icon == 'skills' %}
             <svg aria-hidden="true" focusable="false"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="2rem"
@@ -206,9 +220,16 @@ showHero: true
             {%- endif %}
 
             <h3 class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-white mb-2">{{ card.title }}</h3>
-            <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-tight">
+            <p class="card-summary font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-tight">
                 {{ card.text }}
             </p>
+            {%- if card.detail %}
+            <ul class="card-detail">
+                {%- for line in card.detail %}
+                <li>{{ line }}</li>
+                {%- endfor %}
+            </ul>
+            {%- endif %}
 
         </div>
         {%- endfor %}

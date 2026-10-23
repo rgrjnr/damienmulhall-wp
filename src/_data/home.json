@@ -17,7 +17,35 @@
   },
   "about": {
     "main": "I started out in media production, so structure and story come naturally to me. I don't swear by any one methodology. What matters is getting things done, and making the process easier for everyone along the way.",
-    "secondary": "I've launched a podcast series that passed 100,000 downloads, built internal playbooks people actually use, and run campaigns across formats, teams and time zones. But the size of the brand was never the point."
+    "secondary": "I've launched a podcast series that passed 100,000 downloads, built internal playbooks people actually use, and run campaigns across formats, teams and time zones. But the size of the brand was never the point.",
+    "pathCue": "Hover for how I got here",
+    "path": [
+      {
+        "year": "2010",
+        "role": "Radio presenter and producer",
+        "org": "OpenFM"
+      },
+      {
+        "year": "2012",
+        "role": "Media director",
+        "org": "Biz By Media"
+      },
+      {
+        "year": "2013",
+        "role": "Marketing Program Manager",
+        "org": "Dell Technologies"
+      },
+      {
+        "year": "2018",
+        "role": "Senior account and project manager",
+        "org": "One1000"
+      },
+      {
+        "year": "2025",
+        "role": "PMP, and co-founder",
+        "org": "Hay.chat"
+      }
+    ]
   },
   "services": [
     {
@@ -64,7 +92,7 @@
           "text": "Projects on time and on budget",
           "proof": {
             "value": "5 of 5",
-            "text": "years on time: launch training for 40+ EMEA sites, renewed every year.",
+            "text": "years on time and on budget: launch training for 40+ EMEA sites, renewed every year.",
             "link": "/work/product-launch-training-emea/"
           }
         },
@@ -120,7 +148,11 @@
     {
       "title": "Certifications",
       "text": "PMP / Google Project Management Certificate / Agile Project Management",
-      "icon": "certifications"
+      "icon": "certifications",
+      "detail": [
+        "PMP: Project Management Institute, August 2025. Credential 4175013",
+        "Google Project Management Certificate: July 2025, including Agile Project Management"
+      ]
     },
     {
       "title": "Expertise",

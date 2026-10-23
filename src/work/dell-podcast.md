@@ -30,7 +30,7 @@ stats:
     note: 'Ahead of Dell''s other corporate podcasts worldwide'
   - value: '2 weeks'
     label: 'often all I had from guest introduction to publishing'
-  - value: '#1'  # TODO confirm with Damien
+  - value: '#1'
     label: 'corporate podcast at Dell by downloads'
     note: 'Worldwide, across Dell''s corporate podcast initiatives'
 

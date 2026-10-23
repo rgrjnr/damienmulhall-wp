@@ -26,7 +26,7 @@ stats:
   - value: '3'
     label: 're-commissions'
     note: 'The client came back to update and extend the guide three times'
-  - value: '4'  # TODO confirm with Damien
+  - value: '4'
     label: 'persona groups covered'
     note: 'Students, teachers, administrators and superintendents'
   - value: '2'

@@ -31,7 +31,7 @@ stats:
   - value: '2'
     label: 'regions served'
     note: 'HTML for US campaigns, PDF approved for EMEA syndication'
-  - value: '6K'  # TODO confirm with Damien
+  - value: '6K'
     label: 'native post-production workflow the guide covers'
 
 summary: 'Dell wanted an organic social and lead generation asset that put Precision workstations in front of media and entertainment SMEs and challenged Apple''s hold on the segment. I led the guide with Hollywood editor Vashi Nedomansky and his team. <a href="https://vashivisuals.com/wp-content/uploads/2020/05/2629-Vashi-Nedomansky-6k-Film-Making-Guide-03Oct2019.pdf">Read the guide on Vashi''s site (PDF)</a>.'

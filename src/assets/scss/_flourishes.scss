@@ -23,7 +23,7 @@
   white-space: nowrap;
 
   &::after {
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 24' preserveAspectRatio='none'%3E%3Cpath d='M4 15 C 60 7, 130 5, 200 8 S 278 13, 296 9 M 28 20 C 100 14, 190 13, 272 17' fill='none' stroke='%23226d68' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E")
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 24' preserveAspectRatio='none'%3E%3Cpath d='M4 15 C 60 7, 130 5, 200 8 S 278 13, 296 9 M 28 20 C 100 14, 190 13, 272 17' fill='none' stroke='%2333A199' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E")
       no-repeat center / 100% 100%;
     bottom: -0.08em;
     clip-path: inset(0);
@@ -420,5 +420,155 @@
 @media (prefers-reduced-motion: reduce) {
   .receipt-tile.is-interactive .receipt {
     transform: none;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Receipts, phase 2: the about panel reveals the career path and the
+// certifications card reveals credential detail. CSS only. Touch screens
+// and no-hover devices simply show the detail.
+// ---------------------------------------------------------------------------
+
+.reveal-panel,
+.reveal-card {
+  &:focus-visible {
+    outline: 3px solid $dm-yellow;
+    outline-offset: 4px;
+  }
+}
+
+.career-strip {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.career {
+  border-top: 2px solid rgba($dm-white, 0.3);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0 0;
+}
+
+.career__year {
+  color: $dm-yellow;
+  display: block;
+  font-family: $font-haas-display;
+  font-size: $text-heading-xs;
+  font-weight: $font-medium;
+  line-height: 1;
+}
+
+.career__role {
+  color: $dm-white;
+  display: block;
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  font-weight: $font-bold;
+  line-height: 1.3;
+  margin-top: 0.4rem;
+}
+
+.career__org {
+  color: rgba($dm-white, 0.7);
+  display: block;
+  font-family: $font-haas-text;
+  font-size: 12px;
+  margin-top: 0.15rem;
+}
+
+.career-cue {
+  display: none;
+}
+
+.card-detail {
+  color: $dm-white;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  gap: 0.5rem;
+  line-height: 1.4;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+@media #{$hover-fine} {
+  // The path keeps its space at rest, so revealing it never moves the page.
+  .career-cue {
+    color: rgba($dm-white, 0.6);
+    display: block;
+    font-family: $font-haas-text;
+    font-size: 12px;
+    font-weight: $font-bold;
+    left: 0;
+    letter-spacing: 0.08em;
+    margin: 0;
+    position: absolute;
+    text-transform: uppercase;
+    top: 1rem;
+    transition: opacity $dur-hover ease;
+  }
+
+  .career {
+    border-top-color: rgba($dm-white, 0.15);
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity $dur-hover ease,
+      transform $dur-hover $ease-out,
+      border-color $dur-hover ease;
+  }
+
+  .reveal-panel:is(:hover, :focus-within) {
+    .career {
+      border-top-color: rgba($dm-white, 0.3);
+      opacity: 1;
+      transform: none;
+    }
+
+    .career-cue {
+      opacity: 0;
+    }
+  }
+
+  .reveal-card {
+    .card-detail {
+      bottom: 1.5rem;
+      left: 1.5rem;
+      margin: 0;
+      opacity: 0;
+      position: absolute;
+      right: 1.5rem;
+      transform: translateY(8px);
+      transition:
+        opacity $dur-hover ease,
+        transform $dur-hover $ease-out;
+    }
+
+    .card-summary {
+      transition: opacity $dur-hover ease;
+    }
+
+    &:is(:hover, :focus-within) {
+      .card-detail {
+        opacity: 1;
+        transform: none;
+      }
+
+      .card-summary {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .career,
+  .reveal-card .card-detail {
+    transform: none !important;
   }
 }
