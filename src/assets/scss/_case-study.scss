@@ -1,0 +1,849 @@
+@use "variables" as *;
+
+// Case study pages, the work index cards and the homepage logo wall.
+// Semantic `cs-*`, `work-card*` and `logo-wall*` classes so the templates do not
+// depend on Tailwind scanning generated class strings. Square corners and 3px
+// rules throughout, to match the rest of the site. Mobile first.
+
+$arrow-dark: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0 63 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M42.3627 23.3483L42.3624 32.7149L42.3627 42.0815L32.9961 42.0812L23.6294 42.0815L23.6297 37.0862L28.0003 37.0855L33.8353 37.0859L19.1783 22.4294L22.7114 18.8981L32.3943 28.5804L37.367 33.5531L37.3667 27.7192L37.3673 23.3486L42.3627 23.3483Z' fill='%23201a1e'/%3E%3C/svg%3E");
+$arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0 63 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M42.3627 23.3483L42.3624 32.7149L42.3627 42.0815L32.9961 42.0812L23.6294 42.0815L23.6297 37.0862L28.0003 37.0855L33.8353 37.0859L19.1783 22.4294L22.7114 18.8981L32.3943 28.5804L37.367 33.5531L37.3667 27.7192L37.3673 23.3486L42.3627 23.3483Z' fill='%23e1dfd0'/%3E%3C/svg%3E");
+
+@mixin focus-ring($color: $dm-black) {
+  &:focus-visible {
+    outline: 3px solid $color;
+    outline-offset: 4px;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Shared
+// ---------------------------------------------------------------------------
+
+.cs a,
+.cs-pager a,
+.cs-cta a {
+  @include focus-ring;
+}
+
+.cs-cta a {
+  @include focus-ring($dm-white);
+}
+
+.cs-heading {
+  border-top: 3px solid $dm-black;
+  color: $dm-black;
+  font-family: $font-haas-display;
+  font-size: $text-heading-sm;
+  font-weight: $font-medium;
+  line-height: 1.1;
+  margin: 0 0 1.5rem;
+  padding-top: 1rem;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-heading-md;
+  }
+}
+
+// Arrow bullets, same mark as the prose lists. Light variant on dark grounds.
+.cs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding-left: 1.75em;
+    position: relative;
+
+    &::before {
+      background: $arrow-dark no-repeat center / 100% 100%;
+      content: "";
+      height: 1.5em;
+      left: -0.25em;
+      position: absolute;
+      top: -0.1em;
+      width: 1.5em;
+    }
+  }
+}
+
+.cs-card .cs-list li::before,
+.cs-role .cs-list li::before {
+  background-image: $arrow-light;
+}
+
+// ---------------------------------------------------------------------------
+// Header
+// ---------------------------------------------------------------------------
+
+.cs-titleblock {
+  border-bottom: 3px solid $dm-black;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+
+  @media (min-width: $breakpoint-lg) {
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.cs-titleblock__text {
+  max-width: 52rem;
+}
+
+.cs-logo {
+  display: block;
+  height: 2.25rem;
+  margin-bottom: 1.5rem;
+  width: auto;
+}
+
+.cs-eyebrow {
+  color: rgba($dm-black, 0.7);
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  font-weight: $font-bold;
+  letter-spacing: 0.08em;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.cs-title {
+  color: $dm-black;
+  font-family: $font-haas-display;
+  font-size: $text-display-sm;
+  font-weight: $font-medium;
+  line-height: 1;
+  margin: 0;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-display-lg;
+  }
+}
+
+.cs-outcome {
+  color: $dm-black;
+  font-family: $font-haas-display;
+  font-size: $text-heading-xs;
+  font-weight: $font-medium;
+  line-height: 1.25;
+  margin: 1.25rem 0 0;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-heading-sm;
+  }
+}
+
+.cs-outcome--quiet {
+  color: rgba($dm-black, 0.75);
+}
+
+// ---------------------------------------------------------------------------
+// Facts strip (replaces the old sticky sidebar)
+// ---------------------------------------------------------------------------
+
+.cs-facts {
+  background: $dm-black;
+  display: grid;
+  gap: 1.25rem 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  padding: 1.5rem;
+
+  @media (min-width: $breakpoint-md) {
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    padding: 1.75rem 2rem;
+  }
+}
+
+.cs-facts__item {
+  dt {
+    color: rgba($dm-white, 0.7);
+    font-family: $font-haas-text;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+  }
+
+  dd {
+    color: $dm-white;
+    font-family: $font-haas-display;
+    font-size: $text-body-md;
+    font-weight: $font-medium;
+    line-height: 1.3;
+    margin: 0;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $text-body-lg;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Stat cards
+// ---------------------------------------------------------------------------
+
+.cs-stats {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    &.cs-stats--3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    &.cs-stats--2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &.cs-stats--1 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.cs-stat {
+  border: 3px solid $dm-black;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 1.5rem;
+  }
+}
+
+.cs-stat__value {
+  color: $dm-cyan;
+  font-family: $font-haas-display;
+  font-size: $text-heading-lg;
+  font-weight: $font-medium;
+  line-height: 1;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-display-sm;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: 52px;
+  }
+}
+
+.cs-stat__label {
+  color: $dm-black;
+  font-family: $font-haas-display;
+  font-size: $text-body-md;
+  font-weight: $font-medium;
+  line-height: 1.25;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-body-lg;
+  }
+}
+
+.cs-stat__note {
+  color: rgba($dm-black, 0.75);
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  line-height: 1.4;
+}
+
+// ---------------------------------------------------------------------------
+// At a glance
+// ---------------------------------------------------------------------------
+
+.cs-summary {
+  color: $dm-black;
+  font-family: $font-haas-text;
+  font-size: $text-body-lg;
+  font-weight: $font-medium;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 52rem;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-heading-xs;
+    line-height: 1.45;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Challenge / approach / outcome cards (homepage dark-card style)
+// ---------------------------------------------------------------------------
+
+.cs-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.cs-card {
+  background: $dm-black;
+  color: $dm-white;
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.cs-card__number {
+  color: rgba($dm-white, 0.5);
+  font-family: $font-haas-display;
+  font-size: $text-body-lg;
+  font-weight: $font-medium;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+.cs-card__title {
+  font-family: $font-haas-display;
+  font-size: $text-heading-sm;
+  font-weight: $font-medium;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-heading-md;
+  }
+}
+
+.cs-card__body {
+  font-family: $font-haas-display;
+  font-size: $text-body-md;
+  font-weight: $font-medium;
+  line-height: 1.35;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-body-lg;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// What I owned
+// ---------------------------------------------------------------------------
+
+.cs-role {
+  background: $dm-cyan;
+  color: $dm-white;
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+
+  @media (min-width: $breakpoint-md) {
+    padding: $space-card;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    gap: 3rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+
+  .cs-list {
+    font-family: $font-haas-text;
+    font-size: $text-body-md;
+    font-weight: $font-medium;
+    line-height: 1.45;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $text-body-lg;
+    }
+  }
+}
+
+.cs-role__title {
+  font-family: $font-haas-display;
+  font-size: $text-heading-sm;
+  font-weight: $font-bold;
+  line-height: 1.1;
+  margin: 0;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-heading-lg;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Gallery and media
+// ---------------------------------------------------------------------------
+
+.cs-media,
+.cs-gallery {
+  align-items: start;
+  display: grid;
+  gap: 1.5rem 1rem;
+  grid-template-columns: minmax(0, 1fr);
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.cs-media {
+  margin-bottom: 1.5rem;
+}
+
+.cs-gallery--3 {
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.cs-figure {
+  margin: 0;
+
+  figcaption {
+    border-left: 3px solid $dm-black;
+    color: $dm-black;
+    font-family: $font-haas-text;
+    font-size: $text-body-sm;
+    line-height: 1.45;
+    margin-top: 0.75rem;
+    padding-left: 0.75rem;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $text-body-md;
+    }
+  }
+}
+
+.cs-figure--audio,
+.cs-figure--embed {
+  grid-column: 1 / -1;
+}
+
+.cs-figure__link {
+  background: $dm-black;
+  display: block;
+  padding: 0.5rem;
+  transition: background-color 200ms ease;
+
+  &:hover {
+    background: $dm-cyan;
+  }
+
+  picture,
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.cs-figure__video,
+.cs-figure__embed {
+  background: $dm-black;
+  border: 0;
+  display: block;
+  width: 100%;
+}
+
+.cs-figure__video {
+  height: auto;
+}
+
+.cs-figure__audio {
+  display: block;
+  width: 100%;
+}
+
+// ---------------------------------------------------------------------------
+// Quote and lessons
+// ---------------------------------------------------------------------------
+
+.cs-quote {
+  border-left: 3px solid $dm-black;
+  margin: 0;
+  padding-left: 1.5rem;
+
+  blockquote {
+    margin: 0;
+
+    p {
+      color: $dm-black;
+      font-family: $font-haas-display;
+      font-size: $text-heading-xs;
+      font-weight: $font-medium;
+      line-height: 1.3;
+      margin: 0;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: $text-heading-md;
+      }
+    }
+  }
+
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-haas-text;
+    font-size: $text-body-md;
+    margin-top: 1rem;
+  }
+}
+
+.cs-quote__name {
+  font-weight: $font-bold;
+}
+
+.cs-quote__title {
+  color: rgba($dm-black, 0.75);
+}
+
+.cs-lessons__body {
+  font-family: $font-haas-text;
+  font-size: $text-body-lg;
+  line-height: 1.55;
+  max-width: 48rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Optional markdown body ("More detail")
+// ---------------------------------------------------------------------------
+
+.cs-body {
+  max-width: 45rem;
+
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Previous / next project cards
+// ---------------------------------------------------------------------------
+
+.cs-pager {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.cs-pager__card--next {
+  @media (min-width: $breakpoint-md) {
+    grid-column: 2;
+  }
+}
+
+.cs-pager__card {
+  border: 3px solid $dm-black;
+  color: $dm-black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-decoration: none;
+  transition: background-color 200ms ease, color 200ms ease;
+
+  &:hover,
+  &:focus-visible {
+    background: $dm-cyan;
+    color: $dm-white;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $dm-black;
+    outline-offset: 4px;
+  }
+}
+
+.cs-pager__image {
+  aspect-ratio: 16 / 9;
+  background: $dm-black;
+  display: block;
+  overflow: hidden;
+
+  picture,
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.cs-pager__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem 4.5rem 1.5rem 1.25rem;
+}
+
+.cs-pager__label {
+  font-family: $font-haas-text;
+  font-size: 12px;
+  font-weight: $font-bold;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+
+.cs-pager__title {
+  font-family: $font-haas-display;
+  font-size: $text-heading-xs;
+  font-weight: $font-medium;
+  line-height: 1.1;
+}
+
+.cs-pager__outcome {
+  font-family: $font-haas-text;
+  font-size: $text-body-md;
+  line-height: 1.4;
+}
+
+.cs-pager__arrow {
+  bottom: 1.5rem;
+  position: absolute;
+  right: 1.25rem;
+  transition: transform 200ms ease;
+}
+
+.cs-pager__card--prev .cs-pager__arrow {
+  transform: rotate(180deg);
+}
+
+.cs-pager__card--next:hover .cs-pager__arrow {
+  transform: translateX(4px);
+}
+
+.cs-pager__card--prev:hover .cs-pager__arrow {
+  transform: rotate(180deg) translateX(4px);
+}
+
+.cs-cta__cv {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+// ---------------------------------------------------------------------------
+// Work index cards
+// ---------------------------------------------------------------------------
+
+.work-grid {
+  display: grid;
+  gap: 1.5rem 1rem;
+  grid-template-columns: minmax(0, 1fr);
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.work-card {
+  border: 3px solid $dm-black;
+  color: $dm-black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  transition: background-color 200ms ease, color 200ms ease;
+
+  &:hover,
+  &:focus-visible {
+    background: $dm-cyan;
+    color: $dm-white;
+
+    .work-card__tag {
+      border-color: $dm-white;
+    }
+  }
+
+  &:focus-visible {
+    outline: 3px solid $dm-black;
+    outline-offset: 4px;
+  }
+}
+
+.work-card__image {
+  aspect-ratio: 16 / 9;
+  background: $dm-black;
+  display: block;
+  overflow: hidden;
+  position: relative;
+
+  picture,
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.work-card__stat {
+  background: $dm-yellow;
+  bottom: 0;
+  color: $dm-black;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  max-width: 80%;
+  padding: 0.6rem 0.9rem;
+  position: absolute;
+}
+
+.work-card__stat-value {
+  font-family: $font-haas-display;
+  font-size: $text-heading-xs;
+  font-weight: $font-medium;
+  line-height: 1;
+}
+
+.work-card__stat-label {
+  font-family: $font-haas-text;
+  font-size: 12px;
+  font-weight: $font-bold;
+  line-height: 1.3;
+  margin-top: 0.2rem;
+}
+
+.work-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem 1.25rem 1.5rem;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 1.5rem;
+  }
+}
+
+.work-card__eyebrow {
+  font-family: $font-haas-text;
+  font-size: 12px;
+  font-weight: $font-bold;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+
+.work-card__title {
+  font-family: $font-haas-display;
+  font-size: $text-heading-xs;
+  font-weight: $font-medium;
+  line-height: 1.15;
+  margin: 0;
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: $text-heading-sm;
+  }
+}
+
+.work-card__project {
+  font-family: $font-haas-text;
+  font-size: $text-body-md;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.work-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: auto 0 0;
+  padding: 0.6rem 0 0;
+}
+
+.work-card__tag {
+  border: 2px solid $dm-black;
+  font-family: $font-haas-text;
+  font-size: 12px;
+  font-weight: $font-bold;
+  line-height: 1;
+  padding: 0.35rem 0.55rem;
+  transition: border-color 200ms ease;
+}
+
+// ---------------------------------------------------------------------------
+// Homepage logo wall
+// ---------------------------------------------------------------------------
+
+.logo-wall {
+  // The homepage hero already ends in a 3px rule, so only close the strip below.
+  border-bottom: 3px solid $dm-black;
+  padding-block: 0.5rem 1.5rem;
+
+  @media (min-width: $breakpoint-lg) {
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+  }
+}
+
+.logo-wall__heading {
+  color: rgba($dm-black, 0.75);
+  flex-shrink: 0;
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  font-weight: $font-bold;
+  letter-spacing: 0.08em;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-lg) {
+    margin: 0;
+  }
+}
+
+.logo-wall__list {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-wall__item {
+  color: rgba($dm-black, 0.65);
+  font-family: $font-haas-display;
+  font-size: $text-heading-xs;
+  font-weight: $font-medium;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  white-space: nowrap;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-heading-sm;
+  }
+}

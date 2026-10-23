@@ -3,154 +3,297 @@ layout: layouts/base.njk
 schemaType: CreativeWork
 showHero: false
 ---
+{#
+  Case study layout. Every section below is driven by an optional front-matter
+  field and is skipped when that field is missing, so older case studies that
+  only have the original fields (client, duration, date, hero, highlights and a
+  markdown body) still render. Field reference: README.md, "Adding a case study".
+
+  Styling lives in src/assets/scss/_case-study.scss under semantic `cs-*` class
+  names, so nothing here depends on Tailwind seeing generated class strings.
+#}
 {% from "partials/highlights-badges.njk" import badges with context %}
 {% from "partials/animated-button.njk" import button %}
 
 {%- set prev = collections.work | getPreviousCollectionItem %}
 {%- set next = collections.work | getNextCollectionItem %}
+{%- set hasStructure = outcome or summary or cards or stats or role %}
 
-<!-- Hero Section -->
-<section class="w-full max-w-page mx-auto px-6 mt-10 md:mt-12">
+{#- Facts strip: explicit `facts`, or a fallback built from the original fields. #}
+{%- if facts and facts.length %}
+{%- set factList = facts %}
+{%- else %}
+{%- set factList = [
+  { label: "Client", value: client },
+  { label: "Timeline", value: duration },
+  { label: "Year", value: (date | year) if date else "" }
+] %}
+{%- endif %}
+
+{%- macro richText(value) -%}
+{%- if value | isArray -%}
+<ul class="cs-list">
+    {%- for line in value %}
+    <li>{{ line | safe }}</li>
+    {%- endfor %}
+</ul>
+{%- else -%}
+<p>{{ value | safe }}</p>
+{%- endif -%}
+{%- endmacro %}
+
+<article class="cs" aria-labelledby="cs-title">
+
+<!-- Header -->
+<header class="w-full max-w-page mx-auto px-6 mt-10 md:mt-12">
     <div class="flex flex-col gap-8">
-        <!-- Back Link -->
-        <a href="/#work"
-            class="inline-flex items-center gap-2 font-haas-display font-medium text-body-md md:text-body-lg text-dm-black hover:text-dm-cyan transition-colors group no-underline">
+        <a href="/work/" class="cs-back inline-flex items-center gap-2 font-haas-display font-medium text-body-md md:text-body-lg text-dm-black hover:text-dm-cyan transition-colors group no-underline">
             <svg class="w-5 h-5 transform rotate-180 group-hover:-translate-x-1 transition-transform"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
                 <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <span>Back to All Work</span>
+            <span>Back to all work</span>
         </a>
 
-        <!-- Title with Highlights -->
-        <div class="border-b-[3px] border-dm-black pb-8">
-            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-                <div>
-                    <h1 class="font-haas-display font-medium text-display-sm md:text-display-lg lg:text-display-xl text-dm-black leading-none mb-4">
-                        {{ title }}
-                    </h1>
-                    {%- if shortTitle %}
-                    <p class="font-haas-text font-medium text-heading-sm md:text-heading-md text-dm-black/60">
-                        {{ shortTitle }}
-                    </p>
-                    {%- endif %}
-                </div>
-
-                <!-- Highlight Circles -->
-                {{ badges(highlights, 'medium', badgeStyles) }}
+        <div class="cs-titleblock">
+            <div class="cs-titleblock__text">
+                {%- if logo %}
+                <img class="cs-logo" src="{{ logo }}" alt="{{ client or title }}" data-raw>
+                {%- elif client %}
+                <p class="cs-eyebrow">{{ client }}</p>
+                {%- endif %}
+                <h1 id="cs-title" class="cs-title">{{ title }}</h1>
+                {%- if outcome %}
+                <p class="cs-outcome">{{ outcome }}</p>
+                {%- elif excerpt %}
+                <p class="cs-outcome cs-outcome--quiet">{{ excerpt }}</p>
+                {%- endif %}
             </div>
+            {{ badges(highlights, 'medium', badgeStyles) }}
         </div>
     </div>
-</section>
+</header>
 
 {%- if hero %}
-<!-- Featured Image -->
-<section class="w-full max-w-page mx-auto px-6 mt-section">
+<!-- Hero image -->
+<section class="w-full max-w-page mx-auto px-6 mt-content" aria-label="Project image">
     <div class="bg-dm-black p-3">
-        {% image hero, title, { sizes: "(min-width: 1120px) 1096px, 100vw", className: "w-full h-auto", eager: true } %}
+        {% image hero, (heroAlt or title), { sizes: "(min-width: 1120px) 1096px, 100vw", className: "w-full h-auto", eager: true } %}
     </div>
 </section>
 {%- endif %}
 
-<!-- Main Content -->
-<section class="w-full max-w-page mx-auto px-6 mt-section">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <!-- Content Area -->
-        <div class="lg:col-span-2">
-            <div class="prose prose-lg max-w-none">
-                {%- if excerpt %}
-                <blockquote>
-                    <p>
-                        {{ excerpt }}
-                    </p>
-                </blockquote>
-                {%- endif %}
-                {{ content | safe }}
-            </div>
+<!-- Facts strip -->
+<section class="w-full max-w-page mx-auto px-6 mt-3" aria-label="Project facts">
+    <dl class="cs-facts">
+        {%- for fact in factList %}
+        {%- if fact.value %}
+        <div class="cs-facts__item">
+            <dt>{{ fact.label }}</dt>
+            <dd>{{ fact.value }}</dd>
         </div>
-
-        <!-- Sidebar -->
-        <div class="lg:col-span-1">
-            <div class="bg-dm-black p-card sticky top-6">
-                <h3 class="font-haas-display font-bold text-body-lg md:text-heading-sm text-dm-white mb-6">
-                    <div>Project Details</div>
-
-                </h3>
-
-                <!-- Meta Information -->
-                <div class="space-y-4">
-                    {%- if client %}
-                    <div>
-                        <p class="font-haas-text text-body-xs md:text-body-sm text-dm-white/60">Client</p>
-                        <p class="font-haas-text text-body-sm md:text-body-md text-dm-white">
-                            {{ client }}
-                        </p>
-                    </div>
-                    {%- endif %}
-
-                    {%- if duration %}
-                    <div>
-                        <p class="font-haas-text text-body-xs md:text-body-sm text-dm-white/60">Duration</p>
-                        <p class="font-haas-text text-body-sm md:text-body-md text-dm-white">
-                            {{ duration }}
-                        </p>
-                    </div>
-                    {%- endif %}
-
-                    <div>
-                        <p class="font-haas-text text-body-xs md:text-body-sm text-dm-white/60">Date</p>
-                        <p class="font-haas-text text-body-sm md:text-body-md text-dm-white">
-                            {{ date | year }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        {%- endif %}
+        {%- endfor %}
+    </dl>
 </section>
 
-<!-- Navigation -->
-<nav class="w-full max-w-page mx-auto px-6 mt-section" aria-label="Case study navigation">
-    <div class="border-t-[3px] border-dm-black pt-8">
-        <div class="flex justify-between items-center">
-            {%- if prev %}
-            <a href="{{ prev.url }}" rel="prev"
-                class="group flex items-center gap-3 font-haas-display font-medium text-body-lg md:text-heading-sm text-dm-black hover:text-dm-cyan transition-colors">
-                <svg class="w-6 h-6 transform rotate-180 group-hover:-translate-x-2 transition-transform"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
-                    <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <span>{{ prev.data.shortTitle or prev.data.title }}</span>
-            </a>
-            {%- else %}
-            <div></div>
+{%- if stats and stats.length %}
+<!-- Results in numbers -->
+<section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="cs-results">
+    <h2 id="cs-results" class="cs-heading">Results</h2>
+    <ul class="cs-stats cs-stats--{{ stats.length }}">
+        {%- for stat in stats %}
+        <li class="cs-stat">
+            <span class="cs-stat__value">{{ stat.value }}</span>
+            <span class="cs-stat__label">{{ stat.label }}</span>
+            {%- if stat.note %}
+            <span class="cs-stat__note">{{ stat.note }}</span>
             {%- endif %}
+        </li>
+        {%- endfor %}
+    </ul>
+</section>
+{%- endif %}
 
-            {%- if next %}
-            <a href="{{ next.url }}" rel="next"
-                class="group flex items-center gap-3 font-haas-display font-medium text-body-lg md:text-heading-sm text-dm-black hover:text-dm-cyan transition-colors">
-                <span>{{ next.data.shortTitle or next.data.title }}</span>
-                <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
-                    <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </a>
-            {%- endif %}
+{%- if summary %}
+<!-- At a glance -->
+<section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="cs-glance">
+    <h2 id="cs-glance" class="cs-heading">At a glance</h2>
+    <p class="cs-summary">{{ summary | safe }}</p>
+</section>
+{%- endif %}
+
+{%- if cards %}
+<!-- Challenge, approach, outcome -->
+<section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="cs-story">
+    <h2 id="cs-story" class="cs-heading">The project</h2>
+    <div class="cs-cards">
+        {%- for def in [
+          { key: "challenge", title: "Challenge", number: "01" },
+          { key: "approach", title: "Approach", number: "02" },
+          { key: "outcome", title: "Outcome", number: "03" }
+        ] %}
+        {%- if cards[def.key] %}
+        <div class="cs-card">
+            <span class="cs-card__number" aria-hidden="true">{{ def.number }}</span>
+            <h3 class="cs-card__title">{{ def.title }}</h3>
+            <div class="cs-card__body">{{ richText(cards[def.key]) }}</div>
         </div>
+        {%- endif %}
+        {%- endfor %}
+    </div>
+</section>
+{%- endif %}
+
+{%- if role and role.length %}
+<!-- What I owned -->
+<section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="cs-role">
+    <div class="cs-role">
+        <h2 id="cs-role" class="cs-role__title">What I owned</h2>
+        <ul class="cs-list">
+            {%- for line in role %}
+            <li>{{ line | safe }}</li>
+            {%- endfor %}
+        </ul>
+    </div>
+</section>
+{%- endif %}
+
+{%- if (media and media.length) or (gallery and gallery.length) %}
+<!-- Gallery -->
+<section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="cs-gallery">
+    <h2 id="cs-gallery" class="cs-heading">In pictures</h2>
+
+    {%- if media and media.length %}
+    <div class="cs-media">
+        {%- for item in media %}
+        <figure class="cs-figure cs-figure--{{ item.type }}">
+            {%- if item.type == "video" %}
+            <video class="cs-figure__video" controls preload="none" playsinline{% if item.poster %} poster="{{ item.poster }}"{% endif %}>
+                <source src="{{ item.src }}" type="video/mp4">
+                <a href="{{ item.src }}">Download the video</a>
+            </video>
+            {%- elif item.type == "audio" %}
+            <audio class="cs-figure__audio" controls preload="none" src="{{ item.src }}">
+                <a href="{{ item.src }}">Download the audio</a>
+            </audio>
+            {%- else %}
+            <iframe class="cs-figure__embed" src="{{ item.src }}" title="{{ item.caption or title }}" loading="lazy" height="{{ item.height or 200 }}" allow="autoplay; encrypted-media; fullscreen"></iframe>
+            {%- endif %}
+            {%- if item.caption %}
+            <figcaption>{{ item.caption }}</figcaption>
+            {%- endif %}
+        </figure>
+        {%- endfor %}
+    </div>
+    {%- endif %}
+
+    {%- if gallery and gallery.length %}
+    <div class="cs-gallery cs-gallery--{{ gallery.length }}">
+        {%- asyncEach item in gallery %}
+        <figure class="cs-figure">
+            <a class="cs-figure__link" href="{{ item.src }}">
+                {% image item.src, (item.alt or item.caption or ""), { sizes: "(min-width: 1120px) 540px, (min-width: 768px) 50vw, 100vw", className: "cs-figure__img" } %}
+                <span class="sr-only">(opens full size)</span>
+            </a>
+            {%- if item.caption %}
+            <figcaption>{{ item.caption }}</figcaption>
+            {%- endif %}
+        </figure>
+        {%- endeach %}
+    </div>
+    {%- endif %}
+</section>
+{%- endif %}
+
+{%- if quote and quote.text %}
+<!-- Quote -->
+<section class="w-full max-w-page mx-auto px-6 mt-section" aria-label="Testimonial">
+    <figure class="cs-quote">
+        <blockquote><p>{{ quote.text }}</p></blockquote>
+        {%- if quote.name %}
+        <figcaption>
+            <span class="cs-quote__name">{{ quote.name }}</span>
+            {%- if quote.title %}<span class="cs-quote__title">{{ quote.title }}</span>{% endif %}
+        </figcaption>
+        {%- endif %}
+    </figure>
+</section>
+{%- endif %}
+
+{%- if lessons %}
+<!-- Lessons -->
+<section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="cs-lessons">
+    <div class="cs-lessons">
+        <h2 id="cs-lessons" class="cs-heading">What I'd do again</h2>
+        <div class="cs-lessons__body">{{ richText(lessons) }}</div>
+    </div>
+</section>
+{%- endif %}
+
+{%- set body = content | trim %}
+{%- if body %}
+<!-- Markdown body -->
+<section class="w-full max-w-page mx-auto px-6 mt-section" {% if hasStructure %}aria-labelledby="cs-more"{% else %}aria-label="Case study"{% endif %}>
+    {%- if hasStructure %}
+    <h2 id="cs-more" class="cs-heading">More detail</h2>
+    {%- endif %}
+    <div class="cs-body prose">
+        {%- if excerpt and not hasStructure %}
+        <blockquote><p>{{ excerpt }}</p></blockquote>
+        {%- endif %}
+        {{ body | safe }}
+    </div>
+</section>
+{%- endif %}
+
+</article>
+
+<!-- Next and previous projects -->
+{%- if prev or next %}
+<nav class="w-full max-w-page mx-auto px-6 mt-section" aria-label="More case studies">
+    <div class="cs-pager">
+        {%- for link in [{ item: prev, label: "Previous project", rel: "prev" }, { item: next, label: "Next project", rel: "next" }] %}
+        {%- if link.item %}
+        {%- set pagerImage = link.item.data.thumb or link.item.data.hero %}
+        <a class="cs-pager__card cs-pager__card--{{ link.rel }}" href="{{ link.item.url }}" rel="{{ link.rel }}">
+            {%- if pagerImage %}
+            <span class="cs-pager__image">
+                <img src="{{ pagerImage }}" alt="" loading="lazy" decoding="async" width="560" height="315">
+            </span>
+            {%- endif %}
+            <span class="cs-pager__text">
+                <span class="cs-pager__label">{{ link.label }}</span>
+                <span class="cs-pager__title">{{ link.item.data.shortTitle or link.item.data.title }}</span>
+                {%- if link.item.data.outcome or link.item.data.excerpt %}
+                <span class="cs-pager__outcome">{{ link.item.data.outcome or link.item.data.excerpt }}</span>
+                {%- endif %}
+            </span>
+            <svg class="cs-pager__arrow" aria-hidden="true" focusable="false" width="40" height="35" viewBox="0 0 52 45" fill="none">
+                <path d="M27 3L46.3208 22.5L27 42" stroke="currentColor" stroke-width="8" />
+                <path d="M0 23H43.5" stroke="currentColor" stroke-width="8" />
+            </svg>
+        </a>
+        {%- endif %}
+        {%- endfor %}
     </div>
 </nav>
+{%- endif %}
 
-<!-- CTA Section -->
-<section class="w-full max-w-page mx-auto px-6 mt-section">
-    <div class="bg-dm-cyan p-content">
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+<!-- CTA -->
+<section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="cs-cta">
+    <div class="bg-dm-cyan p-content cs-cta">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
             <div>
-                <h2 class="font-haas-display font-bold text-heading-md md:text-heading-lg text-dm-white mb-3">
-                    Ready to start your project?
+                <h2 id="cs-cta" class="font-haas-display font-bold text-heading-md md:text-heading-lg text-dm-white mb-3">
+                    Planning something similar?
                 </h2>
-                <div class="font-haas-text text-body-md md:text-body-lg text-dm-white/90">
-                    Let's discuss how I can help bring your ideas to life.
-                </div>
+                <p class="font-haas-text text-body-md md:text-body-lg text-dm-white/90 max-w-xl">
+                    Tell me what you're working on and I'll tell you how I'd run it.
+                </p>
+                <p class="mt-4">
+                    <a class="cs-cta__cv font-haas-text font-bold text-body-md md:text-body-lg text-dm-white" href="{{ site.cv }}">Download my CV (PDF)</a>
+                </p>
             </div>
             {{ button('Get in touch', 'mailto:' + site.email) }}
         </div>

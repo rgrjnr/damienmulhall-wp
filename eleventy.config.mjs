@@ -85,8 +85,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection('work', (collectionApi) =>
     collectionApi
       .getFilteredByGlob('src/work/*.md')
-      .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0)),
+      // Lower `order` first; ties go to the more recent project.
+      .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0) || b.date - a.date),
   );
+
+  // Case study fields accept either a string or a list (cards, lessons).
+  eleventyConfig.addFilter('isArray', (value) => Array.isArray(value));
 
   eleventyConfig.addFilter('year', (value) => new Date(value).getFullYear());
   eleventyConfig.addFilter('isoDate', (value) => new Date(value).toISOString());

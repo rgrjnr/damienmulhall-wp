@@ -49,6 +49,37 @@ What the project was and what it needed to achieve.
 3. Put the images in `src/assets/images/work/my-project/` and reference them in the body with `![description](/assets/images/work/my-project/photo.jpg)`.
 4. Commit and push. The site rebuilds and redeploys automatically.
 
+### Optional structured fields
+
+The case study layout builds its sections from these fields. Every one is optional: a section only appears when its field is set, and the markdown body still renders underneath (as "More detail" once structured fields are present). `src/work/hay-chat.md` and `src/work/windows-11-community-events.md` use all of them.
+
+```yaml
+outcome: 'One line with the headline number. Shown under the title and as the work card headline.'
+heroAlt: 'Alt text for the hero image (defaults to the title)'
+thumb: '/assets/images/work/my-project/card.jpg'   # work card / next-prev image (defaults to hero)
+logo: '/assets/images/work/my-project/logo.svg'     # replaces the client eyebrow above the title
+labels: [Events, Campaign]                          # work card tags (defaults to the badge names)
+facts:                                              # facts strip; without it: Client, Timeline (duration), Year
+  - { label: 'Client', value: 'Dell Technologies' }
+  - { label: 'Role', value: 'Project lead' }
+stats:                                              # 3 or 4 cards; the first is the work card badge
+  - { value: '$9.5M', label: 'new pipeline', note: 'Optional context line' }
+summary: 'Two or three sentences: the brief in plain words.'
+cards:                                              # each a string or a list of up to 3 bullets
+  challenge: 'Short paragraph'
+  approach: ['Bullet', 'Bullet']
+  outcome: ['Bullet']
+role: ['What I owned, 3 to 5 bullets']
+media:                                              # video, audio or embed (iframe)
+  - { type: video, src: '/assets/images/work/my-project/clip.mp4', poster: '/assets/...jpg', caption: 'What it shows' }
+gallery:
+  - { src: '/assets/images/work/my-project/photo.jpg', alt: 'What is in the picture', caption: 'Why it matters' }
+quote: { text: 'Quote', name: 'Name', title: 'Job title, Company' }
+lessons: ['One to three lines']                     # string or list
+```
+
+Do not use `tags` for labels: Eleventy reserves it for collections.
+
 `order` controls the position in the work list (lower is higher up). `highlights` picks the coloured badges — the available keys are in `src/_data/highlights.json`.
 
 ## Editing the homepage
