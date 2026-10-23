@@ -46,7 +46,7 @@ cards:
     - 'About 90% of search traffic came from people looking for an unrelated video chat app.'
   approach:
     - 'I opened the product backlog in September 2025 with the epics and user stories the first release was built against.'
-    - 'I ran product and marketing from one plan in Jira, with research spikes before building and go/no-go gates on bigger bets.'
+    - 'I ran product and marketing from one plan, in Jira at first and then through direct product reviews with Roger, with research spikes before building and go/no-go gates on bigger bets.'
     - 'I rebuilt the website around real buyer searches, with Claude Code as the production team and a written brief for every change.'
   outcome:
     - 'A live, EU-hosted product, with the GDPR work shipped between December 2025 and April 2026.'
