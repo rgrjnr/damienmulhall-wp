@@ -90,10 +90,12 @@
 <div class="scroll-nav" data-scroll-nav>
     <nav class="scroll-nav__inner" aria-label="Quick">
         <a href="/" class="scroll-nav__brand">{{ site.name }}</a>
-        <ul class="scroll-nav__links">
+        <ul class="scroll-nav__links nav-glide" data-nav-glide>
             {%- for item in home.nav %}
-            <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+            {%- set isCurrent = item.url.endsWith('/') and page.url.startsWith(item.url) %}
+            <li><a href="{{ item.url }}"{% if isCurrent %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
             {%- endfor %}
+            <li class="nav-glide__bar" aria-hidden="true"></li>
         </ul>
     </nav>
 </div>

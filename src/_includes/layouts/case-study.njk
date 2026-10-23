@@ -14,6 +14,7 @@ showHero: false
 #}
 {% from "partials/highlights-badges.njk" import badges with context %}
 {% from "partials/animated-button.njk" import button %}
+{% from "partials/shapes.njk" import shapes %}
 
 {%- set prev = collections.work | getPreviousCollectionItem %}
 {%- set next = collections.work | getNextCollectionItem %}
@@ -282,9 +283,10 @@ showHero: false
 
 <!-- CTA -->
 <section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="cs-cta">
-    <div class="bg-dm-cyan p-content cs-cta">
+    <div class="bg-dm-cyan p-6 md:p-content cs-cta">
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
             <div>
+                {{ shapes(74, "text-dm-white mb-6") }}
                 <h2 id="cs-cta" class="font-haas-display font-bold text-heading-md md:text-heading-lg text-dm-white mb-3">
                     Planning something similar?
                 </h2>

@@ -24,6 +24,7 @@ import { setupCounters } from './lib/counters';
 import { setupMarquee } from './lib/marquee';
 import { setupCopyEmail } from './lib/copy-email';
 import { setupScrollNav } from './lib/scroll-nav';
+import { setupNavGlide } from './lib/nav-glide';
 import { setupReceipts } from './lib/receipts';
 import { setupCrowCaw } from './lib/crow-caw';
 
@@ -60,6 +61,7 @@ async function start(): Promise<void> {
   // early return so they work regardless of reduced motion or GSAP.
   safely('mobile-menu', setupMobileMenu);
   safely('scroll-nav', setupScrollNav);
+  safely('nav-glide', setupNavGlide);
   safely('copy-email', setupCopyEmail);
   safely('receipts', setupReceipts);
 

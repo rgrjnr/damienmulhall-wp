@@ -1,20 +1,33 @@
 {#
   Animated button — port of parts/animated-button.php
   Both labels and both arrows are duplicated on purpose: the CSS animation
-  slides one out while the other slides in.
+  slides one out while the other slides in. The second label is aria-hidden so
+  screen readers announce the name once.
+
+  variant: omit for the yellow default, 'green' for the smaller green pill.
+  arrow:   omit for the up-right arrow, 'down' for a chevron that rolls downward.
 #}
-{% macro button(label, link, classes) %}
-<a href="{{ link or '#' }}" class="btn-animated {{ classes or '' }}">
+{% macro button(label, link, classes, variant, arrow) %}
+{%- set labelSize = 'text-heading-sm' if variant == 'green' else 'text-display-sm' -%}
+<a href="{{ link or '#' }}" class="btn-animated{% if variant %} btn-animated--{{ variant }}{% endif %}{% if arrow == 'down' %} btn-animated--down{% endif %} {{ classes or '' }}">
     <div class="btn-labels">
-        <span class="font-haas-display font-medium text-display-sm text-dm-black btn-label">
+        <span class="font-haas-display font-medium {{ labelSize }} text-dm-black btn-label">
             {{ label or "Let's work" }}
         </span>
-        <span class="font-haas-display font-medium text-display-sm text-dm-black btn-label">
+        <span class="font-haas-display font-medium {{ labelSize }} text-dm-black btn-label" aria-hidden="true">
             {{ label or "Let's work" }}
         </span>
     </div>
 
     <div class="btn-arrows">
+        {%- if arrow == 'down' %}
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-arrow" aria-hidden="true" focusable="false">
+            <path d="M8 12L16 20L24 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-arrow" aria-hidden="true" focusable="false">
+            <path d="M8 12L16 20L24 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        {%- else %}
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-arrow" aria-hidden="true" focusable="false">
             <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M4.45022 0H23.1835V18.7332L18.1881 18.7329L18.1878 8.52735L3.53134 23.1844L0 19.6513L14.655 4.99572L4.45054 4.99538L4.45022 0Z"
@@ -25,6 +38,7 @@
                 d="M4.45022 0H23.1835V18.7332L18.1881 18.7329L18.1878 8.52735L3.53134 23.1844L0 19.6513L14.655 4.99572L4.45054 4.99538L4.45022 0Z"
                 fill="black" />
         </svg>
+        {%- endif %}
     </div>
 </a>
 {% endmacro %}

@@ -7,11 +7,15 @@ showHero: false
 eleventyExcludeFromCollections: true
 ---
 {% from "partials/animated-button.njk" import button %}
+{% from "partials/shapes.njk" import shapes %}
 
 <section class="w-full max-w-page mx-auto px-6 mt-section" aria-label="Page not found">
-    <div class="border-t-[3px] border-dm-black pt-12">
+    <div>
         <div class="flex flex-col gap-5">
-            <p class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-black">404</p>
+            <div class="flex items-center gap-5">
+                <p class="font-haas-display font-medium text-heading-sm md:text-heading-md text-dm-black">404</p>
+                {{ shapes(84, "text-dm-black") }}
+            </div>
             <h1 class="font-haas-text font-bold text-heading-lg md:text-display-sm lg:text-display-md text-dm-black leading-none max-w-4xl">
                 This page went missing. The work didn't.
             </h1>

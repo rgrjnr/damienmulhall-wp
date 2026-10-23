@@ -647,6 +647,36 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
   text-underline-offset: 3px;
 }
 
+// On phones the box is narrower than the button's natural width, and the label
+// used to wrap into a three-line blob. Keep it on one line and let the type step
+// down instead.
+.cs-cta .btn-label {
+  white-space: nowrap;
+}
+
+// Stacked below lg: size to the label, like the homepage button, rather than stretch.
+@media (max-width: ($breakpoint-lg - 1px)) {
+  .cs-cta .btn-animated {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: ($breakpoint-md - 1px)) {
+  .cs-cta .btn-animated {
+    padding-inline: 1.5rem 1.25rem;
+  }
+
+  .cs-cta .btn-label {
+    font-size: $text-heading-lg;
+  }
+}
+
+@media (max-width: 389px) {
+  .cs-cta .btn-label {
+    font-size: $text-heading-sm;
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Work index cards
 // ---------------------------------------------------------------------------

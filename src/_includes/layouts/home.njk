@@ -5,6 +5,7 @@ showHero: true
 ---
 {% from "partials/highlights-badges.njk" import badges with context %}
 {% from "partials/animated-button.njk" import button %}
+{% from "partials/shapes.njk" import shapes %}
 
 {%- if home.brands and home.brands.names.length %}
 <!-- Logo wall: text wordmarks in the site type, no third-party logo files -->
@@ -286,16 +287,7 @@ showHero: true
             {%- endif %}
 
             <div class="flex items-center gap-4">
-                <svg aria-hidden="true" focusable="false" width="111" height="29" viewBox="0 0 111 29" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="13.6677" cy="14.497" r="13.6677" fill="#201A1E" />
-                            <path
-                                d="M69.9971 5.79883L61.2979 14.4971L69.9961 23.1953L64.1982 28.9941L55.5 20.2959L46.8018 28.9941L41.0039 23.1953L49.7012 14.4971L41.0029 5.79883L46.8018 0L55.5 8.69824L64.1982 0L69.9971 5.79883Z"
-                                fill="#201A1E" class="animate-rotate" />
-                            <rect x="83.665" y="0.829346" width="27.3354" height="27.3354" fill="#201A1E" />
-                        </svg>
-
-
+                {{ shapes(111, "text-dm-black") }}
             </div>
 
             <div class="flex md:justify-end">

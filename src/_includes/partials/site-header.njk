@@ -4,6 +4,7 @@
   pages get a compact nav-only header.
 #}
 {%- set showHero = (showHero !== false) -%}
+{% from "partials/animated-button.njk" import button %}
 <header class="w-full max-w-page mx-auto px-6">
     <div class="flex flex-col gap-9">
         <!-- Navigation Bar -->
@@ -54,10 +55,12 @@
 
                 <!-- Menu -->
                 <div class="hidden md:flex flex-row gap-8 items-center">
-                    <ul class="flex flex-row gap-8 items-center">
+                    <ul class="nav-glide flex flex-row gap-8 items-center" data-nav-glide>
                         {%- for item in home.nav %}
-                        <li><a href="{{ item.url }}" class="font-haas-text font-bold text-body-sm text-dm-black hover:text-dm-cyan transition-colors">{{ item.label }}</a></li>
+                        {%- set isCurrent = item.url.endsWith('/') and page.url.startsWith(item.url) %}
+                        <li><a href="{{ item.url }}"{% if isCurrent %} aria-current="page"{% endif %} class="font-haas-text font-bold text-body-sm text-dm-black hover:text-dm-cyan transition-colors">{{ item.label }}</a></li>
                         {%- endfor %}
+                        <li class="nav-glide__bar" aria-hidden="true"></li>
                     </ul>
                 </div>
 
@@ -74,7 +77,8 @@
             <div id="mobile-menu" class="md:hidden" aria-hidden="true">
                 <ul class="flex flex-col gap-4 pb-6">
                     {%- for item in home.nav %}
-                    <li><a href="{{ item.url }}" class="font-haas-text font-bold text-body-lg text-dm-black hover:text-dm-cyan transition-colors">{{ item.label }}</a></li>
+                    {%- set isCurrent = item.url.endsWith('/') and page.url.startsWith(item.url) %}
+                    <li><a href="{{ item.url }}"{% if isCurrent %} aria-current="page"{% endif %} class="font-haas-text font-bold text-body-lg text-dm-black hover:text-dm-cyan transition-colors">{{ item.label }}</a></li>
                     {%- endfor %}
                 </ul>
             </div>
@@ -104,14 +108,7 @@
 
         <!-- CTA Buttons -->
         <div class="flex flex-row gap-3.5 items-center justify-end">
-            <a href="/#work"
-                class="press bg-dm-green rounded-full px-6 py-3 flex items-center gap-3 hover:bg-opacity-90 transition-colors">
-                <span class="font-haas-display font-medium text-heading-sm text-dm-white">Projects</span>
-                <svg aria-hidden="true" focusable="false" class="w-8 h-8 text-dm-white" viewBox="0 0 32 32" fill="none">
-                    <path d="M8 12L16 20L24 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </a>
+            {{ button('Projects', '/#work', '', 'green', 'down') }}
         </div>
 
         <!-- Divider -->

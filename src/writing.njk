@@ -6,6 +6,7 @@ permalink: /writing/
 showHero: false
 eleventyExcludeFromCollections: true
 ---
+{% from "partials/shapes.njk" import shapes %}
 {#- Posts live on hay.chat, so each title links out. Order comes from writing.json (newest first). #}
 <section class="w-full max-w-page mx-auto px-6 mt-section relative" aria-labelledby="writing-title">
     <div class="border-b-[3px] border-dm-black pb-8">
@@ -29,4 +30,5 @@ eleventyExcludeFromCollections: true
         </li>
         {%- endfor %}
     </ol>
+    {{ shapes(56, "text-dm-black mt-10") }}
 </section>

@@ -1,0 +1,17 @@
+{#
+  The circle, X and square sign-off. Colour comes from currentColor, so set it
+  with a text-* class on the caller. The X carries .animate-rotate, which
+  setupRotations() (lib/reveals.ts) picks up with no extra JS.
+  width: rendered width in px (the artwork is 111 x 29).
+#}
+{% macro shapes(width, classes) %}
+{%- set w = width or 111 -%}
+<svg aria-hidden="true" focusable="false" width="{{ w }}" height="{{ (w * 29 / 111) | round(1) }}" viewBox="0 0 111 29" fill="none"
+    xmlns="http://www.w3.org/2000/svg" class="shapes {{ classes or '' }}">
+    <circle cx="13.6677" cy="14.497" r="13.6677" fill="currentColor" />
+    <path
+        d="M69.9971 5.79883L61.2979 14.4971L69.9961 23.1953L64.1982 28.9941L55.5 20.2959L46.8018 28.9941L41.0039 23.1953L49.7012 14.4971L41.0029 5.79883L46.8018 0L55.5 8.69824L64.1982 0L69.9971 5.79883Z"
+        fill="currentColor" class="animate-rotate" />
+    <rect x="83.665" y="0.829346" width="27.3354" height="27.3354" fill="currentColor" />
+</svg>
+{% endmacro %}

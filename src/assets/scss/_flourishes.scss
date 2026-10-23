@@ -226,6 +226,59 @@
 }
 
 // ---------------------------------------------------------------------------
+// Nav marker: a 3px bar, the weight of the site's rules, rests under the
+// current page and glides to whichever link is hovered or keyboard-focused.
+// lib/nav-glide.ts sets --glide-x / --glide-w and adds .is-ready. Until then
+// (or with no JS) the current link is simply underlined at the same weight.
+// ---------------------------------------------------------------------------
+
+.nav-glide {
+  position: relative;
+
+  &:not(.is-ready) a[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.5rem;
+  }
+}
+
+.nav-glide__bar {
+  background: $dm-black;
+  bottom: -0.5rem;
+  height: 3px;
+  left: 0;
+  list-style: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(var(--glide-x, 0)) scaleX(var(--glide-w, 0));
+  transform-origin: left center;
+  transition:
+    transform $dur-hover $ease-out,
+    opacity $dur-hover $ease-out;
+  width: 1px;
+
+  &.is-visible {
+    opacity: 1;
+  }
+
+  // Appearing from nothing: jump into place, then fade, rather than sliding in from the left edge.
+  &.is-instant {
+    transition: opacity $dur-hover $ease-out;
+  }
+}
+
+.scroll-nav .nav-glide__bar {
+  bottom: -0.35rem;
+}
+
+#mobile-menu a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.4rem;
+}
+
+// ---------------------------------------------------------------------------
 // Stat counters: fixed-width digits so the number doesn't wobble as it counts.
 // ---------------------------------------------------------------------------
 
@@ -239,6 +292,11 @@
 // ---------------------------------------------------------------------------
 
 @media (prefers-reduced-motion: reduce) {
+  .nav-glide__bar,
+  .nav-glide__bar.is-instant {
+    transition: none;
+  }
+
   .scroll-nav,
   .scroll-nav.is-visible {
     transform: none;

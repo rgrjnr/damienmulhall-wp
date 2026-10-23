@@ -219,25 +219,72 @@ body.loaded {
     }
   }
 
-  &:focus-visible,
-  &:hover {
-    .btn-labels {
-      .btn-label:nth-child(1) {
-        transform: translateY(-100%);
+  // The roll only runs for people who haven't asked for less motion. Everyone
+  // else gets a plain fade so hover and focus still read as a response.
+  @media (prefers-reduced-motion: no-preference) {
+    &:focus-visible,
+    &:hover {
+      .btn-labels {
+        .btn-label:nth-child(1) {
+          transform: translateY(-100%);
+        }
+
+        .btn-label:nth-child(2) {
+          transform: translateY(0);
+        }
       }
 
-      .btn-label:nth-child(2) {
-        transform: translateY(0);
+      .btn-arrows {
+        .btn-arrow:nth-child(1) {
+          transform: translate(100%, -100%);
+        }
+
+        .btn-arrow:nth-child(2) {
+          transform: translate(0, 0);
+        }
       }
     }
+  }
 
-    .btn-arrows {
-      .btn-arrow:nth-child(1) {
-        transform: translate(100%, -100%);
-      }
+  @media (prefers-reduced-motion: reduce) {
+    transition: opacity $dur-hover ease;
 
-      .btn-arrow:nth-child(2) {
-        transform: translate(0, 0);
+    &:focus-visible,
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// Smaller green pill (the hero's Projects link). Same roll, with a chevron that
+// drops down and out while its twin falls in from above.
+.btn-animated--green {
+  background-color: $dm-green;
+  gap: 0.5rem;
+  padding-block: 0.25rem;
+  padding-inline: 1.5rem 1.25rem;
+}
+
+.btn-animated--down {
+  .btn-arrows {
+    color: $dm-black;
+
+    .btn-arrow:nth-child(2) {
+      transform: translateY(-100%);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &:focus-visible,
+    &:hover {
+      .btn-arrows {
+        .btn-arrow:nth-child(1) {
+          transform: translateY(100%);
+        }
+
+        .btn-arrow:nth-child(2) {
+          transform: translateY(0);
+        }
       }
     }
   }
