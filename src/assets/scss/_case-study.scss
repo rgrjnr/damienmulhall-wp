@@ -847,3 +847,19 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
     font-size: $text-heading-sm;
   }
 }
+
+// ---------------------------------------------------------------------------
+// Hero image: cap the height so square or tall images do not dominate desktop.
+// Wide heroes (about 16:9) stay under the cap and are unaffected.
+// ---------------------------------------------------------------------------
+
+.cs-hero__img {
+  max-height: 32rem;
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+
+  @media (min-width: $breakpoint-md) {
+    max-height: 40rem;
+  }
+}

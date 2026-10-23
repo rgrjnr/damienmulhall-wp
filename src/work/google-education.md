@@ -2,44 +2,68 @@
 title: 'Google for Education eGuide'
 shortTitle: 'Google for Education'
 excerpt: 'A persona-driven guide helping K-12 IT decision-makers and sales teams navigate Google’s complete educational technology ecosystem.'
+outcome: 'A buying guide that became a hero reference asset for global Chromebook education sales and was re-commissioned three times.'
 client: 'Google for Education / Dell Technologies'
 duration: ''
-date: 2025-08-15
+date: 2025-08-15 # TODO real dates
 order: 3
 hero: '/assets/images/work/google-education/EDU-Lifestyle-4-Latitude-5430-Chromebook.jpeg'
+heroAlt: 'A smiling woman working at a table on a silver Dell Chromebook'
 highlights: [education, my-computer, star]
+labels: [eGuide, Education, Sales enablement]
+
+facts:
+  - label: 'Client'
+    value: 'Google for Education / Dell Technologies'
+  - label: 'Role'
+    value: 'Project lead, kickoff to delivery'
+  - label: 'Audience'
+    value: 'K-12 IT decision-makers and sales teams'
+
+stats:
+  - value: '3'
+    label: 're-commissions'
+    note: 'The client came back to update and extend the guide three times'
+  - value: '4'  # TODO confirm with Damien
+    label: 'persona groups covered'
+    note: 'Students, teachers, administrators and superintendents'
+  - value: '2'
+    label: 'brands to satisfy on every approval'
+    note: 'Google and Dell, each with brand and legal review'
+
+summary: 'Google for Education and Dell needed one guide that worked as a buying guide for school IT decision-makers and a quick reference for sales teams. I led the eGuide, which sets out Chromebooks, accessories, software and education programmes around the people who use them. <a href="/assets/images/work/google-education/3884-DELL-Chrome-Educators-eGuide-FY24-03Nov2023-stu-1.pdf">Read the eGuide (PDF)</a>.'
+
+cards:
+  challenge:
+    - 'Brand and legal approvals across both Google and Dell.'
+    - 'Telling an educational story while staying strictly accurate and compliant.'
+    - 'Describing workflows in a way education professionals found relatable.'
+  approach:
+    - 'Approvals locked at each milestone, from copy to design to publishing.'
+    - 'Interviews with teaching specialists to understand classroom workflows at each level.'
+    - 'Visual matrices mapping educator workflows to recommended technology and software.'
+  outcome:
+    - 'A hero reference asset for global Chromebook sales in education.'
+    - 'Re-commissioned three times over several years as educational needs changed.'
+    - 'Delivered within project funding and publishing deadlines.'
+
+role:
+  - 'Led the eGuide from kickoff through delivery.'
+  - 'Oversaw content development and creative production with stakeholders and internal teams.'
+  - 'Managed every round of internal and external approval.'
+  - 'Kept delivery inside project funding and publishing deadlines.'
+
+gallery:
+  - src: '/assets/images/work/google-education/EDU-Lifestyle-4-Latitude-5430-Chromebook.jpeg'
+    alt: 'A smiling woman working at a table on a silver Dell Latitude 5430 Chromebook'
+    caption: 'The Latitude 5430 Chromebook in an everyday working setting.'
+  - src: '/assets/images/work/google-education/EDU-Lifestyle-3-Latitude-5430-Chromebook.jpeg'
+    alt: 'Close-up of hands typing on a Dell Latitude 5430 Chromebook showing the app launcher'
+    caption: 'The Chromebook app launcher, central to how the guide maps software to workflows.'
+  - src: '/assets/images/work/google-education/EDU-Lifestyle-2-Latitude-3445-Chromebook.jpeg'
+    alt: 'A man working on a Dell Latitude 3445 Chromebook showing a spreadsheet with green charts'
+    caption: 'The Latitude 3445 Chromebook handling spreadsheet work.'
+  - src: '/assets/images/work/google-education/EDU-Lifestyle-1-Latitude-3445-Chromebook.jpeg'
+    alt: 'A woman in a peach blouse working on a grey Dell Latitude 3445 Chromebook'
+    caption: 'The Latitude 3445 Chromebook, one of the devices the guide covers.'
 ---
-## Intro & Goal
-
-The Google for Education eGuide was designed as both a buying guide for K-12 school IT decision-makers and a quick-reference tool for sales teams. The objective: present an end-to-end view of Chromebooks, accessories, software, and education programs, structured around personas — from students of all age groups to teachers, administrators, and superintendents.
-
-![](/assets/images/work/google-education/EDU-Lifestyle-4-Latitude-5430-Chromebook.jpeg)
-
-## Challenges
-
-- Navigating complex brand and legal approval processes across Google and Dell stakeholders.
-- Balancing educational storytelling with strict factual accuracy and compliance requirements.
-- Framing workflows and solutions in a way that felt genuinely relatable and valuable to education professionals.
-
-## Solution
-
-- Applied a structured Waterfall project management approach, locking key approvals at each milestone: copy → design → publishing.
-- Conducted interviews with teaching specialists to deeply understand classroom workflows across different educational levels.
-- Designed visual matrices mapping educator workflows to recommended technology and software solutions, enhancing the guide’s practical value.
-- Maintained early and frequent communication with Google and Dell content specialists to ensure clarity, accuracy, and alignment.
-
-![](/assets/images/work/google-education/EDU-Lifestyle-3-Latitude-5430-Chromebook.jpeg)
-
-## My Role
-
-- Project managed the eGuide from kickoff through delivery.
-- Oversaw content development and creative production, coordinating with stakeholders and internal teams.
-- Managed all rounds of internal and external approvals.
-- Ensured full delivery within project funding and publishing deadlines.
-
-## Results
-
-- The eGuide became a _hero reference asset_ for global Chromebook sales in the education sector.
-- Client re-engaged me three times over multiple years to update and extend the guide’s relevance as educational needs evolved.
-
-![](/assets/images/work/google-education/EDU-Lifestyle-2-Latitude-3445-Chromebook.jpeg)

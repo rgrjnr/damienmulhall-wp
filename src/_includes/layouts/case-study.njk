@@ -78,7 +78,7 @@ showHero: false
 <!-- Hero image -->
 <section class="w-full max-w-page mx-auto px-6 mt-content" aria-label="Project image">
     <div class="bg-dm-black p-3">
-        {% image hero, (heroAlt or title), { sizes: "(min-width: 1120px) 1096px, 100vw", className: "w-full h-auto", eager: true } %}
+        {% image hero, (heroAlt or title), { sizes: "(min-width: 1120px) 1096px, 100vw", className: "w-full h-auto cs-hero__img", eager: true } %}
     </div>
 </section>
 {%- endif %}

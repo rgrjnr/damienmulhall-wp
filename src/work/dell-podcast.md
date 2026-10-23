@@ -2,45 +2,70 @@
 title: 'Dell Technologies Forum Podcast Series'
 shortTitle: 'Dell Podcast Series'
 excerpt: 'A corporate podcast extending event conversations and building an engaged community around innovation.'
+outcome: 'A podcast series that passed 100,000 downloads, ahead of Dell''s other corporate podcasts worldwide.'
 client: 'Dell Technologies'
 duration: ''
-date: 2025-08-15
+date: 2025-08-15 # TODO real dates
 order: 1
 hero: '/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-Poster-frame-1.jpg'
+heroAlt: 'Poster frame from the Dell Technologies Forum podcast trailer'
 highlights: [mic, spotify, increase]
+labels: [Podcast, Content, EMEA]
+
+facts:
+  - label: 'Client'
+    value: 'Dell Technologies'
+  - label: 'Role'
+    value: 'Producer and project lead'
+  - label: 'Scope'
+    value: 'Scripting, guests, recording, transcripts and social clips'
+  - label: 'Reach'
+    value: 'EMEA Forum audience'
+
+stats:
+  - value: '100,000+'
+    label: 'downloads'
+    note: 'Ahead of Dell''s other corporate podcasts worldwide'
+  - value: '2 weeks'
+    label: 'often all I had from guest introduction to publishing'
+  - value: '#1'  # TODO confirm with Damien
+    label: 'corporate podcast at Dell by downloads'
+    note: 'Worldwide, across Dell''s corporate podcast initiatives'
+
+summary: 'Dell wanted the conversations from its Forum events across EMEA to carry on after the event, position Dell as a thought leader and build a community around innovation. I produced the podcast series from first guest introduction to published episode.'
+
+cards:
+  challenge:
+    - 'Often just two weeks between meeting a guest and publishing their episode.'
+    - 'Senior teams kept pushing the same high-priority themes, which risked repeating content.'
+    - 'Consistent audio quality and listener engagement across every episode.'
+  approach:
+    - 'A guest preparation workflow covering intake, content coaching, technical setup and production milestones.'
+    - 'Every guest''s talking points checked against earlier episodes, with guests coached towards fresher angles.'
+    - 'A strict publishing routine for the episode, the transcript and curated audio clips for social.'
+  outcome:
+    - 'More than 100,000 downloads, ahead of Dell''s other corporate podcasts worldwide.'
+    - 'No episode retreaded earlier content, despite the pressure to repeat themes.'
+    - 'Episodes delivered on time across multiple platforms.'
+
+role:
+  - 'Owned content planning, script development and guest management.'
+  - 'Coordinated recording logistics and held audio standards across episodes.'
+  - 'Balanced guest needs against internal priorities with stakeholders.'
+  - 'Marketed each episode with social clips and visuals.'
+  - 'Delivered clean transcripts so every episode was accessible.'
+
+media:
+  - type: video
+    src: '/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-3-17May2024.mp4'
+    poster: '/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-Poster-frame-1.jpg'
+    caption: 'The series trailer.'
+  - type: embed
+    src: 'https://playlist.megaphone.fm/?e=ONELTD8785378937&light=true'
+    caption: 'Listen to an episode.'
+
+gallery:
+  - src: '/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-Poster-frame-1.jpg'
+    alt: 'Poster frame from the Dell Technologies Forum podcast trailer'
+    caption: 'The trailer poster frame used to promote the series.'
 ---
-## Intro & Goal
-
-The Dell Technologies Forum Podcast Series was created to extend the solution-driven conversations from Dell’s Forum events across EMEA.
-
-The goal: position Dell as a thought leader, continue engaging customers post-event, and build a likeminded, innovation-focused community.
-
-<video class="embed" poster="/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-Poster-frame-1.jpg" controls preload="none" playsinline src="/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-3-17May2024.mp4"></video>
-
-## Challenges
-
-- Very tight deadlines: often just two weeks between guest introduction and publishing date.
-- Heavy pressure from senior teams to repeatedly cover high-priority themes, risking content repetition.
-- Ensuring consistent audio quality and maintaining listener engagement across all episodes.
-
-## Solution
-
-- Designed a refined guest preparation workflow: from intake to content coaching, technical setup, and production milestones.
-- Cross-referenced all guest talking points against prior episodes to avoid content duplication, and tactfully coached guests toward fresher, more engaging narratives.
-- Established a strict publishing process ensuring episode delivery, transcript accessibility, and organic social engagement through curated audio excerpts.
-
-## My Role
-
-- Oversaw content planning, script development, and guest management.
-- Coordinated recording logistics and ensured consistent audio standards.
-- Managed stakeholder communication, balancing guest needs with internal priorities.
-- Drove episode marketing through curated social media clips and visuals.
-- Maintained accessibility standards by delivering clean episode transcripts.
-
-<iframe class="embed" src="https://playlist.megaphone.fm/?e=ONELTD8785378937&light=true" loading="lazy" width="100%" height="200" frameborder="0" scrolling="no" title="Podcast player"></iframe>
-
-## Results
-
-- Surpassed **100,000 downloads**, outperforming other corporate podcast initiatives globally for Dell.
-- Maintained strong editorial integrity — no episodes retreaded content, despite internal pressures.
-- Consistently delivered episodes on time and across multiple platforms, driving listener trust and engagement.

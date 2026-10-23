@@ -2,45 +2,67 @@
 title: 'Product Launch Training EMEA'
 shortTitle: 'EMEA Launch Training'
 excerpt: 'A regional sales enablement project delivering training materials and engagement campaigns to over 40 sites across Europe, the Middle East, and Africa.'
+outcome: 'Launch training delivered to 40+ EMEA sites every year, on time, and renewed for five consecutive years.'
 client: 'Dell Technologies'
 duration: ''
-date: 2025-08-15
+date: 2025-08-15 # TODO real dates
 order: 4
 hero: '/assets/images/work/product-launch-training-emea/Screenshot-2025-08-26-at-18.18.29.png'
+heroAlt: 'REBOOT Training FY25 title slide with Dell Technologies, Microsoft and Intel logos over a burst of red and orange colour'
 highlights: [my-computer, megaphone, increase]
+labels: [Sales enablement, Training, EMEA]
+
+facts:
+  - label: 'Client'
+    value: 'Dell Technologies'
+  - label: 'Role'
+    value: 'Project lead, full programme'
+  - label: 'Scope'
+    value: 'Annual launch training for PCs, laptops, desktops, accessories and displays'
+  - label: 'Reach'
+    value: '40+ sites across EMEA'
+
+stats:
+  - value: '40+'
+    label: 'EMEA sites trained each year'
+  - value: '5'
+    label: 'consecutive years running the programme'
+  - value: '5 of 5'
+    label: 'years delivered on time'
+    note: 'Each year, on time and on budget'  # TODO confirm with Damien
+
+summary: 'Before each annual product launch, Dell needed sales teams across 40+ EMEA sites trained and excited about the new range. I ran the programme, from the training manual to a launch hype campaign and the physical kit shipped to every site.'
+
+cards:
+  challenge:
+    - 'Tight timelines while products were still in final development.'
+    - 'Very limited budgets for collateral and distribution.'
+    - 'Approvals across brand, legal and marketing, and customs risk on cross-border shipping.'
+  approach:
+    - 'Eco-friendly, brand-compliant merchandise chosen to ease customs approvals.'
+    - 'A consistent, easy-to-use training manual covering product strengths and positioning.'
+    - 'A hype campaign of launch emails, trainer kits, branded giveaways, internal videos and session templates.'
+  outcome:
+    - 'Materials reached 40+ EMEA sites every year, on time and on budget.'
+    - 'Strong feedback from sales managers and local training leads.'
+    - 'Budget renewed each year and the project handed to me for five years running.'
+
+role:
+  - 'Project managed the full programme across all EMEA sites.'
+  - 'Oversaw content, creative production, logistics and stakeholders.'
+  - 'Managed every approval and kept to brand and legal guidelines.'
+  - 'Delivered materials to each site with usage guidance for local training managers.'
+
+media:
+  - type: video
+    src: '/assets/images/work/product-launch-training-emea/4140-Dell-FM-Reboot-FY25-Landscape-05Feb2024.mp4'
+    caption: 'The REBOOT launch campaign video.'
+
+gallery:
+  - src: '/assets/images/work/product-launch-training-emea/Screenshot-2025-08-26-at-18.18.29.png'
+    alt: 'REBOOT Training FY25 title slide with Dell Technologies, Microsoft and Intel logos over a burst of red and orange colour'
+    caption: 'The REBOOT Training FY25 title slide.'
+  - src: '/assets/images/work/product-launch-training-emea/Screenshot-2025-08-26-at-18.19.21-1.png'
+    alt: 'Slide reading Expand your customers horizons with AI-Ready CSG Solutions, Reboot FY25, beside a colourful profile of a head'
+    caption: 'Campaign creative from the Reboot FY25 launch.'
 ---
-## Intro & Goal
-
-Ahead of annual product launches (PCs, laptops, desktops, accessories, and displays), the client needed a structured training initiative to prepare sales teams across 40+ EMEA sites. The objective: create clear, engaging training materials and drive internal excitement through a coordinated hype campaign — ensuring teams were equipped to position the new generation of products effectively.
-
-![](/assets/images/work/product-launch-training-emea/Screenshot-2025-08-26-at-18.18.29.png)
-
-## Challenges
-
-- Tight delivery timelines during final product development stages.
-- Very limited campaign budgets for collateral and distribution.
-- Managing stakeholder alignment and approvals across brand, legal, and marketing teams.
-- Navigating cross-border shipping and customs risks to ensure timely delivery of physical assets.
-- Balancing strict brand guidelines with creative, engaging campaign ideas.
-
-## Solution
-
-- Presented eco-friendly, brand-compliant merchandise options to streamline customs approvals and align with corporate values.
-- Developed a visually consistent, easy-to-use training manual highlighting product strengths and positioning strategies for sales teams.
-- Built a supporting hype campaign: launch emails, trainer kits, branded giveaways, internal videos, and session templates.
-- Maintained constant communication with internal stakeholders to accelerate approvals and mitigate delivery risks.
-
-![](/assets/images/work/product-launch-training-emea/Screenshot-2025-08-26-at-18.19.21-1.png)
-
-## My Role
-
-- Project managed the full program lifecycle across all EMEA sites.
-- Oversaw content development, creative production, logistics, and stakeholder coordination.
-- Managed all approvals and ensured full compliance with brand and legal guidelines.
-- Delivered materials to each site with full usage guidance for local training managers.
-
-## Results
-
-- Successfully delivered training materials to **40+ EMEA sites** each year on time and on budget.
-- Received strong positive feedback from sales managers and local training leads.
-- Client was awarded renewed budget annually and chose to re-engage me to run the project for **five consecutive years** based on consistent successful delivery.
