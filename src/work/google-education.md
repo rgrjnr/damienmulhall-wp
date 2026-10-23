@@ -4,8 +4,8 @@ shortTitle: 'Google for Education'
 excerpt: 'A persona-driven guide helping K-12 IT decision-makers and sales teams navigate Google’s complete educational technology ecosystem.'
 outcome: 'A buying guide that became a hero reference asset for global Chromebook education sales and was re-commissioned three times.'
 client: 'Google for Education / Dell Technologies'
-duration: ''
-date: 2025-08-15 # TODO real dates
+duration: '21 weeks'
+date: 2023-11-03
 order: 3
 hero: '/assets/images/work/google-education/EDU-Lifestyle-4-Latitude-5430-Chromebook.jpeg'
 heroAlt: 'A smiling woman working at a table on a silver Dell Chromebook'
@@ -17,6 +17,8 @@ facts:
     value: 'Google for Education / Dell Technologies'
   - label: 'Role'
     value: 'Project lead, kickoff to delivery'
+  - label: 'Timeline'
+    value: 'June to November 2023, 21 weeks'
   - label: 'Audience'
     value: 'K-12 IT decision-makers and sales teams'
 

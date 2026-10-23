@@ -1,12 +1,11 @@
 ---
-# TODO client: confirm Dell vs Microsoft with Damien
 title: 'Windows 11 Community Events'
 shortTitle: 'Windows 11 Events'
 excerpt: 'A series of UK-based workshops designed to engage high-value enterprise accounts and drive solution adoption.'
 outcome: 'Seven UK workshops, an 80% registrant-to-attendee rate and $9.5M in new pipeline.'
-client: 'Dell Technologies'
-duration: '3 months'
-date: 2025-08-15
+client: 'Dell Technologies & Microsoft'
+duration: '15 weeks'
+date: 2024-10-25
 order: 2
 hero: '/assets/images/work/windows-11-community-events/4275-LinkedIn-1080x1080-posts2.jpg'
 heroAlt: "Campaign social post reading: Let's get practical, the road to Windows 11 and AI driven productivity, with Dell Technologies, Windows 11 and Intel logos and the host cities London, Manchester, Birmingham, Cambridge, Bristol and Glasgow"
@@ -16,11 +15,11 @@ labels: [Events, Campaign, Pipeline]
 
 facts:
   - label: 'Client'
-    value: 'Dell Technologies'
+    value: 'Dell Technologies & Microsoft'
   - label: 'Role'
     value: 'Project lead, concept to delivery'
   - label: 'Timeline'
-    value: '3 months'
+    value: 'July to October 2024, 15 weeks'
   - label: 'Scope'
     value: '7 full-day workshops, 170 target accounts'
   - label: 'Budget'

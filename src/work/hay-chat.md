@@ -4,7 +4,7 @@ shortTitle: 'Hay.chat'
 excerpt: 'Product ownership and marketing for Hay.chat, the EU-hosted, source-available AI customer support platform I co-founded.'
 outcome: 'From an empty backlog to a live product, a 120+ page website and 67 qualified leads at Web Summit Lisbon.'
 client: 'Hay.chat'
-date: 2026-10-01
+date: 2025-08-01
 order: 1
 hero: '/assets/images/work/hay-chat/dashboard.png'
 heroAlt: 'The Hay.chat dashboard, showing active agents, total conversations, resolution rate and daily conversation activity'
@@ -18,7 +18,7 @@ facts:
   - label: 'Role'
     value: 'Co-Founder, Product Owner & Head of Marketing'
   - label: 'Timeline'
-    value: 'September 2025 to today'
+    value: 'August 2025 to today'
   - label: 'Scope'
     value: 'Product backlog, website, SEO, outbound, events'
   - label: 'Partners'
@@ -30,8 +30,9 @@ stats:
   - value: '120+'
     label: 'live pages on the website'
     note: '100+ revised and 20 built in one week, October 2026'
-  - value: '200+'
-    label: 'backlinks'
+  - value: '17'
+    label: 'live integrations'
+    note: '310+ actions available to the AI agent, plus 200+ backlinks to the site'
   - value: '579'
     label: 'Jira issues across product and marketing'
     note: '301 of them written by me'
@@ -54,7 +55,7 @@ cards:
 
 role:
   - 'Wrote 164 of the 213 product issues, including 96 user stories, each with acceptance criteria and a definition of done.'
-  - 'Specified integrations including Zendesk, HubSpot, Stripe, WhatsApp, Shopify and Klaviyo, and delivered the Wix integration myself.'
+  - 'Owned the integration roadmap from spec to launch: 17 live integrations across Shopify, WooCommerce, Wix, Magento, WordPress, WhatsApp, Instagram, Zendesk, HubSpot, Stripe, Notion and more, with 310+ actions for the AI agent.'
   - 'Led the website: SEO strategy, keyword research, content and the release of every change.'
   - 'Wrote 18 long-form blog posts in three months, each through an eight-step pipeline from concept to social posts.'
   - 'Ran our events from booth pitch to follow-up: demo videos, printed offer cards and a QR landing page feeding our CRM.'

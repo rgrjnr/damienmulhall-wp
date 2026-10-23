@@ -4,8 +4,8 @@ shortTitle: 'EMEA Launch Training'
 excerpt: 'A regional sales enablement project delivering training materials and engagement campaigns to over 40 sites across Europe, the Middle East, and Africa.'
 outcome: 'Launch training delivered to 40+ EMEA sites every year, on time, and renewed for five consecutive years.'
 client: 'Dell Technologies'
-duration: ''
-date: 2025-08-15 # TODO real dates
+duration: '13 weeks a year'
+date: 2024-03-11
 order: 4
 hero: '/assets/images/work/product-launch-training-emea/Screenshot-2025-08-26-at-18.18.29.png'
 heroAlt: 'REBOOT Training FY25 title slide with Dell Technologies, Microsoft and Intel logos over a burst of red and orange colour'
@@ -17,6 +17,8 @@ facts:
     value: 'Dell Technologies'
   - label: 'Role'
     value: 'Project lead, full programme'
+  - label: 'Timeline'
+    value: 'December to March each year, 13 weeks per launch cycle'
   - label: 'Scope'
     value: 'Annual launch training for PCs, laptops, desktops, accessories and displays'
   - label: 'Reach'

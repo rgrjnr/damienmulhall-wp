@@ -4,8 +4,8 @@ shortTitle: 'Filmmaking Guide'
 excerpt: 'A hero marketing asset created to engage media and entertainment businesses and reposition enterprise solutions in a traditionally Apple-dominated segment.'
 outcome: 'An interactive guide with a Hollywood film editor, live in the US and approved for EMEA syndication. Vashi still features it on his own site.'
 client: 'Dell Technologies'
-duration: ''
-date: 2025-08-15 # TODO real dates
+duration: '19 weeks'
+date: 2019-10-14
 order: 5
 hero: '/assets/images/work/vashi-nedomansky-filmmaking-guide/Screenshot-2025-08-26-at-15.05.53.png'
 heroAlt: 'Page from the filmmaking guide titled Before you start editing you must do two things, over a photo of a man in a snowstorm'
@@ -19,6 +19,8 @@ facts:
     value: 'Vashi Nedomansky, Hollywood film editor'
   - label: 'Role'
     value: 'Project lead, kickoff to delivery'
+  - label: 'Timeline'
+    value: 'June to October 2019, 19 weeks'
   - label: 'Audience'
     value: 'Media and entertainment SMEs'
 

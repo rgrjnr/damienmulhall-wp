@@ -4,8 +4,8 @@ shortTitle: 'Dell Podcast Series'
 excerpt: 'A corporate podcast extending event conversations and building an engaged community around innovation.'
 outcome: 'A podcast series that passed 100,000 downloads, ahead of Dell''s other corporate podcasts worldwide.'
 client: 'Dell Technologies'
-duration: ''
-date: 2025-08-15 # TODO real dates
+duration: '48 weeks'
+date: 2024-08-09
 order: 1
 hero: '/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-Poster-frame-1.jpg'
 heroAlt: 'Poster frame from the Dell Technologies Forum podcast trailer'
@@ -17,6 +17,8 @@ facts:
     value: 'Dell Technologies'
   - label: 'Role'
     value: 'Producer and project lead'
+  - label: 'Timeline'
+    value: 'September 2023 to August 2024, about 48 weeks'
   - label: 'Scope'
     value: 'Scripting, guests, recording, transcripts and social clips'
   - label: 'Reach'
@@ -64,8 +66,4 @@ media:
     src: 'https://playlist.megaphone.fm/?e=ONELTD8785378937&light=true'
     caption: 'Listen to an episode.'
 
-gallery:
-  - src: '/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-Poster-frame-1.jpg'
-    alt: 'Poster frame from the Dell Technologies Forum podcast trailer'
-    caption: 'The trailer poster frame used to promote the series.'
 ---
