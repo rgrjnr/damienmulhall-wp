@@ -58,7 +58,7 @@
                     <ul class="nav-glide flex flex-row gap-8 items-center" data-nav-glide>
                         {%- for item in home.nav %}
                         {%- set isCurrent = item.url.endsWith('/') and page.url.startsWith(item.url) %}
-                        <li><a href="{{ item.url }}"{% if isCurrent %} aria-current="page"{% endif %} class="font-haas-text font-bold text-body-sm text-dm-black hover:text-dm-cyan transition-colors">{{ item.label }}</a></li>
+                        <li><a href="{{ item.url }}"{% if item.url.endsWith('.pdf') %} target="_blank" rel="noopener"{% endif %}{% if isCurrent %} aria-current="page"{% endif %} class="font-haas-text font-bold text-body-sm text-dm-black hover:text-dm-cyan transition-colors">{{ item.label }}</a></li>
                         {%- endfor %}
                         <li class="nav-glide__bar" aria-hidden="true"></li>
                     </ul>
@@ -78,7 +78,7 @@
                 <ul class="flex flex-col gap-4 pb-6">
                     {%- for item in home.nav %}
                     {%- set isCurrent = item.url.endsWith('/') and page.url.startsWith(item.url) %}
-                    <li><a href="{{ item.url }}"{% if isCurrent %} aria-current="page"{% endif %} class="font-haas-text font-bold text-body-lg text-dm-black hover:text-dm-cyan transition-colors">{{ item.label }}</a></li>
+                    <li><a href="{{ item.url }}"{% if item.url.endsWith('.pdf') %} target="_blank" rel="noopener"{% endif %}{% if isCurrent %} aria-current="page"{% endif %} class="font-haas-text font-bold text-body-lg text-dm-black hover:text-dm-cyan transition-colors">{{ item.label }}</a></li>
                     {%- endfor %}
                 </ul>
             </div>

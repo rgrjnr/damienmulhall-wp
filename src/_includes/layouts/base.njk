@@ -93,7 +93,7 @@
         <ul class="scroll-nav__links nav-glide" data-nav-glide>
             {%- for item in home.nav %}
             {%- set isCurrent = item.url.endsWith('/') and page.url.startsWith(item.url) %}
-            <li><a href="{{ item.url }}"{% if isCurrent %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+            <li><a href="{{ item.url }}"{% if item.url.endsWith('.pdf') %} target="_blank" rel="noopener"{% endif %}{% if isCurrent %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
             {%- endfor %}
             <li class="nav-glide__bar" aria-hidden="true"></li>
         </ul>
