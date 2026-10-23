@@ -1,53 +1,73 @@
 ---
+# TODO client: confirm Dell vs Microsoft with Damien
 title: 'Windows 11 Community Events'
 shortTitle: 'Windows 11 Events'
 excerpt: 'A series of UK-based workshops designed to engage high-value enterprise accounts and drive solution adoption.'
+outcome: 'Seven UK workshops, an 80% registrant-to-attendee rate and $9.5M in new pipeline.'
 client: 'Dell Technologies'
 duration: '3 months'
 date: 2025-08-15
 order: 2
 hero: '/assets/images/work/windows-11-community-events/4275-LinkedIn-1080x1080-posts2.jpg'
+heroAlt: "Campaign social post reading: Let's get practical, the road to Windows 11 and AI driven productivity, with Dell Technologies, Windows 11 and Intel logos and the host cities London, Manchester, Birmingham, Cambridge, Bristol and Glasgow"
+thumb: '/assets/images/work/windows-11-community-events/IMG-20241015-WA0007.jpg'
 highlights: [megaphone, increase, star]
+labels: [Events, Campaign, Pipeline]
+
+facts:
+  - label: 'Client'
+    value: 'Dell Technologies'
+  - label: 'Role'
+    value: 'Project lead, concept to delivery'
+  - label: 'Timeline'
+    value: '3 months'
+  - label: 'Scope'
+    value: '7 full-day workshops, 170 target accounts'
+  - label: 'Budget'
+    value: '$80k'
+
+stats:
+  - value: '$9.5M'
+    label: 'new pipeline'
+    note: 'Attributed to campaign engagement'
+  - value: '80%'
+    label: 'registrant-to-attendee conversion'
+  - value: '7'
+    label: 'community events across the UK'
+  - value: '170'
+    label: 'high-value accounts targeted'
+
+summary: 'A leading technology solutions provider needed to re-engage 170 high-value customer accounts over three months, support their move to Windows 11 and get them ready for future AI projects. I led a series of full-day community workshops in UK cities that gave account executives a real reason to get back in the room with those customers.'
+
+cards:
+  challenge:
+    - 'Giving busy IT leaders a reason to spend a full day at a workshop.'
+    - 'Seven events in different UK cities, all within one month, on an $80k budget.'
+    - 'Brand and legal reviews that meant heavy revisions, plus two funding partners with separate proof of execution rules.'
+  approach:
+    - 'A clear structure from day one: defined roles, regular internal checkpoints and weekly client calls.'
+    - 'Campaign branding, messaging and creative designed and pitched with an event specialist and a creative director.'
+    - 'A client-facing dashboard tracking every deliverable, the budget and resourcing.'
+  outcome:
+    - 'All seven events delivered on time and to the standard the client expected.'
+    - 'Very positive attendee feedback after the events.'
+    - 'Full compliance with both funding partners and their proof of execution processes.'
+
+role:
+  - 'Led the project from concept to delivery.'
+  - 'Managed the full campaign budget and tracked the burn rate throughout.'
+  - 'Ran creative development and approvals with the brand and legal teams.'
+  - 'Worked with technical leaders to tie the event content to the Windows 11 migration and AI readiness story.'
+  - 'Delivered proof of execution for both funding partners.'
+
+gallery:
+  - src: '/assets/images/work/windows-11-community-events/IMG-20241015-WA0007.jpg'
+    alt: 'Attendees seated in a converted warehouse venue facing a presenter and a screen titled Navigating Windows 11'
+    caption: 'The Navigating Windows 11 session, the core of each full-day workshop.'
+  - src: '/assets/images/work/windows-11-community-events/IMG-20241015-WA0003.jpg'
+    alt: 'A presenter speaking to a seated audience, with event branding and a large screen behind him'
+    caption: 'A full room at one of the workshops. 80% of people who registered turned up on the day.'
+  - src: '/assets/images/work/windows-11-community-events/IMG-20241015-WA0046.jpg'
+    alt: 'A workshop room with Dell Technologies branded demo stands, laptops and a presenter at the front'
+    caption: 'Hands-on demo stations set up alongside the sessions, so attendees could try the kit.'
 ---
-## Intro & Goal
-
-A leading technology solutions provider sought to engage 170 high-value customer accounts over three months, supporting their migration to Windows 11 and preparing organizations for future AI initiatives.
-
-The goal: enable account executives to re-engage customers meaningfully through localized community workshops, reinforcing the provider’s leadership in enterprise IT solutions.
-
-![](/assets/images/work/windows-11-community-events/4275-LinkedIn-1080x1080-posts2.jpg)
-
-## Challenges
-
-- Building real perceived value for busy IT leaders to attend full-day workshops.
-- Tight logistics: organizing seven events across different UK cities within a one-month period.
-- Brand and legal constraints requiring heavy revisions to campaign visuals and messaging.
-- Managing a tight $80k budget while meeting expectations for delivery and experience quality.
-- Handling dual funding partner requirements with separate proof of execution standards.
-
-## Solution
-
-- Established a clear project structure: defined roles, frequent internal checkpoints, and weekly client calls.
-- Designed and pitched campaign branding, messaging, and creative assets alongside an internal event specialist and creative director.
-- Built a central client-facing dashboard tracking all deliverables, budgets, and resourcing.
-- Collaborated closely with technical leaders to align event content with broader migration and AI readiness narratives.
-
-## My Role
-
-- Led the full project from concept to delivery.
-- Managed the complete campaign budget and monitored burn rates.
-- Oversaw creative development and approvals with brand and legal teams.
-- Delivered seven events on time, to high client standards, with full compliance to funding partner proof of execution processes.
-
-## Results
-
-- Successfully executed **7 community events** across the UK.
-- Achieved **80% registrant-to-attendee conversion rate**.
-- Received overwhelmingly positive attendee feedback post-events.
-- Generated **$9.5 million in new pipeline** directly attributed to campaign engagement.
-
-![](/assets/images/work/windows-11-community-events/IMG-20241015-WA0007.jpg)
-
-![](/assets/images/work/windows-11-community-events/IMG-20241015-WA0003.jpg)
-
-![](/assets/images/work/windows-11-community-events/IMG-20241015-WA0046.jpg)
