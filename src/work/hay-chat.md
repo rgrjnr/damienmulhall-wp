@@ -16,7 +16,7 @@ facts:
   - label: 'Company'
     value: 'Hay.chat'
   - label: 'Role'
-    value: 'Co-Founder, Product Owner & Head of Marketing'
+    value: 'Co-Founder, Product & Go-to-Market'
   - label: 'Timeline'
     value: 'August 2025 to today'
   - label: 'Scope'
@@ -98,4 +98,4 @@ The 31 August 2026 baseline showed the problem clearly. Most search traffic was 
 
 ## Outbound and events
 
-I set up six segmented Lemlist campaigns in January 2026, with two extra sending domains warmed up properly. I claimed and optimised our G2 and Capterra profiles and got 20 directory listings live. For SIM Conference in Portugal and Dublin Tech Summit I prepared the booth pitches, a 90-second Startup World Cup video, a silent looping demo, printed offer cards and a QR landing page straight into Twenty CRM.
+I set up six segmented Lemlist campaigns in January 2026, with two extra sending domains warmed up properly. I claimed and optimised our G2 and Capterra profiles and got 20 directory listings live. For SIM Conference in Portugal and Dublin Tech Summit I prepared the booth pitches, a 90-second Startup World Cup video, a silent looping demo, printed offer cards and a QR landing page straight into Twenty CRM. I pitched Hay live in the Startup World Cup at Dublin Tech Summit and we made the Irish final, with strong scores and feedback from the judges.
