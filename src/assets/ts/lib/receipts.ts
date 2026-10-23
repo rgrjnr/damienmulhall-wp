@@ -8,6 +8,11 @@
 
 import { hasFinePointer, queryAll } from './env';
 
+// The open receipt sits below all the lines, so heading for its link means
+// gliding across the other lines. A line only takes over once the cursor
+// rests on it this long, so passing over doesn't swap the receipt.
+const HOVER_INTENT_MS = 160;
+
 export function setupReceipts(): void {
   const finePointer = hasFinePointer();
 
@@ -17,6 +22,7 @@ export function setupReceipts(): void {
 
     tile.classList.add('is-interactive');
     let active: number | null = null;
+    let intent = 0;
 
     const activate = (index: number | null): void => {
       active = index;
@@ -32,7 +38,17 @@ export function setupReceipts(): void {
       const line = item.querySelector<HTMLButtonElement>('.receipt-line');
       if (!line) return;
 
-      if (finePointer) line.addEventListener('pointerenter', () => activate(i));
+      if (finePointer) {
+        line.addEventListener('pointerenter', () => {
+          window.clearTimeout(intent);
+          if (active === null) {
+            activate(i);
+            return;
+          }
+          intent = window.setTimeout(() => activate(i), HOVER_INTENT_MS);
+        });
+        line.addEventListener('pointerleave', () => window.clearTimeout(intent));
+      }
       // Keyboard focus only: a tap also focuses the button, and the click
       // handler below would then immediately toggle it shut again.
       line.addEventListener('focus', () => {
@@ -48,7 +64,12 @@ export function setupReceipts(): void {
       });
     });
 
-    if (finePointer) tile.addEventListener('pointerleave', () => activate(null));
+    if (finePointer) {
+      tile.addEventListener('pointerleave', () => {
+        window.clearTimeout(intent);
+        activate(null);
+      });
+    }
 
     tile.addEventListener('focusout', (event) => {
       if (!tile.contains(event.relatedTarget as Node | null)) activate(null);

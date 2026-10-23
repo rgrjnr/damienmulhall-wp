@@ -371,6 +371,7 @@
 
   .receipt-item.is-active .receipt {
     opacity: 1;
+    z-index: 1;
     transform: none;
     transition:
       opacity $dur-hover ease,
@@ -386,6 +387,8 @@
   .receipt-cue {
     bottom: $space-card;
     color: rgba($dm-white, 0.6);
+    // It shares the receipt's spot; never let it swallow clicks on the link.
+    pointer-events: none;
     display: block;
     font-family: $font-haas-text;
     font-size: 12px;
