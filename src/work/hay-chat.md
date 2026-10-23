@@ -25,19 +25,20 @@ facts:
     value: 'Roger Junior, co-founder (engineering)'
 
 stats:
-  - value: '67'
-    label: 'qualified leads at Web Summit Lisbon'
-  - value: '120+'
-    label: 'live pages on the website'
-    note: '100+ revised and 20 built in one week, October 2026, plus 200+ backlinks'
-  - value: '16'
-    label: 'live integrations, plus the built-in web chat'
-    note: '317 actions available to the AI agent'
   - value: '50+'
     label: 'features shipped in 14 monthly releases'
     note: 'Co-directed with Roger, August 2025 to October 2026'
+  - value: '16'
+    label: 'live integrations, plus the built-in web chat'
+    note: '317 actions available to the AI agent'
+  - value: '120+'
+    label: 'live pages on the website'
+    note: '100+ revised and 20 built in one week, October 2026, plus 200+ backlinks'
+  - value: '79%'
+    label: 'of support scenarios where AI cost more than the helpdesk'
+    note: 'A 40-scenario, seven-vendor pricing study I wrote up and pitched to trade press'
 
-summary: "Hay.chat is an EU-hosted, source-available AI customer support platform for e-commerce and B2B SaaS. I co-founded it with Roger Junior, who leads engineering. I own the product backlog and run marketing end to end, from the user stories the first release was built on to the website, SEO, outbound and events."
+summary: "Hay.chat is an EU-hosted, source-available AI customer support platform for e-commerce and B2B SaaS. I co-founded it with Roger Junior, who leads engineering. I own the product backlog and run marketing end to end, from the user stories the first release was built on to the pitch, the website, SEO, outbound and events."
 
 cards:
   challenge:
