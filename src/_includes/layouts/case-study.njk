@@ -98,9 +98,9 @@ showHero: false
 </section>
 
 {%- if stats and stats.length %}
-<!-- Results in numbers -->
+<!-- Stats in numbers -->
 <section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="cs-results">
-    <h2 id="cs-results" class="cs-heading">Results</h2>
+    <h2 id="cs-results" class="cs-heading">In numbers</h2>
     <ul class="cs-stats cs-stats--{{ stats.length }}">
         {%- for stat in stats %}
         <li class="cs-stat">
@@ -124,14 +124,14 @@ showHero: false
 {%- endif %}
 
 {%- if cards %}
-<!-- Challenge, approach, outcome -->
+<!-- Context, decisions, results -->
 <section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="cs-story">
     <h2 id="cs-story" class="cs-heading">The project</h2>
     <div class="cs-cards">
         {%- for def in [
-          { key: "challenge", title: "Challenge", number: "01" },
-          { key: "approach", title: "Approach", number: "02" },
-          { key: "outcome", title: "Outcome", number: "03" }
+          { key: "challenge", title: "Context", number: "01" },
+          { key: "approach", title: "My decisions", number: "02" },
+          { key: "outcome", title: "Results", number: "03" }
         ] %}
         {%- if cards[def.key] %}
         <div class="cs-card">

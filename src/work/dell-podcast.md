@@ -42,9 +42,9 @@ cards:
     - 'Senior teams kept pushing the same high-priority themes, which risked repeating earlier episodes.'
     - 'The series had to prove engagement to be renewed.'
   approach:
-    - 'I checked every guest''s talking points against earlier episodes and pushed back on anything already covered, asking for fresh angles framed around what listeners needed.'
-    - 'Listener first, guest agenda second. We were borrowing their attention, so insight came before each guest''s own messages.'
-    - 'I would move a recording date rather than record a weak script, and asked for re-takes until the audio was clean.'
+    - 'I checked every guest''s talking points against earlier episodes and steered them away from ground already covered, towards what listeners hadn''t heard.'
+    - 'Listener first, guest agenda second. Guests naturally wanted to talk about their own topics, so I held the line on fresh angles, even when that meant a harder conversation.'
+    - 'When the draft for an AI Factory episode was weak, I escalated it and moved the recording date rather than record it.'
   outcome:
     - 'More than 100,000 downloads, ahead of Dell''s other corporate podcasts worldwide.'
     - 'No episode retreaded earlier content, despite the pressure to repeat themes.'

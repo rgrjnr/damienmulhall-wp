@@ -43,7 +43,7 @@ cards:
   approach:
     - 'With two brands'' legal teams to satisfy, I locked approvals at each milestone: copy, then design, then publishing.'
     - 'I based the content on interviews with teaching specialists about classroom workflows at each level.'
-    - 'The guide was organised around four persona groups, with visual matrices mapping their workflows to recommended technology and software.'
+    - 'The client brief set a four-persona structure. I challenged it and helped shape it on a call with their specialist, then built visual matrices mapping each persona''s workflows to recommended technology and software.'
   outcome:
     - 'A hero reference asset for global Chromebook sales in education.'
     - 'Re-commissioned three times as schools'' needs changed.'

@@ -22,6 +22,8 @@ facts:
     value: 'July to October 2024, 15 weeks'
   - label: 'Scope'
     value: '7 full-day workshops, 170 target accounts'
+  - label: 'Budget'
+    value: '$80k'
 
 stats:
   - value: '$9.5M'
@@ -39,12 +41,12 @@ summary: 'Dell and Microsoft needed to re-engage 170 high-value customer account
 cards:
   challenge:
     - 'Busy IT leaders needed a reason to give up a full day.'
-    - 'Seven events in different UK cities, all within one month.'
+    - 'Seven events in different UK cities, all within one month, on an $80k budget.'
     - 'Brand and legal reviews that meant heavy revisions, and two funding partners with separate proof of execution rules.'
   approach:
-    - 'I set the structure on day one: defined roles, regular internal checkpoints and weekly client calls.'
-    - 'I put every deliverable, the budget and resourcing on one client-facing dashboard.'
+    - 'I set the structure on day one: defined roles, regular internal checkpoints and weekly client calls, with every deliverable, the budget and resourcing on one client-facing dashboard.'
     - 'I worked with technical leaders to tie every session to the Windows 11 migration and AI readiness story.'
+    - 'The full-day format was the client''s requirement. In the following quarter we prepped a half-day version of the workshop, so we could run two workshops in one venue per day and give customers a timeslot to suit their schedule.'
   outcome:
     - '$9.5M in new pipeline attributed to campaign engagement, and 80% of registrants turned up.'
     - 'All seven events delivered on time and to the client''s standard, with very positive attendee feedback.'

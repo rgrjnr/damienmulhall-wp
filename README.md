@@ -65,10 +65,10 @@ facts:                                              # facts strip; without it: C
 stats:                                              # 3 or 4 cards; the first is the work card badge
   - { value: '$9.5M', label: 'new pipeline', note: 'Optional context line' }
 summary: 'Two or three sentences: the brief in plain words.'
-cards:                                              # each a string or a list of up to 3 bullets
-  challenge: 'Short paragraph'
-  approach: ['Bullet', 'Bullet']
-  outcome: ['Bullet']
+cards:                                              # shown as Context, My decisions, Results. Each a string or a list of up to 3 bullets
+  challenge: 'Short paragraph'                      # card: Context
+  approach: ['Bullet', 'Bullet']                    # card: My decisions
+  outcome: ['Bullet']                               # card: Results
 role: ['What I owned, 3 to 5 bullets']
 media:                                              # video, audio or embed (iframe)
   - { type: video, src: '/assets/images/work/my-project/clip.mp4', poster: '/assets/...jpg', caption: 'What it shows' }

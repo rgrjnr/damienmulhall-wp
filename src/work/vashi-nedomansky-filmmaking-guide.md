@@ -43,7 +43,7 @@ cards:
     - 'Dell brand and legal approvals, balanced against creative integrity.'
   approach:
     - 'I locked the content before design began, to keep scope creep out.'
-    - 'An interactive HTML eGuide as the main output for US campaigns, with a second interactive PDF for EMEA content syndication.'
+    - 'I made an interactive HTML eGuide the main output for US campaigns, with a second interactive PDF for EMEA content syndication.'
     - 'I cleared the IP permissions alongside the Dell brand and legal approvals.'
   outcome:
     - 'Live in US campaigns and approved for syndication in EMEA.'
