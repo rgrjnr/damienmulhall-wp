@@ -42,17 +42,17 @@ cards:
     - 'Permissions and licensing for well-known IP, including Deadpool references.'
     - 'Dell brand and legal approvals, balanced against creative integrity.'
   approach:
-    - 'Content locked before design began, to keep scope creep out.'
-    - 'An interactive HTML eGuide as the main output for US campaigns.'
-    - 'A second interactive PDF made for EMEA content syndication.'
+    - 'I locked the content before design began, to keep scope creep out.'
+    - 'An interactive HTML eGuide as the main output for US campaigns, with a second interactive PDF for EMEA content syndication.'
+    - 'I cleared the IP permissions alongside the Dell brand and legal approvals.'
   outcome:
-    - 'A guide the media and entertainment audience engaged with.'
-    - 'Approved for syndication in EMEA campaigns.'
+    - 'Live in US campaigns and approved for syndication in EMEA.'
     - 'Strong feedback from the project sponsor and the marketing teams.'
+    - 'Vashi still features the guide on his own site.'
 
 role:
   - 'Led the eGuide from kickoff to final delivery.'
-  - 'Oversaw content, creative production and stakeholders.'
+  - 'Oversaw content, creative production and stakeholders, including Vashi and his team.'
   - 'Managed every internal and external approval round across creative and legal.'
   - 'Delivered within the funding and publishing deadlines.'
 

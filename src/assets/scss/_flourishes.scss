@@ -578,3 +578,18 @@
   pointer-events: none;
   position: absolute;
 }
+
+// ---------------------------------------------------------------------------
+// Ways to work with me: each card's proof sits at the foot of the card, so the
+// three proofs line up across the row whatever the length of the copy above.
+// ---------------------------------------------------------------------------
+
+.ways-card__proof {
+  border-top: 1px solid rgba($dm-white, 0.25);
+  margin-top: auto;
+  padding-top: 1rem;
+
+  .receipt__text {
+    color: rgba($dm-white, 0.85);
+  }
+}

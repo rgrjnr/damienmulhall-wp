@@ -34,28 +34,28 @@ stats:
     label: 'corporate podcast at Dell by downloads'
     note: 'Worldwide, across Dell''s corporate podcast initiatives'
 
-summary: 'Dell wanted the conversations from its Forum events across EMEA to carry on after the event, position Dell as a thought leader and build a community around innovation. I produced the podcast series from first guest introduction to published episode.'
+summary: 'Dell wanted its Forum event conversations across EMEA to carry on after the events and build a community around innovation. Few of its earlier corporate podcasts had been renewed. I produced this series from first guest introduction to published episode.'
 
 cards:
   challenge:
     - 'Often just two weeks between meeting a guest and publishing their episode.'
-    - 'Senior teams kept pushing the same high-priority themes, which risked repeating content.'
-    - 'Keeping audio quality and listener interest up across every episode.'
+    - 'Senior teams kept pushing the same high-priority themes, which risked repeating earlier episodes.'
+    - 'The series had to prove engagement to be renewed.'
   approach:
-    - 'A guest preparation workflow covering intake, content coaching, technical setup and production milestones.'
-    - 'Every guest''s talking points checked against earlier episodes, with guests coached towards fresher angles.'
-    - 'A strict publishing routine for the episode, the transcript and curated audio clips for social.'
+    - 'I checked every guest''s talking points against earlier episodes and pushed back on anything already covered, asking for fresh angles framed around what listeners needed.'
+    - 'Listener first, guest agenda second. We were borrowing their attention, so insight came before each guest''s own messages.'
+    - 'I would move a recording date rather than record a weak script, and asked for re-takes until the audio was clean.'
   outcome:
     - 'More than 100,000 downloads, ahead of Dell''s other corporate podcasts worldwide.'
     - 'No episode retreaded earlier content, despite the pressure to repeat themes.'
     - 'Episodes delivered on time across multiple platforms.'
 
 role:
-  - 'Owned content planning, script development and guest management.'
+  - 'Owned content planning, scripting and guest management, including the host''s intro and outro.'
+  - 'Built the guest preparation process, from intro call and sound check to recording day.'
   - 'Ran recording logistics and kept the audio standard consistent.'
-  - 'Worked with stakeholders to balance what guests wanted against internal priorities.'
-  - 'Marketed each episode with social clips and visuals.'
-  - 'Delivered clean transcripts for every episode.'
+  - 'Pitched three title options for every episode and delivered the transcript and social clips.'
+  - 'Proposed costed ideas to lift engagement, such as guest social packs and video shorts.'
 
 media:
   - type: video

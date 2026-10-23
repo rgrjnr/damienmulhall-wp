@@ -139,6 +139,27 @@
   "toolsBlock": {
     "text": "I'm not the designer or the developer. I'm the project manager who clears the path so they can do their best work. On time, on budget, without the chaos."
   },
+  "howIWork": {
+    "heading": "How I work",
+    "principles": [
+      {
+        "title": "The method fits the job",
+        "text": "No single methodology. I've run yearly launch programmes and sprint-based product work, and I pick whatever gets the team to done."
+      },
+      {
+        "title": "I clear the path",
+        "text": "Designers and developers do their best work when decisions, sign-offs and briefs are sorted before they start. Sorting them is my job."
+      },
+      {
+        "title": "Written down, then checked",
+        "text": "Work starts with a written brief and gets checked against it before it ships. On the Hay.chat website that meant 32 packages, each reviewed on a test build before it merged."
+      },
+      {
+        "title": "AI as the build team",
+        "text": "I direct Claude Code as the build team on the Hay.chat website. I set the direction, write the briefs, review the output and decide what ships. That's 40 recorded reviews so far."
+      }
+    ]
+  },
   "cards": [
     {
       "title": "Skills",
@@ -165,10 +186,43 @@
       "icon": "tools"
     }
   ],
+  "waysToWork": {
+    "heading": "Ways to work with me",
+    "options": [
+      {
+        "title": "Fractional",
+        "text": "Part-time, embedded with your team for a programme or a launch. I plan it, run it and keep the stakeholders aligned.",
+        "proof": {
+          "value": "7 workshops",
+          "text": "across the UK for Dell and Microsoft, with two funding partners and brand and legal on every asset.",
+          "link": "/work/windows-11-community-events/"
+        }
+      },
+      {
+        "title": "Full-time",
+        "text": "A senior project, programme or product role, where I own delivery from plan to launch.",
+        "proof": {
+          "value": "14 months",
+          "text": "from an empty backlog to a live product at Hay.chat, with 50+ features shipped in 14 monthly releases.",
+          "link": "/work/hay-chat/"
+        }
+      },
+      {
+        "title": "One project, end to end",
+        "text": "A single project, scoped, delivered and handed over to your team when it's done.",
+        "proof": {
+          "value": "100,000+",
+          "text": "downloads for the Dell Technologies Forum podcast, which I produced from first guest to published episode.",
+          "link": "/work/dell-podcast/"
+        }
+      }
+    ]
+  },
   "cta": {
     "heading": "Work with me and see how a smooth, focused project feels.",
     "buttonText": "Let's work",
-    "buttonLink": "mailto:damien@damienmulhall.com"
+    "buttonLink": "mailto:mulhall.damien@gmail.com",
+    "availability": "I'm still building Hay.chat. I'm also available for fractional or full-time work."
   },
   "nav": [
     {
@@ -181,7 +235,7 @@
     },
     {
       "label": "Contact me",
-      "url": "mailto:damien@damienmulhall.com"
+      "url": "mailto:mulhall.damien@gmail.com"
     }
   ],
   "receiptsCue": {

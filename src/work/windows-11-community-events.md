@@ -22,8 +22,6 @@ facts:
     value: 'July to October 2024, 15 weeks'
   - label: 'Scope'
     value: '7 full-day workshops, 170 target accounts'
-  - label: 'Budget'
-    value: '$80k'
 
 stats:
   - value: '$9.5M'
@@ -36,27 +34,27 @@ stats:
   - value: '170'
     label: 'high-value accounts targeted'
 
-summary: 'Dell and Microsoft needed to re-engage 170 high-value customer accounts over three months, support their move to Windows 11 and get them ready for future AI projects. I led a series of full-day community workshops in UK cities that gave account executives a real reason to get back in the room with those customers.'
+summary: 'Dell and Microsoft needed to re-engage 170 high-value customer accounts over three months, support their move to Windows 11 and get them ready for future AI projects. I led a series of full-day community workshops in UK cities that gave account executives a reason to get back in the room with those customers.'
 
 cards:
   challenge:
-    - 'Giving busy IT leaders a reason to spend a full day at a workshop.'
-    - 'Seven events in different UK cities, all within one month, on an $80k budget.'
-    - 'Brand and legal reviews that meant heavy revisions, plus two funding partners with separate proof of execution rules.'
+    - 'Busy IT leaders needed a reason to give up a full day.'
+    - 'Seven events in different UK cities, all within one month.'
+    - 'Brand and legal reviews that meant heavy revisions, and two funding partners with separate proof of execution rules.'
   approach:
-    - 'A clear structure from day one: defined roles, regular internal checkpoints and weekly client calls.'
-    - 'Campaign branding, messaging and creative designed and pitched with an event specialist and a creative director.'
-    - 'A client-facing dashboard tracking every deliverable, the budget and resourcing.'
+    - 'I set the structure on day one: defined roles, regular internal checkpoints and weekly client calls.'
+    - 'I put every deliverable, the budget and resourcing on one client-facing dashboard.'
+    - 'I worked with technical leaders to tie every session to the Windows 11 migration and AI readiness story.'
   outcome:
-    - 'All seven events delivered on time and to the client''s standard.'
-    - 'Very positive attendee feedback after the events.'
-    - 'Full compliance with both funding partners and their proof of execution processes.'
+    - '$9.5M in new pipeline attributed to campaign engagement, and 80% of registrants turned up.'
+    - 'All seven events delivered on time and to the client''s standard, with very positive attendee feedback.'
+    - 'Full compliance with both funding partners'' proof of execution processes.'
 
 role:
   - 'Led the project from concept to delivery.'
-  - 'Managed the full campaign budget and tracked the burn rate throughout.'
-  - 'Ran creative development and approvals with the brand and legal teams.'
-  - 'Worked with technical leaders to tie the event content to the Windows 11 migration and AI readiness story.'
+  - 'Managed the campaign budget and tracked the burn rate throughout.'
+  - 'Designed and pitched the campaign branding, messaging and creative with an event specialist and a creative director.'
+  - 'Ran creative approvals with the brand and legal teams.'
   - 'Delivered proof of execution for both funding partners.'
 
 gallery:

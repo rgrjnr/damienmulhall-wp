@@ -37,23 +37,22 @@ summary: 'Google for Education and Dell needed one guide that worked as a buying
 
 cards:
   challenge:
-    - 'Brand and legal approvals across both Google and Dell.'
-    - 'Telling an educational story while staying strictly accurate and compliant.'
-    - 'Describing classroom workflows in a way teachers and IT staff would recognise.'
+    - 'Brand and legal approvals at both Google and Dell.'
+    - 'An educational story that still had to be strictly accurate and compliant.'
+    - 'Classroom workflows described so teachers and IT staff would recognise them.'
   approach:
-    - 'Approvals locked at each milestone, from copy to design to publishing.'
-    - 'Interviews with teaching specialists to understand classroom workflows at each level.'
-    - 'Visual matrices mapping educator workflows to recommended technology and software.'
+    - 'With two brands'' legal teams to satisfy, I locked approvals at each milestone: copy, then design, then publishing.'
+    - 'I based the content on interviews with teaching specialists about classroom workflows at each level.'
+    - 'The guide was organised around four persona groups, with visual matrices mapping their workflows to recommended technology and software.'
   outcome:
     - 'A hero reference asset for global Chromebook sales in education.'
-    - 'Re-commissioned three times over the following years as schools'' needs changed.'
+    - 'Re-commissioned three times as schools'' needs changed.'
     - 'Delivered within project funding and publishing deadlines.'
 
 role:
-  - 'Led the eGuide from kickoff through delivery.'
+  - 'Led the eGuide from kickoff to delivery.'
   - 'Oversaw content development and creative production with stakeholders and internal teams.'
   - 'Managed every round of internal and external approval.'
-  - 'Kept delivery inside project funding and publishing deadlines.'
 
 gallery:
   - src: '/assets/images/work/google-education/EDU-Lifestyle-4-Latitude-5430-Chromebook.jpeg'

@@ -123,6 +123,21 @@ showHero: true
     </div>
 </section>
 
+{%- if home.howIWork %}
+<!-- How I Work -->
+<section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="how-heading">
+    <h2 id="how-heading" class="font-haas-display font-bold text-heading-sm md:text-heading-md text-dm-black mb-6">{{ home.howIWork.heading }}</h2>
+    <ol class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        {%- for item in home.howIWork.principles %}
+        <li class="bg-dm-cyan p-card flex flex-col gap-3" data-reveal="fade">
+            <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">{{ item.title }}</h3>
+            <p class="font-haas-text font-medium text-body-md md:text-body-lg text-dm-white leading-normal">{{ item.text }}</p>
+        </li>
+        {%- endfor %}
+    </ol>
+</section>
+{%- endif %}
+
 <!-- Work Section -->
 <section id="work" class="w-full max-w-page mx-auto px-6 mt-section pt-section relative" aria-labelledby="work-heading">
     <h2 id="work-heading" class="sr-only">Selected work</h2>
@@ -236,6 +251,28 @@ showHero: true
     </div>
 </section>
 
+{%- if home.waysToWork %}
+<!-- Ways to Work With Me -->
+<section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="ways-heading">
+    <h2 id="ways-heading" class="font-haas-display font-bold text-heading-sm md:text-heading-md text-dm-black mb-6">{{ home.waysToWork.heading }}</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        {%- for option in home.waysToWork.options %}
+        <li class="ways-card bg-dm-black p-card flex flex-col gap-3" data-reveal="fade">
+            <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">{{ option.title }}</h3>
+            <p class="font-haas-text font-medium text-body-md md:text-body-lg text-dm-white leading-normal">{{ option.text }}</p>
+            {%- if option.proof %}
+            <div class="ways-card__proof">
+                <span class="receipt__value">{{ option.proof.value }}</span>
+                <span class="receipt__text">{{ option.proof.text }}</span>
+                <a class="receipt__link" href="{{ option.proof.link }}">See the project<span class="sr-only">: {{ option.title }}</span></a>
+            </div>
+            {%- endif %}
+        </li>
+        {%- endfor %}
+    </ul>
+</section>
+{%- endif %}
+
 <!-- CTA Section -->
 <section id="contact" class="w-full max-w-page mx-auto px-6 mt-section" aria-label="Contact">
     <div class="border-t-[3px] border-dm-black pt-12">
@@ -244,6 +281,9 @@ showHero: true
                 class="font-haas-text font-bold text-heading-lg md:text-display-sm lg:text-display-md text-dm-black leading-none max-w-4xl">
                 {{ home.cta.heading }}
             </h2>
+            {%- if home.cta.availability %}
+            <p class="cta-availability font-haas-text font-medium text-body-md md:text-body-lg text-dm-black">{{ home.cta.availability }}</p>
+            {%- endif %}
 
             <div class="flex items-center gap-4">
                 <svg aria-hidden="true" focusable="false" width="111" height="29" viewBox="0 0 111 29" fill="none"
