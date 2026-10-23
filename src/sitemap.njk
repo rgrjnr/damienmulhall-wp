@@ -16,6 +16,12 @@ eleventyExcludeFromCollections: true
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>{{ '/writing/' | absoluteUrl(site.url) }}</loc>
+        <lastmod>{{ writing.posts[0].date | isoDate }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
     {%- for item in collections.work %}
     <url>
         <loc>{{ item.url | absoluteUrl(site.url) }}</loc>

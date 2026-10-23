@@ -84,3 +84,86 @@ footer a {
     display: block;
   }
 }
+
+// ---------------------------------------------------------------------------
+// Writing index: a plain list of posts published elsewhere
+// ---------------------------------------------------------------------------
+
+.writing-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.writing-item {
+  border-bottom: 3px solid $dm-black;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-block: 1.75rem;
+
+  @media (min-width: $breakpoint-md) {
+    padding-block: 2rem;
+  }
+}
+
+.writing-item__meta {
+  align-items: center;
+  color: $dm-black;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  font-weight: $font-bold;
+  gap: 0.4rem 0.75rem;
+  margin: 0;
+}
+
+.writing-item__source {
+  border: 2px solid $dm-black;
+  font-size: 12px;
+  line-height: 1;
+  padding: 0.35rem 0.55rem;
+}
+
+.writing-item__title {
+  font-family: $font-haas-display;
+  font-size: $text-heading-xs;
+  font-weight: $font-medium;
+  line-height: 1.15;
+  margin: 0;
+  max-width: 52rem;
+  overflow-wrap: break-word;
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: $text-heading-sm;
+  }
+
+  a {
+    color: $dm-black;
+    text-decoration: none;
+    transition: color $dur-hover ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $dm-cyan;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    &:focus-visible {
+      outline: 3px solid $dm-black;
+      outline-offset: 4px;
+    }
+  }
+}
+
+.writing-item__description {
+  color: $dm-black;
+  font-family: $font-haas-text;
+  font-size: $text-body-md;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 44rem;
+}

@@ -1,5 +1,5 @@
 {%- set pageTitle = title if title else site.title -%}
-{%- set metaTitle = (pageTitle + " — " + site.name) if (title and title != site.title) else site.title -%}
+{%- set metaTitle = (pageTitle + " | " + site.name) if (title and title != site.title) else site.title -%}
 {%- set metaDescription = description or excerpt or site.description -%}
 {%- set canonical = site.url + page.url -%}
 {%- set ogImageUrl = site.ogImage | absoluteUrl(site.url) -%}

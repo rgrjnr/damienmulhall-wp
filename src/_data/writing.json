@@ -1,0 +1,113 @@
+{
+  "intro": "I write about AI in customer support, mostly on the Hay.chat blog.",
+  "posts": [
+    {
+      "title": "AI Chatbots for Business: Where They Pay Off and Where They're Oversold",
+      "url": "https://hay.chat/blog/ai-chatbot-for-business/",
+      "date": "2026-07-02",
+      "description": "Which use cases pay off, which are oversold, and how to choose the right approach for your team."
+    },
+    {
+      "title": "Customer Service Chatbot ROI: The Business Case, the Risks, and What Pays Off",
+      "url": "https://hay.chat/blog/customer-service-chatbot/",
+      "date": "2026-06-24",
+      "description": "Real costs, real returns, two case studies of what goes wrong, and how to build the business case that gets budget approved."
+    },
+    {
+      "title": "Helpdesk Automation: Three Strategies, One Most Teams Miss.",
+      "url": "https://hay.chat/blog/helpdesk-automation/",
+      "date": "2026-06-18",
+      "description": "Helpdesk automation covers triage, deflection, and agent assist."
+    },
+    {
+      "title": "Why Your HubSpot CRM Integration Only Pays Off When AI Can Use It",
+      "url": "https://hay.chat/blog/hubspot-crm-integration/",
+      "date": "2026-06-03",
+      "description": "HubSpot CRM integration becomes dramatically more valuable when AI can access your full customer journey."
+    },
+    {
+      "title": "Conversational AI for Customer Service Fails More Than It Works. Here's Why, and What to Do About It",
+      "url": "https://hay.chat/blog/conversational-ai-for-customer-service/",
+      "date": "2026-04-28",
+      "description": "Here's why most implementations break, what the companies getting results do differently, and how to evaluate what you actually need."
+    },
+    {
+      "title": "Open Source Helpdesk Software: Same Principles, Less Infrastructure",
+      "url": "https://hay.chat/blog/open-source-helpdesk-software/",
+      "date": "2026-04-21",
+      "description": "We compare Zammad, Chatwoot, osTicket, and explain when managed open source makes more sense."
+    },
+    {
+      "title": "Why Your Intercom and HubSpot Integration Keeps Breaking (And What to Do About It)",
+      "url": "https://hay.chat/blog/intercom-and-hubspot-integration/",
+      "date": "2026-04-09",
+      "description": "Intercom and HubSpot integration breaks silently in four specific ways."
+    },
+    {
+      "title": "Free Zendesk Alternatives That Actually Resolve Customer Issues",
+      "url": "https://hay.chat/blog/free-zendesk-alternatives/",
+      "date": "2026-03-27",
+      "description": "This guide covers what six popular alternatives actually deliver, where each one falls short, and why the real question isn't which helpdesk is cheapest."
+    },
+    {
+      "title": "Shopify Customer Service in 2026: What's Breaking and How to Fix It",
+      "url": "https://hay.chat/blog/shopify-customer-service/",
+      "date": "2026-03-11",
+      "description": "Shopify customer service is hitting a wall: satisfaction is down, ticket volumes are up, and most AI tools make it worse."
+    },
+    {
+      "title": "Gorgias vs Zendesk for Shopify: The Honest Comparison Nobody Writes",
+      "url": "https://hay.chat/blog/gorgias-vs-zendesk-for-shopify/",
+      "date": "2026-03-04",
+      "description": "Gorgias charges by ticket volume. Zendesk charges by agent count."
+    },
+    {
+      "title": "AI-Powered Chatbots in 2026: What Works, What Fails, and How to Tell the Difference",
+      "url": "https://hay.chat/blog/ai-powered-chatbots/",
+      "date": "2026-02-25",
+      "description": "A practical guide covering what separates successful implementations from expensive failures, with real examples and an evaluation framework."
+    },
+    {
+      "title": "Intercom Pricing 2026: What You'll Actually Pay (Including Fin AI Add-Ons)",
+      "url": "https://hay.chat/blog/intercom-pricing-2026/",
+      "date": "2026-02-18",
+      "description": "Complete 2026 breakdown of Fin AI's $0.99 per outcome, hidden add-ons, and when alternatives make sense."
+    },
+    {
+      "title": "Customer Service KPIs That Actually Predict Churn (Not Just Measure Activity)",
+      "url": "https://hay.chat/blog/customer-service-kpis/",
+      "date": "2026-02-11",
+      "description": "Customer Service KPIs guide: which metrics predict churn vs. which just fill dashboards."
+    },
+    {
+      "title": "How to Handle Angry Customers: De-Escalation Guide 2026",
+      "url": "https://hay.chat/blog/how-to-handle-angry-customers/",
+      "date": "2026-02-04",
+      "description": "Learn how to handle angry customers with the HEARD de-escalation framework, 50+ ready-to-use phrases, and scripts for turning complaints into loyalty."
+    },
+    {
+      "title": "Zendesk Pricing 2026: Real Costs Breakdown",
+      "url": "https://hay.chat/blog/zendesk-pricing-in-2026/",
+      "date": "2026-01-29",
+      "description": "Full breakdown of every tier, add-on, and hidden cost for 2026."
+    },
+    {
+      "title": "Support Ticket Response Templates: 25+ Examples That Sound Human",
+      "url": "https://hay.chat/blog/support-ticket-response-templates-that-sound-human/",
+      "date": "2026-01-14",
+      "description": "These 25+ support ticket templates include annotations explaining why each works, plus the psychology that makes customers feel heard."
+    },
+    {
+      "title": "Why Your FAQ Page Isn't Reducing Support Tickets",
+      "url": "https://hay.chat/blog/why-faq-fails-to-reduce-support-tickets/",
+      "date": "2026-01-07",
+      "description": "Here's why your FAQ page isn't reducing support tickets, what actually deflects volume, and where AI fits."
+    },
+    {
+      "title": "Scale Support Without Burning Out Your Team",
+      "url": "https://hay.chat/blog/scaling-without-burnout/",
+      "date": "2025-12-29",
+      "description": "Scale your support team without burnout: a practical playbook for leaders facing rising ticket volumes and flat budgets."
+    }
+  ]
+}

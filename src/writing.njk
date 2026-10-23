@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: Writing
+description: Articles I've written about AI in customer support, helpdesk tools and support operations, published on the Hay.chat blog.
+permalink: /writing/
+showHero: false
+eleventyExcludeFromCollections: true
+---
+{#- Posts live on hay.chat, so each title links out. Order comes from writing.json (newest first). #}
+<section class="w-full max-w-page mx-auto px-6 mt-section relative" aria-labelledby="writing-title">
+    <div class="border-b-[3px] border-dm-black pb-8">
+        <h1 id="writing-title" class="font-haas-display font-medium text-display-sm md:text-display-lg lg:text-display-xl text-dm-black leading-none">
+            Writing
+        </h1>
+        <p class="font-haas-text font-medium text-body-md md:text-body-lg text-dm-black mt-6 max-w-2xl">{{ writing.intro }}</p>
+    </div>
+
+    <ol class="writing-list">
+        {%- for post in writing.posts %}
+        <li class="writing-item">
+            <p class="writing-item__meta">
+                <time datetime="{{ post.date }}">{{ post.date | readableDate }}</time>
+                <span class="writing-item__source">On Hay.chat</span>
+            </p>
+            <h2 class="writing-item__title">
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </h2>
+            <p class="writing-item__description">{{ post.description }}</p>
+        </li>
+        {%- endfor %}
+    </ol>
+</section>

@@ -94,6 +94,10 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter('year', (value) => new Date(value).getFullYear());
   eleventyConfig.addFilter('isoDate', (value) => new Date(value).toISOString());
+  // UTC so a bare "YYYY-MM-DD" never slips to the previous day in a western timezone.
+  eleventyConfig.addFilter('readableDate', (value) =>
+    new Date(value).toLocaleDateString('en-IE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }),
+  );
 
   eleventyConfig.addFilter('absoluteUrl', (path, base) => new URL(path, base).href);
 

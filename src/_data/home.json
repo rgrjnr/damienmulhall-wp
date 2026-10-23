@@ -209,7 +209,7 @@
       },
       {
         "title": "One project, end to end",
-        "text": "A single project, scoped, delivered and handed over to your team when it's done.",
+        "text": "A single project, scoped, run and delivered end to end, with you kept in the loop throughout.",
         "proof": {
           "value": "100,000+",
           "text": "downloads for the Dell Technologies Forum podcast, which I produced from first guest to published episode.",
@@ -232,6 +232,10 @@
     {
       "label": "Work",
       "url": "/#work"
+    },
+    {
+      "label": "Writing",
+      "url": "/writing/"
     },
     {
       "label": "Contact me",
