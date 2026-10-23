@@ -1,7 +1,7 @@
 ---
 title: 'Google for Education eGuide'
 shortTitle: 'Google for Education'
-excerpt: 'A persona-driven guide helping K-12 IT decision-makers and sales teams navigate Google’s complete educational technology ecosystem.'
+excerpt: 'A guide to Google for Education, built around the people who use it, for school IT decision-makers and the sales teams selling to them.'
 outcome: 'A buying guide that became a hero reference asset for global Chromebook education sales and was re-commissioned three times.'
 client: 'Google for Education / Dell Technologies'
 duration: '21 weeks'
@@ -39,14 +39,14 @@ cards:
   challenge:
     - 'Brand and legal approvals across both Google and Dell.'
     - 'Telling an educational story while staying strictly accurate and compliant.'
-    - 'Describing workflows in a way education professionals found relatable.'
+    - 'Describing classroom workflows in a way teachers and IT staff would recognise.'
   approach:
     - 'Approvals locked at each milestone, from copy to design to publishing.'
     - 'Interviews with teaching specialists to understand classroom workflows at each level.'
     - 'Visual matrices mapping educator workflows to recommended technology and software.'
   outcome:
     - 'A hero reference asset for global Chromebook sales in education.'
-    - 'Re-commissioned three times over several years as educational needs changed.'
+    - 'Re-commissioned three times over the following years as schools'' needs changed.'
     - 'Delivered within project funding and publishing deadlines.'
 
 role:

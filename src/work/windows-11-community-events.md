@@ -1,7 +1,7 @@
 ---
 title: 'Windows 11 Community Events'
 shortTitle: 'Windows 11 Events'
-excerpt: 'A series of UK-based workshops designed to engage high-value enterprise accounts and drive solution adoption.'
+excerpt: 'Seven full-day workshops across the UK that got Dell and Microsoft back in the room with 170 high-value accounts.'
 outcome: 'Seven UK workshops, an 80% registrant-to-attendee rate and $9.5M in new pipeline.'
 client: 'Dell Technologies & Microsoft'
 duration: '15 weeks'
@@ -36,7 +36,7 @@ stats:
   - value: '170'
     label: 'high-value accounts targeted'
 
-summary: 'A leading technology solutions provider needed to re-engage 170 high-value customer accounts over three months, support their move to Windows 11 and get them ready for future AI projects. I led a series of full-day community workshops in UK cities that gave account executives a real reason to get back in the room with those customers.'
+summary: 'Dell and Microsoft needed to re-engage 170 high-value customer accounts over three months, support their move to Windows 11 and get them ready for future AI projects. I led a series of full-day community workshops in UK cities that gave account executives a real reason to get back in the room with those customers.'
 
 cards:
   challenge:
@@ -48,7 +48,7 @@ cards:
     - 'Campaign branding, messaging and creative designed and pitched with an event specialist and a creative director.'
     - 'A client-facing dashboard tracking every deliverable, the budget and resourcing.'
   outcome:
-    - 'All seven events delivered on time and to the standard the client expected.'
+    - 'All seven events delivered on time and to the client''s standard.'
     - 'Very positive attendee feedback after the events.'
     - 'Full compliance with both funding partners and their proof of execution processes.'
 

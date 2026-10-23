@@ -1,7 +1,7 @@
 ---
 title: 'Dell Technologies Forum Podcast Series'
 shortTitle: 'Dell Podcast Series'
-excerpt: 'A corporate podcast extending event conversations and building an engaged community around innovation.'
+excerpt: 'A Dell podcast that kept the Forum event conversations going after the events ended, and passed 100,000 downloads.'
 outcome: 'A podcast series that passed 100,000 downloads, ahead of Dell''s other corporate podcasts worldwide.'
 client: 'Dell Technologies'
 duration: '48 weeks'
@@ -40,7 +40,7 @@ cards:
   challenge:
     - 'Often just two weeks between meeting a guest and publishing their episode.'
     - 'Senior teams kept pushing the same high-priority themes, which risked repeating content.'
-    - 'Consistent audio quality and listener engagement across every episode.'
+    - 'Keeping audio quality and listener interest up across every episode.'
   approach:
     - 'A guest preparation workflow covering intake, content coaching, technical setup and production milestones.'
     - 'Every guest''s talking points checked against earlier episodes, with guests coached towards fresher angles.'
@@ -52,10 +52,10 @@ cards:
 
 role:
   - 'Owned content planning, script development and guest management.'
-  - 'Coordinated recording logistics and held audio standards across episodes.'
-  - 'Balanced guest needs against internal priorities with stakeholders.'
+  - 'Ran recording logistics and kept the audio standard consistent.'
+  - 'Worked with stakeholders to balance what guests wanted against internal priorities.'
   - 'Marketed each episode with social clips and visuals.'
-  - 'Delivered clean transcripts so every episode was accessible.'
+  - 'Delivered clean transcripts for every episode.'
 
 media:
   - type: video

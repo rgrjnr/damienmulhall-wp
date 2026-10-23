@@ -1,7 +1,7 @@
 ---
 title: 'Product Launch Training EMEA'
 shortTitle: 'EMEA Launch Training'
-excerpt: 'A regional sales enablement project delivering training materials and engagement campaigns to over 40 sites across Europe, the Middle East, and Africa.'
+excerpt: 'Annual launch training and a launch campaign for Dell sales teams at 40+ sites across Europe, the Middle East and Africa.'
 outcome: 'Launch training delivered to 40+ EMEA sites every year, on time, and renewed for five consecutive years.'
 client: 'Dell Technologies'
 duration: '13 weeks a year'
@@ -41,8 +41,8 @@ cards:
     - 'Very limited budgets for collateral and distribution.'
     - 'Approvals across brand, legal and marketing, and customs risk on cross-border shipping.'
   approach:
-    - 'Eco-friendly, brand-compliant merchandise chosen to ease customs approvals.'
-    - 'A consistent, easy-to-use training manual covering product strengths and positioning.'
+    - 'Eco-friendly, on-brand merchandise, chosen partly because it clears customs more easily.'
+    - 'One easy-to-use training manual covering what each product does well and how to position it.'
     - 'A hype campaign of launch emails, trainer kits, branded giveaways, internal videos and session templates.'
   outcome:
     - 'Materials reached 40+ EMEA sites every year, on time and on budget.'

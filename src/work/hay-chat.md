@@ -67,7 +67,7 @@ gallery:
     caption: 'What Hay is, from our pitch deck. I rebuilt the deck in Figma around the real product.'
   - src: '/assets/images/work/hay-chat/resolving-an-order.png'
     alt: 'A customer chat where Hay looks up an order on Shopify, verifies payment on Stripe and reads the shipping policy before replying'
-    caption: 'Hay resolving an order query by checking Shopify, Stripe and the shipping policy. Resolving, not deflecting, is the core of our positioning.'
+    caption: 'Hay resolving an order query by checking Shopify, Stripe and the shipping policy. Actually resolving the query is the core of our positioning.'
   - src: '/assets/images/work/hay-chat/deck-how-hay-works.png'
     alt: 'Pitch deck slide titled How Hay works, with six steps: upload your docs, build playbooks, configure agents, test and refine, go live, measure and improve'
     caption: 'The six-step setup flow. It follows the onboarding, training and sandbox testing stories in the product backlog.'
@@ -90,11 +90,11 @@ lessons:
 
 I opened the Hay backlog on 27 September 2025. It covered agents, training, onboarding, escalation to a human, connections, payments, account management and GDPR. The GDPR epic alone took in data subject requests, retention and clean-up, logging and redaction, incident response, data residency, a subprocessor registry, backup and restore, consent mode and an opt-out from OpenAI training. Almost all of it shipped between December 2025 and April 2026.
 
-I also wrote the growth epics, each with an owner, a goal and completion criteria: building in public on the open-source engine, in-product growth loops, marketplace listings for Shopify, Zendesk and HubSpot, and a hospitality vertical backed by 18 research spikes.
+I also wrote the growth epics, each with an owner, a goal and completion criteria: building in public on the source-available engine, in-product growth loops, marketplace listings for Shopify, Zendesk and HubSpot, and a hospitality vertical backed by 18 research spikes.
 
 ## Website and SEO
 
-The 31 August 2026 baseline showed the problem clearly. Most search traffic was brand confusion, and no commercial page ranked above position 15. I moved the work towards real buyer searches, with one page per search meaning, checked on the live results page first. That meant integration pages, compare pages, a glossary, guides and a press section, plus the technical work behind them: structured data, real 301 redirects, IndexNow and fixes to indexing problems on Bing and Google.
+The 31 August 2026 baseline showed the problem. Most search traffic was brand confusion, and no commercial page ranked above position 15. I moved the work towards real buyer searches, with one page per search meaning, checked on the live results page first. That meant integration pages, compare pages, a glossary, guides and a press section, plus the technical work behind them: structured data, real 301 redirects, IndexNow and fixes to indexing problems on Bing and Google.
 
 ## Outbound and events
 

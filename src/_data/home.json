@@ -1,10 +1,10 @@
 {
-  "_comment": "Recovered verbatim from the WordPress theme's Carbon Fields defaults in custom/theme-options/homepage.php. This file is the homepage copy — edit it here.",
+  "_comment": "Homepage copy. First recovered from the old WordPress theme, rewritten October 2026. Edit it here.",
 
   "hero": {
     "heading": "I lead creative projects from concept to delivery.",
     "highlight": "delivery",
-    "description": "I've spent over 10 years leading creative projects—mostly in agency settings where content, deadlines, and expectations all move fast."
+    "description": "I've spent 14 years leading projects, mostly in agencies where content, deadlines and expectations all move fast."
   },
 
   "brands": {
@@ -13,62 +13,62 @@
   },
 
   "about": {
-    "main": "My background is in media production, so I naturally gravitate toward structure, story, and the bigger picture. I'm not tied to a single methodology or buzzword. What matters is making things happen—and making the process easier for everyone involved.",
-    "secondary": "I've helped launch podcasts with 100,000+ downloads, built internal playbooks that actually get used, and run campaigns across formats, teams, and time zones. But this isn't about the biggest project or the flashiest brand."
+    "main": "I started out in media production, so structure and story come naturally to me. I don't swear by any one methodology. What matters is getting things done, and making the process easier for everyone along the way.",
+    "secondary": "I've launched a podcast series that passed 100,000 downloads, built internal playbooks people actually use, and run campaigns across formats, teams and time zones. But the size of the brand was never the point."
   },
 
   "services": [
     {
-      "title": "What I Do",
+      "title": "What I do",
       "lines": [
-        "Lead Creative Projects End-to-End",
-        "Translate Strategy into Execution",
-        "Align Stakeholders & Deliver Results"
+        "Lead creative projects end to end",
+        "Turn strategy into a plan that ships",
+        "Get stakeholders aligned and deliver"
       ]
     },
     {
-      "title": "What I Deliver",
+      "title": "What I deliver",
       "lines": [
-        "Content That Performs",
-        "Projects On Time & On Budget",
-        "Clear, Actionable Comms"
+        "Content that performs",
+        "Projects on time and on budget",
+        "Comms people can act on"
       ]
     },
     {
-      "title": "What To Expect",
-      "lines": ["Sharp Thinking", "Calm Leadership", "No-Fluff Delivery"]
+      "title": "What to expect",
+      "lines": ["Sharp thinking", "Calm leadership", "No-fluff delivery"]
     }
   ],
 
   "toolsBlock": {
-    "text": "I'm not the designer or the developer. I'm just the project manager who clears the path so they can do their best work—on time, on budget, and without the chaos."
+    "text": "I'm not the designer or the developer. I'm the project manager who clears the path so they can do their best work. On time, on budget, without the chaos."
   },
 
   "cards": [
     {
       "title": "Skills",
-      "text": "Waterfall / Budgeting / Planning / Client & Stakeholder Management / Creative Studio Management",
+      "text": "Waterfall / Budgeting / Planning / Client and stakeholder management / Creative studio management",
       "icon": "skills"
     },
     {
       "title": "Certifications",
-      "text": "PMP / Google Project Management / Agile Project Management / Project Planning / Project Execution",
+      "text": "PMP / Google Project Management Certificate / Agile Project Management",
       "icon": "certifications"
     },
     {
       "title": "Expertise",
-      "text": "Sales Enablement / Webinars & Live Events / Podcasts / Product Launches / Community Events / Demand Generation Campaigns / Rich Media Content",
+      "text": "Sales enablement / Webinars and live events / Podcasts / Product launches / Community events / Demand generation / Rich media",
       "icon": "expertise"
     },
     {
       "title": "Tools",
-      "text": "Google Workspace / Office 365 / Sharepoint / Adobe CC / Riverside FM / Trello",
+      "text": "Google Workspace / Office 365 / SharePoint / Adobe CC / Riverside.fm / Trello",
       "icon": "tools"
     }
   ],
 
   "cta": {
-    "heading": "Work with me, and see how smooth, focused projects really feel.",
+    "heading": "Work with me and see how a smooth, focused project feels.",
     "buttonText": "Let's work",
     "buttonLink": "mailto:damien@damienmulhall.com"
   },

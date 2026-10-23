@@ -1,7 +1,7 @@
 ---
 title: 'Vashi Nedomansky Filmmaking Guide'
 shortTitle: 'Filmmaking Guide'
-excerpt: 'A hero marketing asset created to engage media and entertainment businesses and reposition enterprise solutions in a traditionally Apple-dominated segment.'
+excerpt: 'A filmmaking guide with Hollywood editor Vashi Nedomansky, made to put Dell Precision workstations in front of media and entertainment businesses that mostly buy Apple.'
 outcome: 'An interactive guide with a Hollywood film editor, live in the US and approved for EMEA syndication. Vashi still features it on his own site.'
 client: 'Dell Technologies'
 duration: '19 weeks'
@@ -46,9 +46,9 @@ cards:
     - 'An interactive HTML eGuide as the main output for US campaigns.'
     - 'A second interactive PDF made for EMEA content syndication.'
   outcome:
-    - 'A guide that resonated with the media and entertainment audience.'
+    - 'A guide the media and entertainment audience engaged with.'
     - 'Approved for syndication in EMEA campaigns.'
-    - 'Strong praise from the project sponsor and marketing teams.'
+    - 'Strong feedback from the project sponsor and the marketing teams.'
 
 role:
   - 'Led the eGuide from kickoff to final delivery.'
