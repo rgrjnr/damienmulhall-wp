@@ -151,8 +151,8 @@
         "text": "Designers and developers do their best work when decisions, sign-offs and briefs are sorted before they start. Sorting them is my job."
       },
       {
-        "title": "Written down, then checked",
-        "text": "Work starts with a written brief and gets checked against it before it ships. On the Hay.chat website that meant 32 packages, each reviewed on a test build before it merged."
+        "title": "Plan the work, then work the plan",
+        "text": "Every project I run starts with an agreed scope and a plan, and changes go through change control, whether it runs Waterfall, Agile or a mix of both. On the Hay.chat website that meant 32 scoped work packages, each checked against its brief before it shipped."
       },
       {
         "title": "AI as the build team",
