@@ -29,10 +29,10 @@ stats:
     label: 'qualified leads at Web Summit Lisbon'
   - value: '120+'
     label: 'live pages on the website'
-    note: '100+ revised and 20 built in one week, October 2026'
-  - value: '17'
-    label: 'live integrations'
-    note: '310+ actions available to the AI agent, plus 200+ backlinks to the site'
+    note: '100+ revised and 20 built in one week, October 2026, plus 200+ backlinks'
+  - value: '16'
+    label: 'live integrations, plus the built-in web chat'
+    note: '317 actions available to the AI agent'
   - value: '579'
     label: 'Jira issues across product and marketing'
     note: '301 of them written by me'
@@ -55,7 +55,7 @@ cards:
 
 role:
   - 'Wrote 164 of the 213 product issues, including 96 user stories, each with acceptance criteria and a definition of done.'
-  - 'Owned the integration roadmap from spec to launch: 17 live integrations across Shopify, WooCommerce, Wix, Magento, WordPress, WhatsApp, Instagram, Zendesk, HubSpot, Stripe, Notion and more, with 310+ actions for the AI agent.'
+  - 'Owned the integration roadmap from spec to launch: 16 live integrations plus the built-in web chat, across Shopify, WooCommerce, WordPress, Wix, Magento, Zendesk, HubSpot, Stripe, Klaviyo, Twenty, Cal.com, Notion, WhatsApp, Instagram, Chatwoot and Atlassian, giving the AI agent 317 actions.'
   - 'Led the website: SEO strategy, keyword research, content and the release of every change.'
   - 'Wrote 18 long-form blog posts in three months, each through an eight-step pipeline from concept to social posts.'
   - 'Ran our events from booth pitch to follow-up: demo videos, printed offer cards and a QR landing page feeding our CRM.'
