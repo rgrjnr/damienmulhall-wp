@@ -2,40 +2,33 @@
  * Theme animations for the static (Eleventy) build.
  *
  * Ported from the WordPress theme's `assets/ts/main.ts`. The AJAX/SPA page
- * navigation layer is deliberately gone — this site is static, real navigations
- * are already instant, and the fetch/innerHTML swap fought ScrollSmoother.
- * What remains: ScrollSmoother, the hero SplitText reveal, scroll reveals, the
- * `.work-item` hover choreography, the crow overlay, and anchor scrolling.
+ * navigation layer is deliberately gone: this site is static and real
+ * navigations are already instant. Scrolling is the browser's own.
+ * What remains: the hero SplitText reveal and scribble, scroll reveals, stat
+ * counters, the logo marquee, the `.work-item` hover choreography, the crow
+ * overlay, the scroll-up header, copy-to-clipboard and anchor scrolling.
  */
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 import { prefersReducedMotion, safely, yieldToMain } from './lib/env';
 import { setupMobileMenu } from './lib/mobile-menu';
 import { setupCrowLoader } from './lib/crow-loader';
 import { setupHeroText } from './lib/hero-text';
 import { forceVisible, setupReveals, setupRotations } from './lib/reveals';
-import {
-  getSmoother,
-  handleInitialHash,
-  setupAnchorLinks,
-  setupSmoothScroll,
-} from './lib/smooth-scroll';
+import { setupAnchorLinks } from './lib/smooth-scroll';
 import { setupWorkItems } from './lib/work-items';
-
-declare global {
-  interface Window {
-    smoother: ScrollSmoother | null;
-  }
-}
+import { setupCounters } from './lib/counters';
+import { setupMarquee } from './lib/marquee';
+import { setupCopyEmail } from './lib/copy-email';
+import { setupScrollNav } from './lib/scroll-nav';
 
 /** Plugin registration is itself fail-safe: without it we degrade to static. */
 function registerPlugins(): boolean {
   try {
-    gsap.registerPlugin(ScrollTrigger, SplitText, ScrollSmoother);
+    gsap.registerPlugin(ScrollTrigger, SplitText);
     return true;
   } catch (error) {
     console.warn('[animations] GSAP plugin registration failed; running unanimated.', error);
@@ -61,34 +54,35 @@ async function start(): Promise<void> {
   document.body.classList.add('loaded');
   document.body.classList.remove('loading');
 
-  // The mobile menu is not an animation — wire it before any early return so it
-  // works regardless of reduced motion or GSAP availability.
+  // None of these are animations in their own right. Wire them before any
+  // early return so they work regardless of reduced motion or GSAP.
   safely('mobile-menu', setupMobileMenu);
+  safely('scroll-nav', setupScrollNav);
+  safely('copy-email', setupCopyEmail);
 
   const reduced = prefersReducedMotion();
-  const animate = registerPlugins() && !reduced;
 
-  if (!animate) {
-    // Reduced motion (or no GSAP): render everything final, no smoother, no
-    // SplitText. Anchors still work, just without easing. (The crow splash was
-    // already resolved in scheduleBoot.)
+  if (!registerPlugins()) {
     safely('force-visible', forceVisible);
     safely('anchor-links', () => setupAnchorLinks(false));
-    safely('initial-hash', () => handleInitialHash(false));
     return;
   }
+
+  // Reduced motion gets the gentle version: reveals become plain fades, and
+  // everything that moves (text rise, counters, marquee, rotations) is skipped.
+  const animate = !reduced;
 
   // Each step yields to the main thread afterwards. Run as one block these total
   // ~200ms of blocking time on a throttled mobile CPU, which is long enough to
   // hurt responsiveness; chunked, no single task is long enough to be counted.
   const steps: Array<[string, () => void]> = [
-    ['smooth-scroll', () => setupSmoothScroll(true)],
-    ['hero-text', () => setupHeroText(true)],
-    ['reveals', () => setupReveals(true)],
-    ['rotations', () => setupRotations(true)],
-    ['work-items', () => setupWorkItems(true)],
-    ['anchor-links', () => setupAnchorLinks(true)],
-    ['initial-hash', () => handleInitialHash(true)],
+    ['hero-text', () => setupHeroText(animate)],
+    ['reveals', () => setupReveals(animate ? 'full' : 'gentle')],
+    ['counters', () => setupCounters(animate)],
+    ['marquee', () => setupMarquee(animate)],
+    ['rotations', () => setupRotations(animate)],
+    ['work-items', () => setupWorkItems(animate)],
+    ['anchor-links', () => setupAnchorLinks(animate)],
     ['scroll-trigger-refresh', scheduleRefreshes],
   ];
 
@@ -96,9 +90,6 @@ async function start(): Promise<void> {
     safely(name, step);
     await yieldToMain();
   }
-
-  // Handy for debugging in the console; harmless in production.
-  window.smoother = getSmoother();
 }
 
 /** Last line of defence: whatever failed, the page must end up readable. */
@@ -119,18 +110,18 @@ function boot(): void {
 /**
  * Yield a frame before booting.
  *
- * Registering the GSAP plugins and building the ScrollSmoother/ScrollTrigger graph
- * is one long task. Run it synchronously after DOMContentLoaded and the browser
- * has no paint opportunity until it finishes — on a throttled mobile CPU that
- * pushed LCP from 1.9s to 6.4s, entirely in render delay. Waiting for a rendered
- * frame (rAF, then a macrotask so the paint actually commits) costs nothing
+ * Registering the GSAP plugins and building the ScrollTrigger graph is one long
+ * task. Run it synchronously after DOMContentLoaded and the browser has no
+ * paint opportunity until it finishes. On a throttled mobile CPU that pushed
+ * LCP from 1.9s to 6.4s, entirely in render delay. Waiting for a rendered frame
+ * (rAF, then a macrotask so the paint actually commits) costs nothing
  * perceptible and lets the hero paint on time.
  *
  * `body.loaded` is applied immediately so nothing depends on the deferred work.
  */
 function scheduleBoot(): void {
   document.body.classList.add('loaded');
-  // Resolve the intro splash immediately — not behind the deferred GSAP graph —
+  // Resolve the intro splash immediately, not behind the deferred GSAP graph,
   // so on a first visit it covers the page promptly rather than flashing in late.
   safely('crow-loader', () => setupCrowLoader(!prefersReducedMotion()));
   requestAnimationFrame(() => {

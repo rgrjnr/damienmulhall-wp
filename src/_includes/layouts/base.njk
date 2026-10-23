@@ -86,8 +86,20 @@
     </video>
 </div>
 
-<div id="smooth-wrapper">
-    <div id="smooth-content">
+<!-- Scroll-up header: a slim copy of the nav that returns when you scroll back up -->
+<div class="scroll-nav" data-scroll-nav>
+    <nav class="scroll-nav__inner" aria-label="Quick">
+        <a href="/" class="scroll-nav__brand">{{ site.name }}</a>
+        <ul class="scroll-nav__links">
+            {%- for item in home.nav %}
+            <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+            {%- endfor %}
+        </ul>
+    </nav>
+</div>
+
+<div id="page">
+    <div>
 
         <main id="content" class="bg-dm-white">
             <div class="py-12 lg:py-12">
@@ -99,7 +111,9 @@
         <!-- Footer -->
         <footer class="w-full max-w-page mx-auto px-6 py-12 flex justify-between items-center">
             <p class="font-haas-display font-medium text-body-md text-dm-black">
-                {{ build.year }} © {{ site.name }}. <a href="{{ site.social.linkedin }}">LinkedIn</a>
+                {{ build.year }} © {{ site.name }}. <a href="{{ site.social.linkedin }}">LinkedIn</a> ·
+                <a class="copy-email" href="mailto:{{ site.email }}" data-copy="{{ site.email }}">{{ site.email }}<span class="copy-email__stamp" aria-hidden="true">Copied</span></a>
+                <span class="sr-only" role="status" aria-live="polite" data-copy-status></span>
             </p>
             <a href="{{ site.credit.url }}" aria-label="Site by {{ site.credit.name }}">
                 <svg aria-hidden="true" focusable="false" width="32" height="37" viewBox="0 0 32 37" fill="none" xmlns="http://www.w3.org/2000/svg">

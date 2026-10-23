@@ -11,11 +11,13 @@ showHero: true
 <section class="w-full max-w-page mx-auto px-6 mt-9" aria-labelledby="brands-heading">
     <div class="logo-wall">
         <h2 id="brands-heading" class="logo-wall__heading">{{ home.brands.heading }}</h2>
-        <ul class="logo-wall__list">
-            {%- for name in home.brands.names %}
-            <li class="logo-wall__item">{{ name }}</li>
-            {%- endfor %}
-        </ul>
+        <div class="logo-wall__viewport">
+            <ul class="logo-wall__list">
+                {%- for name in home.brands.names %}
+                <li class="logo-wall__item">{{ name }}</li>
+                {%- endfor %}
+            </ul>
+        </div>
     </div>
 </section>
 {%- endif %}

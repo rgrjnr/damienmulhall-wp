@@ -49,3 +49,15 @@ $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
+
+// Motion. One easing and three durations for the whole site, so every effect
+// moves the same way. Values follow Emil Kowalski's guidance: ease-out, never
+// ease-in, and UI feedback under 300ms. Keep in step with MOTION in lib/env.ts.
+$ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+$dur-press: 160ms;
+$dur-hover: 250ms;
+$dur-reveal: 600ms;
+
+// Hover effects only for real pointers, so touch screens never get stuck states.
+$hover-fine: "(hover: hover) and (pointer: fine)";

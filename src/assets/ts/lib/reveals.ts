@@ -2,13 +2,18 @@
  * Scroll-triggered reveals.
  *
  * The starting states also exist in CSS (`.fade-in` and friends are opacity: 0),
- * with `body.loaded` as the no-JS / reduced-motion escape hatch. When GSAP takes
- * an element over we tag it `.gsap-reveal` so the CSS transition stops fighting
- * the tween frame by frame.
+ * with `body.loaded` as the no-JS escape hatch. When GSAP takes an element over
+ * we tag it `.gsap-reveal` so the CSS transition stops fighting the tween frame
+ * by frame.
+ *
+ * `gentle` is the reduced-motion version: the same reveals as a plain fade,
+ * with no travel or scaling.
  */
 
 import { gsap } from 'gsap';
-import { queryAll } from './env';
+import { MOTION, queryAll } from './env';
+
+export type RevealMode = 'full' | 'gentle';
 
 /** Tweens this module owns, so `forceVisible()` can undo exactly them. */
 const revealTweens: gsap.core.Tween[] = [];
@@ -16,52 +21,33 @@ const revealTweens: gsap.core.Tween[] = [];
 interface RevealGroup {
   selector: string;
   from: gsap.TweenVars;
-  to: gsap.TweenVars;
-  start: string;
 }
 
 const GROUPS: RevealGroup[] = [
-  {
-    selector: '.fade-in, [data-reveal="fade"]',
-    from: { opacity: 0, y: 50 },
-    to: { opacity: 1, y: 0, duration: 1, ease: 'power2.out' },
-    start: 'top 85%',
-  },
-  {
-    selector: '.scale-in, [data-reveal="scale"]',
-    from: { opacity: 0, scale: 0.8 },
-    to: { opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.7)' },
-    start: 'top 80%',
-  },
-  {
-    selector: '.slide-left, [data-reveal="left"]',
-    from: { opacity: 0, x: -100 },
-    to: { opacity: 1, x: 0, duration: 1, ease: 'power2.out' },
-    start: 'top 80%',
-  },
-  {
-    selector: '.slide-right, [data-reveal="right"]',
-    from: { opacity: 0, x: 100 },
-    to: { opacity: 1, x: 0, duration: 1, ease: 'power2.out' },
-    start: 'top 80%',
-  },
+  { selector: '.fade-in, [data-reveal="fade"]', from: { y: 24 } },
+  { selector: '.scale-in, [data-reveal="scale"]', from: { scale: 0.95 } },
+  { selector: '.slide-left, [data-reveal="left"]', from: { x: -40 } },
+  { selector: '.slide-right, [data-reveal="right"]', from: { x: 40 } },
 ];
 
-export function setupReveals(enabled: boolean): void {
-  // Reduced motion: `body.loaded` already puts every one of these at its final
-  // state, so there is nothing to do and nothing left invisible.
-  if (!enabled) return;
-
+export function setupReveals(mode: RevealMode): void {
   GROUPS.forEach((group) => {
+    const from: gsap.TweenVars = mode === 'full' ? { opacity: 0, ...group.from } : { opacity: 0 };
+
     queryAll<HTMLElement>(group.selector).forEach((element) => {
       element.classList.add('gsap-reveal');
 
       revealTweens.push(
-        gsap.fromTo(element, group.from, {
-          ...group.to,
+        gsap.fromTo(element, from, {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          scale: 1,
+          duration: mode === 'full' ? MOTION.reveal : 0.4,
+          ease: MOTION.ease,
           scrollTrigger: {
             trigger: element,
-            start: group.start,
+            start: 'top 85%',
             toggleActions: 'play none none none',
             once: true,
           },
@@ -80,8 +66,8 @@ export function setupRotations(enabled: boolean): void {
 
     gsap
       .timeline({ repeat: -1 })
-      .to(element, { rotation: '+=90', scale: 0.9, duration: 0.5, ease: 'power2.inOut' })
-      .to(element, { scale: 1, duration: 3, ease: 'power2.out' });
+      .to(element, { rotation: '+=90', scale: 0.9, duration: 0.5, ease: MOTION.easeInOut })
+      .to(element, { scale: 1, duration: 3, ease: MOTION.ease });
   });
 }
 
@@ -90,7 +76,6 @@ export function setupRotations(enabled: boolean): void {
  * at opacity 0. Called when animations are disabled or after a failure.
  */
 export function forceVisible(): void {
-  // Kill only our own triggers — ScrollSmoother owns one too and must survive.
   revealTweens.forEach((tween) => {
     tween.scrollTrigger?.kill();
     tween.kill();
@@ -104,4 +89,6 @@ export function forceVisible(): void {
     element.style.opacity = '1';
     element.style.transform = 'none';
   });
+
+  queryAll<HTMLElement>('.scribble').forEach((element) => element.classList.add('is-drawn'));
 }

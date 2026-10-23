@@ -2,6 +2,17 @@
  * Small shared helpers: motion preference and fail-safe step execution.
  */
 
+/**
+ * The GSAP side of the motion tokens in `_variables.scss`. power4 is GSAP's
+ * quint, the same curve as cubic-bezier(0.23, 1, 0.32, 1).
+ */
+export const MOTION = {
+  ease: 'power4.out',
+  easeInOut: 'power3.inOut',
+  reveal: 0.6,
+  stagger: 0.05,
+} as const;
+
 /** True when the visitor asked the OS to reduce motion. */
 export function prefersReducedMotion(): boolean {
   if (typeof window.matchMedia !== 'function') return false;
@@ -41,4 +52,10 @@ export function yieldToMain(): Promise<void> {
   return new Promise((resolve) => {
     window.setTimeout(resolve, 0);
   });
+}
+
+/** True for a mouse or trackpad, false for touch. */
+export function hasFinePointer(): boolean {
+  if (typeof window.matchMedia !== 'function') return false;
+  return window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 }

@@ -1,24 +1,27 @@
-// Animation-related styles for GSAP animations
+@use "variables" as *;
 
-// Base animation classes
+// Animation-related styles. Timing comes from the motion tokens in _variables.scss.
+
+// Base animation classes. Entries travel a short way and never start from tiny
+// scales: big moves read as showy, small ones as finished.
 .fade-in {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(24px);
 }
 
 .scale-in {
   opacity: 0;
-  transform: scale(0.8);
+  transform: scale(0.95);
 }
 
 .slide-left {
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateX(-40px);
 }
 
 .slide-right {
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(40px);
 }
 
 // Animation states
@@ -31,8 +34,8 @@
     opacity: 1;
     transform: none;
     transition:
-      opacity 0.6s ease-out,
-      transform 0.6s ease-out;
+      opacity $dur-reveal $ease-out,
+      transform $dur-reveal $ease-out;
   }
 }
 
@@ -46,24 +49,25 @@ body {
   }
 }
 
-// Interactive hover states
-button,
-.wp-block-button__link,
-.btn {
-  transition: transform 0.2s ease-out;
-
-  &:hover {
-    transform: scale(1.05);
+// Native scrolling, eased only for people who haven't asked for less motion.
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }
 
-// Image hover effects
-.wp-block-image img,
-.gallery-item img {
-  transition: transform 0.3s ease-out;
+// Press feedback: a quick dip that tells you the click landed.
+@media (prefers-reduced-motion: no-preference) {
+  button,
+  .btn,
+  .btn-animated,
+  .press,
+  .wp-block-button__link {
+    transition: transform $dur-press $ease-out;
 
-  &:hover {
-    transform: scale(1.05);
+    &:active {
+      transform: scale(0.97);
+    }
   }
 }
 
@@ -91,10 +95,10 @@ button,
 // Scroll-triggered animation classes
 .scroll-fade {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(24px);
   transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out;
+    opacity $dur-reveal $ease-out,
+    transform $dur-reveal $ease-out;
 
   &.scrolled {
     opacity: 1;
@@ -104,10 +108,10 @@ button,
 
 .scroll-scale {
   opacity: 0;
-  transform: scale(0.8);
+  transform: scale(0.95);
   transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
+    opacity $dur-reveal $ease-out,
+    transform $dur-reveal $ease-out;
 
   &.scrolled {
     opacity: 1;
@@ -136,22 +140,6 @@ button,
   animation-delay: 0.5s;
 }
 
-// Smooth scrolling wrapper styles
-#smooth-wrapper {
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-#smooth-content {
-  min-height: 100vh;
-  transform-origin: 0 0;
-}
-
 // Once GSAP owns a reveal element it writes inline styles every frame; the
 // CSS transition above would smear those, so it is switched off for them.
 .gsap-reveal {
@@ -163,21 +151,22 @@ button,
   will-change: transform, opacity;
 }
 
-// Reduced motion support
+// Reduced motion means gentler, not none: fades and colour changes stay,
+// movement and looping animation go.
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
   }
 
   .fade-in,
   .scale-in,
   .slide-left,
-  .slide-right {
-    opacity: 1 !important;
+  .slide-right,
+  .scroll-fade,
+  .scroll-scale {
     transform: none !important;
   }
 }

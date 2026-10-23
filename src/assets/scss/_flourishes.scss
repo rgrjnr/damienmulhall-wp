@@ -1,0 +1,265 @@
+@use "variables" as *;
+
+// Native scroll no longer hides the decorative "Selected Work" text that runs
+// off the right edge, so clip it here. `clip` (not `hidden`) keeps this from
+// becoming a scroll container.
+#page {
+  overflow-x: clip;
+}
+
+// Small finishing touches: the hero scribble, the logo marquee, the copy-email
+// stamp, the scroll-up header and the stat counters. Each one works without
+// JavaScript and stays still for visitors who ask for reduced motion.
+
+// ---------------------------------------------------------------------------
+// Hero scribble: a marker stroke under one phrase, drawn after the words land.
+// `html.motion` is set by JS only when animating, so without it (no JS, reduced
+// motion, a failed boot) the stroke is simply there.
+// ---------------------------------------------------------------------------
+
+.scribble {
+  isolation: isolate;
+  position: relative;
+  white-space: nowrap;
+
+  &::after {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 24' preserveAspectRatio='none'%3E%3Cpath d='M4 15 C 60 7, 130 5, 200 8 S 278 13, 296 9 M 28 20 C 100 14, 190 13, 272 17' fill='none' stroke='%23e3bf30' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E")
+      no-repeat center / 100% 100%;
+    bottom: -0.08em;
+    clip-path: inset(0);
+    content: "";
+    height: 0.34em;
+    left: -3%;
+    pointer-events: none;
+    position: absolute;
+    right: -3%;
+    z-index: -1;
+  }
+}
+
+.motion .scribble:not(.is-drawn)::after {
+  clip-path: inset(0 100% 0 0);
+}
+
+.motion .scribble.is-drawn::after {
+  transition: clip-path 700ms $ease-in-out;
+}
+
+// ---------------------------------------------------------------------------
+// Logo wall marquee. JS adds `.is-marquee` after cloning enough names to fill
+// the strip; until then (and under reduced motion) it is the static wrapped list.
+// ---------------------------------------------------------------------------
+
+.logo-wall__viewport {
+  flex: 1;
+  min-width: 0;
+}
+
+.logo-wall.is-marquee {
+  .logo-wall__viewport {
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    overflow: hidden;
+  }
+
+  .logo-wall__list {
+    animation: logo-marquee var(--marquee-duration, 40s) linear infinite;
+    flex-wrap: nowrap;
+    gap: 0;
+    justify-content: flex-start;
+    width: max-content;
+  }
+
+  // Spacing lives on the items, not in `gap`, so both halves of the track are
+  // exactly the same width and the loop has no seam.
+  .logo-wall__item {
+    padding-right: 3rem;
+  }
+
+  &:hover .logo-wall__list {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes logo-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Copy email: a rubber stamp confirms the copy; screen readers hear it too.
+// ---------------------------------------------------------------------------
+
+.copy-email {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  position: relative;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:focus-visible {
+    outline: 3px solid $dm-black;
+    outline-offset: 4px;
+  }
+}
+
+.copy-email__stamp {
+  --stamp-rotate: -8deg;
+
+  background: $dm-white;
+  border: 2px solid $dm-red;
+  border-radius: 4px;
+  color: $dm-red;
+  font-family: $font-haas-text;
+  font-size: 12px;
+  font-weight: $font-bold;
+  left: 50%;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  padding: 0.15em 0.5em;
+  pointer-events: none;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(var(--stamp-rotate));
+  white-space: nowrap;
+}
+
+.copy-email.is-copied .copy-email__stamp {
+  animation: copy-stamp 1.6s $ease-out forwards;
+}
+
+@keyframes copy-stamp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--stamp-rotate)) scale(1.4);
+  }
+
+  12% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(var(--stamp-rotate)) scale(1);
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--stamp-rotate)) scale(1);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Scroll-up header: hidden while you read down, back as soon as you scroll up.
+// ---------------------------------------------------------------------------
+
+.scroll-nav {
+  background: $dm-white;
+  border-bottom: 3px solid $dm-black;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateY(-100%);
+  transition:
+    transform $dur-hover $ease-out,
+    visibility 0s linear $dur-hover;
+  visibility: hidden;
+  z-index: 100;
+
+  &.is-visible {
+    transform: none;
+    transition:
+      transform $dur-hover $ease-out,
+      visibility 0s;
+    visibility: visible;
+  }
+}
+
+.scroll-nav__inner {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: $page-width;
+  padding: 0.75rem 1.5rem;
+}
+
+.scroll-nav__brand {
+  color: $dm-black;
+  font-family: $font-haas-display;
+  font-size: $text-body-lg;
+  font-weight: $font-bold;
+  text-decoration: none;
+
+  @media (max-width: ($breakpoint-sm - 1px)) {
+    display: none;
+  }
+}
+
+.scroll-nav__links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+
+  a {
+    color: $dm-black;
+    font-family: $font-haas-text;
+    font-size: $text-body-sm;
+    font-weight: $font-bold;
+    text-decoration: none;
+    transition: color $dur-hover ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $dm-cyan;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Stat counters: fixed-width digits so the number doesn't wobble as it counts.
+// ---------------------------------------------------------------------------
+
+.cs-stat__value,
+.work-card__stat-value {
+  font-variant-numeric: tabular-nums;
+}
+
+// ---------------------------------------------------------------------------
+// Reduced motion: the header and stamp fade in place instead of moving.
+// ---------------------------------------------------------------------------
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-nav,
+  .scroll-nav.is-visible {
+    transform: none;
+  }
+
+  .scroll-nav {
+    opacity: 0;
+    transition:
+      opacity $dur-hover ease,
+      visibility 0s linear $dur-hover;
+
+    &.is-visible {
+      opacity: 1;
+      transition:
+        opacity $dur-hover ease,
+        visibility 0s;
+    }
+  }
+
+  .copy-email.is-copied .copy-email__stamp {
+    animation: none;
+    opacity: 1;
+  }
+}

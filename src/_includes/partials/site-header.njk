@@ -88,7 +88,11 @@
         <div class="flex flex-col lg:flex-row gap-12 lg:gap-28 items-start justify-between">
             <h1 data-hero-heading
                 class="font-haas-display font-bold text-display-md lg:text-display-xl leading-none text-dm-black max-w-3xl">
+                {%- if home.hero.highlight %}
+                {{ home.hero.heading | escape | replace(home.hero.highlight, '<span class="scribble">' + home.hero.highlight + '</span>') | safe }}
+                {%- else %}
                 {{ home.hero.heading }}
+                {%- endif %}
             </h1>
             <p class="font-haas-text font-medium text-body-md text-dm-black max-w-sm lg:pt-4">
                 {{ home.hero.description }}
@@ -101,7 +105,7 @@
         <!-- CTA Buttons -->
         <div class="flex flex-row gap-3.5 items-center justify-end">
             <a href="/#work"
-                class="bg-dm-green rounded-full px-6 py-3 flex items-center gap-3 hover:bg-opacity-90 transition-all">
+                class="press bg-dm-green rounded-full px-6 py-3 flex items-center gap-3 hover:bg-opacity-90 transition-colors">
                 <span class="font-haas-display font-medium text-heading-sm text-dm-white">Projects</span>
                 <svg aria-hidden="true" focusable="false" class="w-8 h-8 text-dm-white" viewBox="0 0 32 32" fill="none">
                     <path d="M8 12L16 20L24 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
