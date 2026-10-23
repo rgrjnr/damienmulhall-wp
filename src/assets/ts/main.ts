@@ -24,6 +24,7 @@ import { setupCounters } from './lib/counters';
 import { setupMarquee } from './lib/marquee';
 import { setupCopyEmail } from './lib/copy-email';
 import { setupScrollNav } from './lib/scroll-nav';
+import { setupReceipts } from './lib/receipts';
 
 /** Plugin registration is itself fail-safe: without it we degrade to static. */
 function registerPlugins(): boolean {
@@ -59,6 +60,7 @@ async function start(): Promise<void> {
   safely('mobile-menu', setupMobileMenu);
   safely('scroll-nav', setupScrollNav);
   safely('copy-email', setupCopyEmail);
+  safely('receipts', setupReceipts);
 
   const reduced = prefersReducedMotion();
 

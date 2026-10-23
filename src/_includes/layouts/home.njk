@@ -52,16 +52,31 @@ showHero: true
 
         <!-- Services Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {#- Receipts: every claim carries its proof. Without JS each proof sits
+                under its line; lib/receipts.ts turns them into hover/tap reveals. #}
             {%- for service in home.services %}
-            <div class="bg-dm-cyan p-card flex flex-col gap-3">
+            {%- set tile = loop.index %}
+            <div class="receipt-tile bg-dm-cyan p-card flex flex-col gap-3" data-receipts>
                 <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">{{ service.title }}</h3>
-                <div class="flex flex-col gap-2">
+                <ul class="receipt-lines">
                     {%- for line in service.lines %}
-                    <p class="font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none">
-                        {{ line }}
-                    </p>
+                    <li class="receipt-item">
+                        <button type="button" class="receipt-line font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none"
+                            aria-expanded="false" aria-controls="receipt-{{ tile }}-{{ loop.index }}">{{ line.text }}</button>
+                        {%- if line.proof %}
+                        <div class="receipt" id="receipt-{{ tile }}-{{ loop.index }}">
+                            <span class="receipt__value">{{ line.proof.value }}</span>
+                            <span class="receipt__text">{{ line.proof.text }}</span>
+                            <a class="receipt__link" href="{{ line.proof.link }}">See the project<span class="sr-only">: {{ line.text }}</span></a>
+                        </div>
+                        {%- endif %}
+                    </li>
                     {%- endfor %}
-                </div>
+                </ul>
+                <p class="receipt-cue" aria-hidden="true">
+                    <span class="receipt-cue__hover">{{ home.receiptsCue.hover }}</span>
+                    <span class="receipt-cue__tap">{{ home.receiptsCue.tap }}</span>
+                </p>
             </div>
             {%- endfor %}
         </div>

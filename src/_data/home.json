@@ -1,49 +1,116 @@
 {
   "_comment": "Homepage copy. First recovered from the old WordPress theme, rewritten October 2026. Edit it here.",
-
   "hero": {
     "heading": "I take projects and products from first idea to delivery.",
     "highlight": "delivery",
     "description": "14 years leading projects for Dell, Microsoft, Intel and Google, mostly in agencies where deadlines move fast. Now co-founder of Hay.chat, an AI support platform I took from first backlog to live product."
   },
-
   "brands": {
     "heading": "Brands I've delivered for",
-    "names": ["Dell Technologies", "Microsoft", "Intel", "Google", "NVIDIA"]
+    "names": [
+      "Dell Technologies",
+      "Microsoft",
+      "Intel",
+      "Google",
+      "NVIDIA"
+    ]
   },
-
   "about": {
     "main": "I started out in media production, so structure and story come naturally to me. I don't swear by any one methodology. What matters is getting things done, and making the process easier for everyone along the way.",
     "secondary": "I've launched a podcast series that passed 100,000 downloads, built internal playbooks people actually use, and run campaigns across formats, teams and time zones. But the size of the brand was never the point."
   },
-
   "services": [
     {
       "title": "What I do",
       "lines": [
-        "Lead projects and products end to end",
-        "Turn strategy into a plan that ships",
-        "Get stakeholders aligned and deliver"
+        {
+          "text": "Lead projects and products end to end",
+          "proof": {
+            "value": "14 months",
+            "text": "from an empty backlog to a live product, with 50+ features shipped in 14 monthly releases.",
+            "link": "/work/hay-chat/"
+          }
+        },
+        {
+          "text": "Turn strategy into a plan that ships",
+          "proof": {
+            "value": "15 plans",
+            "text": "for go-to-market, audited against the backlog and re-sequenced, run as 22 epics on sprints synced with engineering.",
+            "link": "/work/hay-chat/"
+          }
+        },
+        {
+          "text": "Get stakeholders aligned and deliver",
+          "proof": {
+            "value": "7 workshops",
+            "text": "across the UK for Dell and Microsoft, with two funding partners and brand and legal on every asset. 80% of registrants turned up.",
+            "link": "/work/windows-11-community-events/"
+          }
+        }
       ]
     },
     {
       "title": "What I deliver",
       "lines": [
-        "Content that performs",
-        "Projects on time and on budget",
-        "Comms people can act on"
+        {
+          "text": "Content that performs",
+          "proof": {
+            "value": "100,000+",
+            "text": "downloads for the Dell Technologies Forum podcast, which I produced from first guest to published episode.",
+            "link": "/work/dell-podcast/"
+          }
+        },
+        {
+          "text": "Projects on time and on budget",
+          "proof": {
+            "value": "5 of 5",
+            "text": "years on time: launch training for 40+ EMEA sites, renewed every year.",
+            "link": "/work/product-launch-training-emea/"
+          }
+        },
+        {
+          "text": "Comms people can act on",
+          "proof": {
+            "value": "3 times",
+            "text": "re-commissioned: the Google for Education guide became a reference asset for global Chromebook sales.",
+            "link": "/work/google-education/"
+          }
+        }
       ]
     },
     {
       "title": "What to expect",
-      "lines": ["Sharp thinking", "Calm leadership", "No-fluff delivery"]
+      "lines": [
+        {
+          "text": "Sharp thinking",
+          "proof": {
+            "value": "90%",
+            "text": "of Hay.chat's search traffic was the wrong audience. I rebuilt the site around buyer searches.",
+            "link": "/work/hay-chat/"
+          }
+        },
+        {
+          "text": "Calm leadership",
+          "proof": {
+            "value": "Irish final",
+            "text": "of the Startup World Cup, pitching Hay.chat live at Dublin Tech Summit.",
+            "link": "/work/hay-chat/"
+          }
+        },
+        {
+          "text": "No-fluff delivery",
+          "proof": {
+            "value": "32 packages",
+            "text": "of website work and 36 pull requests, each one checked against a written brief before it shipped.",
+            "link": "/work/hay-chat/"
+          }
+        }
+      ]
     }
   ],
-
   "toolsBlock": {
     "text": "I'm not the designer or the developer. I'm the project manager who clears the path so they can do their best work. On time, on budget, without the chaos."
   },
-
   "cards": [
     {
       "title": "Skills",
@@ -66,16 +133,27 @@
       "icon": "tools"
     }
   ],
-
   "cta": {
     "heading": "Work with me and see how a smooth, focused project feels.",
     "buttonText": "Let's work",
     "buttonLink": "mailto:damien@damienmulhall.com"
   },
-
   "nav": [
-    { "label": "Download CV", "url": "/assets/files/Damien_Mulhall_CV.pdf" },
-    { "label": "Work", "url": "/#work" },
-    { "label": "Contact me", "url": "mailto:damien@damienmulhall.com" }
-  ]
+    {
+      "label": "Download CV",
+      "url": "/assets/files/Damien_Mulhall_CV.pdf"
+    },
+    {
+      "label": "Work",
+      "url": "/#work"
+    },
+    {
+      "label": "Contact me",
+      "url": "mailto:damien@damienmulhall.com"
+    }
+  ],
+  "receiptsCue": {
+    "hover": "Hover a line for the proof",
+    "tap": "Tap a line for the proof"
+  }
 }
