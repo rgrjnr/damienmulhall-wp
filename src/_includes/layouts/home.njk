@@ -6,6 +6,20 @@ showHero: true
 {% from "partials/highlights-badges.njk" import badges with context %}
 {% from "partials/animated-button.njk" import button %}
 
+{%- if home.brands and home.brands.names.length %}
+<!-- Logo wall: text wordmarks in the site type, no third-party logo files -->
+<section class="w-full max-w-page mx-auto px-6 mt-9" aria-labelledby="brands-heading">
+    <div class="logo-wall">
+        <h2 id="brands-heading" class="logo-wall__heading">{{ home.brands.heading }}</h2>
+        <ul class="logo-wall__list">
+            {%- for name in home.brands.names %}
+            <li class="logo-wall__item">{{ name }}</li>
+            {%- endfor %}
+        </ul>
+    </div>
+</section>
+{%- endif %}
+
 <!-- About Section -->
 <section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="about-heading">
     <h2 id="about-heading" class="sr-only">About</h2>

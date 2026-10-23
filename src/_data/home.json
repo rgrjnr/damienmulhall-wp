@@ -6,6 +6,11 @@
     "description": "I've spent over 10 years leading creative projects—mostly in agency settings where content, deadlines, and expectations all move fast."
   },
 
+  "brands": {
+    "heading": "Brands I've delivered for",
+    "names": ["Dell Technologies", "Microsoft", "Intel", "Google", "NVIDIA"]
+  },
+
   "about": {
     "main": "My background is in media production, so I naturally gravitate toward structure, story, and the bigger picture. I'm not tied to a single methodology or buzzword. What matters is making things happen—and making the process easier for everyone involved.",
     "secondary": "I've helped launch podcasts with 100,000+ downloads, built internal playbooks that actually get used, and run campaigns across formats, teams, and time zones. But this isn't about the biggest project or the flashiest brand."
