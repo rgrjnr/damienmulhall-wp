@@ -47,7 +47,9 @@ cards:
     - 'Two founders, no employees and no marketing team, up against Intercom, Zendesk and Gorgias.'
     - 'No backlog yet for the first release, and GDPR to get right from the start for an EU-hosted product.'
     - 'About 90% of search traffic came from people looking for an unrelated video chat app, and no commercial page ranked above position 15.'
+    - 'Web Summit 2025 showed real demand, but our first version wasn''t ready for it.'
   approach:
+    - 'We chose to rebuild rather than sell what we had. In January 2026 we re-engineered the platform from the ground up, from the engine to every integration.'
     - 'I wrote every feature down before anyone built it, as a user story with acceptance criteria and a definition of done, so my co-founder could pick up a ticket and build without a meeting.'
     - 'I audited our 15 go-to-market plans against the backlog. The highest-ranked plans had the emptiest epics and stale assumptions, so I re-sequenced the marketplace launches.'
     - 'I kept our claims honest. I cut traction claims we couldn''t stand behind from the pitch, retired the pilot language once the pilot programme ended and described Hay as source-available, not open source.'
