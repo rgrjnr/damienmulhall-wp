@@ -11,6 +11,7 @@ hero: '/assets/images/work/product-launch-training-emea/Screenshot-2025-08-26-at
 heroAlt: 'REBOOT Training FY25 title slide with Dell Technologies, Microsoft and Intel logos over a burst of red and orange colour'
 highlights: [my-computer, megaphone, increase]
 labels: [Sales enablement, Training, EMEA]
+categories: [Events, Sales enablement]
 
 facts:
   - label: 'Client'
@@ -59,6 +60,7 @@ role:
 media:
   - type: video
     src: '/assets/images/work/product-launch-training-emea/4140-Dell-FM-Reboot-FY25-Landscape-05Feb2024.mp4'
+    poster: '/assets/images/work/product-launch-training-emea/4140-reboot-poster.jpg'
     caption: 'The REBOOT launch campaign video.'
 
 gallery:

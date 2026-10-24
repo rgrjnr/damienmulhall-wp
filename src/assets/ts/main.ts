@@ -26,6 +26,7 @@ import { setupCopyEmail } from './lib/copy-email';
 import { setupScrollNav } from './lib/scroll-nav';
 import { setupNavGlide } from './lib/nav-glide';
 import { setupReceipts } from './lib/receipts';
+import { setupWorkFilter } from './lib/work-filter';
 import { setupCrowCaw } from './lib/crow-caw';
 
 /** Plugin registration is itself fail-safe: without it we degrade to static. */
@@ -64,6 +65,7 @@ async function start(): Promise<void> {
   safely('nav-glide', setupNavGlide);
   safely('copy-email', setupCopyEmail);
   safely('receipts', setupReceipts);
+  safely('work-filter', setupWorkFilter);
 
   const reduced = prefersReducedMotion();
   safely('crow-caw', () => setupCrowCaw(!reduced));

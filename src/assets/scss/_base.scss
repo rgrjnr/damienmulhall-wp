@@ -24,6 +24,21 @@ img {
   max-width: 100%;
 }
 
+// No single word stranded on the last line of a heading or paragraph.
+h1,
+h2,
+h3,
+.work-card__title,
+.cs-pager__title {
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+}
+
 // Loading states
 body.loading {
   opacity: 0.5;

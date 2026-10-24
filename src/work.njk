@@ -18,12 +18,24 @@ eleventyExcludeFromCollections: true
         </h1>
     </div>
 
+    {#- The filter row is hidden until lib/work-filter.ts wires it up, so without
+        JS every card simply shows. #}
+    <div class="work-filter" data-work-filter hidden>
+        <p class="work-filter__label" id="work-filter-label">Show</p>
+        <ul class="work-filter__list" aria-labelledby="work-filter-label">
+            {%- for cat in ["All", "Events", "Sales enablement", "Content", "Product"] %}
+            <li><button type="button" class="work-filter__button" data-filter="{{ cat }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ cat }}</button></li>
+            {%- endfor %}
+        </ul>
+        <p class="sr-only" role="status" aria-live="polite" data-work-filter-status></p>
+    </div>
+
     <ul class="work-grid">
         {%- asyncEach item in collections.work %}
         {%- set d = item.data %}
         {%- set thumb = d.thumb or d.hero %}
         {%- set stat = d.stats[0] if (d.stats and d.stats.length) else null %}
-        <li>
+        <li data-categories="{{ (d.categories or []) | join('|') }}">
             <a class="work-card" href="{{ item.url }}">
                 {%- if thumb %}
                 <span class="work-card__image">

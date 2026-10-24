@@ -11,6 +11,7 @@ hero: '/assets/images/work/x-in-a-box/xiab-programme-guide-cover.jpg'
 heroAlt: 'X in a Box Programme title slide with Dell EMC and Intel logos, a large blue X and a Latitude laptop showing a waterfall'
 highlights: [megaphone, star, my-computer]
 labels: [Sales enablement, Events, Product thinking]
+categories: [Sales enablement, Events, Product]
 
 facts:
   - label: 'Client'

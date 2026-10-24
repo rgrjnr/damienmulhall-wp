@@ -2,16 +2,17 @@
 title: 'Dell sales enablement, from the inside'
 shortTitle: 'Dell Sales Enablement'
 excerpt: 'Two sales enablement hubs for thousands of Dell and partner sellers across EMEA, rebuilt around usage data: hub registrations up 103%, and Client Master taken to 20 languages across 122 countries.'
-outcome: 'Hub registrations up 103% across 1,800 inside-sales reps, and Client Master live for partner sellers in all 122 EMEA Partner Portal countries, in 20 languages.'
+outcome: 'Hub registrations up 103%, and Client Master live in 20 languages across 122 countries.'
 client: 'Dell Technologies'
 duration: '2014 to 2016'
 date: 2015-06-01
 order: 9
 hero: '/assets/images/work/dell-sales-enablement/sales-motion-hub-landing-page.jpg'
 heroAlt: 'Sales Motion Hub landing page with a blue welcome panel and coloured tiles for each sales motion, with Dell, Microsoft and Intel logos'
-thumb: '/assets/images/work/dell-sales-enablement/sales-motion-usage-booster-email.jpg'
+thumb: '/assets/images/work/dell-sales-enablement/sales-motion-usage-booster-email-banner.jpg'
 highlights: [education, heart, my-computer]
 labels: [Sales enablement, Localisation, EMEA]
+categories: [Sales enablement]
 
 facts:
   - label: 'Client'

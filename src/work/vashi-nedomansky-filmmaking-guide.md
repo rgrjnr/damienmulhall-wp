@@ -11,6 +11,7 @@ hero: '/assets/images/work/vashi-nedomansky-filmmaking-guide/Screenshot-2025-08-
 heroAlt: 'Page from the filmmaking guide titled Before you start editing you must do two things, over a photo of a man in a snowstorm'
 highlights: [movie, 4k, video-card]
 labels: [eGuide, Media and entertainment, Lead generation]
+categories: [Content]
 
 facts:
   - label: 'Client'

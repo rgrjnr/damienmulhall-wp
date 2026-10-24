@@ -11,6 +11,7 @@ hero: '/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podca
 heroAlt: 'Poster frame from the Dell Technologies Forum podcast trailer'
 highlights: [mic, spotify, increase]
 labels: [Podcast, Content, EMEA]
+categories: [Content]
 
 facts:
   - label: 'Client'

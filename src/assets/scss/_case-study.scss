@@ -214,6 +214,13 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
   &.cs-stats--1 {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  // Two-up below lg, so an odd last stat would otherwise sit alone at half width.
+  @media (max-width: ($breakpoint-lg - 1px)) {
+    .cs-stat:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+  }
 }
 
 .cs-stat {
@@ -221,7 +228,7 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  padding: 1.25rem;
+  padding: 1rem;
 
   @media (min-width: $breakpoint-md) {
     padding: 1.5rem;
@@ -231,7 +238,8 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
 .cs-stat__value {
   color: $dm-cyan;
   font-family: $font-haas-display;
-  font-size: $text-heading-lg;
+  // Scales with the viewport on phones so "100,000+" fits a half-width box.
+  font-size: clamp(1.5rem, 7.5vw, $text-heading-lg);
   font-weight: $font-medium;
   line-height: 1;
 
@@ -432,8 +440,17 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
 }
 
 .cs-figure--audio,
-.cs-figure--embed {
+.cs-figure--embed,
+.cs-figure--video {
   grid-column: 1 / -1;
+}
+
+// Two-up from md, so an odd last image spans the row instead of leaving a gap.
+// Three-up galleries have their own column count at lg, so they are left alone.
+.cs-gallery:not(.cs-gallery--3) > .cs-figure:last-child:nth-child(odd) {
+  @media (min-width: $breakpoint-md) {
+    grid-column: 1 / -1;
+  }
 }
 
 .cs-figure__link {
@@ -452,6 +469,12 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
     height: auto;
     width: 100%;
   }
+
+  // One frame for every gallery image, whatever shape the source is.
+  img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
 }
 
 .cs-figure__video,
@@ -463,6 +486,7 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
 }
 
 .cs-figure__video {
+  aspect-ratio: 16 / 9;
   height: auto;
 }
 
@@ -895,17 +919,259 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
 }
 
 // ---------------------------------------------------------------------------
-// Hero image: cap the height so square or tall images do not dominate desktop.
-// Wide heroes (about 16:9) stay under the cap and are unaffected.
+// Hero image: a fixed 16:9 frame so the page does not jump between projects.
 // ---------------------------------------------------------------------------
 
 .cs-hero__img {
-  max-height: 32rem;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center top;
   width: 100%;
+}
+
+// ---------------------------------------------------------------------------
+// Homepage proof strip: three headline numbers under the hero
+// ---------------------------------------------------------------------------
+
+.proof-strip {
+  border-bottom: 3px solid $dm-black;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: $breakpoint-md) {
-    max-height: 40rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+
+.proof-strip__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem 0;
+
+  & + & {
+    border-top: 3px solid $dm-black;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    padding: 1.5rem 1.5rem 1.75rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    & + & {
+      border-left: 3px solid $dm-black;
+      border-top: 0;
+    }
+  }
+}
+
+.proof-strip__value {
+  color: $dm-cyan;
+  font-family: $font-haas-display;
+  font-size: $text-heading-lg;
+  font-weight: $font-medium;
+  line-height: 1;
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: $text-display-sm;
+  }
+}
+
+.proof-strip__label {
+  color: $dm-black;
+  font-family: $font-haas-text;
+  font-size: $text-body-md;
+  font-weight: $font-medium;
+  line-height: 1.35;
+
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: $dm-cyan;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Homepage project index: a row of small thumbnails, one per case study.
+// Scrolls sideways on narrow screens, sits in one row of ten at lg.
+// ---------------------------------------------------------------------------
+
+.project-index {
+  display: grid;
+  gap: 0.75rem;
+  grid-auto-columns: 136px;
+  grid-auto-flow: column;
+  list-style: none;
+  margin: 0;
+  overflow-x: auto;
+  padding: 0 0 0.75rem;
+  scroll-snap-type: x mandatory;
+
+  > li {
+    scroll-snap-align: start;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-auto-columns: minmax(0, 1fr);
+    overflow: visible;
+    padding-bottom: 0;
+  }
+}
+
+.project-index__link {
+  color: $dm-black;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    color: $dm-cyan;
+
+    .project-index__image {
+      background: $dm-cyan;
+    }
+  }
+
+  &:focus-visible {
+    outline: 3px solid $dm-black;
+    outline-offset: 4px;
+  }
+}
+
+.project-index__image {
+  aspect-ratio: 16 / 9;
+  background: $dm-black;
+  display: block;
+  overflow: hidden;
+  padding: 3px;
+  transition: background-color $dur-hover ease;
+
+  picture,
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.project-index__title {
+  font-family: $font-haas-text;
+  font-size: 12px;
+  font-weight: $font-bold;
+  line-height: 1.25;
+}
+
+// ---------------------------------------------------------------------------
+// Homepage work list: one-line outcome and tags under each title
+// ---------------------------------------------------------------------------
+
+.work-item__outcome {
+  color: $dm-black;
+  font-family: $font-haas-text;
+  font-size: $text-body-md;
+  font-weight: $font-medium;
+  line-height: 1.4;
+  margin: 0.75rem 0 0;
+  max-width: 46rem;
+  transition: color $dur-hover ease;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-body-lg;
+  }
+}
+
+.work-item__tags {
+  color: rgba($dm-black, 0.7);
+  font-family: $font-haas-text;
+  font-size: 12px;
+  font-weight: $font-bold;
+  letter-spacing: 0.08em;
+  margin: 0.5rem 0 0;
+  text-transform: uppercase;
+  transition: color $dur-hover ease;
+}
+
+.work-item:is(:hover, :focus-visible) {
+  .work-item__outcome,
+  .work-item__tags {
+    color: $dm-white;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Work index filter
+// ---------------------------------------------------------------------------
+
+.work-filter {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 2rem;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.work-filter__label {
+  color: rgba($dm-black, 0.75);
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  font-weight: $font-bold;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.work-filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-filter__button {
+  background: transparent;
+  border: 2px solid $dm-black;
+  color: $dm-black;
+  cursor: pointer;
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  font-weight: $font-bold;
+  line-height: 1;
+  padding: 0.55rem 0.85rem;
+  transition: background-color $dur-hover ease, color $dur-hover ease;
+
+  &:hover {
+    background: rgba($dm-cyan, 0.12);
+  }
+
+  &[aria-pressed="true"] {
+    background: $dm-black;
+    color: $dm-white;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $dm-black;
+    outline-offset: 3px;
+  }
+}
+
+.work-grid > li[hidden] {
+  display: none;
 }

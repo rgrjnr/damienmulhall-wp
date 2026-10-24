@@ -2,7 +2,7 @@
 title: 'Google for Education eGuide'
 shortTitle: 'Google for Education'
 excerpt: 'A guide to Google for Education, built around the people who use it, for school IT decision-makers and the sales teams selling to them.'
-outcome: 'A buying guide that became a hero reference asset for global Chromebook education sales and was re-commissioned three times.'
+outcome: 'A buying guide that became a hero reference asset for global Chromebook education sales and was re-⁠commissioned three times.'
 client: 'Google for Education / Dell Technologies'
 duration: '21 weeks'
 date: 2023-11-03
@@ -11,6 +11,7 @@ hero: '/assets/images/work/google-education/EDU-Lifestyle-4-Latitude-5430-Chrome
 heroAlt: 'A smiling woman working at a table on a silver Dell Chromebook'
 highlights: [education, my-computer, star]
 labels: [eGuide, Education, Sales enablement]
+categories: [Content, Sales enablement]
 
 facts:
   - label: 'Client'
@@ -18,7 +19,7 @@ facts:
   - label: 'Role'
     value: 'Project lead, kickoff to delivery'
   - label: 'Timeline'
-    value: 'June to November 2023, 21 weeks'
+    value: 'June to November 2023, 21 weeks'
   - label: 'Audience'
     value: 'K-12 IT decision-makers and sales teams'
 

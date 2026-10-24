@@ -2,7 +2,7 @@
 title: 'Precision eGuides and Localisation'
 shortTitle: 'Precision eGuides'
 excerpt: 'Interactive eGuides and quick reference guides for Dell Precision workstations, built, localised and measured for partners and sales teams in up to 12 languages.'
-outcome: '77 interactive eGuides in 7 languages, 66 Dell and Intel co-branded QRG variants in 2021, and analytics across 97 subdomains.'
+outcome: '77 interactive eGuides in 7 languages, and 66 Dell and Intel co-branded guide variants.'
 client: 'Dell Technologies, with Intel and NVIDIA'
 duration: '2020 to 2024'
 date: 2024-02-12
@@ -11,6 +11,7 @@ hero: '/assets/images/work/precision-eguides-localisation/gis-qrg-cover.jpg'
 heroAlt: 'Cover of the Geographic Information Systems Industry Guide, a Dell Precision quick reference guide, with Dell Technologies, NVIDIA and Intel logos over an aerial photograph of a colourful hot spring'
 highlights: [video-card, code, increase]
 labels: [Interactive, Localisation, Sales enablement]
+categories: [Content, Sales enablement, Product]
 
 facts:
   - label: 'Client'

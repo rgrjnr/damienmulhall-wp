@@ -5,6 +5,22 @@
     "highlight": "delivery",
     "description": "14 years leading projects for Dell, Microsoft, Intel and Google, mostly in agencies where deadlines move fast. Now co-founder of Hay.chat, an AI support platform I took from first backlog to live product."
   },
+  "proof": [
+    {
+      "value": "£4.5M+",
+      "label": "in client revenue brought in for One1000 over seven years"
+    },
+    {
+      "value": "$9.5M",
+      "label": "in new pipeline from one UK event series",
+      "link": "/work/windows-11-community-events/"
+    },
+    {
+      "value": "6 years",
+      "label": "of EMEA launch training, on time and on budget",
+      "link": "/work/product-launch-training-emea/"
+    }
+  ],
   "brands": {
     "heading": "Brands I've delivered for",
     "names": [

@@ -11,6 +11,7 @@ heroAlt: 'The Hay.chat dashboard, showing active agents, total conversations, re
 logo: '/assets/images/work/hay-chat/hay-chat-logo.svg'
 highlights: [code, increase, megaphone]
 labels: [Product ownership, Go-to-market, SEO, Events]
+categories: [Product]
 
 facts:
   - label: 'Company'

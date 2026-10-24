@@ -11,6 +11,7 @@ hero: '/assets/images/work/nemoclaw-lab/emea-playbook-cover.jpg'
 heroAlt: 'NemoClaw Lab, The EMEA Playbook cover with Dell Technologies and NVIDIA logos and the line The Lab is ready. The opportunity is yours.'
 highlights: [code, video-card, megaphone]
 labels: [AI, Events, Campaign]
+categories: [Events]
 
 facts:
   - label: 'Client'
