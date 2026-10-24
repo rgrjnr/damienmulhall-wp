@@ -219,5 +219,24 @@
   "receiptsCue": {
     "hover": "Hover a line for the proof",
     "tap": "Tap a line for the proof"
+  },
+  "askAi": {
+    "heading": "Ask an AI about me",
+    "prompt": "Read https://damienmulhall.com/llms.txt and summarise Damien Mulhall's experience for a project or product manager role: what he led, the results, and how it fits the role. Cite the case study pages you use.",
+    "tools": [
+      {
+        "name": "ChatGPT",
+        "url": "https://chatgpt.com/?q="
+      },
+      {
+        "name": "Claude",
+        "url": "https://claude.ai/new?q="
+      },
+      {
+        "name": "Perplexity",
+        "url": "https://www.perplexity.ai/search?q="
+      }
+    ],
+    "fileLabel": "or read my llms.txt"
   }
 }

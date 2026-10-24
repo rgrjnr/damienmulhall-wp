@@ -325,6 +325,18 @@ showHero: true
             <div class="flex md:justify-end">
                 {{ button(home.cta.buttonText, home.cta.buttonLink) }}
             </div>
+
+            {%- if home.askAi %}
+            <div class="ask-ai">
+                <p class="ask-ai__label" id="ask-ai-label">{{ home.askAi.heading }}</p>
+                <ul class="ask-ai__list" aria-labelledby="ask-ai-label">
+                    {%- for tool in home.askAi.tools %}
+                    <li><a class="ask-ai__link" href="{{ tool.url }}{{ home.askAi.prompt | urlencode }}" target="_blank" rel="noopener">{{ tool.name }}<span class="sr-only"> (opens in a new tab)</span></a></li>
+                    {%- endfor %}
+                </ul>
+                <a class="ask-ai__file" href="/llms.txt">{{ home.askAi.fileLabel }}</a>
+            </div>
+            {%- endif %}
         </div>
     </div>
 </section>

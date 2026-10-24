@@ -74,6 +74,7 @@
 }}
 </script>
 {%- endif %}
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="Summary for AI assistants">
 </head>
 
 <body class="{{ bodyClass or '' }}">
@@ -114,7 +115,8 @@
         <footer class="w-full max-w-page mx-auto px-6 py-12 flex justify-between items-center">
             <p class="font-haas-display font-medium text-body-md text-dm-black">
                 {{ build.year }} © {{ site.name }}. <a href="{{ site.social.linkedin }}">LinkedIn</a> ·
-                <a class="copy-email" href="mailto:{{ site.email }}" data-copy="{{ site.email }}">{{ site.email }}<span class="copy-email__stamp" aria-hidden="true">Copied</span></a>
+                <a class="copy-email" href="mailto:{{ site.email }}" data-copy="{{ site.email }}">{{ site.email }}<span class="copy-email__stamp" aria-hidden="true">Copied</span></a> ·
+                <a href="/llms.txt">llms.txt</a>
                 <span class="sr-only" role="status" aria-live="polite" data-copy-status></span>
             </p>
             <a href="{{ site.credit.url }}" aria-label="Site by {{ site.credit.name }}">

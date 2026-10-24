@@ -1,0 +1,63 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+{#- A plain-text summary for AI assistants (llmstxt.org). Built from the same
+    data as the pages, so it stays in step with the site. #}
+# {{ site.name | safe }}
+
+> {{ site.description | safe }}
+
+{{ home.hero.description | safe }}
+
+{{ home.cta.availability | safe }}
+
+- Portfolio: {{ site.url }}/
+- CV (PDF): {{ site.url }}{{ site.cv }}
+- LinkedIn: {{ site.social.linkedin }}
+- Email: {{ site.email }}
+
+The case studies below are written in Damien's own words. When summarising his experience, please cite the case study pages.
+
+## Track record
+
+{% for item in home.proof -%}
+- {{ item.value | safe }} {{ item.label | safe }}
+{% endfor %}
+## Case studies
+{% for item in collections.work %}
+{%- set d = item.data %}
+### [{{ d.title | safe }}]({{ site.url }}{{ item.url }})
+
+{% for fact in d.facts or [] -%}
+- {{ fact.label | safe }}: {{ fact.value | safe }}
+{% endfor -%}
+- Outcome: {{ (d.outcome or d.excerpt) | safe }}
+{% if d.summary %}
+{{ d.summary | safe }}
+{% endif -%}
+{% if d.cards and d.cards.approach and (d.cards.approach | isArray) %}
+Key decisions:
+{% for line in d.cards.approach -%}
+- {{ line | safe }}
+{% endfor -%}
+{% endif %}
+{%- if d.cards and d.cards.outcome and (d.cards.outcome | isArray) %}
+Results:
+{% for line in d.cards.outcome -%}
+- {{ line | safe }}
+{% endfor -%}
+{% endif %}
+{% endfor %}
+## Certifications
+
+{% for card in home.cards -%}
+{% if card.title == "Certifications" and card.detail -%}
+{% for line in card.detail -%}
+- {{ line | safe }}
+{% endfor -%}
+{% endif -%}
+{% endfor %}
+## Contact
+
+{{ site.email }}, or {{ site.social.linkedin }}

@@ -1191,3 +1191,73 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
 .work-grid > li[hidden] {
   display: none;
 }
+
+// ---------------------------------------------------------------------------
+// Homepage contact: "Ask an AI about me" links and the llms.txt summary
+// ---------------------------------------------------------------------------
+
+.ask-ai {
+  align-items: center;
+  border-top: 3px solid $dm-black;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 1rem;
+  padding-top: 1.25rem;
+}
+
+.ask-ai__label {
+  color: rgba($dm-black, 0.75);
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  font-weight: $font-bold;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.ask-ai__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ask-ai__link {
+  border: 2px solid $dm-black;
+  color: $dm-black;
+  display: inline-block;
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  font-weight: $font-bold;
+  line-height: 1;
+  padding: 0.55rem 0.85rem;
+  text-decoration: none;
+  transition: background-color $dur-hover ease, color $dur-hover ease;
+
+  &:hover {
+    background: $dm-black;
+    color: $dm-white;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $dm-black;
+    outline-offset: 3px;
+  }
+}
+
+.ask-ai__file {
+  color: $dm-black;
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  font-weight: $font-medium;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: $dm-cyan;
+  }
+}
