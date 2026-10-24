@@ -44,7 +44,7 @@ showHero: true
     <h2 id="index-heading" class="logo-wall__heading">{{ home.indexHeading or "Projects at a glance" }}</h2>
     <ul class="project-index">
         {%- asyncEach item in collections.work %}
-        {%- set thumb = item.data.thumb or item.data.hero %}
+        {%- set thumb = item.data.indexThumb or item.data.thumb or item.data.hero %}
         <li>
             <a class="project-index__link" href="{{ item.url }}">
                 <span class="project-index__image">

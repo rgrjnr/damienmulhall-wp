@@ -8,6 +8,7 @@ duration: '13 months'
 date: 2020-01-30
 order: 8
 hero: '/assets/images/work/x-in-a-box/xiab-programme-guide-cover.jpg'
+indexThumb: '/assets/images/work/x-in-a-box/index-thumb.jpg'
 heroAlt: 'X in a Box Programme title slide with Dell EMC and Intel logos, a large blue X and a Latitude laptop showing a waterfall'
 highlights: [megaphone, star, my-computer]
 labels: [Sales enablement, Events, Product thinking]

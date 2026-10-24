@@ -8,6 +8,7 @@ duration: '13 weeks a year'
 date: 2024-03-11
 order: 4
 hero: '/assets/images/work/product-launch-training-emea/Screenshot-2025-08-26-at-18.18.29.png'
+indexThumb: '/assets/images/work/product-launch-training-emea/index-thumb.jpg'
 heroAlt: 'REBOOT Training FY25 title slide with Dell Technologies, Microsoft and Intel logos over a burst of red and orange colour'
 highlights: [my-computer, megaphone, increase]
 labels: [Sales enablement, Training, EMEA]

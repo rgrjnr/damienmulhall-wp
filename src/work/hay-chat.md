@@ -7,6 +7,7 @@ client: 'Hay.chat'
 date: 2025-08-01
 order: 1
 hero: '/assets/images/work/hay-chat/dashboard.png'
+indexThumb: '/assets/images/work/hay-chat/index-thumb.jpg'
 heroAlt: 'The Hay.chat dashboard, showing active agents, total conversations, resolution rate and daily conversation activity'
 logo: '/assets/images/work/hay-chat/hay-chat-logo.svg'
 highlights: [code, increase, megaphone]

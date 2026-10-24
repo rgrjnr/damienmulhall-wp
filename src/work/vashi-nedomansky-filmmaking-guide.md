@@ -7,7 +7,8 @@ client: 'Dell Technologies'
 duration: '19 weeks'
 date: 2019-10-14
 order: 5
-hero: '/assets/images/work/vashi-nedomansky-filmmaking-guide/Screenshot-2025-08-26-at-15.05.53.png'
+hero: '/assets/images/work/vashi-nedomansky-filmmaking-guide/filmmaking-guide-150553.png'
+indexThumb: '/assets/images/work/vashi-nedomansky-filmmaking-guide/index-thumb.jpg'
 heroAlt: 'Page from the filmmaking guide titled Before you start editing you must do two things, over a photo of a man in a snowstorm'
 highlights: [movie, 4k, video-card]
 labels: [eGuide, Media and entertainment, Lead generation]
@@ -58,13 +59,13 @@ role:
   - 'Delivered within the funding and publishing deadlines.'
 
 gallery:
-  - src: '/assets/images/work/vashi-nedomansky-filmmaking-guide/Screenshot-2025-08-26-at-15.05.53.png'
+  - src: '/assets/images/work/vashi-nedomansky-filmmaking-guide/filmmaking-guide-150553.png'
     alt: 'Page from the filmmaking guide titled Before you start editing you must do two things, over a photo of a man in a snowstorm'
     caption: 'A Tales from the Trenches page, where Vashi shares editing lessons.'
-  - src: '/assets/images/work/vashi-nedomansky-filmmaking-guide/Screenshot-2025-08-26-at-15.02.49.png'
+  - src: '/assets/images/work/vashi-nedomansky-filmmaking-guide/filmmaking-guide-150249.png'
     alt: 'Chapter 1, Pioneering Pipelines, showing a Dell Precision workstation and an NVIDIA Quadro graphics card'
     caption: 'Chapter 1 covers the native 6K post-production pipeline on Dell Precision.'
-  - src: '/assets/images/work/vashi-nedomansky-filmmaking-guide/Screenshot-2025-08-26-at-15.04.12.png'
+  - src: '/assets/images/work/vashi-nedomansky-filmmaking-guide/filmmaking-guide-150412.png'
     alt: 'Page titled The film editor must always, with a numbered list of seven rules beside a photo of an editor''s hand on a console'
     caption: 'Practical rules from a working editor, set out for quick reading.'
 ---

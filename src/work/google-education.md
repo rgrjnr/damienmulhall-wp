@@ -8,6 +8,7 @@ duration: '21 weeks'
 date: 2023-11-03
 order: 3
 hero: '/assets/images/work/google-education/EDU-Lifestyle-4-Latitude-5430-Chromebook.jpeg'
+indexThumb: '/assets/images/work/google-education/index-thumb.jpg'
 heroAlt: 'A smiling woman working at a table on a silver Dell Chromebook'
 highlights: [education, my-computer, star]
 labels: [eGuide, Education, Sales enablement]

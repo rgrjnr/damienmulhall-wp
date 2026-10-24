@@ -8,6 +8,7 @@ duration: '48 weeks'
 date: 2024-08-09
 order: 1
 hero: '/assets/images/work/dell-podcast/3966-DEL-SD-Podcast-Series-for-DTF-Podcast-trailer-Poster-frame-1.jpg'
+indexThumb: '/assets/images/work/dell-podcast/index-thumb.jpg'
 heroAlt: 'Poster frame from the Dell Technologies Forum podcast trailer'
 highlights: [mic, spotify, increase]
 labels: [Podcast, Content, EMEA]

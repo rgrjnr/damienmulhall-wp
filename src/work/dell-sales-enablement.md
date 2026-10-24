@@ -8,6 +8,7 @@ duration: '2014 to 2016'
 date: 2015-06-01
 order: 9
 hero: '/assets/images/work/dell-sales-enablement/sales-motion-hub-landing-page.jpg'
+indexThumb: '/assets/images/work/dell-sales-enablement/index-thumb.jpg'
 heroAlt: 'Sales Motion Hub landing page with a blue welcome panel and coloured tiles for each sales motion, with Dell, Microsoft and Intel logos'
 thumb: '/assets/images/work/dell-sales-enablement/sales-motion-usage-booster-email-banner.jpg'
 highlights: [education, heart, my-computer]

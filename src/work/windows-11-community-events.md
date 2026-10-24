@@ -8,6 +8,7 @@ duration: '15 weeks'
 date: 2024-10-25
 order: 2
 hero: '/assets/images/work/windows-11-community-events/4275-hero-16x9.jpg'
+indexThumb: '/assets/images/work/windows-11-community-events/index-thumb.jpg'
 heroAlt: "Campaign social post reading: Let's get practical, the road to Windows 11 and AI driven productivity, with Dell Technologies, Windows 11 and Intel logos"
 thumb: '/assets/images/work/windows-11-community-events/IMG-20241015-WA0007.jpg'
 highlights: [megaphone, increase, star]
