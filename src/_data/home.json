@@ -235,6 +235,10 @@
       {
         "name": "Perplexity",
         "url": "https://www.perplexity.ai/search?q="
+      },
+      {
+        "name": "Gemini",
+        "url": "https://gemini.google.com/app?q="
       }
     ],
     "fileLabel": "or read my llms.txt"
