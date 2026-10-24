@@ -2,7 +2,7 @@
 title: 'Product Launch Training EMEA'
 shortTitle: 'EMEA Launch Training'
 excerpt: 'Annual launch training and a launch campaign for Dell sales teams at 40+ sites across Europe, the Middle East and Africa.'
-outcome: 'Launch training delivered to 40+ EMEA sites every year, on time, and renewed for five consecutive years.'
+outcome: 'Launch training delivered to 40+ EMEA sites every year, on time, and renewed for six consecutive years.'
 client: 'Dell Technologies'
 duration: '13 weeks a year'
 date: 2024-03-11
@@ -27,13 +27,13 @@ facts:
 stats:
   - value: '40+'
     label: 'EMEA sites trained each year'
-  - value: '5'
+  - value: '6'
     label: 'consecutive years running the programme'
-  - value: '5 of 5'
+  - value: '6 of 6'
     label: 'years delivered on time'
     note: 'Each year, on time and on budget'
 
-summary: 'Before each annual product launch, Dell needed sales teams across 40+ EMEA sites trained and excited about the new range. I ran the programme for five years, from the training manual to a launch hype campaign and the physical kit shipped to every site.'
+summary: 'Before each annual product launch, Dell needed sales teams across 40+ EMEA sites trained and excited about the new range. I ran the programme for six years, from the training manual to a launch hype campaign and the physical kit shipped to every site.'
 
 cards:
   challenge:
@@ -47,7 +47,7 @@ cards:
   outcome:
     - 'Materials reached 40+ EMEA sites every year, on time and on budget.'
     - 'Strong feedback from sales managers and local training leads.'
-    - 'Budget renewed each year and the project handed to me for five years running.'
+    - 'Budget renewed each year and the project handed to me for six years running.'
 
 role:
   - 'Project managed the full programme across all EMEA sites.'
