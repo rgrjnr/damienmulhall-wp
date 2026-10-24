@@ -1,8 +1,8 @@
 ---
 title: 'Dell sales enablement, from the inside'
 shortTitle: 'Dell Sales Enablement'
-excerpt: 'Two sales enablement hubs for Dell EMEA, rebuilt around usage data: registered sales reps up from 34% to 69%, and Client Master taken to 20 languages across 122 countries.'
-outcome: 'Registered inside-sales reps doubled from 34% to 69% on the Client Solutions Sales Motion hub, and Client Master reached all 122 EMEA Partner Portal countries in 20 languages.'
+excerpt: 'Two sales enablement hubs for thousands of Dell and partner sellers across EMEA, rebuilt around usage data: hub registrations up 103%, and Client Master taken to 20 languages across 122 countries.'
+outcome: 'Hub registrations up 103% across 1,800 inside-sales reps, and Client Master live for partner sellers in all 122 EMEA Partner Portal countries, in 20 languages.'
 client: 'Dell Technologies'
 duration: '2014 to 2016'
 date: 2015-06-01
@@ -23,14 +23,15 @@ facts:
   - label: 'Scope'
     value: 'Client Solutions Sales Motion hub for inside-sales reps, and Client Master for channel partners'
   - label: 'Reach'
-    value: '22 hub sites in 9 languages, then 122 Partner Portal countries in 20 languages'
+    value: 'Around 1,800 inside-sales reps on 22 sites, plus partner sellers in 122 countries'
 
 stats:
-  - value: '34% to 69%'
-    label: 'inside-sales reps registered on the hub'
-    note: '1,253 of an estimated 1,812 reps, in two quarters of 2014'
-  - value: '145 to 45'
-    label: 'slides per sales motion, version 1 to version 2'
+  - value: '+103%'
+    label: 'hub registrations in two quarters'
+    note: 'Registrations more than doubled in 2014'
+  - value: '1,800'
+    label: 'inside-sales reps across 22 EMEA sites'
+    note: 'Plus partner sellers in 122 countries on Client Master'
   - value: '20'
     label: 'languages across all 122 EMEA Partner Portal countries'
     note: 'Up from 10 languages on 32 sites, in one quarter'
@@ -38,7 +39,7 @@ stats:
     label: 'new client pipeline identified by Focus Week in a Box'
     note: 'Programme figure, pipeline rather than revenue'
 
-summary: 'The first version of Dell''s Sales Motion hub ran to 145 slides and few sales reps used it. I owned the Client Solutions side of the Sales Motion hub and led Client Master, the matching library for channel partners. I used usage data to cut, localise and relaunch both.'
+summary: 'Dell''s sales enablement had to work for thousands of inside-sales reps and channel partner sellers across EMEA, but the first version of the Sales Motion hub ran to 145 slides and few reps used it. I owned the Client Solutions side of the Sales Motion hub and led Client Master, the matching library for channel partners. I used usage data to cut, localise and relaunch both.'
 
 cards:
   challenge:
@@ -50,8 +51,8 @@ cards:
     - 'I produced usage reports twice a quarter, site by site, to track uptake. For the Q3 relaunch I ran a usage booster campaign: desk drops with a puzzle, a video on the log-in page and a headset competition.'
     - 'I built Client Master inside the Partner Portal on the same model, organised around the steps of the sales cycle, with a fixed quarterly refresh and translation cycle.'
   outcome:
-    - 'Registered reps went from 34% to 69% (1,253 of an estimated 1,812). Version 2 became the highest-usage sales motion in EMEA.'
-    - 'The share of reps checking the hub at least monthly rose from 49% to 68% across the second half of FY15.'
+    - 'Hub registrations rose 103% in two quarters, to 1,253 of around 1,800 inside-sales reps. Version 2 became the highest-usage sales motion in EMEA.'
+    - 'The share of reps checking the hub every month rose 39% across the second half of FY15.'
     - 'Client Master went from 10 languages on 32 sites to 20 languages on 122 sites in one quarter.'
 
 role:
