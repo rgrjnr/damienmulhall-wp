@@ -159,15 +159,15 @@
     "principles": [
       {
         "title": "The method fits the job",
-        "text": "Waterfall, Agile or a mix, always with an agreed scope and change control."
+        "text": "Waterfall, Agile or a mix. I pick whatever gets the team to done."
       },
       {
         "title": "I clear the path",
         "text": "Decisions, sign-offs and briefs are sorted before designers and developers start."
       },
       {
-        "title": "AI as the build team",
-        "text": "I direct Claude Code on the Hay.chat website: I write the briefs, review the output and decide what ships."
+        "title": "Plan the work, then work the plan",
+        "text": "Every project starts with an agreed scope and a plan, and changes go through change control."
       }
     ]
   },
