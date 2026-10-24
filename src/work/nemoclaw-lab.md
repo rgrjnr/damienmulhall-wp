@@ -1,0 +1,78 @@
+---
+title: 'Dell x NVIDIA NemoClaw Lab'
+shortTitle: 'NemoClaw Lab'
+excerpt: 'A hands-on agentic AI developer lab for Dell Technologies EMEA, co-funded and co-branded by NVIDIA, taken from kick-off to a live programme in four months.'
+outcome: 'Kick-off to live programme in four months, 30 workstations in the field, and Dell funding a second campaign.'
+client: 'Dell Technologies & NVIDIA'
+duration: '4 months'
+date: 2026-10-24
+order: 10
+hero: '/assets/images/work/nemoclaw-lab/emea-playbook-cover.jpg'
+heroAlt: 'NemoClaw Lab, The EMEA Playbook cover with Dell Technologies and NVIDIA logos and the line The Lab is ready. The opportunity is yours.'
+highlights: [code, megaphone, my-computer]
+labels: [AI, Events, Campaign]
+
+facts:
+  - label: 'Client'
+    value: 'Dell Technologies EMEA, with NVIDIA as co-funder and co-brand'
+  - label: 'Role'
+    value: 'Day-to-day client lead, freelance for One1000'
+  - label: 'Timeline'
+    value: 'Kick-off 18 June 2026, first activation in Germany at the end of October 2026'
+  - label: 'Scope'
+    value: 'Campaign identity, EMEA playbook, event comms, kit branding, certificates, video and social'
+  - label: 'Budget'
+    value: '$25K to $30K envelope at kick-off, $28K ceiling, plus a follow-on SOW of about $15K'
+
+stats:
+  - value: '4'
+    label: 'months from kick-off to live programme'
+  - value: '30'
+    label: 'Dell Pro Max with GB10 workstations'
+    note: 'Pre-installed in three fly cases, plus a UK kit of ten'
+  - value: '20+'
+    label: 'versioned copy decks and briefs'
+  - value: '2nd'
+    label: 'campaign funded by Dell'
+    note: 'Deskside AI Labs, funded in October 2026'
+
+summary: 'Dell wanted its regional teams across EMEA to be able to run their own hands-on agentic AI events for developers and IT buyers, with NVIDIA co-funding and co-branding the programme. I led the account for One1000 day to day, from the cost model to the campaign identity, the copy and the studio that built it. It went from kick-off to live in four months.'
+
+cards:
+  challenge:
+    - 'A fixed envelope of $25K to $30K that dropped to a $28K ceiling on the second client call, with the PO waiting on the revised numbers.'
+    - 'A brief that kept moving. In July the client dropped the AI Hackathon format and the programme had to be rebuilt around one format.'
+    - 'Physical kit going to several countries, three languages, and approvals across Dell EMEA, Dell Global, NVIDIA and Dell brand.'
+  approach:
+    - 'I built the cost model in USD and GBP at Dell''s hedge rate and rebuilt it the same afternoon when the ceiling dropped, so the PO could be raised that day.'
+    - 'I ran a weekly client cadence and wrote up every call: decisions locked, items still open, and the deliverables each one triggered. When calls disagreed, the latest decision stood.'
+    - 'When the Hackathon went, I restructured the playbook and production plan around one format and archived the parked work. Physical kit carries logos only, so it needs no translation.'
+  outcome:
+    - 'Live in four months, with 30 pre-installed workstations in three fly cases and a UK kit of ten.'
+    - 'A 14-section EMEA playbook and a six-email CVENT journey, among 20+ versioned copy decks and briefs. The teaser video was approved by Dell brand in English and French within about two weeks, with German in edit.'
+    - 'Dell funded Deskside AI Labs as a new campaign and asked One1000 to develop its creative concept.'
+
+role:
+  - 'Led the account day to day for One1000: client meetings, decisions, budget and scope.'
+  - 'Built the cost model and proposal, then scoped the follow-on Q3 statement of work at about $15K and tracked the remaining budget.'
+  - 'Created the campaign identity and wrote the tagline, the EMEA playbook, the CVENT emails and event site, the customer invitation, certificates in three languages and the video script.'
+  - 'Briefed and reviewed the designer, creative director and video editor, and set print specs for the certificates.'
+  - 'Managed stakeholders across Dell EMEA, Dell Global, NVIDIA and two logistics partners.'
+
+gallery:
+  - src: '/assets/images/work/nemoclaw-lab/emea-playbook-cover.jpg'
+    alt: 'NemoClaw Lab, The EMEA Playbook cover with Dell Technologies and NVIDIA logos and a field of coloured data lines'
+    caption: 'The cover of the 14-section EMEA playbook that regional teams use to run a lab.'
+  - src: '/assets/images/work/nemoclaw-lab/quick-start-guide-cover.jpg'
+    alt: 'NemoClaw Labs Quick Start Guide cover reading The hardest part is picking a date'
+    caption: 'The quick start guide, the first thing a regional team reads.'
+  - src: '/assets/images/work/nemoclaw-lab/flight-case-sticker.jpg'
+    alt: 'Dark fly case sticker with Dell Technologies and NVIDIA logos above the words NemoClaw Lab'
+    caption: 'Fly case branding. Physical kit carries logos and imagery only, so it works in every country.'
+  - src: '/assets/images/work/nemoclaw-lab/certificate-of-attendance.jpg'
+    alt: 'Certificate of attendance for NemoClaw Lab with blank name, title and date lines and Dell Technologies and NVIDIA logos'
+    caption: 'The certificate of attendance, produced in English, French and German.'
+  - src: '/assets/images/work/nemoclaw-lab/linkedin-post.jpg'
+    alt: 'LinkedIn post reading Run local AI all day. All it costs is the electricity, above a Dell workstation'
+    caption: 'One of the 12 LinkedIn posts written for Dell account executives.'
+---
