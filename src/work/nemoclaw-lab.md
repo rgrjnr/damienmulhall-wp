@@ -43,9 +43,11 @@ cards:
     - 'A brief that kept moving. In July the client dropped the AI Hackathon format and the programme had to be rebuilt around one format.'
     - 'Physical kit going to several countries, three languages, and approvals across Dell EMEA, Dell Global, NVIDIA and Dell brand.'
   approach:
-    - 'I built the cost model in USD and GBP at Dell''s hedge rate and rebuilt it the same afternoon when the ceiling dropped, so the PO could be raised that day.'
-    - 'I ran a weekly client cadence and wrote up every call: decisions locked, items still open, and the deliverables each one triggered. When calls disagreed, the latest decision stood.'
-    - 'When the Hackathon went, I restructured the playbook and production plan around one format and archived the parked work. Physical kit carries logos only, so it needs no translation.'
+    - 'Before writing a word of copy, I researched how to run AI events that work: the continental European developer and IT buyer audience, the NVIDIA software stack, self-service event kit benchmarks, prize strategy and certificate conventions. Every claim in the playbook traces to a named, dated source.'
+    - 'I didn''t wait for material the client couldn''t supply. I drafted the gaps myself: the quick start guide, operator run sheets, the customer invitation and a 12-post LinkedIn pack for Dell account executives.'
+    - 'I pushed back when it mattered. The client proposed three to four weeks to acknowledge regional kit bookings. I argued for seven days, because silence kills self-service programmes, and the client agreed.'
+    - 'When the client dropped the Hackathon format in July, I rebuilt the playbook and production plan around one format without losing the parked work.'
+    - 'When the budget ceiling dropped, I rebuilt the cost model in USD and GBP the same afternoon, so Dell could raise the PO that day.'
   outcome:
     - 'Live in two months, with 30 pre-installed workstations in three fly cases and a UK kit of ten.'
     - 'A 14-section EMEA playbook and a six-email CVENT journey, among 20+ versioned copy decks and briefs. The teaser video was approved by Dell brand in English and French within about two weeks, with German in edit.'
