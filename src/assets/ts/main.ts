@@ -25,7 +25,7 @@ import { setupMarquee } from './lib/marquee';
 import { setupCopyEmail } from './lib/copy-email';
 import { setupScrollNav } from './lib/scroll-nav';
 import { setupNavGlide } from './lib/nav-glide';
-import { setupReceipts } from './lib/receipts';
+import { setupCareer } from './lib/career';
 import { setupWorkFilter } from './lib/work-filter';
 import { setupCrowCaw } from './lib/crow-caw';
 
@@ -64,7 +64,6 @@ async function start(): Promise<void> {
   safely('scroll-nav', setupScrollNav);
   safely('nav-glide', setupNavGlide);
   safely('copy-email', setupCopyEmail);
-  safely('receipts', setupReceipts);
   safely('work-filter', setupWorkFilter);
 
   const reduced = prefersReducedMotion();
@@ -87,6 +86,7 @@ async function start(): Promise<void> {
     ['hero-text', () => setupHeroText(animate)],
     ['reveals', () => setupReveals(animate ? 'full' : 'gentle')],
     ['counters', () => setupCounters(animate)],
+    ['career', () => setupCareer(animate)],
     ['marquee', () => setupMarquee(animate)],
     ['rotations', () => setupRotations(animate)],
     ['work-items', () => setupWorkItems(animate)],

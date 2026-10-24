@@ -934,15 +934,53 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
 // ---------------------------------------------------------------------------
 
 .proof-strip {
-  border-bottom: 3px solid $dm-black;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
 
   @media (min-width: $breakpoint-md) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  }
+
+  // The closing rule is drawn rather than a border, so it can sweep in.
+  &::after {
+    background: $dm-black;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform-origin: left center;
+  }
+}
+
+.proof-strip__item,
+.proof-strip__cta {
+  position: relative;
+
+  // Separators between cells, drawn so they can grow in.
+  & + &::before,
+  .proof-strip__item + &::before {
+    background: $dm-black;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: left center;
+
+    @media (min-width: $breakpoint-md) {
+      bottom: 0;
+      height: auto;
+      right: auto;
+      transform-origin: center top;
+      width: 3px;
+    }
   }
 }
 
@@ -952,22 +990,52 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
   gap: 0.35rem;
   padding: 1.25rem 0;
 
-  & + & {
-    border-top: 3px solid $dm-black;
-  }
-
   @media (min-width: $breakpoint-md) {
     padding: 1.5rem 1.5rem 1.75rem;
 
     &:first-child {
       padding-left: 0;
     }
+  }
+}
 
-    & + & {
-      border-left: 3px solid $dm-black;
-      border-top: 0;
+.proof-strip__cta {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.25rem 0;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+}
+
+// The rules sweep in on load. Pure CSS, so there is no flash before scripts
+// run, and reduced-motion visitors simply get the finished lines.
+@keyframes proof-rule-x {
+  from { transform: scaleX(0); }
+}
+
+@keyframes proof-rule-y {
+  from { transform: scaleY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .proof-strip::after {
+    animation: proof-rule-x 1s $ease-out 0.6s both;
+  }
+
+  .proof-strip__item + .proof-strip__item::before,
+  .proof-strip__item + .proof-strip__cta::before {
+    animation: proof-rule-x 0.8s $ease-out 0.9s both;
+
+    @media (min-width: $breakpoint-md) {
+      animation-name: proof-rule-y;
     }
   }
+
+  .proof-strip__item:nth-child(3)::before { animation-delay: 1.05s; }
+  .proof-strip__cta::before { animation-delay: 1.2s; }
 }
 
 .proof-strip__value {

@@ -8,9 +8,9 @@ showHero: true
 {% from "partials/shapes.njk" import shapes %}
 
 {%- if home.proof and home.proof.length %}
-<!-- Proof strip: three headline numbers straight under the hero -->
+<!-- Proof strip: three headline numbers straight under the hero, plus the jump to the work -->
 <section class="w-full max-w-page mx-auto px-6" aria-label="Track record">
-    <ul class="proof-strip">
+    <ul class="proof-strip" data-proof-strip>
         {%- for item in home.proof %}
         <li class="proof-strip__item">
             <span class="proof-strip__value">{{ item.value }}</span>
@@ -19,6 +19,7 @@ showHero: true
             </span>
         </li>
         {%- endfor %}
+        <li class="proof-strip__cta">{{ button('Projects', '/#work', '', 'pill', 'down') }}</li>
     </ul>
 </section>
 {%- endif %}
@@ -62,14 +63,13 @@ showHero: true
     <h2 id="about-heading" class="sr-only">About</h2>
     <div class="flex flex-col gap-3">
         <!-- Main About Block -->
-        <div class="bg-dm-cyan p-6 md:p-content relative{% if home.about.path %} reveal-panel{% endif %}"{% if home.about.path %} tabindex="0"{% endif %}>
+        <div class="bg-dm-cyan p-6 md:p-content relative">
             <p class="font-haas-text font-medium text-heading-xs leading-[1.35] md:text-heading-lg md:leading-normal text-dm-white">
                 {{ home.about.main }}
             </p>
             {%- if home.about.path %}
             <div class="career-strip">
-                <p class="career-cue" aria-hidden="true">{{ home.about.pathCue }}</p>
-                <ol class="career" aria-label="How I got here">
+                <ol class="career" aria-label="How I got here" data-career>
                     {%- for step in home.about.path %}
                     <li class="career__step">
                         <span class="career__year">{{ step.year }}</span>
@@ -94,31 +94,20 @@ showHero: true
 
         <!-- Services Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {#- Receipts: every claim carries its proof. Without JS each proof sits
-                under its line; lib/receipts.ts turns them into hover/tap reveals. #}
+            {#- Receipts: each claim leads with its number and links to the project behind it. #}
             {%- for service in home.services %}
-            {%- set tile = loop.index %}
-            <div class="receipt-tile bg-dm-cyan p-card flex flex-col gap-3" data-receipts>
+            <div class="receipt-tile bg-dm-cyan p-card flex flex-col gap-4">
                 <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">{{ service.title }}</h3>
-                <ul class="receipt-lines">
+                <ul class="receipt-rows">
                     {%- for line in service.lines %}
-                    <li class="receipt-item">
-                        <button type="button" class="receipt-line font-haas-display font-medium text-body-md md:text-body-lg text-dm-white leading-none"
-                            aria-expanded="false" aria-controls="receipt-{{ tile }}-{{ loop.index }}">{{ line.text }}</button>
-                        {%- if line.proof %}
-                        <div class="receipt" id="receipt-{{ tile }}-{{ loop.index }}">
-                            <span class="receipt__value">{{ line.proof.value }}</span>
-                            <span class="receipt__text">{{ line.proof.text }}</span>
-                            <a class="receipt__link" href="{{ line.proof.link }}">See the project<span class="sr-only">: {{ line.text }}</span></a>
-                        </div>
-                        {%- endif %}
+                    <li>
+                        <a class="receipt-row" href="{{ line.proof.link }}">
+                            <span class="receipt-row__value">{{ line.proof.value }}</span>
+                            <span class="receipt-row__text">{{ line.text }}</span>
+                        </a>
                     </li>
                     {%- endfor %}
                 </ul>
-                <p class="receipt-cue" aria-hidden="true">
-                    <span class="receipt-cue__hover">{{ home.receiptsCue.hover }}</span>
-                    <span class="receipt-cue__tap">{{ home.receiptsCue.tap }}</span>
-                </p>
             </div>
             {%- endfor %}
         </div>

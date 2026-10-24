@@ -33,7 +33,6 @@
   },
   "about": {
     "main": "I started out in media production, so structure and story come naturally to me. I don't swear by any one methodology. What matters is getting things done, and making the process easier for everyone along the way.",
-    "pathCue": "Hover for how I got here",
     "path": [
       {
         "year": "2010",
@@ -216,10 +215,6 @@
       "url": "mailto:mulhall.damien@gmail.com"
     }
   ],
-  "receiptsCue": {
-    "hover": "Hover a line for the proof",
-    "tap": "Tap a line for the proof"
-  },
   "askAi": {
     "heading": "Ask an AI about me",
     "prompt": "Read https://damienmulhall.com/llms.txt and summarise Damien Mulhall's experience for a project or product manager role: what he led, the results, and how it fits the role. Cite the case study pages you use.",

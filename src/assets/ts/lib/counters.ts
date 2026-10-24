@@ -1,7 +1,7 @@
 /**
  * Headline stats count up once as they scroll into view.
  *
- * Only plain numbers animate ("67", "120+", "100,000+", "$0.22"). Anything else
+ * Only plain numbers animate ("67", "120+", "£4.5M+", "14 months"). Anything else
  * ("#1", "5 of 5", "Q3") is left exactly as written. Screen readers get the final
  * value straight away from a visually hidden copy.
  */
@@ -9,8 +9,9 @@
 import { gsap } from 'gsap';
 import { queryAll } from './env';
 
-const SELECTOR = '.cs-stat__value, .work-card__stat-value';
-const PATTERN = /^([$€£]?)(\d[\d,]*(?:\.\d+)?)([+%]?)$/;
+const SELECTOR = '.cs-stat__value, .work-card__stat-value, .proof-strip__value, .receipt-row__value';
+// Optional trailing unit: "+", "%", "M+" or a word ("14 months", "6 years").
+const PATTERN = /^([$€£]?)(\d[\d,]*(?:\.\d+)?)((?:M\+?|[+%]|\s[A-Za-z][A-Za-z ]*)?)$/;
 
 interface Parsed {
   prefix: string;
