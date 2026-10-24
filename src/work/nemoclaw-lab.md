@@ -1,10 +1,10 @@
 ---
 title: 'Dell x NVIDIA NemoClaw Lab'
 shortTitle: 'NemoClaw Lab'
-excerpt: 'A hands-on agentic AI developer lab for Dell Technologies EMEA, co-funded and co-branded by NVIDIA, taken from kick-off to a live programme in four months.'
-outcome: 'Kick-off to live programme in four months, 30 workstations in the field, and Dell funding a second campaign.'
+excerpt: 'A hands-on agentic AI developer lab for Dell Technologies EMEA, co-funded and co-branded by NVIDIA, taken from kick-off to a live programme in two months.'
+outcome: 'Kick-off to live programme in two months, 30 workstations in the field, and Dell funding a second campaign.'
 client: 'Dell Technologies & NVIDIA'
-duration: '4 months'
+duration: '2 months'
 date: 2026-10-24
 order: 10
 hero: '/assets/images/work/nemoclaw-lab/emea-playbook-cover.jpg'
@@ -23,7 +23,7 @@ facts:
     value: 'Campaign identity, EMEA playbook, event comms, kit branding, certificates, video and social'
 
 stats:
-  - value: '4'
+  - value: '2'
     label: 'months from kick-off to live programme'
   - value: '30'
     label: 'Dell Pro Max with GB10 workstations'
@@ -34,7 +34,7 @@ stats:
     label: 'campaign funded by Dell'
     note: 'Deskside AI Labs, funded in October 2026'
 
-summary: 'Dell wanted its regional teams across EMEA to be able to run their own hands-on agentic AI events for developers and IT buyers, with NVIDIA co-funding and co-branding the programme. I led the account for One1000 day to day, from the cost model to the campaign identity, the copy and the studio that built it. It went from kick-off to live in four months.'
+summary: 'Dell wanted its regional teams across EMEA to be able to run their own hands-on agentic AI events for developers and IT buyers, with NVIDIA co-funding and co-branding the programme. I led the account for One1000 day to day, from the cost model to the campaign identity, the copy and the studio that built it. It went from kick-off to live in two months.'
 
 cards:
   challenge:
@@ -46,7 +46,7 @@ cards:
     - 'I ran a weekly client cadence and wrote up every call: decisions locked, items still open, and the deliverables each one triggered. When calls disagreed, the latest decision stood.'
     - 'When the Hackathon went, I restructured the playbook and production plan around one format and archived the parked work. Physical kit carries logos only, so it needs no translation.'
   outcome:
-    - 'Live in four months, with 30 pre-installed workstations in three fly cases and a UK kit of ten.'
+    - 'Live in two months, with 30 pre-installed workstations in three fly cases and a UK kit of ten.'
     - 'A 14-section EMEA playbook and a six-email CVENT journey, among 20+ versioned copy decks and briefs. The teaser video was approved by Dell brand in English and French within about two weeks, with German in edit.'
     - 'Dell funded Deskside AI Labs as a new campaign and asked One1000 to develop its creative concept.'
 
