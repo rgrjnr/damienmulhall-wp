@@ -35,30 +35,27 @@ stats:
     label: 'campaign funded by Dell'
     note: 'Deskside AI Labs, funded in October 2026'
 
-summary: 'Dell wanted its regional teams across EMEA to be able to run their own hands-on agentic AI events for developers and IT buyers, with NVIDIA co-funding and co-branding the programme. I led the account for One1000 day to day, from the cost model to the campaign identity, the copy and the studio that built it. It went from kick-off to live in two months.'
+summary: 'Dell and NVIDIA wanted regional teams across Europe to run their own hands-on agentic AI labs for developers and IT buyers. I led the programme for One1000, from the research and campaign identity to the copy and the studio that built it, and took it from kick-off to live in two months.'
 
 cards:
   challenge:
-    - 'A fixed envelope of $25K to $30K that dropped to a $28K ceiling on the second client call, with the PO waiting on the revised numbers.'
-    - 'A brief that kept moving. In July the client dropped the AI Hackathon format and the programme had to be rebuilt around one format.'
-    - 'Physical kit going to several countries, three languages, and approvals across Dell EMEA, Dell Global, NVIDIA and Dell brand.'
+    - 'A new kind of event: hands-on agentic AI labs for a technical audience, run by Dell''s regional teams themselves.'
+    - 'A brief that kept moving, including a whole format the client dropped midway.'
+    - 'Physical kit, three languages and four sets of approvers across Dell and NVIDIA.'
   approach:
-    - 'Before writing a word of copy, I researched how to run AI events that work: the continental European developer and IT buyer audience, the NVIDIA software stack, self-service event kit benchmarks, prize strategy and certificate conventions. Every claim in the playbook traces to a named, dated source.'
-    - 'I didn''t wait for material the client couldn''t supply. I drafted the gaps myself: the quick start guide, operator run sheets, the customer invitation and a 12-post LinkedIn pack for Dell account executives.'
-    - 'I pushed back when it mattered. The client proposed three to four weeks to acknowledge regional kit bookings. I argued for seven days, because silence kills self-service programmes, and the client agreed.'
-    - 'When the client dropped the Hackathon format in July, I rebuilt the playbook and production plan around one format without losing the parked work.'
-    - 'When the budget ceiling dropped, I rebuilt the cost model in USD and GBP the same afternoon, so Dell could raise the PO that day.'
+    - 'I researched what makes AI events work for European developers and IT buyers before writing any copy, and built the playbook on that evidence.'
+    - 'Where the client couldn''t supply material, I drafted it myself, from the quick start guide to the operator run sheets and the LinkedIn pack.'
+    - 'I pushed back where it mattered, winning a seven-day booking turnaround instead of three to four weeks, because silence kills self-service programmes.'
   outcome:
-    - 'Live in two months, with 30 pre-installed workstations in three fly cases and a UK kit of ten.'
-    - 'A 14-section EMEA playbook and a six-email CVENT journey, among 20+ versioned copy decks and briefs. The teaser video was approved by Dell brand in English and French within about two weeks, with German in edit.'
-    - 'Dell funded Deskside AI Labs as a new campaign and asked One1000 to develop its creative concept.'
+    - 'Live in two months, with 30 pre-installed AI workstations ready to ship.'
+    - 'A 14-section EMEA playbook, event comms and a teaser video brand-approved within about two weeks.'
+    - 'Dell funded a second campaign, Deskside AI Labs, and asked One1000 to develop its creative concept.'
 
 role:
-  - 'Led the account day to day for One1000: client meetings, decisions, budget and scope.'
-  - 'Built the cost model and proposal, then scoped the follow-on Q3 statement of work and tracked the remaining budget.'
-  - 'Created the campaign identity and wrote the tagline, the EMEA playbook, the CVENT emails and event site, the customer invitation, certificates in three languages and the video script.'
-  - 'Briefed and reviewed the designer, creative director and video editor, and set print specs for the certificates.'
-  - 'Managed stakeholders across Dell EMEA, Dell Global, NVIDIA and two logistics partners.'
+  - 'Led the programme day to day: client calls, decisions, scope and budget.'
+  - 'Created the campaign identity and wrote the tagline, playbook, event comms, certificates and video script.'
+  - 'Directed the designer, creative director and video editor.'
+  - 'Managed Dell EMEA, Dell Global, NVIDIA and two logistics partners.'
 
 gallery:
   - src: '/assets/images/work/nemoclaw-lab/emea-playbook-cover.jpg'

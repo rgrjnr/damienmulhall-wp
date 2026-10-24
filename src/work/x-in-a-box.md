@@ -35,28 +35,27 @@ stats:
     label: 'training events supported'
     note: 'Plus 8 customer events, with 7 more booked'
 
-summary: 'Dell EMEA marketing had several business units each asking for its own event kit, sales content and training material. I ran X in a Box, a single modular programme that combined them: a physical stand with swappable skins, a content hub on Dell''s intranet and a promotional layer. I treated it like a product, with users, usage data and a roadmap, and I proposed the model for the next year.'
+summary: 'Five Dell business units were each asking for their own event kit, sales content and training material. I turned that into one modular programme, X in a Box: a stand with swappable branding, a shared content hub and a campaign to drive its use. I ran it like a product, and its usage data shaped the next year''s model.'
 
 cards:
   challenge:
-    - 'Five business units (Medium Business, REBOOT, Dell Technologies, Precision, and Displays and Client Peripherals) each had their own needs and their own sign-off.'
-    - 'Stands, skins and notebooks had to reach sites in many countries, in several languages, in time for product launches.'
-    - 'A programme this size needed a way to show it was being used, so the funding could be justified.'
+    - 'Five business units, each with its own needs and sign-off.'
+    - 'Kit had to reach sites across EMEA, in several languages, in time for product launches.'
+    - 'The programme had to prove it was being used to keep its funding.'
   approach:
-    - 'I split it into three layers: a physical stand with a swappable skin for each business unit, a content hub with sales tools, guides and event packs, and a promotional layer to get people using both.'
-    - 'I ran the work from shared trackers, a deliverables dashboard and print dashboards, and shipped in waves with a delivery date for each. French and German skins went through translation and local production.'
-    - 'Once the hub was live I tracked what people downloaded and what events they asked for. Usage and regional feedback shaped the changes: a Hub 2.0 with zones for running an event, a VR demo page, and a formal newsletter.'
+    - 'One stand, many skins: each business unit got its own branding on shared hardware.'
+    - 'One content hub on Dell''s intranet for sales tools, guides and event packs, so teams had a single place to go.'
+    - 'I tracked downloads and event requests, and used them to shape Hub 2.0 and the next year''s three-tier support model.'
   outcome:
-    - '87 stand skins and 6,500 notebooks produced and distributed in one quarter: Medium Business 17 skins and 2,500 notebooks, REBOOT 39 and 3,000, Dell Technologies 6 and 1,000, Precision 8 skins, Displays and Client Peripherals 17 skins.'
-    - 'The content hub logged 5,377 downloads from April to November 2019. The programme supported 25+ training events, 8 customer events with 7 more booked, and 4 site-wide hype days.'
-    - 'Every Tier 1 product launch in FY20 involved it.'
+    - '87 branded stand skins and 6,500 notebooks delivered in one quarter.'
+    - '5,377 content downloads in eight months, with 25+ training events and 8 customer events supported.'
+    - 'Every Tier 1 product launch in FY20 used it.'
 
 role:
-  - 'Ran the programme day to day across all five business units, from the first tracker in January 2019 to the last event tracker in January 2020.'
-  - 'Briefed and reviewed the programme guide, the stand and skin artwork and the content hub pages.'
-  - 'Wrote the proof-of-execution deck for the first quarter and the November 2019 results review for Dell Medium Business.'
-  - 'Proposed the FY21 model: a quarterly blanket PO, three tiers of event support and a second version of the hub.'
-  - 'Managed delivery waves, translated skins and the invoicing across six POs.'
+  - 'Ran the programme across all five business units for a year.'
+  - 'Briefed the artwork, programme guide and content hub.'
+  - 'Wrote the results review and proposed the next year''s model.'
+  - 'Managed production, translation and delivery across EMEA.'
 
 gallery:
   - src: '/assets/images/work/x-in-a-box/xiab-what-is-xiab.jpg'

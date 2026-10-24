@@ -37,28 +37,27 @@ stats:
     label: 'views of the English NVIDIA GPU Guide'
     note: 'Plus 289 hours of read time, by September 2021'
 
-summary: 'Dell needed its Precision workstation sales content to work for partners and sales teams in their own language, and to show what was being read. I ran the eGuides and quick reference guides as a product: what got built, how it was localised, how it was checked and how it was measured.'
+summary: 'Dell''s Precision workstation guides had to work for partners and sales teams in their own language, and prove they were being read. I ran them as a product: what got built, how it was localised and how it was measured.'
 
 cards:
   challenge:
-    - 'Interactive guides break easily when translated, and one 2021 error log recorded 297 overset text errors on the Spanish build alone.'
-    - 'Localisation cost was mostly translation pass-through, so it needed pricing per language before anyone committed.'
-    - 'Dozens of guides and language variants needed their own links and reliable reporting.'
+    - 'Interactive guides break easily in translation, so quality had to hold in every language.'
+    - 'Translation costs could run away without a clear price per language up front.'
+    - 'With dozens of guides and variants, Dell needed to know which ones were actually being read.'
   approach:
-    - 'I built the per-language translation and DTP cost model behind the 2021 QRG localisation, so the cost of each language was priced before the work started.'
-    - 'Every translated guide came back to us for a check against the English master, covering structure, interactivity and content, before regional Dell contacts reviewed it. Each variant then got its own vanity URL with a two-letter language code.'
-    - 'I scoped Google Analytics 4 across the whole eGuide estate and prototyped a new guide format designed to cut the hours needed for each update.'
+    - 'I built a per-language cost model, so every market was priced before anyone committed.'
+    - 'Every translated guide was checked against the English master before regional review.'
+    - 'I put the whole estate on Google Analytics 4, with a clean link for each language, so Dell could see what each market read.'
   outcome:
-    - '44 QRG variants (11 guides in 4 languages), then 66 Dell and Intel co-branded variants, with Intel co-funding the translation.'
-    - '77 eGuides in 7 languages, moved to Google Analytics 4 across 97 custom subdomains.'
-    - 'The NVIDIA GPU Guide, signed off by Dell and NVIDIA, reached 1,977 English views and 289 hours of read time by September 2021, with French and German editions alongside it.'
+    - '66 Dell and Intel co-branded guide variants in 2021, with Intel co-funding the translation.'
+    - '77 eGuides in 7 languages, all measured in one place.'
+    - 'The NVIDIA GPU Guide, signed off by both brands, drew close to 2,000 English views and 289 hours of reading by September 2021, with French and German editions.'
 
 role:
-  - 'Scoped and priced the QRG localisation, and built the per-language translation and DTP cost model behind it.'
-  - 'Ran the handoff to Dell''s translation process, the quality checks against the English masters, the regional review rounds and the error log.'
-  - 'Set up vanity URLs for every language variant and the analytics reporting for the eGuide estate.'
-  - 'Worked with Dell and NVIDIA on the NVIDIA GPU Guide and kept it updated into 2023.'
-  - 'Scoped the 2024 AI eGuide localisation, with HTML and PDF versions and a vanity URL for each language.'
+  - 'Scoped, priced and ran the localisation programme for Dell''s Precision guides.'
+  - 'Ran quality checks and regional reviews across every language.'
+  - 'Set up the analytics and reporting for the eGuide estate.'
+  - 'Worked with Dell and NVIDIA on the NVIDIA GPU Guide and kept it current into 2023.'
 
 gallery:
   - src: '/assets/images/work/precision-eguides-localisation/gis-qrg-cover.jpg'

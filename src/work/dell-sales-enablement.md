@@ -39,27 +39,27 @@ stats:
     label: 'new client pipeline identified by Focus Week in a Box'
     note: 'Programme figure, pipeline rather than revenue'
 
-summary: 'Dell''s sales enablement had to work for thousands of inside-sales reps and channel partner sellers across EMEA, but the first version of the Sales Motion hub ran to 145 slides and few reps used it. I owned the Client Solutions side of the Sales Motion hub and led Client Master, the matching library for channel partners. I used usage data to cut, localise and relaunch both.'
+summary: 'Dell''s sales enablement had to work for thousands of inside-sales reps and channel partner sellers across EMEA, and the first version of the Sales Motion hub wasn''t being used. I owned the Client Solutions side of the hub and led Client Master, its partner equivalent, and used usage data to rebuild both.'
 
 cards:
   challenge:
-    - 'The first version of the hub ran to 145 slides and had low usage. Early 2014 analytics showed page views roughly halving week on week.'
-    - 'Reps sat across 22 sites and needed content in their own language, on a quarterly update cycle.'
-    - 'Channel partners had no equivalent, and no reason to log in to yet another system.'
+    - 'The first hub ran to 145 slides, and usage was falling week on week.'
+    - 'Reps across 22 sites needed content in their own language, kept current every quarter.'
+    - 'Channel partners had nothing equivalent.'
   approach:
-    - 'I cut the hub to 45 slides for version 2 and localised in waves: English, French and German first, then Spanish, Italian, Polish and Swedish, then the rest of EMEA.'
-    - 'I produced usage reports twice a quarter, site by site, to track uptake. For the Q3 relaunch I ran a usage booster campaign: desk drops with a puzzle, a video on the log-in page and a headset competition.'
-    - 'I built Client Master inside the Partner Portal on the same model, organised around the steps of the sales cycle, with a fixed quarterly refresh and translation cycle.'
+    - 'I cut the hub from 145 slides to 45 and rolled it out in waves of languages.'
+    - 'I tracked usage site by site and ran a relaunch campaign to bring reps back.'
+    - 'I built Client Master for partners on the same model, organised around the sales cycle.'
   outcome:
-    - 'Hub registrations rose 103% in two quarters, to 1,253 of around 1,800 inside-sales reps. Version 2 became the highest-usage sales motion in EMEA.'
-    - 'The share of reps checking the hub every month rose 39% across the second half of FY15.'
-    - 'Client Master went from 10 languages on 32 sites to 20 languages on 122 sites in one quarter.'
+    - 'Hub registrations up 103% in two quarters, making it the most used sales motion in EMEA.'
+    - 'Monthly use up 39% across the second half of FY15.'
+    - 'Client Master grew from 10 to 20 languages, across all 122 Partner Portal countries, in one quarter.'
 
 role:
-  - 'Owned the Client Solutions side of the Sales Motion hub, including content, localisation and the twice-quarterly usage reports.'
-  - 'Led the creation, launch and quarterly updates of Client Master, and presented its Behind the Scenes tour to the wider team.'
-  - 'Ran Focus Week in a Box sales-floor training in 8 EMEA countries, then 14 plus channel partners. The programme identified over $4 million in new client pipeline.'
-  - 'Managed Event in a Box, including a refresh across 8 countries that Intel funded half of.'
+  - 'Owned the Client Solutions side of the Sales Motion hub: content, localisation and usage reporting.'
+  - 'Led the creation, launch and updates of Client Master.'
+  - 'Ran Focus Week in a Box sales-floor training across 14 countries, which identified over $4 million in new client pipeline.'
+  - 'Ran Event in a Box, including a refresh half-funded by Intel.'
 
 gallery:
   - src: '/assets/images/work/dell-sales-enablement/sales-motion-hub-landing-page.jpg'
