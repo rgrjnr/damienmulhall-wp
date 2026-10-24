@@ -94,7 +94,7 @@ showHero: true
 
         <!-- Services Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {#- Receipts: each claim leads with its number and links to the project behind it. #}
+            {#- Receipts: each claim, then the number that proves it, linking to the project behind it. #}
             {%- for service in home.services %}
             <div class="receipt-tile bg-dm-cyan p-card flex flex-col gap-4">
                 <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">{{ service.title }}</h3>
@@ -102,8 +102,8 @@ showHero: true
                     {%- for line in service.lines %}
                     <li>
                         <a class="receipt-row" href="{{ line.proof.link }}">
-                            <span class="receipt-row__value">{{ line.proof.value }}</span>
                             <span class="receipt-row__text">{{ line.text }}</span>
+                            <span class="receipt-row__proof"><span class="receipt-row__value">{{ line.proof.value }}</span> {{ line.proof.short }}</span>
                         </a>
                     </li>
                     {%- endfor %}

@@ -70,7 +70,8 @@
           "proof": {
             "value": "14 months",
             "text": "from an empty backlog to a live product, with 50+ features shipped in 14 monthly releases.",
-            "link": "/work/hay-chat/"
+            "link": "/work/hay-chat/",
+            "short": "from an empty backlog to a live product"
           }
         },
         {
@@ -78,7 +79,8 @@
           "proof": {
             "value": "15 plans",
             "text": "for go-to-market, audited against the backlog and re-sequenced, run as 22 epics on sprints synced with engineering.",
-            "link": "/work/hay-chat/"
+            "link": "/work/hay-chat/",
+            "short": "for go-to-market, audited against the backlog and re-sequenced"
           }
         },
         {
@@ -86,7 +88,8 @@
           "proof": {
             "value": "7 workshops",
             "text": "across the UK for Dell and Microsoft, with two funding partners and brand and legal on every asset. 80% of registrants turned up.",
-            "link": "/work/windows-11-community-events/"
+            "link": "/work/windows-11-community-events/",
+            "short": "across the UK, with two funding partners and brand and legal on every asset"
           }
         }
       ]
@@ -99,7 +102,8 @@
           "proof": {
             "value": "100,000+",
             "text": "downloads for the Dell Technologies Forum podcast, which I produced from first guest to published episode.",
-            "link": "/work/dell-podcast/"
+            "link": "/work/dell-podcast/",
+            "short": "downloads for the Dell Technologies Forum podcast"
           }
         },
         {
@@ -107,7 +111,8 @@
           "proof": {
             "value": "6 of 6",
             "text": "years on time and on budget: launch training for 40+ EMEA sites, renewed every year.",
-            "link": "/work/product-launch-training-emea/"
+            "link": "/work/product-launch-training-emea/",
+            "short": "years of EMEA launch training, across 40+ sites"
           }
         },
         {
@@ -115,7 +120,8 @@
           "proof": {
             "value": "3 times",
             "text": "re-commissioned: the Google for Education guide became a reference asset for global Chromebook sales.",
-            "link": "/work/google-education/"
+            "link": "/work/google-education/",
+            "short": "re-commissioned: the Google for Education guide"
           }
         }
       ]
@@ -128,7 +134,8 @@
           "proof": {
             "value": "90%",
             "text": "of Hay.chat's search traffic was the wrong audience. I rebuilt the site around buyer searches.",
-            "link": "/work/hay-chat/"
+            "link": "/work/hay-chat/",
+            "short": "of search traffic was the wrong audience, so I rebuilt the site around buyers"
           }
         },
         {
@@ -136,7 +143,8 @@
           "proof": {
             "value": "Irish final",
             "text": "of the Startup World Cup, pitching Hay.chat live at Dublin Tech Summit.",
-            "link": "/work/hay-chat/"
+            "link": "/work/hay-chat/",
+            "short": "of the Startup World Cup, pitching Hay.chat live"
           }
         },
         {
@@ -144,7 +152,8 @@
           "proof": {
             "value": "32 packages",
             "text": "of website work and 36 pull requests, each one checked against a written brief before it shipped.",
-            "link": "/work/hay-chat/"
+            "link": "/work/hay-chat/",
+            "short": "of website work, each checked against a written brief"
           }
         }
       ]

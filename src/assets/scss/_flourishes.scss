@@ -354,19 +354,11 @@
   }
 }
 
-.receipt-row__value {
-  color: $dm-yellow;
-  font-family: $font-haas-display;
-  font-size: $text-heading-sm;
-  font-weight: $font-medium;
-  line-height: 1;
-}
-
 .receipt-row__text {
   font-family: $font-haas-display;
-  font-size: $text-body-md;
+  font-size: $text-body-lg;
   font-weight: $font-medium;
-  line-height: 1.3;
+  line-height: 1.25;
   text-decoration: underline;
   text-decoration-color: rgba($dm-white, 0.35);
   text-decoration-thickness: 1px;
@@ -374,8 +366,26 @@
   transition: text-decoration-color $dur-hover ease;
 
   @media (min-width: $breakpoint-md) {
-    font-size: $text-body-lg;
+    font-size: $text-heading-xs;
   }
+}
+
+// The evidence line: the number in yellow, then what it counts, in quieter type.
+.receipt-row__proof {
+  color: rgba($dm-white, 0.85);
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  line-height: 1.4;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-body-md;
+  }
+}
+
+.receipt-row__value {
+  color: $dm-yellow;
+  font-family: $font-haas-display;
+  font-weight: $font-bold;
 }
 
 .receipt__value {
