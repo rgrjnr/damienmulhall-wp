@@ -10,7 +10,7 @@ order: 9
 hero: '/assets/images/work/dell-sales-enablement/sales-motion-hub-landing-page.jpg'
 heroAlt: 'Sales Motion Hub landing page with a blue welcome panel and coloured tiles for each sales motion, with Dell, Microsoft and Intel logos'
 thumb: '/assets/images/work/dell-sales-enablement/sales-motion-usage-booster-email.jpg'
-highlights: [education, increase, my-computer]
+highlights: [education, heart, my-computer]
 labels: [Sales enablement, Localisation, EMEA]
 
 facts:

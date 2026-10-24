@@ -9,7 +9,7 @@ date: 2024-02-12
 order: 7
 hero: '/assets/images/work/precision-eguides-localisation/gis-qrg-cover.jpg'
 heroAlt: 'Cover of the Geographic Information Systems Industry Guide, a Dell Precision quick reference guide, with Dell Technologies, NVIDIA and Intel logos over an aerial photograph of a colourful hot spring'
-highlights: [code, my-computer, video-card]
+highlights: [video-card, code, increase]
 labels: [Interactive, Localisation, Sales enablement]
 
 facts:
