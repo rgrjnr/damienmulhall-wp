@@ -3,6 +3,7 @@ title: 'Hay.chat: Product and Go-to-Market'
 shortTitle: 'Hay.chat'
 excerpt: 'Product ownership and go-to-market for Hay.chat, the AI customer support platform I co-founded.'
 outcome: 'From an empty backlog to a live product in 14 months, with 50+ features shipped and a 120+ page website.'
+homeLine: 'Empty backlog to live product in 14 months.'
 client: 'Hay.chat'
 date: 2025-08-01
 order: 1

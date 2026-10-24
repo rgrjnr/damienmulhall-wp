@@ -3,6 +3,7 @@ title: 'Product Launch Training EMEA'
 shortTitle: 'EMEA Launch Training'
 excerpt: 'Annual launch training and a launch campaign for Dell sales teams at 40+ sites across Europe, the Middle East and Africa.'
 outcome: 'Launch training delivered to 40+ EMEA sites every year, on time and on budget, for six consecutive years.'
+homeLine: '40+ sites a year, on time and on budget for six years.'
 client: 'Dell Technologies'
 duration: '13 weeks a year'
 date: 2024-03-11

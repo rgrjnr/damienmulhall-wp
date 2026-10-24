@@ -3,6 +3,7 @@ title: 'X in a Box'
 shortTitle: 'X in a Box'
 excerpt: 'A modular sales enablement and event programme that gave Dell EMEA teams one place to get stands, content and event support.'
 outcome: '87 branded stand skins and 6,500 notebooks in one quarter, and 5,377 content hub downloads in eight months.'
+homeLine: 'One modular programme for five Dell business units.'
 client: 'Dell Technologies'
 duration: '13 months'
 date: 2020-01-30

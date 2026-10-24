@@ -62,7 +62,7 @@ showHero: true
     <h2 id="about-heading" class="sr-only">About</h2>
     <div class="flex flex-col gap-3">
         <!-- Main About Block -->
-        <div class="bg-dm-cyan p-6 md:p-content{% if home.about.path %} reveal-panel{% endif %}"{% if home.about.path %} tabindex="0"{% endif %}>
+        <div class="bg-dm-cyan p-6 md:p-content relative{% if home.about.path %} reveal-panel{% endif %}"{% if home.about.path %} tabindex="0"{% endif %}>
             <p class="font-haas-text font-medium text-heading-xs leading-[1.35] md:text-heading-lg md:leading-normal text-dm-white">
                 {{ home.about.main }}
             </p>
@@ -80,13 +80,6 @@ showHero: true
                 </ol>
             </div>
             {%- endif %}
-        </div>
-
-        <!-- Secondary About Block -->
-        <div class="bg-dm-cyan p-6 md:p-content flex items-end justify-between relative">
-            <p class="font-haas-text font-medium text-body-md md:text-body-lg text-dm-white max-w-md leading-normal">
-                {{ home.about.secondary }}
-            </p>
             <div class="hidden lg:block absolute right-0 -bottom-px" data-crow-caw="flip">
 
                 <svg aria-hidden="true" focusable="false" width="102" height="77" viewBox="0 0 102 77" fill="none"
@@ -162,7 +155,7 @@ showHero: true
 <!-- How I Work -->
 <section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="how-heading">
     <h2 id="how-heading" class="font-haas-display font-bold text-heading-sm md:text-heading-md text-dm-black mb-6">{{ home.howIWork.heading }}</h2>
-    <ol class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <ol class="grid grid-cols-1 md:grid-cols-3 gap-3">
         {%- for item in home.howIWork.principles %}
         <li class="bg-dm-cyan p-card flex flex-col gap-3" data-reveal="fade">
             <h3 class="font-haas-display font-bold text-body-lg md:text-heading-xs text-dm-white">{{ item.title }}</h3>
@@ -217,11 +210,9 @@ showHero: true
                     {{ displayTitle }}
                 </div>
 
-                {%- if item.data.outcome %}
-                <p class="work-item__outcome">{{ item.data.outcome }}</p>
-                {%- endif %}
-                {%- if item.data.labels and item.data.labels.length %}
-                <p class="work-item__tags">{{ item.data.labels | join(" · ") }}</p>
+                {%- set homeLine = item.data.homeLine or item.data.outcome %}
+                {%- if homeLine %}
+                <p class="work-item__outcome">{{ homeLine }}</p>
                 {%- endif %}
             </div>
 
@@ -241,7 +232,7 @@ showHero: true
 <!-- Skills Section -->
 <section class="w-full max-w-page mx-auto px-6 mt-section" aria-labelledby="skills-heading">
     <h2 id="skills-heading" class="sr-only">Skills, certifications, expertise and tools</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2  gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         {%- for card in home.cards %}
         <div class="bg-dm-black p-6 flex flex-col justify-between relative min-h-[240px]{% if card.detail %} reveal-card{% endif %}"{% if card.detail %} tabindex="0"{% endif %}>
             {%- if card.icon == 'skills' %}

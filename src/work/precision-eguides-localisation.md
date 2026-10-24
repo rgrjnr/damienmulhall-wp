@@ -3,6 +3,7 @@ title: 'Precision eGuides and Localisation'
 shortTitle: 'Precision eGuides'
 excerpt: 'Interactive eGuides and quick reference guides for Dell Precision workstations, built, localised and measured for partners and sales teams in up to 12 languages.'
 outcome: '77 interactive eGuides in 7 languages, and 66 Dell and Intel co-branded guide variants.'
+homeLine: '77 interactive eGuides in 7 languages.'
 client: 'Dell Technologies, with Intel and NVIDIA'
 duration: '2020 to 2024'
 date: 2024-02-12

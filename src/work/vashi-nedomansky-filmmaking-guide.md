@@ -3,6 +3,7 @@ title: 'Vashi Nedomansky Filmmaking Guide'
 shortTitle: 'Filmmaking Guide'
 excerpt: 'A filmmaking guide with Hollywood editor Vashi Nedomansky, made to put Dell Precision workstations in front of media and entertainment businesses that mostly buy Apple.'
 outcome: 'An interactive guide with a Hollywood film editor, live in the US and approved for EMEA syndication. Vashi still features it on his own site.'
+homeLine: 'An interactive guide with a Hollywood film editor.'
 client: 'Dell Technologies'
 duration: '19 weeks'
 date: 2019-10-14

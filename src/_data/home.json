@@ -33,7 +33,6 @@
   },
   "about": {
     "main": "I started out in media production, so structure and story come naturally to me. I don't swear by any one methodology. What matters is getting things done, and making the process easier for everyone along the way.",
-    "secondary": "I've launched a podcast series that passed 100,000 downloads, built internal playbooks people actually use, and run campaigns across formats, teams and time zones. But the size of the brand was never the point.",
     "pathCue": "Hover for how I got here",
     "path": [
       {
@@ -160,28 +159,19 @@
     "principles": [
       {
         "title": "The method fits the job",
-        "text": "No single methodology. I've run yearly launch programmes and sprint-based product work, and I pick whatever gets the team to done."
+        "text": "Waterfall, Agile or a mix, always with an agreed scope and change control."
       },
       {
         "title": "I clear the path",
-        "text": "Designers and developers do their best work when decisions, sign-offs and briefs are sorted before they start. Sorting them is my job."
-      },
-      {
-        "title": "Plan the work, then work the plan",
-        "text": "Every project I run starts with an agreed scope and a plan, and changes go through change control, whether it runs Waterfall, Agile or a mix of both. On the Hay.chat website that meant 32 scoped work packages, each checked against its brief before it shipped."
+        "text": "Decisions, sign-offs and briefs are sorted before designers and developers start."
       },
       {
         "title": "AI as the build team",
-        "text": "I direct Claude Code as the build team on the Hay.chat website. I set the direction, write the briefs, review the output and decide what ships. That's 40 recorded reviews so far."
+        "text": "I direct Claude Code on the Hay.chat website: I write the briefs, review the output and decide what ships."
       }
     ]
   },
   "cards": [
-    {
-      "title": "Skills",
-      "text": "Waterfall / Budgeting / Planning / Client and stakeholder management / Creative studio management",
-      "icon": "skills"
-    },
     {
       "title": "Certifications",
       "text": "PMP / Google Project Management Certificate / Agile Project Management",
@@ -198,47 +188,15 @@
     },
     {
       "title": "Tools",
-      "text": "Jira / Confluence / Claude Code / VS Code / GitHub / Figma / Canva / Workfront / CVENT / Lemlist / Twenty CRM / Google Search Console / DataForSEO / Google Workspace / Office 365 / Adobe CC / Riverside.fm",
+      "text": "Jira / Confluence / Claude Code / GitHub / Figma / Workfront / CVENT / Google Search Console",
       "icon": "tools"
     }
   ],
-  "waysToWork": {
-    "heading": "Ways to work with me",
-    "options": [
-      {
-        "title": "Fractional",
-        "text": "Part-time, embedded with your team for a programme or a launch. I plan it, run it and keep the stakeholders aligned.",
-        "proof": {
-          "value": "7 workshops",
-          "text": "across the UK for Dell and Microsoft, with two funding partners and brand and legal on every asset.",
-          "link": "/work/windows-11-community-events/"
-        }
-      },
-      {
-        "title": "Full-time",
-        "text": "A senior project, programme or product role, where I own delivery from plan to launch.",
-        "proof": {
-          "value": "14 months",
-          "text": "from an empty backlog to a live product at Hay.chat, with 50+ features shipped in 14 monthly releases.",
-          "link": "/work/hay-chat/"
-        }
-      },
-      {
-        "title": "One project, end to end",
-        "text": "A single project, scoped, run and delivered end to end, with you kept in the loop throughout.",
-        "proof": {
-          "value": "100,000+",
-          "text": "downloads for the Dell Technologies Forum podcast, which I produced from first guest to published episode.",
-          "link": "/work/dell-podcast/"
-        }
-      }
-    ]
-  },
   "cta": {
     "heading": "Work with me and see how a smooth, focused project feels.",
     "buttonText": "Let's work",
     "buttonLink": "mailto:mulhall.damien@gmail.com",
-    "availability": "I'm still building Hay.chat. I'm also available for fractional or full-time work."
+    "availability": "I'm still building Hay.chat, and I'm open to full-time, fractional or single-project work."
   },
   "nav": [
     {

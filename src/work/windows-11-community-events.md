@@ -3,6 +3,7 @@ title: 'Windows 11 Community Events'
 shortTitle: 'Windows 11 Events'
 excerpt: 'Seven full-day workshops across the UK that got Dell and Microsoft back in the room with 170 high-value accounts.'
 outcome: 'Seven UK workshops, an 80% registrant-to-attendee rate and $9.5M in new pipeline.'
+homeLine: 'Seven UK workshops and $9.5M in new pipeline.'
 client: 'Dell Technologies & Microsoft'
 duration: '15 weeks'
 date: 2024-10-25

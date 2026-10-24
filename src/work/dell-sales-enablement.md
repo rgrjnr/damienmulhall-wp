@@ -3,6 +3,7 @@ title: 'Dell sales enablement, from the inside'
 shortTitle: 'Dell Sales Enablement'
 excerpt: 'Two sales enablement hubs for thousands of Dell and partner sellers across EMEA, rebuilt around usage data: hub registrations up 103%, and Client Master taken to 20 languages across 122 countries.'
 outcome: 'Hub registrations up 103%, and Client Master live in 20 languages across 122 countries.'
+homeLine: 'Hub registrations up 103%, Client Master in 20 languages.'
 client: 'Dell Technologies'
 duration: '2014 to 2016'
 date: 2015-06-01

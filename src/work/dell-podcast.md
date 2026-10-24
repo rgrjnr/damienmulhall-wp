@@ -3,6 +3,7 @@ title: 'Dell Technologies Forum Podcast Series'
 shortTitle: 'Dell Podcast Series'
 excerpt: 'A Dell podcast that kept the Forum event conversations going after the events ended, and passed 100,000 downloads.'
 outcome: 'A podcast series that passed 100,000 downloads, ahead of Dell''s other corporate podcasts worldwide.'
+homeLine: 'Passed 100,000 downloads, ahead of Dell''s other corporate podcasts.'
 client: 'Dell Technologies'
 duration: '48 weeks'
 date: 2024-08-09

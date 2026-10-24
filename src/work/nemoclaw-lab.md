@@ -3,6 +3,7 @@ title: 'Dell x NVIDIA NemoClaw Lab'
 shortTitle: 'NemoClaw Lab'
 excerpt: 'A hands-on agentic AI developer lab for Dell Technologies EMEA, co-funded and co-branded by NVIDIA, taken from kick-off to a live programme in two months.'
 outcome: 'Kick-off to live programme in two months, 30 workstations in the field, and Dell funding a second campaign.'
+homeLine: 'Kick-off to live AI lab programme in two months.'
 client: 'Dell Technologies & NVIDIA'
 duration: '2 months'
 date: 2026-10-24
