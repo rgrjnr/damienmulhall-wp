@@ -52,13 +52,13 @@ cards:
   outcome:
     - 'Registered reps went from 34% to 69% (1,253 of an estimated 1,812). Version 2 became the highest-usage sales motion in EMEA.'
     - 'The share of reps checking the hub at least monthly rose from 49% to 68% across the second half of FY15.'
-    - 'Client Master went from 10 languages on 32 sites to 20 languages on 122 sites in one quarter, at about $26.5K a quarter to run.'
+    - 'Client Master went from 10 languages on 32 sites to 20 languages on 122 sites in one quarter.'
 
 role:
   - 'Owned the Client Solutions side of the Sales Motion hub, including content, localisation and the twice-quarterly usage reports.'
   - 'Led the creation, launch and quarterly updates of Client Master, and presented its Behind the Scenes tour to the wider team.'
   - 'Ran Focus Week in a Box sales-floor training in 8 EMEA countries, then 14 plus channel partners. The programme identified over $4 million in new client pipeline.'
-  - 'Managed Event in a Box, including a refresh co-funded by Intel at $52,504 across 8 countries.'
+  - 'Managed Event in a Box, including a refresh across 8 countries that Intel funded half of.'
 
 gallery:
   - src: '/assets/images/work/dell-sales-enablement/sales-motion-hub-landing-page.jpg'

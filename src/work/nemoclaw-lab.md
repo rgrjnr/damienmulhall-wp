@@ -21,8 +21,6 @@ facts:
     value: 'Kick-off 18 June 2026, first activation in Germany at the end of October 2026'
   - label: 'Scope'
     value: 'Campaign identity, EMEA playbook, event comms, kit branding, certificates, video and social'
-  - label: 'Budget'
-    value: '$25K to $30K envelope at kick-off, $28K ceiling, plus a follow-on SOW of about $15K'
 
 stats:
   - value: '4'
@@ -54,7 +52,7 @@ cards:
 
 role:
   - 'Led the account day to day for One1000: client meetings, decisions, budget and scope.'
-  - 'Built the cost model and proposal, then scoped the follow-on Q3 statement of work at about $15K and tracked the remaining budget.'
+  - 'Built the cost model and proposal, then scoped the follow-on Q3 statement of work and tracked the remaining budget.'
   - 'Created the campaign identity and wrote the tagline, the EMEA playbook, the CVENT emails and event site, the customer invitation, certificates in three languages and the video script.'
   - 'Briefed and reviewed the designer, creative director and video editor, and set print specs for the certificates.'
   - 'Managed stakeholders across Dell EMEA, Dell Global, NVIDIA and two logistics partners.'

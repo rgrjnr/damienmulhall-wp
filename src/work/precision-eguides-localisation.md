@@ -33,7 +33,6 @@ stats:
     note: 'After a first round of 44 variants in 4 languages'
   - value: '12'
     label: 'languages scoped for the 2024 AI eGuide'
-    note: 'Scoped at $750 per language'
   - value: '1,977'
     label: 'views of the English NVIDIA GPU Guide'
     note: 'Plus 289 hours of read time, by September 2021'
@@ -50,7 +49,7 @@ cards:
     - 'Every translated guide came back to us for a check against the English master, covering structure, interactivity and content, before regional Dell contacts reviewed it. Each variant then got its own vanity URL with a two-letter language code.'
     - 'I scoped Google Analytics 4 across the whole eGuide estate and prototyped a new guide format designed to cut the hours needed for each update.'
   outcome:
-    - '44 QRG variants (11 guides in 4 languages) on a $145,545.63 statement of work, then 66 Dell and Intel co-branded variants on a further $60,000. Intel co-funded the translation.'
+    - '44 QRG variants (11 guides in 4 languages), then 66 Dell and Intel co-branded variants, with Intel co-funding the translation.'
     - '77 eGuides in 7 languages, moved to Google Analytics 4 across 97 custom subdomains.'
     - 'The NVIDIA GPU Guide, signed off by Dell and NVIDIA, reached 1,977 English views and 289 hours of read time by September 2021, with French and German editions alongside it.'
 

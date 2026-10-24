@@ -21,8 +21,6 @@ facts:
     value: 'January 2019 to January 2020'
   - label: 'Scope'
     value: 'Stand skins, notebooks, an intranet content hub and event support for five Dell business units'
-  - label: 'Budget'
-    value: 'About £246K invoiced across six POs, including pass-through print, shipping and hardware'
 
 stats:
   - value: '87'
