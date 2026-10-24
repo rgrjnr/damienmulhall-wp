@@ -331,7 +331,10 @@ showHero: true
                 <p class="ask-ai__label" id="ask-ai-label">{{ home.askAi.heading }}</p>
                 <ul class="ask-ai__list" aria-labelledby="ask-ai-label">
                     {%- for tool in home.askAi.tools %}
-                    <li><a class="ask-ai__link" href="{{ tool.url }}{{ home.askAi.prompt | urlencode }}" target="_blank" rel="noopener">{{ tool.name }}<span class="sr-only"> (opens in a new tab)</span></a></li>
+                    <li><a class="ask-ai__link" href="{{ tool.url }}{{ home.askAi.prompt | urlencode }}" target="_blank" rel="noopener" title="Ask {{ tool.name }}">
+                        {#- Logos from Simple Icons, drawn in currentColor so they take the site's ink. #}
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="{{ tool.icon }}"/></svg>
+                        <span class="sr-only">Ask {{ tool.name }} (opens in a new tab)</span></a></li>
                     {%- endfor %}
                 </ul>
                 <a class="ask-ai__file" href="/llms.txt">{{ home.askAi.fileLabel }}</a>
