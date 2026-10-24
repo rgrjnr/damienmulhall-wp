@@ -68,7 +68,7 @@ gallery:
     alt: 'Page from a Precision quick reference guide showing a mobile workstation, a monitor, a dock and a keyboard with product descriptions and links'
     caption: 'A solution page. Each guide was interactive, so every variant had to keep its links and rollovers intact after translation.'
   - src: '/assets/images/work/precision-eguides-localisation/qrg-sales-email.jpg'
-    alt: 'Sales email template headed Making the promise of AI a reality, with Dell Technologies and NVIDIA logos, inviting the reader to an AI workflows eGuide'
+    alt: 'Sales email header reading Making the promise of AI a reality, with Dell Technologies and Intel logos over a blue city skyline'
     caption: 'Each QRG came with a sales email written in the voice of a sales rep, linking to the guide.'
   - src: '/assets/images/work/precision-eguides-localisation/nvidia-gpu-guide-cover.jpg'
     alt: 'Cover of The GPU comes first, a Dell and NVIDIA buyer guide, over a glowing graphics chip'
