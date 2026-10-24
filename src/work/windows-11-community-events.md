@@ -30,7 +30,7 @@ facts:
 stats:
   - value: '$9.5M'
     label: 'new pipeline'
-    note: 'Attributed to campaign engagement'
+    note: 'Reported by the Dell client, attributed to campaign engagement'
   - value: '80%'
     label: 'registrant-to-attendee conversion'
   - value: '7'
@@ -50,7 +50,7 @@ cards:
     - 'I worked with technical leaders to tie every session to the Windows 11 migration and AI readiness story.'
     - 'The full-day format was the client''s requirement. In the following quarter we prepped a half-day version of the workshop, so we could run two workshops in one venue per day and give customers a timeslot to suit their schedule.'
   outcome:
-    - '$9.5M in new pipeline attributed to campaign engagement, and 80% of registrants turned up.'
+    - '$9.5M in new pipeline, as reported by the Dell client, and 80% of registrants turned up.'
     - 'All seven events delivered on time and to the client''s standard, with very positive attendee feedback.'
     - 'Full compliance with both funding partners'' proof of execution processes.'
 
