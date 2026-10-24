@@ -56,6 +56,7 @@ role:
   - 'Ran recording logistics and kept the audio standard consistent.'
   - 'Pitched three title options for every episode and delivered the transcript and social clips.'
   - 'Proposed costed ideas to lift engagement, such as guest social packs and video shorts.'
+  - 'Before this series, I produced two seasons of Dell''s Need to Know cyber-resilience podcast (2022 to 2023), from naming the show to guest briefing, recording and social.'
 
 media:
   - type: video

@@ -44,6 +44,7 @@ cards:
     - 'I chose eco-friendly, on-brand merchandise that people would actually use, partly because it clears customs more easily.'
     - 'I split the training manual by line of business, each with two fixed review rounds, then combined them into one guide for final sign-off.'
     - 'I wrapped the training in a hype campaign: launch emails, trainer kits, internal videos, session templates and branded prizes for engagement in sessions.'
+    - 'In early 2020 we posted 3,273 printed folders to 41 destinations. When Covid stopped site training later that year, I rebuilt the kit as a digital guide in one week.'
   outcome:
     - 'Materials reached 40+ EMEA sites every year, on time and on budget.'
     - 'Strong feedback from sales managers and local training leads.'
