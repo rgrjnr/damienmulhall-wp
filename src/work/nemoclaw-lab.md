@@ -1,11 +1,11 @@
 ---
 title: 'Dell x NVIDIA NemoClaw Lab'
 shortTitle: 'NemoClaw Lab'
-excerpt: 'A hands-on agentic AI developer lab for Dell Technologies EMEA, co-funded and co-branded by NVIDIA, taken from kick-off to a live programme in two months.'
-outcome: 'Kick-off to live programme in two months, 30 workstations in the field, and Dell funding a second campaign.'
-homeLine: 'Kick-off to live AI lab programme in two months.'
+excerpt: 'A hands-on agentic AI developer lab for Dell Technologies EMEA, co-funded and co-branded by NVIDIA, taken from kick-off to a live programme in four months.'
+outcome: 'Kick-off to live programme in four months, 30 workstations in the field, and Dell funding a second campaign.'
+homeLine: 'Kick-off to live AI lab programme in four months.'
 client: 'Dell Technologies & NVIDIA'
-duration: '2 months'
+duration: '4 months'
 date: 2026-10-24
 order: 10
 hero: '/assets/images/work/nemoclaw-lab/emea-playbook-cover.jpg'
@@ -38,7 +38,7 @@ stats:
     label: 'campaign funded by Dell'
     note: 'Deskside AI Labs, funded in October 2026'
 
-summary: 'Dell and NVIDIA wanted regional teams across Europe to run their own hands-on agentic AI labs for developers and IT buyers. I led the programme for One1000, from the research and campaign identity to the copy and the studio that built it, and took it from kick-off to live in two months.'
+summary: 'Dell and NVIDIA wanted regional teams across Europe to run their own hands-on agentic AI labs for developers and IT buyers. I led the programme for One1000, from the research and campaign identity to the copy and the studio that built it, and took it from kick-off to live in four months.'
 
 cards:
   challenge:
@@ -50,7 +50,7 @@ cards:
     - 'Where the client couldn''t supply material, I drafted it myself, from the quick start guide to the operator run sheets and the LinkedIn pack.'
     - 'I pushed back where it mattered, winning a seven-day booking turnaround instead of three to four weeks, because silence kills self-service programmes.'
   outcome:
-    - 'Live in two months, with 30 pre-installed AI workstations ready to ship.'
+    - 'Live in four months, with 30 pre-installed AI workstations ready to ship.'
     - 'A 14-section EMEA playbook, event comms and a teaser video brand-approved within about two weeks.'
     - 'Dell funded a second campaign, Deskside AI Labs, and asked One1000 to develop its creative concept.'
 

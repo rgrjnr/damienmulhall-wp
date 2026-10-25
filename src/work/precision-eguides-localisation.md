@@ -60,7 +60,7 @@ role:
   - 'Scoped, priced and ran the localisation programme for Dell''s Precision guides.'
   - 'Ran quality checks and regional reviews across every language.'
   - 'Set up the analytics and reporting for the eGuide estate.'
-  - 'Worked with Dell and NVIDIA on the NVIDIA GPU Guide and kept it current into 2023.'
+  - 'Worked with Dell and NVIDIA on the NVIDIA GPU Guide and kept it current into 2024.'
 
 gallery:
   - src: '/assets/images/work/precision-eguides-localisation/gis-qrg-cover.jpg'

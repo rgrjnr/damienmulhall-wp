@@ -1,9 +1,9 @@
 ---
 title: 'Windows 11 Community Events'
 shortTitle: 'Windows 11 Events'
-excerpt: 'Seven full-day workshops across the UK that got Dell and Microsoft back in the room with 170 high-value accounts.'
-outcome: 'Seven UK workshops, an 80% registrant-to-attendee rate and $9.5M in new pipeline.'
-homeLine: 'Seven UK workshops and $9.5M in new pipeline.'
+excerpt: 'Six full-day workshops across the UK that got Dell and Microsoft back in the room with 170 high-value accounts.'
+outcome: 'Six UK workshops, an 80% registrant-to-attendee rate and $9.5M in new pipeline.'
+homeLine: 'Six UK workshops and $9.5M in new pipeline.'
 client: 'Dell Technologies & Microsoft'
 duration: '15 weeks'
 date: 2024-10-25
@@ -24,7 +24,7 @@ facts:
   - label: 'Timeline'
     value: 'July to October 2024, 15 weeks'
   - label: 'Scope'
-    value: '7 full-day workshops, 170 target accounts'
+    value: '6 full-day workshops, 170 target accounts'
   - label: 'Budget'
     value: '$80k'
 
@@ -34,7 +34,7 @@ stats:
     note: 'Reported by the Dell client, attributed to campaign engagement'
   - value: '80%'
     label: 'registrant-to-attendee conversion'
-  - value: '7'
+  - value: '6'
     label: 'community events across the UK'
   - value: '170'
     label: 'high-value accounts targeted'
@@ -44,7 +44,7 @@ summary: 'Dell and Microsoft needed to re-engage 170 high-value customer account
 cards:
   challenge:
     - 'Busy IT leaders needed a reason to give up a full day.'
-    - 'Seven events in different UK cities, all within one month, on an $80k budget.'
+    - 'Six events in different UK cities, all within one month, on an $80k budget.'
     - 'Brand and legal reviews that meant heavy revisions, and two funding partners with separate proof of execution rules.'
   approach:
     - 'I set the structure on day one: defined roles, regular internal checkpoints and weekly client calls, with every deliverable, the budget and resourcing on one client-facing dashboard.'
@@ -52,7 +52,7 @@ cards:
     - 'The full-day format was the client''s requirement. In the following quarter we prepped a half-day version of the workshop, so we could run two workshops in one venue per day and give customers a timeslot to suit their schedule.'
   outcome:
     - '$9.5M in new pipeline, as reported by the Dell client, and 80% of registrants turned up.'
-    - 'All seven events delivered on time and to the client''s standard, with very positive attendee feedback.'
+    - 'All six events delivered on time and to the client''s standard, with very positive attendee feedback.'
     - 'Full compliance with both funding partners'' proof of execution processes.'
 
 role:
