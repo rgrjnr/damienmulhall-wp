@@ -71,5 +71,5 @@ gallery:
     caption: 'A full room at one of the workshops. 80% of people who registered turned up on the day.'
   - src: '/assets/images/work/windows-11-community-events/IMG-20241015-WA0046.jpg'
     alt: 'A workshop room with Dell Technologies branded demo stands, laptops and a presenter at the front'
-    caption: 'Hands-on demo stations set up alongside the sessions, so attendees could try the kit.'
+    caption: 'Demo stations set up alongside the sessions, so attendees could try the kit.'
 ---

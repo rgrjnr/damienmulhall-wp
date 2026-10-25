@@ -41,12 +41,12 @@ summary: 'Dell wanted its Forum event conversations across EMEA to carry on afte
 
 cards:
   challenge:
-    - 'Often just two weeks between meeting a guest and publishing their episode.'
+    - 'Often no more than two weeks between meeting a guest and publishing their episode.'
     - 'Senior teams kept pushing the same high-priority themes, which risked repeating earlier episodes.'
     - 'The series had to prove engagement to be renewed.'
   approach:
     - 'I checked every guest''s talking points against earlier episodes and steered them away from ground already covered, towards what listeners hadn''t heard.'
-    - 'Listener first, guest agenda second. Guests naturally wanted to talk about their own topics, so I held the line on fresh angles, even when that meant a harder conversation.'
+    - 'Listener first, guest agenda second. Guests wanted to talk about their own topics, and I held the line on fresh angles, even when that meant a harder conversation.'
     - 'When the draft for an AI Factory episode was weak, I escalated it and moved the recording date rather than record it.'
   outcome:
     - 'More than 100,000 downloads, ahead of Dell''s other corporate podcasts worldwide.'

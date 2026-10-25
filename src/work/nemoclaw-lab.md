@@ -42,13 +42,13 @@ summary: 'Dell and NVIDIA wanted regional teams across Europe to run their own h
 
 cards:
   challenge:
-    - 'A new kind of event: hands-on agentic AI labs for a technical audience, run by Dell''s regional teams themselves.'
+    - 'A new kind of event: agentic AI labs for a technical audience, run by Dell''s regional teams themselves.'
     - 'A brief that kept moving, including a whole format the client dropped midway.'
     - 'Physical kit, three languages and four sets of approvers across Dell and NVIDIA.'
   approach:
     - 'I researched what makes AI events work for European developers and IT buyers before writing any copy, and built the playbook on that evidence.'
     - 'Where the client couldn''t supply material, I drafted it myself, from the quick start guide to the operator run sheets and the LinkedIn pack.'
-    - 'I pushed back where it mattered, winning a seven-day booking turnaround instead of three to four weeks, because silence kills self-service programmes.'
+    - 'I pushed back where it mattered and won a seven-day booking turnaround instead of three to four weeks. Teams stop using a self-service programme if they wait weeks to hear back.'
   outcome:
     - 'Live in four months, with 30 pre-installed AI workstations ready to ship.'
     - 'A 14-section EMEA playbook, event comms and a teaser video brand-approved within about two weeks.'

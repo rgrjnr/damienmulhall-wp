@@ -41,10 +41,10 @@ summary: 'Before each annual product launch, Dell needed sales teams across 40+ 
 cards:
   challenge:
     - 'Tight timelines while products were still in final development.'
-    - 'Very limited budgets for collateral and distribution.'
+    - 'Small budgets for collateral and distribution.'
     - 'Approvals across brand, legal and marketing, and customs risk on cross-border shipping.'
   approach:
-    - 'I chose eco-friendly, on-brand merchandise that people would actually use, partly because it clears customs more easily.'
+    - 'I chose eco-friendly, on-brand merchandise that people would use, partly because it clears customs more easily.'
     - 'I split the training manual by line of business, each with two fixed review rounds, then combined them into one guide for final sign-off.'
     - 'I wrapped the training in a hype campaign: launch emails, trainer kits, internal videos, session templates and branded prizes for engagement in sessions.'
     - 'In early 2020 we posted 3,273 printed folders to 41 destinations. When Covid stopped site training, I rebuilt the kit as a digital guide for the following winter''s launch, with the first version in one week.'

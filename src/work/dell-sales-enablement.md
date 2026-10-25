@@ -42,7 +42,7 @@ stats:
     label: 'new client pipeline identified by Focus Week in a Box'
     note: 'Programme figure, pipeline rather than revenue'
 
-summary: 'Dell''s sales enablement had to work for thousands of inside-sales reps and channel partner sellers across EMEA, and the first version of the Sales Motion hub wasn''t being used. I owned the Client Solutions side of the hub and led Client Master, its partner equivalent, and used usage data to rebuild both.'
+summary: 'Dell''s sales enablement had to work for thousands of inside-sales reps and channel partner sellers across EMEA, and the first version of the Sales Motion hub wasn''t being used. I owned the Client Solutions side of the hub and led Client Master, its partner equivalent, and rebuilt both around usage data.'
 
 cards:
   challenge:
@@ -54,7 +54,7 @@ cards:
     - 'I tracked usage site by site and ran a relaunch campaign to bring reps back.'
     - 'I built Client Master for partners on the same model, organised around the sales cycle.'
   outcome:
-    - 'Hub registrations up 103% in two quarters, making it the most used sales motion in EMEA.'
+    - 'Hub registrations up 103% in two quarters. It became the most used sales motion in EMEA.'
     - 'Monthly use up 39% across the second half of FY15.'
     - 'Client Master grew from 10 to 20 languages, across all 122 Partner Portal countries, in one quarter.'
 

@@ -32,7 +32,7 @@
     ]
   },
   "about": {
-    "main": "I started out in media production, so structure and story come naturally to me. I don't swear by any one methodology. What matters is getting things done, and making the process easier for everyone along the way.",
+    "main": "I started out in media production, so structure and story come naturally to me. I don't swear by any one methodology. I care about getting things done, and making the work easier for the people doing it.",
     "path": [
       {
         "year": "2010",
@@ -160,7 +160,7 @@
     }
   ],
   "toolsBlock": {
-    "text": "I'm not the designer or the developer. I'm the project manager who clears the path so they can do their best work. On time, on budget, without the chaos."
+    "text": "Designers and developers do the building. I clear the path so they can do their best work, on time and on budget, without the chaos."
   },
   "howIWork": {
     "heading": "How I work",
@@ -201,7 +201,7 @@
     }
   ],
   "cta": {
-    "heading": "Work with me and see how a smooth, focused project feels.",
+    "heading": "Work with me and see what a smooth project feels like.",
     "buttonText": "Let's work",
     "buttonLink": "mailto:mulhall.damien@gmail.com",
     "availability": "I'm still building Hay.chat, and I'm open to full-time, fractional or single-project work."

@@ -50,7 +50,7 @@ cards:
     - 'About 90% of search traffic came from people looking for an unrelated video chat app, and no commercial page ranked above position 15.'
     - 'Web Summit 2025 showed real demand, but our first version wasn''t ready for it.'
   approach:
-    - 'We chose to rebuild rather than sell what we had. In January 2026 we re-engineered the platform from the ground up, from the engine to every integration.'
+    - 'We chose to rebuild rather than sell what we had. In January 2026 we re-engineered the platform, from the engine to every integration.'
     - 'I wrote every feature down before anyone built it, as a user story with acceptance criteria and a definition of done, so my co-founder could pick up a ticket and build without a meeting.'
     - 'I audited our 15 go-to-market plans against the backlog. The highest-ranked plans had the emptiest epics and stale assumptions, so I re-sequenced the marketplace launches.'
     - 'I kept our claims honest. I cut traction claims we couldn''t stand behind from the pitch, retired the pilot language once the pilot programme ended and described Hay as source-available, not open source.'
@@ -61,7 +61,7 @@ cards:
 
 role:
   - 'Wrote 164 of the 213 product issues, including the 96 user stories the first release was built on.'
-  - 'Owned the integration roadmap from spec to launch: 16 live integrations, including Shopify, Zendesk, HubSpot and Stripe, plus the built-in web chat. I built the Wix integration hands-on.'
+  - 'Owned the integration roadmap from spec to launch: 16 live integrations, including Shopify, Zendesk, HubSpot and Stripe, plus the built-in web chat. I built the Wix integration myself.'
   - 'Wrote and delivered every Hay pitch and deck, on stage and on camera.'
   - 'Led the website end to end: SEO strategy, keyword research, content and the release of every change.'
   - 'Ran outbound and events, from six segmented campaigns and 20+ directory listings to booth pitches and CRM follow-up.'
@@ -86,7 +86,7 @@ gallery:
 lessons:
   - 'Write it down before anyone builds it. Every feature started as a user story with acceptance criteria, so two founders always worked from the same plan.'
   - 'Check the live search results before writing a page. Difficulty scores alone gave false positives, so I classified 55 results pages by hand.'
-  - 'Use AI as the production team, not the decision maker. I write the brief, review the output and decide what ships.'
+  - 'Treat AI as the production team. I write the brief, review the output and decide what ships.'
 ---
 ## Product
 

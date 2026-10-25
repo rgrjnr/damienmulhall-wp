@@ -38,7 +38,7 @@ stats:
     label: 'training events supported'
     note: 'Plus 8 customer events, with 7 more booked'
 
-summary: 'Five Dell business units were each asking for their own event kit, sales content and training material. I turned that into one modular programme, X in a Box: a stand with swappable branding, a shared content hub and a campaign to drive its use. I ran it like a product, and its usage data shaped the next year''s model.'
+summary: 'Five Dell business units were each asking for their own event kit, sales content and training material. I turned that into one modular programme, X in a Box: a stand with swappable branding, a shared content hub and a campaign to drive its use. I ran it like a product, and shaped the next year''s model on its usage data.'
 
 cards:
   challenge:

@@ -46,10 +46,10 @@ cards:
   challenge:
     - 'Interactive guides break easily in translation, so quality had to hold in every language.'
     - 'Translation costs could run away without a clear price per language up front.'
-    - 'With dozens of guides and variants, Dell needed to know which ones were actually being read.'
+    - 'With dozens of guides and variants, Dell needed to know which ones people were reading.'
   approach:
     - 'I built a per-language cost model, so every market was priced before anyone committed.'
-    - 'Every translated guide was checked against the English master before regional review.'
+    - 'I had every translated guide checked against the English master before regional review.'
     - 'I put the whole estate on Google Analytics 4, with a clean link for each language, so Dell could see what each market read.'
   outcome:
     - '66 Dell and Intel co-branded guide variants in 2021, with Intel co-funding the translation.'

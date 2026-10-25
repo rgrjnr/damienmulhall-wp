@@ -41,7 +41,7 @@ summary: 'Google for Education and Dell needed one guide that worked as a buying
 cards:
   challenge:
     - 'Brand and legal approvals at both Google and Dell.'
-    - 'An educational story that still had to be strictly accurate and compliant.'
+    - 'An educational story that still had to be accurate and compliant.'
     - 'Classroom workflows described so teachers and IT staff would recognise them.'
   approach:
     - 'With two brands'' legal teams to satisfy, I locked approvals at each milestone: copy, then design, then publishing.'
