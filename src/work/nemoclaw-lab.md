@@ -26,7 +26,7 @@ facts:
     value: 'Campaign identity, EMEA playbook, event comms, kit branding, certificates, video and social'
 
 stats:
-  - value: '2'
+  - value: '4'
     label: 'months from kick-off to live programme'
   - value: '30'
     label: 'Dell Pro Max with GB10 workstations'
