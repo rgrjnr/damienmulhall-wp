@@ -1,0 +1,381 @@
+@use "variables" as *;
+
+// Unlisted briefing pages (src/briefings/). Built on the case-study `cs-*`
+// components; these rules only add what a briefing needs on top: the private
+// banner, evidence labels, the evidence list, two-up boxes and the objections.
+
+.br-private {
+  align-items: center;
+  background: $dm-red;
+  color: $dm-white;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  font-weight: $font-medium;
+  gap: 0.25rem 0.75rem;
+  line-height: 1.4;
+  padding: 0.85rem 1.25rem;
+
+  strong {
+    font-family: $font-haas-display;
+    font-weight: $font-bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
+.br-tag {
+  border: 2px solid currentColor;
+  display: inline-block;
+  font-family: $font-haas-text;
+  font-size: 11px;
+  font-weight: $font-bold;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  padding: 0.3rem 0.45rem 0.25rem;
+  text-transform: uppercase;
+  vertical-align: 0.2em;
+  white-space: nowrap;
+}
+
+.br-tag--confirmed {
+  color: $dm-cyan;
+}
+
+// Yellow fails contrast as text on dm-white, so unverified is a filled chip.
+.br-tag--unverified {
+  background: $dm-yellow;
+  border-color: $dm-yellow;
+  color: $dm-black;
+}
+
+.br-tag--view {
+  color: $dm-purple;
+}
+
+.br-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-family: $font-haas-text;
+  font-size: $text-body-md;
+  line-height: 1.4;
+  list-style: none;
+  margin: 0;
+  max-width: 52rem;
+  padding: 0;
+
+  .br-tag {
+    margin-right: 0.5rem;
+  }
+}
+
+.br-points {
+  counter-reset: br-point;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.br-point {
+  border-bottom: 1px solid rgba($dm-black, 0.2);
+  display: grid;
+  gap: 0.5rem 1.5rem;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  padding: 1.25rem 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &::before {
+    color: $dm-cyan;
+    content: counter(br-point, decimal-leading-zero);
+    counter-increment: br-point;
+    font-family: $font-haas-display;
+    font-size: $text-heading-xs;
+    font-weight: $font-medium;
+    line-height: 1.1;
+  }
+}
+
+.br-point__title {
+  color: $dm-black;
+  font-family: $font-haas-display;
+  font-size: $text-body-lg;
+  font-weight: $font-medium;
+  line-height: 1.3;
+  margin: 0 0 0.35rem;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-heading-xs;
+  }
+}
+
+.br-point__body {
+  font-family: $font-haas-text;
+  font-size: $text-body-md;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 48rem;
+
+  .br-tag {
+    margin-left: 0.35rem;
+  }
+}
+
+.br-evidence {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.br-evidence__item {
+  border-bottom: 1px solid rgba($dm-black, 0.2);
+  display: grid;
+  gap: 0.5rem 2rem;
+  padding: 1.1rem 0;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+}
+
+.br-evidence__claim {
+  font-family: $font-haas-text;
+  font-size: $text-body-md;
+  line-height: 1.5;
+  margin: 0;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $text-body-lg;
+  }
+}
+
+.br-evidence__source {
+  color: rgba($dm-black, 0.75);
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  line-height: 1.4;
+  margin: 0;
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}
+
+.br-boxes {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.br-box {
+  border: 3px solid $dm-black;
+  padding: 1.5rem;
+
+  .cs-list {
+    font-family: $font-haas-text;
+    font-size: $text-body-md;
+    line-height: 1.45;
+  }
+}
+
+.br-box__title {
+  color: $dm-black;
+  font-family: $font-haas-display;
+  font-size: $text-heading-xs;
+  font-weight: $font-medium;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.br-faq {
+  details {
+    border-bottom: 1px solid rgba($dm-black, 0.2);
+  }
+
+  summary {
+    color: $dm-black;
+    cursor: pointer;
+    display: flex;
+    font-family: $font-haas-display;
+    font-size: $text-body-lg;
+    font-weight: $font-medium;
+    gap: 1rem;
+    justify-content: space-between;
+    line-height: 1.3;
+    list-style: none;
+    padding: 1.1rem 0;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $text-heading-xs;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      color: $dm-cyan;
+      content: "+";
+      flex-shrink: 0;
+    }
+
+    &:focus-visible {
+      outline: 3px solid $dm-black;
+      outline-offset: 4px;
+    }
+  }
+
+  details[open] summary::after {
+    content: "\2212";
+  }
+
+  p {
+    font-family: $font-haas-text;
+    font-size: $text-body-md;
+    line-height: 1.55;
+    margin: 0 0 1.25rem;
+    max-width: 48rem;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $text-body-lg;
+    }
+  }
+}
+
+.br-sources {
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 1.25rem;
+
+  li {
+    margin-bottom: 0.4rem;
+    overflow-wrap: anywhere;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}
+
+.br-note {
+  color: rgba($dm-black, 0.75);
+  font-family: $font-haas-text;
+  font-size: $text-body-sm;
+  line-height: 1.5;
+  margin: 1rem 0 0;
+  max-width: 48rem;
+}
+
+// ---------------------------------------------------------------------------
+// One1000 theme. The briefing is for One1000, so it wears their palette (taken
+// from one1000.com) on white instead of the site's cream. Their lime and orange
+// are too light for text on white, so they only ever sit behind dark text.
+// ---------------------------------------------------------------------------
+
+$o1k-green: #95c122;
+$o1k-orange: #fd6f1a;
+$o1k-charcoal: #2e3a42;
+$o1k-ink: #222222;
+$o1k-arrow-ink: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0 63 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M42.3627 23.3483L42.3624 32.7149L42.3627 42.0815L32.9961 42.0812L23.6294 42.0815L23.6297 37.0862L28.0003 37.0855L33.8353 37.0859L19.1783 22.4294L22.7114 18.8981L32.3943 28.5804L37.367 33.5531L37.3667 27.7192L37.3673 23.3486L42.3627 23.3483Z' fill='%23222222'/%3E%3C/svg%3E");
+$o1k-arrow-green: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0 63 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M42.3627 23.3483L42.3624 32.7149L42.3627 42.0815L32.9961 42.0812L23.6294 42.0815L23.6297 37.0862L28.0003 37.0855L33.8353 37.0859L19.1783 22.4294L22.7114 18.8981L32.3943 28.5804L37.367 33.5531L37.3667 27.7192L37.3673 23.3486L42.3627 23.3483Z' fill='%2395c122'/%3E%3C/svg%3E");
+
+html:has(body.briefing-page),
+body.briefing-page,
+.briefing-page main,
+.briefing-page .scroll-nav,
+.briefing-page .crow-loader {
+  background-color: #fff;
+}
+
+.briefing-page {
+  .br-private {
+    background: $o1k-orange;
+    color: $o1k-ink;
+  }
+
+  .cs-heading,
+  .cs-titleblock {
+    border-color: $o1k-green;
+  }
+
+  .cs-facts,
+  .cs-card {
+    background: $o1k-charcoal;
+  }
+
+  .cs-card .cs-list li::before {
+    background-image: $o1k-arrow-green;
+  }
+
+  .cs-stat {
+    border-color: $o1k-charcoal;
+    border-top: 8px solid $o1k-green;
+  }
+
+  .cs-stat__value {
+    color: $o1k-charcoal;
+  }
+
+  .br-point::before {
+    align-items: center;
+    align-self: start;
+    background: $o1k-green;
+    color: $o1k-ink;
+    display: flex;
+    font-size: $text-body-md;
+    height: 2.5rem;
+    justify-content: center;
+    width: 2.5rem;
+  }
+
+  .br-box {
+    border-color: $o1k-charcoal;
+  }
+
+  .br-box .cs-list li::before {
+    background-image: $o1k-arrow-ink;
+  }
+
+  .br-tag--confirmed {
+    background: $o1k-green;
+    border-color: $o1k-green;
+    color: $o1k-ink;
+  }
+
+  .br-tag--unverified {
+    background: $o1k-orange;
+    border-color: $o1k-orange;
+    color: $o1k-ink;
+  }
+
+  .br-tag--view {
+    color: $o1k-charcoal;
+  }
+
+  .br-faq summary::after {
+    color: $o1k-charcoal;
+  }
+
+  .cs-role {
+    background: $o1k-green;
+    color: $o1k-ink;
+
+    .cs-list li::before {
+      background-image: $o1k-arrow-ink;
+    }
+  }
+}
