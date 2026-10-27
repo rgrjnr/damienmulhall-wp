@@ -24,15 +24,15 @@ showHero: true
 </section>
 {%- endif %}
 
-{%- if home.brands and home.brands.names.length %}
-<!-- Logo wall: text wordmarks in the site type, no third-party logo files -->
+{%- if home.brands and home.brands.logos.length %}
+<!-- Logo wall: single-colour SVGs in dm-black. `scale` evens out the optical size of wide and tall marks. -->
 <section class="w-full max-w-page mx-auto px-6 mt-9" aria-labelledby="brands-heading">
     <div class="logo-wall">
         <h2 id="brands-heading" class="logo-wall__heading">{{ home.brands.heading }}</h2>
         <div class="logo-wall__viewport">
             <ul class="logo-wall__list">
-                {%- for name in home.brands.names %}
-                <li class="logo-wall__item">{{ name }}</li>
+                {%- for logo in home.brands.logos %}
+                <li class="logo-wall__item" style="--logo-scale: {{ logo.scale or 1 }}"><img src="/assets/images/logos/{{ logo.file }}" alt="{{ logo.name }}" data-raw></li>
                 {%- endfor %}
             </ul>
         </div>

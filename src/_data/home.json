@@ -23,12 +23,14 @@
   ],
   "brands": {
     "heading": "Brands I've delivered for",
-    "names": [
-      "Dell Technologies",
-      "Microsoft",
-      "Intel",
-      "Google",
-      "NVIDIA"
+    "logos": [
+      { "name": "Dell Technologies", "file": "dell-technologies.svg", "scale": 0.62 },
+      { "name": "Microsoft", "file": "microsoft.svg", "scale": 0.82 },
+      { "name": "Intel", "file": "intel.svg", "scale": 0.92 },
+      { "name": "Google", "file": "google.svg", "scale": 0.92 },
+      { "name": "NVIDIA", "file": "nvidia.svg", "scale": 0.6 },
+      { "name": "One1000", "file": "one1000.svg", "scale": 0.68 },
+      { "name": "Hay.chat", "file": "hay-chat.svg", "scale": 0.82 }
     ]
   },
   "about": {

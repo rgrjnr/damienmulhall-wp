@@ -870,10 +870,9 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
   border-bottom: 3px solid $dm-black;
   padding-block: 0.5rem 1.5rem;
 
-  @media (min-width: $breakpoint-lg) {
-    align-items: center;
-    display: flex;
-    gap: 3rem;
+  // Logos need the full row, so the heading sits above them at every width.
+  .logo-wall__heading {
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -902,19 +901,29 @@ $arrow-light: url("data:image/svg+xml,%3Csvg width='63' height='64' viewBox='0 0
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $breakpoint-lg) {
+    flex-wrap: nowrap;
+  }
 }
 
 .logo-wall__item {
-  color: rgba($dm-black, 0.65);
-  font-family: $font-haas-display;
-  font-size: $text-heading-xs;
-  font-weight: $font-medium;
-  letter-spacing: -0.01em;
-  line-height: 1;
-  white-space: nowrap;
+  --logo-height: 1.75rem;
+  display: flex;
+  line-height: 0;
+
+  img {
+    display: block;
+    height: calc(var(--logo-height) * var(--logo-scale, 1));
+    width: auto;
+  }
 
   @media (min-width: $breakpoint-md) {
-    font-size: $text-heading-sm;
+    --logo-height: 2rem;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    --logo-height: 1.75rem;
   }
 }
 
