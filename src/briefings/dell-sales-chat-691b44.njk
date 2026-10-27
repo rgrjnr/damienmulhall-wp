@@ -7,7 +7,10 @@ showHero: false
 noindex: true
 bodyClass: briefing-page
 eleventyExcludeFromCollections: true
+deleteOn: Tuesday 3 November 2026
+pdf: /assets/files/briefings/dell-sales-chat-691b44.pdf
 ---
+{% from "partials/animated-button.njk" import button %}
 {#- Unlisted: no links to it, kept out of collections, the sitemap, the feed and
     llms.txt, and marked noindex. Deliberately not listed in robots.txt, which
     would publish the URL. The hex suffix makes the address hard to guess. #}
@@ -16,7 +19,7 @@ eleventyExcludeFromCollections: true
 <div class="w-full max-w-page mx-auto px-6 mt-6">
     <p class="br-private" role="note">
         <strong>Private</strong>
-        <span>Unlisted briefing for One1000. It is not part of damienmulhall.com, isn't linked from the site and is hidden from search engines. Please don't share it outside One1000.</span>
+        <span>Unlisted briefing for One1000. It is not part of damienmulhall.com, isn't linked from the site and is hidden from search engines. Please don't share it outside One1000. This page will be deleted on {{ deleteOn }}, so download a copy if you want to keep it.</span>
     </p>
 </div>
 
@@ -27,6 +30,7 @@ eleventyExcludeFromCollections: true
             <h1 id="cs-title" class="cs-title">Dell Sales Chat: what we actually know</h1>
             <p class="cs-outcome cs-outcome--quiet">What Dell's in-house AI tool for sellers is, what it can and can't do, and what it might mean for our work. Public sources only.</p>
         </div>
+        <div class="br-download">{{ button('Download PDF', pdf, '', 'pill') }}</div>
     </div>
 </header>
 

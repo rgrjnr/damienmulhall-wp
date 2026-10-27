@@ -379,3 +379,40 @@ body.briefing-page,
     }
   }
 }
+
+.briefing-page .btn-animated {
+  background-color: $o1k-green;
+}
+
+.br-download {
+  flex-shrink: 0;
+}
+
+// The PDF is printed from this page, so drop the site chrome and the button.
+@media print {
+  .briefing-page {
+    .scroll-nav,
+    .crow-loader,
+    .skip-to-content-link,
+    #content > div > header,
+    #mobile-menu,
+    .br-download,
+    footer {
+      display: none !important;
+    }
+
+    .cs-card,
+    .cs-stat,
+    .br-box,
+    .br-point,
+    .br-evidence__item,
+    .cs-role,
+    details {
+      break-inside: avoid;
+    }
+
+    .cs-heading {
+      break-after: avoid;
+    }
+  }
+}
